@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unified Journey // Jeniffer Córdoba</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="images/logo2.png">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#87A96A',
+                        'deep': '#2D4F1E',
+                        'sage': '#9CAF88',
+                        'alabaster': '#F2F2EB',
+                        'mint': '#DDEBDB'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-alabaster selection:bg-primary/30">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav nav-transparent" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo2.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                Jeniffer Córdoba
+            </a>
+            <ul class="nav-links">
+                <li class="hidden xl:block"><a href="index.html">Home</a></li>
+                <li><a href="healing.html" class="active">Healing</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
+                <li class="hidden xl:block"><a href="youth.html">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html">Corporate</a></li>
+                <li class="hidden xl:block"><a href="gallery.html">Gallery</a></li>
+                <li class="hidden xl:block"><a href="pricing.html">Pricing</a></li>
+
+                <!-- More Button -->
+                <li class="relative xl:hidden">
+                    <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div id="moreDropdown" class="more-dropdown">
+                        <a href="index.html" class="xl:hidden">Home</a>
+                        <a href="youth.html" class="xl:hidden">Youth</a>
+                        <a href="corporate.html" class="xl:hidden">Corporate</a>
+                        <a href="gallery.html" class="xl:hidden">Gallery</a>
+                        <a href="pricing.html" class="xl:hidden">Pricing</a>
+                        <hr class="border-mint/20 my-2 xl:hidden">
+                        <a href="booking.html">Book Your Session</a>
+                    </div>
+                </li>
+
+                <li class="hidden sm:block"><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 text-white">
+            <img src="images/LotusPoseWoman.png" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-deep/10"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <h1 class="text-6xl md:text-[100px] font-display text-white italic leading-[1] mb-10 drop-shadow-2xl">
+                The Unified Session: <br>
+                <span class="font-light opacity-90 text-4xl md:text-6xl">A Journey Tailored to Your Essence.</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed italic">
+                Moving beyond labels. Combining Somatic Movement, Quantum Resonance, and Breath Science into a single,
+                fluid experience designed for your unique frequency.
+            </p>
+            <a href="booking.html"
+                class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold uppercase text-sm tracking-widest shadow-2xl hover:bg-white hover:text-deep transition-all">
+                Begin Your Journey
+            </a>
+        </div>
+        <div
+            class="absolute bottom-12 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-white to-transparent opacity-50">
+        </div>
+    </header>
+
+    <!-- ALCHEMY OF TOOLS (PILLARS) -->
+    <section class="section-padding bg-alabaster overflow-hidden">
+        <div class="container text-center mb-20">
+            <span class="text-primary font-bold text-xs tracking-[0.4em] uppercase mb-4 block">The Four Pillars</span>
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic">Alchemy of Tools</h2>
+        </div>
+
+        <!-- Pillars Grid -->
+        <div class="container grid md:grid-cols-4 gap-8 mb-16">
+            <!-- Pillar 1 -->
+            <div data-pillar="0" onclick="showPillarDetail(0, true)" onmouseenter="showPillarDetail(0, false)"
+                onmouseleave="hidePillarIfNotSelected()"
+                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                <div
+                    class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
+                    <span class="material-symbols-outlined text-primary text-3xl transition-colors">spa</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title">
+                    Somatic Yoga</h3>
+                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc">Body-led
+                    healing and intuitive intelligence.</p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div data-pillar="1" onclick="showPillarDetail(1, true)" onmouseenter="showPillarDetail(1, false)"
+                onmouseleave="hidePillarIfNotSelected()"
+                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                <div
+                    class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
+                    <span class="material-symbols-outlined text-primary text-3xl transition-colors">auto_awesome</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title">
+                    Quantum Resonance</h3>
+                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc">Energy
+                    frequency and vibrational alignment.</p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div data-pillar="2" onclick="showPillarDetail(2, true)" onmouseenter="showPillarDetail(2, false)"
+                onmouseleave="hidePillarIfNotSelected()"
+                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                <div
+                    class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
+                    <span class="material-symbols-outlined text-primary text-3xl transition-colors">air</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title">
+                    Conscious Breath</h3>
+                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc">Nervous system
+                    regulation protocols.</p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div data-pillar="3" onclick="showPillarDetail(3, true)" onmouseenter="showPillarDetail(3, false)"
+                onmouseleave="hidePillarIfNotSelected()"
+                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                <div
+                    class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
+                    <span class="material-symbols-outlined text-primary text-3xl transition-colors">psychology</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title">
+                    Integration</h3>
+                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc">Bridging the
+                    session into daily life.</p>
+            </div>
+        </div>
+
+        <!-- Detail Discovery Card -->
+        <div class="container">
+            <div id="pillarDetailWrapper"
+                class="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+                <div class="py-8 md:py-12"> <!-- Container for shadow to breathe -->
+                    <div id="pillarDetailCard"
+                        class="bg-white rounded-32 flex flex-col md:flex-row overflow-hidden border border-deep/10">
+                        <div class="md:w-1/2 relative min-h-[300px] md:min-h-0 overflow-hidden bg-alabaster">
+                            <img id="pillarImage" src=""
+                                class="absolute inset-0 w-full h-full object-cover transition-all duration-1000">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#212529]/10 to-transparent"></div>
+                        </div>
+                        <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center bg-white">
+                            <span id="pillarLabel"
+                                class="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block"></span>
+                            <h3 id="pillarHeading" class="text-3xl md:text-5xl font-display text-deep italic mb-6"></h3>
+                            <p id="pillarText"
+                                class="text-gray-600 text-base md:text-lg font-light leading-relaxed italic mb-8">
+                            </p>
+                            <div class="flex gap-4">
+                                <div class="h-px bg-primary w-12 my-auto"></div>
+                                <span id="pillarSmallLabel"
+                                    class="text-deep font-bold text-[10px] uppercase tracking-widest"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .pillar-card.active-pillar {
+            background-color: #2F3E46 !important;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .pillar-card.active-pillar .pillar-title {
+            color: #87A96A !important;
+        }
+
+        .pillar-card.active-pillar .pillar-desc {
+            color: white !important;
+        }
+
+        .pillar-card.active-pillar .icon-bg {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .pillar-card.active-pillar .material-symbols-outlined {
+            color: #87A96A !important;
+        }
+
+        /* Generic hover logic for non-active cards */
+        .pillar-card:hover:not(.active-pillar) {
+            background-color: #2F3E46;
+            transform: translateY(-8px);
+        }
+
+        .pillar-card:hover:not(.active-pillar) .pillar-title {
+            color: #87A96A !important;
+        }
+
+        .pillar-card:hover:not(.active-pillar) .pillar-desc {
+            color: white !important;
+        }
+
+        .pillar-card:hover:not(.active-pillar) .icon-bg {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .pillar-card:hover:not(.active-pillar) .material-symbols-outlined {
+            color: #87A96A !important;
+        }
+
+        #pillarDetailWrapper.is-active {
+            max-height: 1200px;
+            opacity: 1;
+            margin-top: 2rem;
+        }
+
+        /* Scroll Reveal Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        const pillarData = [
+            {
+                title: "Somatic Yoga",
+                label: "Healing Modality",
+                smallLabel: "Pillar I",
+                heading: "The Wisdom of Sensation",
+                text: "Somatic yoga is a practice that focuses on the internal experience of movement. Unlike traditional hatha, we prioritize how the body feels from within. This practice is essential for unwinding deep-seated nervous system patterns and releasing 'Sensory Motor Amnesia'.",
+                image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000"
+            },
+            {
+                title: "Quantum Resonance",
+                label: "Vibrational Healing",
+                smallLabel: "Pillar II",
+                heading: "Vibrational Realignment",
+                text: "Everything is frequency. Through sound, intentional energetic work, and bio-field clearing, we address the energetic blockages that precede physical illness. This pillar targets the subtle body, bringing your cellular rhythm back into harmony.",
+                image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=2000"
+            },
+            {
+                title: "Conscious Breath",
+                label: "Breathwork",
+                smallLabel: "Pillar III",
+                heading: "The Breath-Mind Bridge",
+                text: "Breath is the only function of the autonomic nervous system that we can consciously control. By mastering specific Pranayama and modern breath-science protocols, we gain direct access to our stress response, allowing radical restoration.",
+                image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000"
+            },
+            {
+                title: "Integration",
+                label: "Sustainability",
+                smallLabel: "Pillar IV",
+                heading: "Soul Sustenance",
+                text: "The transformation doesn't end when you leave the session. Integration is the art of weaving the calm, clarity, and insights found during our work into the complex fabric of your daily life, creating sustainable habits.",
+                image: "https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?q=80&w=2000"
+            }
+        ];
+
+        let selectedIndex = -1;
+
+        function showPillarDetail(index, isClick) {
+            if (isClick) {
+                if (selectedIndex === index) {
+                    selectedIndex = -1;
+                    hidePillarDetail();
+                    return;
+                }
+                selectedIndex = index;
+            }
+
+            const data = pillarData[index];
+            const wrapper = document.getElementById('pillarDetailWrapper');
+            const img = document.getElementById('pillarImage');
+
+            // Highlight active/hovered card
+            document.querySelectorAll('.pillar-card').forEach((c, i) => {
+                if (i === index) c.classList.add('active-pillar');
+                else if (i !== selectedIndex) c.classList.remove('active-pillar');
+            });
+
+            // Update content
+            img.src = data.image;
+            document.getElementById('pillarLabel').innerText = data.label;
+            document.getElementById('pillarHeading').innerText = data.heading;
+            document.getElementById('pillarText').innerText = data.text;
+            document.getElementById('pillarSmallLabel').innerText = data.smallLabel;
+
+            // Show wrapper
+            wrapper.classList.add('is-active');
+        }
+
+        function hidePillarIfNotSelected() {
+            if (selectedIndex === -1) {
+                hidePillarDetail();
+            } else {
+                // Return to selected state highlighting
+                document.querySelectorAll('.pillar-card').forEach((c, i) => {
+                    if (i === selectedIndex) c.classList.add('active-pillar');
+                    else c.classList.remove('active-pillar');
+                });
+            }
+        }
+
+        function hidePillarDetail() {
+            const wrapper = document.getElementById('pillarDetailWrapper');
+            if (wrapper) wrapper.classList.remove('is-active');
+            document.querySelectorAll('.pillar-card').forEach(c => c.classList.remove('active-pillar'));
+        }
+
+        /* Intersection Observer for Scroll Animations */
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+
+        // More Menu Toggle
+        const moreBtn = document.getElementById('moreMenuBtn');
+        const moreDropdown = document.getElementById('moreDropdown');
+
+        if (moreBtn && moreDropdown) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle('is-active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                    moreDropdown.classList.remove('is-active');
+                }
+            });
+        }
+    </script>
+
+    <!-- ANATOMY OF A SESSION (TIMELINE) -->
+    <section class="section-padding bg-white overflow-hidden">
+        <div class="container max-w-[1440px]">
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic text-center mb-28 reveal">Anatomy of a Session
+            </h2>
+            <div class="space-y-32 relative">
+                <!-- Thicker Vertical Line -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 -translate-x-1/2 hidden md:block">
+                </div>
+
+                <!-- Stage 1 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
+                    <!-- Image -->
+                    <div class="md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAiLuZA3QLFiK8SB7fREOPzs7mHc9vKrvHnC1ACYIFpZx3Ml4vAyYZ2eFclKd6-U64bu4LZuHbNtfWDUEX5Mkzlqki_XvnpFcEkQvqSlmjt2L267XaRgQwhBVvNT-mvT_jEzyWMPgEgSWfuOiQMW1_9QLSohWw4bnnsHeQ5JKmahxrk-ZamxqTPYRWfrPZM6vbxdGn4ygesFwRUq68TzeLPoILTjpuNcakp0bUgEgxq7eDRtSQ_-oEodQznGUwhup7PCMoFrJS4ASv"
+                            class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+
+                    <!-- Enlarged Timeline Dot -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
+                    </div>
+
+                    <!-- Text Expanded Outward -->
+                    <div class="md:w-[50%] order-1 md:order-2 text-left md:pl-12">
+                        <span class="text-primary font-bold text-sm tracking-[0.4em] uppercase mb-5 block">Stage
+                            One</span>
+                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8">The Scan</h3>
+                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed max-w-2xl">A detailed
+                            intuitive and energetic assessment to identify blockages and determine your system's
+                            immediate needs through resonant observation.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
+                    <!-- Text Expanded Outward -->
+                    <div class="md:w-[50%] order-1 text-left md:text-right md:pr-12">
+                        <span class="text-primary font-bold text-sm tracking-[0.4em] uppercase mb-5 block">Stage
+                            Two</span>
+                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8">The Opening</h3>
+                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed max-w-2xl ml-auto">Gentle
+                            somatic unwinding designed to soften physical fascia and prepare the neural pathways for
+                            deeper energetic reception.</p>
+                    </div>
+
+                    <!-- Enlarged Timeline Dot -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
+                    </div>
+
+                    <!-- Image -->
+                    <div class="md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ-fVn16nw4A-0NDlZbdcqNMYwiZzSaNipG4ML7600buxoxqSBxkKSKTgKfiYnv1viSj5vy8B0CgPNYjzRISpJB4C-pss2bVSvsERFZblaPapSg8sWzEFn4LyDrg06Uk_lFI1COVNFB1a-3QubkOeHA8bl-L3GWR1_JyzM4epeWzLnLfeFcUXXadEvYFAI0BxsKsAMJZKnB9arNcHXI4nRQz6WN4GfFHbjs8N4ctnPI0dw4tYsdSOozYI_9rDVqnfWJKNevvwFONZv"
+                            class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
+                    <!-- Image -->
+                    <div class="md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4MjcZ7TwY1cRbFHUQXnh5tVlAq0zDriSQLr91rkaNqpJa8mWMFpJMG9btaA-jTMJFtwZurvaqyUJVQx--bP9zrtgM1NerM9CKGFgppmZGzPQt0BOxsfx118BoB4pHJc3Tf3y8ZEB56Z3PYn1eePtbKTWrzd_GssEBkr9T0FCIqe7g_B7XUF-yTjLbbbNcM_q5bPiHT18rffxn9wG9qK7IvlgL0B4qQ4sRpi-cncCCAudgVZh5YfZMe1qqtkD-bzzEpR4TyX-MsKi"
+                            class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+
+                    <!-- Enlarged Timeline Dot -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
+                    </div>
+
+                    <!-- Text Expanded Outward -->
+                    <div class="md:w-[50%] order-1 md:order-2 text-left md:pl-12">
+                        <span class="text-primary font-bold text-sm tracking-[0.4em] uppercase mb-5 block">Stage
+                            Three</span>
+                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8">The Deep Work</h3>
+                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed max-w-2xl">The core of
+                            the journey. Weaving quantum resonance with breath protocols to facilitate profound cellular
+                            release and realignment.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
+                    <!-- Text Expanded Outward -->
+                    <div class="md:w-[50%] order-1 text-left md:text-right md:pr-12">
+                        <span class="text-primary font-bold text-sm tracking-[0.4em] uppercase mb-5 block">Stage
+                            Four</span>
+                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8">The Grounding</h3>
+                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed max-w-2xl ml-auto">
+                            Integration into pure stillness. We anchor the expanded energetic state into your physical
+                            architecture for lasting structural shift.</p>
+                    </div>
+
+                    <!-- Enlarged Timeline Dot -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
+                    </div>
+
+                    <!-- Image -->
+                    <div class="md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa8LMA1QGNxfdJZYMJHyLZ_k6IZjV38wwfn689HUrbucUngIXkFyAHRtupj_WvAltH0tv4zWOBJu2hFnH9wkbp8EKx1MDaTxLxwZNPMiLhfl2Gio1YP_jACutxn3_1F31OyVvhVUOhP8sI8vSqRW5tvbdQh27IMDj7H74j2joaKfaiGcJOMxf1-8Bsdpo64meHVs845_0nEtqvEERB5Em4SJCdaj-qioGBo4OTXxYBbHPBtIj3pvRdCm93-Z-48XeFDfP7bhMy3b09"
+                            class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIOLOGY MEETS ENERGY (STATS) -->
+    <section class="section-padding bg-[#354F52] relative overflow-hidden">
+        <div class="absolute inset-0 bg-primary/5 blur-3xl opacity-30 translate-y-1/2"></div>
+        <div class="container relative z-10">
+            <div class="bg-[#6B917E] rounded-[60px] p-12 md:p-24 shadow-2xl max-w-5xl mx-auto border border-white/10">
+                <div class="text-center space-y-12">
+                    <h2 class="text-4xl md:text-7xl font-display text-white italic leading-tight">Where Biology Meets
+                        Energy.</h2>
+                    <div class="space-y-10 text-white/90 text-xl font-light leading-relaxed max-w-4xl mx-auto">
+                        <p>Our somatic approach isn't just about feeling good—it's anchored in neurobiology. By moving
+                            the body with intention, we communicate directly with the vagus nerve, signaling safety to
+                            the brain.</p>
+                        <p>When the nervous system is regulated, the body becomes a conductor for quantum resonance. We
+                            utilize specific sound frequencies to harmonize your internal landscape.</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-12 pt-12">
+                        <div class="text-center">
+                            <p class="text-5xl font-display text-white font-bold mb-2">95%</p>
+                            <p class="text-[10px] uppercase tracking-widest text-white/60">Nervous Regulation</p>
+                        </div>
+                        <div class="w-px h-12 bg-white/20"></div>
+                        <div class="text-center">
+                            <p class="text-5xl font-display text-white font-bold mb-2">100%</p>
+                            <p class="text-[10px] uppercase tracking-widest text-white/60">Bespoke Protocol</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE TRANSFORMATION -->
+    <section class="section-padding bg-alabaster">
+        <div class="container text-center mb-20">
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic">The Transformation</h2>
+        </div>
+        <div class="container grid md:grid-cols-3 gap-10">
+            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7L-Kc0LUkdwo6i37g5JPK8Yds0d2wtwImxYEIvf1_VUP7gBvN5qCZUo8quB8y1N3fxdOw-16PwlgnlgQ4DTz8JlIS3KLPuEh2vslaK7CMEvjjsoE9pAyGjDi0N26hnGSdiYswEwZ0jJiXFrYfbkHOD822cYrbTe_-RZpm4Iod0dU0ALRNZeyqQbd869G2Kf53DaG7ez8hhotOPfImaxFA8SvBTwG1DKcNxXC3DJuyJOQbTx004tmkZpY5TJlR5R8gVVa79-9Clp3T"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-10 space-y-4">
+                    <h3 class="text-2xl font-display text-deep italic">Nervous System Balance</h3>
+                    <p class="text-gray-500 font-light">Release chronic stress patterns and move from a state of
+                        survival to one of restorative thriving.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3CcE3s65ef5of8SW2ka5VRkeHw1eqxW1XkXM1AQHP4u84JJx11orYyc-oa-D6Dkk1oKtkq_kF3Bc7Yl9kkTNKseT2lEiZNHhetLm0-hapq4ihhyM8OlYkdEdsL82_NeT2bMrM_ScPrHWyg6uur7aE07C24k4KKq0-_IxLvSwfwQJgi64cPD1yG0POfbmWEOCaZaQjp9LPTlGTWA22yVUqGmJtdiA-8XC3kxBvhnd3wOBiYQb-KAXsjnuDRacyK4Iz0SLttZka4Ib"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-10 space-y-4">
+                    <h3 class="text-2xl font-display text-deep italic">Mental Clarity</h3>
+                    <p class="text-gray-500 font-light">Clear cognitive fog and emotional noise, allowing for decisive
+                        action and creative flow.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPFIbhBRuMtzkv3E9j-mXfIu445dcTmj9F_JdAAqjWpqm7c677YpD192Q0Ceb6GWg9v0tFrMfWfs-m599C7qp-o4q_q6ZFE_G_AEU5CLFS1z0mNE8ztbi7Q8xTC0-2F1tulcVnycS00sgNXs-FF3m4JB_QHlDyUw-MxBDS_Zlk6pRtfEgyGclrGo59m7vMiaC56Z6j-4aOF2yEiojqbsGwLJ9h2PsimMUs70tuJtbNGjNf9ojtE1d7BGob-rV1ivBZ3dLloe6dAz0Q"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-10 space-y-4">
+                    <h3 class="text-2xl font-display text-deep italic">Physical Vitality</h3>
+                    <p class="text-gray-500 font-light">Restore cellular communication and energy flow, manifesting in
+                        improved posture and deep rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE NUANCES (FAQ) -->
+    <section class="section-padding bg-white">
+        <div class="container text-center mb-20">
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic reveal">The Nuances</h2>
+        </div>
+        <div class="container grid md:grid-cols-2 gap-24 items-center">
+            <div class="relative reveal">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Xh6yMN81HmAmy99VBqFAM5OdG84bfZ2vtr85Lc25fMWLMCAmP7tJVvd_WY1AQkclJ7ppy1XG9YLGb2vbYCn06wHQj9QJAi28n3HZi297enHt-Fyt1sgPPofrYx--_4eZ7EYHkMtkuF4xPt9KA7Hb_mlTaBfZ6fkxitOEy5cOz0_aeqjmyCjp4BgQ6zLQ-rRX88mYic1QnfoEhDgRvrmJWslvK6cz7XXve0nrwrh8TLyoMjAL1467ffXjz5ia-8iCQbmBkhZpflXF"
+                    class="w-full h-[600px] object-cover rounded-32 grayscale brightness-75 contrast-110 shadow-2xl">
+                <div class="absolute inset-0 flex items-end p-12">
+                    <p class="text-white text-3xl font-display italic leading-snug">"Healing is a return to your
+                        original resonance."</p>
+                </div>
+            </div>
+            <div class="space-y-4 reveal">
+                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden"
+                    open>
+                    <summary
+                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
+                        <span class="font-bold text-xl text-deep">What exactly is a "Unified Session"?</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed">
+                        A Unified Session is a 90-minute bespoke experience where we don't follow a fixed template.
+                        Instead, we weave together whatever tools your body requires in the moment—whether it's more
+                        somatic release or deeper energetic clearing.
+                    </div>
+                </details>
+                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden">
+                    <summary
+                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
+                        <span class="font-bold text-xl text-deep">Do I need prior experience?</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed">
+                        Not at all. The journey is specifically designed for your current state. Whether you are a
+                        seasoned practitioner or completely new to wellness work, the session meets you exactly
+                        where you are.
+                    </div>
+                </details>
+                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden">
+                    <summary
+                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
+                        <span class="font-bold text-xl text-deep">Can this help with chronic pain?</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed">
+                        Somatic work is highly effective for chronic pain related to tension and trauma storage. By
+                        addressing the nervous system's response, many clients experience significant and lasting
+                        relief.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-deep">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP6n32gnfG75ZQGL6_KfNAQV5b58CAKo0fD_ZmgTNwtp8sE-njmSneCVc6MLI8Is5H3wIlQosncKaO-SXZVhRVxGEhjR0mtEwYmkAP-l8UM8w_Dl0InVy-pgp5IVNkQDIWLrrMbqgPLznbuAtZEMAkmNOZXFhM8A3XqgISubYL6l974UcC-YPrcKsDym5bqgoICJ7-YLmb2DUdQO4GybTVxu6AW9prXaA9EZQZ_Zg_qTddlTWIX6Cn9FFSJTpx25LCB5PGW8pJj0pX"
+                class="w-full h-full object-cover brightness-[0.3] scale-105">
+        </div>
+        <div class="relative z-10 px-6 max-w-4xl space-y-12">
+            <h2 class="text-6xl md:text-9xl font-display text-white italic leading-tight drop-shadow-2xl">Ready to
+                Experience <br> the Shift?</h2>
+            <a href="booking.html"
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all">
+                Book Your Session
+            </a>
+            <div class="flex items-center justify-center gap-6 text-white/40 pt-10">
+                <span class="w-12 h-px bg-white/20"></span>
+                <p class="text-sm uppercase tracking-[0.4em] font-bold">Limited Availability</p>
+                <span class="w-12 h-px bg-white/20"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2F3E46] text-white/70 py-24 px-[5%] mt-0">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+            <!-- Brand Section -->
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo2.png" class="w-16 h-16 object-contain brightness-0 invert"
+                        alt="Jeniffer Córdoba Logo">
+                    <span
+                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight">Jeniffer
+                        Córdoba</span>
+                </div>
+                <p class="text-white/80 text-xl font-bold italic tracking-wide">
+                    A sanctuary for those seeking balance in a chaotic world.
+                </p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="flex items-center gap-6">
+                <!-- Instagram -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#E1306C] transition-all duration-500 shadow-xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                    </svg>
+                </a>
+                <!-- Mail -->
+                <a href="booking.html"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#87A96A] transition-all duration-500 shadow-xl">
+                    <span
+                        class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
+                </a>
+                <!-- Facebook -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1877F2] transition-all duration-500 shadow-xl">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <!-- YouTube -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#FF0000] transition-all duration-500 shadow-xl overflow-hidden">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Mutually Exclusive Toggle Logic
+        document.querySelectorAll('details[name="healing-faq"]').forEach((details) => {
+            details.addEventListener('click', (e) => {
+                if (!details.open) {
+                    // If we are opening this one, close all others
+                    document.querySelectorAll('details[name="healing-faq"]').forEach((other) => {
+                        if (other !== details) {
+                            other.removeAttribute('open');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

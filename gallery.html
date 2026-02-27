@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sacred Space // Jennifer Cordoba</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="images/logo2.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#87A96A',
+                        'deep': '#2D4F1E',
+                        'sage': '#9CAF88',
+                        'alabaster': '#F2F2EB',
+                        'mint': '#DDEBDB'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .masonry {
+            column-count: 3;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .masonry {
+                column-count: 1;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .audio-wave divine {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 40px;
+        }
+
+        .wave-bar {
+            width: 3px;
+            background: rgba(135, 169, 106, 0.3);
+            border-radius: 99px;
+            transition: all 0.3s ease;
+        }
+
+        .wave-bar.active {
+            background: #87A96A;
+        }
+    </style>
+</head>
+
+<body class="bg-alabaster selection:bg-primary/30">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav scrolled" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo2.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                Jeniffer Córdoba
+            </a>
+            <ul class="nav-links">
+                <li class="hidden xl:block"><a href="index.html">Home</a></li>
+                <li><a href="healing.html">Healing</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
+                <li class="hidden xl:block"><a href="youth.html">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html">Corporate</a></li>
+                <li class="hidden xl:block"><a href="gallery.html" class="active">Gallery</a></li>
+                <li class="hidden xl:block"><a href="pricing.html">Pricing</a></li>
+
+                <!-- More Button -->
+                <li class="relative xl:hidden">
+                    <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div id="moreDropdown" class="more-dropdown">
+                        <a href="index.html" class="xl:hidden">Home</a>
+                        <a href="youth.html" class="xl:hidden">Youth</a>
+                        <a href="corporate.html" class="xl:hidden">Corporate</a>
+                        <a href="gallery.html" class="xl:hidden">Gallery</a>
+                        <a href="pricing.html" class="xl:hidden">Pricing</a>
+                        <div class="border-t border-primary/10 my-2"></div>
+                        <a href="booking.html" class="text-primary font-bold">Book Now</a>
+                    </div>
+                </li>
+
+                <li class="hidden sm:block"><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- INTRO -->
+    <section class="section-padding pt-40">
+        <div class="container text-center max-w-4xl space-y-8">
+            <h1 class="text-6xl md:text-8xl font-display text-deep italic">The Sacred Space</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-500 max-w-2xl mx-auto italic">
+                A visual and auditory window into the frequency of our practice. Immerse yourself in the atmosphere of
+                Stillness.
+            </p>
+            <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- GALLERY FILTER & MASONRY -->
+    <section class="pb-24">
+        <div class="container mb-16 flex flex-wrap justify-center gap-4">
+            <button
+                class="px-10 py-3 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-widest shadow-xl">All
+                Moments</button>
+            <button
+                class="px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all">The
+                Studio</button>
+            <button
+                class="px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all">Nature
+                Retreats</button>
+            <button
+                class="px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all">The
+                Practice</button>
+        </div>
+        <div class="container masonry">
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group pointer-events-none">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgc8kvQVo4EIcoc-NOilIYiJCzvTq3L28EuAVuooOG1MgQubqmz0d5j5x5TJ1rNvWKJ03Uo768Fn-vysmg4o8LZsYiWpTVZmwd6Dbv7poBb3kn6RqyoCz6j2lOyNCedFy6INnX2AaEh_NQhabt1z4uQrnlNibGvy2-oxTu5lVNOEwV3rWT2bo874ZjtCAEII0oJz9p0PDL12PXpfnBLWeu0Nt2Y3khw4BRoYYlSGMocMuBmWRA7aieBwQElGnxq9slFE_ElIwwy-7g"
+                    class="w-full">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbSDm8PqG3vn19DFDGquLtXxkOPigCa13thwgPHR5-HbGI5C5Z5QfGMZjaWj3IDEL3Y4eKmfDX4H6SxjCmtOzKKD8uteRMSd_C7LNoG2Nq-yQc_WhKZRrl9FtV4_BFIQRWGgP6PA3sg6urey-oF3cTXtpd7g2sLZKb0ws39lfjlSL3Pe0c1A9Up0AcicCZ_lMVdgkosVihfrdiyEsiNMEeaCKxjWUf5EmmqWDHrmlVPBpewv4ZjQ83lf4OW2a8JMNEA_BJ31ErXigY"
+                    class="w-full">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBN5rP_Nu1PsUukU_8eLE5cUANufRw5ubm5Lid3lGkfavw9CPZ0lPCJ2jAb9K5_wnyJX9FlIPdmM8b39OdQtHBPsEYL56kibRaQ3cqmmd52c0D1xvpjWABd2IBkPCUj5qAkTok26_r_eMlNeDr5HfEBzGcCJrjwEH0fPZQZZt_kTNKxASWr6PhLvPQrEv5g_A5mvG9l6U4fGC3kEhujTDSf2q8JiNU65DsAEqXEvBzW6KfNOAgd20_CmMIHzTrpKdMsBeEwG1M2bl"
+                    class="w-full">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEJ3o2RFu3RVtTotgBjdkwJ9xzxgCDKXVfnPwCZnTjimEgKt-m7cwiH0xs3j2YRv2Kla35nSa5_jILP5seR3nIQADOWM1p2xFu5BNXgp0LTXuZ08sqQmQTzT5pCFRwjxDSnCsWJQDqItfNw7AbS6ecTIS9Q9OHguOeUvBke3Sio6mO3zFc_fA0PjpN7ZMPMe6-y2FOPXoy0qaxd7O8uCjZNRksFs6qJ6P47AC4XOYblUPZ2iZcaozYGGF8YkqYIDjPwMX2G0dHHKa"
+                    class="w-full">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDIvU28lM8RbGFu90orVEaQHA9o_hStpeY69K-R10AcX0qF7XHzWMqJK8j9x-plHmMVmqpsWXTlt0APBfmJU2omazVnxzHi5n5f4C9p4BZkNRH0RgVHtzMxzI2b-iLB-MqsNUQWGwmo0mQUmYHzNHnNbaeIwUm1ZbKuJgPDVtc8tUkJcNLFGMdjv574zmdr-YK2yKgHtlUWj5jEaP2u6owpm2gopnvteCN5EuTyLZJHOHIecrIt-_7fg2MzhdcjG1XpnAMnve66I3f"
+                    class="w-full">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8dHsQ2H7NLGiudhJS2471TslwQH-ZiL6HxfF3Hy4byzJUiifW_ogyWD86jlkrtqMtpLEcXio4jtVTLYePVrrF8wMLVnp1-wh__VEk6TRQt3XgKRbtndj4R27QVdOkNMUgA-ssrHzFCTyCid2xm-IrjNaC_wjjuwltyhDCgNKUa5MhAdd7xia-q9whA21-h2tIizkmkmg0w2ljttZRyjhdpLk1d7eaMKaF9dbDXbQIrlGQu-6DtnElW6c9SIpt1RTMe5LmeTZmS_Zu"
+                    class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- SOUND BATH SECTION -->
+    <section class="section-padding bg-[#354F52] text-white overflow-hidden">
+        <div class="container max-w-4xl">
+            <div class="text-center mb-16 space-y-6">
+                <h2 class="text-5xl md:text-6xl font-display italic text-white">Sanctuary Sounds</h2>
+                <p class="text-white/40 italic text-xl">Close your eyes, breathe, and listen.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Track 1 -->
+                <div
+                    class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[32px] flex items-center gap-6 group hover:bg-white/10 transition-all">
+                    <button
+                        class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-xl group-hover:scale-110 transition-all shrink-0">
+                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                    </button>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-end mb-2">
+                            <h3 class="text-xl font-display italic truncate text-white">Chakra Alignment</h3>
+                            <span class="text-[8px] font-bold tracking-widest opacity-40 shrink-0 ml-2">12:45 //
+                                432Hz</span>
+                        </div>
+                        <div class="flex items-end gap-1 h-8">
+                            <div class="w-1 bg-white/20 h-[40%] rounded-full"></div>
+                            <div class="w-1 bg-white/40 h-[70%] rounded-full"></div>
+                            <div class="w-1 bg-white/60 h-[50%] rounded-full"></div>
+                            <div class="w-1 bg-white/80 h-[90%] rounded-full"></div>
+                            <div class="w-1 bg-white h-[80%] rounded-full"></div>
+                            <div class="w-1 bg-white/30 h-[40%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Track 2 -->
+                <div
+                    class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[32px] flex items-center gap-6 group hover:bg-white/10 transition-all">
+                    <button
+                        class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border border-white/10 group-hover:bg-primary transition-all shrink-0">
+                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                    </button>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-end mb-2">
+                            <h3 class="text-xl font-display italic truncate text-white">Nervous System Reset</h3>
+                            <span class="text-[8px] font-bold tracking-widest opacity-40 shrink-0 ml-2">22:10 //
+                                528Hz</span>
+                        </div>
+                        <div class="flex items-end gap-1 h-8">
+                            <div class="w-1 bg-white/10 h-[30%] rounded-full"></div>
+                            <div class="w-1 bg-white/10 h-[50%] rounded-full"></div>
+                            <div class="w-1 bg-white/10 h-[80%] rounded-full"></div>
+                            <div class="w-1 bg-white/10 h-[60%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- BOTTOM CTA -->
+    <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-deep">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEJ3o2RFu3RVtTotgBjdkwJ9xzxgCDKXVfnPwCZnTjimEgKt-m7cwiH0xs3j2YRv2Kla35nSa5_jILP5seR3nIQADOWM1p2xFu5BNXgp0LTXuZ08sqQmQTzT5pCFRwjxDSnCsWJQDqItfNw7AbS6ecTIS9Q9OHguOeUvBke3Sio6mO3zFc_fA0PjpN7ZMPMe6-y2FOPXoy0qaxd7O8uCjZNRksFs6qJ6P47AC4XOYblUPZ2iZcaozYGGF8YkqYIDjPwMX2G0dHHKa"
+                class="w-full h-full object-cover brightness-[0.4] scale-105">
+        </div>
+        <div class="relative z-10 px-6 max-w-4xl space-y-12">
+            <h2 class="text-6xl md:text-[100px] font-display text-white italic leading-tight drop-shadow-2xl">From
+                Observation <br> to Experience.</h2>
+            <a href="booking.html"
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all">
+                Book Your Session
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2F3E46] text-white/70 py-24 px-[5%] mt-0">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+            <!-- Brand Section -->
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo2.png" class="w-16 h-16 object-contain brightness-0 invert"
+                        alt="Jeniffer Córdoba Logo">
+                    <span
+                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight">Jeniffer
+                        Córdoba</span>
+                </div>
+                <p class="text-white/80 text-xl font-bold italic tracking-wide">
+                    A sanctuary for those seeking balance in a chaotic world.
+                </p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="flex items-center gap-6">
+                <!-- Instagram -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#E1306C] transition-all duration-500 shadow-xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                    </svg>
+                </a>
+                <!-- Mail -->
+                <a href="booking.html"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#87A96A] transition-all duration-500 shadow-xl">
+                    <span
+                        class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
+                </a>
+                <!-- Facebook -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1877F2] transition-all duration-500 shadow-xl">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <!-- YouTube -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#FF0000] transition-all duration-500 shadow-xl overflow-hidden">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                // Keep scrolled state for background visibility on light pages if needed.
+            }
+        });
+
+        // More Menu Toggle
+        const moreBtn = document.getElementById('moreMenuBtn');
+        const moreDropdown = document.getElementById('moreDropdown');
+
+        if (moreBtn && moreDropdown) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle('is-active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                    moreDropdown.classList.remove('is-active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
