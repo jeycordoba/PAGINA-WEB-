@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment // Jennifer Cordoba</title>
+    <title>Investment // Jeniffer Córdoba</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet">
@@ -40,18 +40,28 @@
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
                 <img src="images/logo_optimized.webp" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                Jeniffer Córdoba
+                <span data-i18n="footer_brand">Jeniffer Córdoba</span>
             </a>
             <ul class="nav-links">
-                <li class="hidden xl:block"><a href="index.html">Home</a></li>
-                <li><a href="healing.html">Healing</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="healing.html" data-i18n="nav_healing">Healing</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
 
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
-                <li class="hidden xl:block"><a href="youth.html">Youth</a></li>
-                <li class="hidden xl:block"><a href="corporate.html">Corporate</a></li>
-                <li class="hidden xl:block"><a href="gallery.html">Gallery</a></li>
-                <li class="hidden xl:block"><a href="pricing.html" class="active">Pricing</a></li>
+                <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
+                <li class="hidden xl:block"><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                <!-- <li class="hidden xl:block"><a href="pricing.html" class="active" data-i18n="nav_pricing">Pricing</a></li> -->
+
+                <!-- Language Switcher Desktop (Hidden as per request)
+                <li class="hidden xl:block">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <span class="lang-divider"></span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+                -->
 
                 <!-- More Button -->
                 <li class="relative xl:hidden">
@@ -59,17 +69,27 @@
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
-                        <a href="index.html" class="xl:hidden">Home</a>
-                        <a href="youth.html" class="xl:hidden">Youth</a>
-                        <a href="corporate.html" class="xl:hidden">Corporate</a>
-                        <a href="gallery.html" class="xl:hidden">Gallery</a>
-                        <a href="pricing.html" class="xl:hidden">Pricing</a>
+                        <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
+                        <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
+                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
+                        <a href="gallery.html" class="xl:hidden" data-i18n="nav_gallery">Gallery</a>
+                        <!-- <a href="pricing.html" class="xl:hidden active" data-i18n="nav_pricing">Pricing</a> -->
                         <div class="border-t border-primary/10 my-2"></div>
-                        <a href="booking.html" class="text-primary font-bold">Book Now</a>
+
+                        <!-- Language Switcher Mobile (Hidden as per request)
+                        <div class="lang-switcher-mobile">
+                            <button class="lang-btn active" data-lang="es">Español</button>
+                            <button class="lang-btn" data-lang="en">English</button>
+                        </div>
+                        -->
+                        <div class="border-t border-primary/10 my-2"></div>
+
+                        <a href="booking.html" class="text-primary font-bold" data-i18n="nav_book">Book Now</a>
                     </div>
                 </li>
 
-                <li class="hidden sm:block"><a href="booking.html" class="nav-cta">Book Now</a></li>
+                <li class="hidden sm:block"><a href="booking.html" class="nav-cta" data-i18n="nav_book">Book Now</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -77,9 +97,10 @@
     <!-- HERO -->
     <header class="section-padding pt-40 pb-20">
         <div class="container text-center max-w-4xl">
-            <h1 class="text-6xl md:text-8xl font-display text-deep italic mb-8">Investment in <span
-                    class="text-primary italic">Well-being</span></h1>
-            <p class="text-xl md:text-2xl font-light text-gray-500 max-w-2xl mx-auto italic leading-relaxed">
+            <h1 class="text-6xl md:text-8xl font-display text-deep italic mb-8" data-i18n="pricing_hero_title">
+                Investment in <span class="text-primary italic">Well-being</span></h1>
+            <p class="text-xl md:text-2xl font-light text-gray-500 max-w-2xl mx-auto italic leading-relaxed"
+                data-i18n="pricing_hero_desc">
                 Choose a path that fits your practice and lifestyle. We offer flexible options for every step of your
                 journey.
             </p>
@@ -92,83 +113,91 @@
             <!-- Drop-in -->
             <div class="bg-white p-12 rounded-[40px] shadow-sm border border-deep/5 flex flex-col">
                 <div class="mb-10">
-                    <h3 class="text-3xl font-display text-deep italic">Drop-in Class</h3>
-                    <p class="text-gray-400 text-sm mt-2">Perfect for occasional visits</p>
+                    <h3 class="text-3xl font-display text-deep italic" data-i18n="pricing_tier1_name">Drop-in Class</h3>
+                    <p class="text-gray-400 text-sm mt-2" data-i18n="pricing_tier1_subtitle">Perfect for occasional
+                        visits</p>
                 </div>
                 <div class="mb-10 flex items-baseline">
-                    <span class="text-6xl font-display text-deep">$25</span>
-                    <span class="text-gray-400 ml-2">/class</span>
+                    <span class="text-6xl font-display text-deep" data-i18n="pricing_tier1_price">$25</span>
+                    <span class="text-gray-400 ml-2" data-i18n="pricing_tier1_period">/class</span>
                 </div>
                 <ul class="space-y-6 mb-12 flex-grow">
                     <li class="flex items-center gap-4 text-gray-600">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Single class access</span>
+                        <span data-i18n="pricing_tier1_feat1">Single class access</span>
                     </li>
                     <li class="flex items-center gap-4 text-gray-600">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Valid for 30 days</span>
+                        <span data-i18n="pricing_tier1_feat2">Valid for 30 days</span>
                     </li>
                 </ul>
                 <a href="booking.html"
-                    class="w-full text-center py-5 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">Purchase
+                    class="w-full text-center py-5 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all"
+                    data-i18n="pricing_purchase_now">Purchase
                     Now</a>
             </div>
 
             <!-- Unlimited -->
             <div
                 class="bg-[#354F52] p-12 rounded-[40px] shadow-2xl relative scale-105 transform z-10 text-white flex flex-col">
-                <div
-                    class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.3em] px-6 py-2 rounded-full">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.3em] px-6 py-2 rounded-full"
+                    data-i18n="pricing_tier2_tag">
                     Most Popular</div>
                 <div class="mb-10">
-                    <h3 class="text-3xl font-display italic text-white">Monthly Unlimited</h3>
-                    <p class="text-white/60 text-sm mt-2">Our most flexible membership</p>
+                    <h3 class="text-3xl font-display italic text-white" data-i18n="pricing_tier2_name">Monthly Unlimited
+                    </h3>
+                    <p class="text-white/60 text-sm mt-2" data-i18n="pricing_tier2_subtitle">Our most flexible
+                        membership</p>
                 </div>
                 <div class="mb-10 flex items-baseline">
-                    <span class="text-7xl font-display text-white">$150</span>
-                    <span class="text-white/40 ml-2">/month</span>
+                    <span class="text-7xl font-display text-white" data-i18n="pricing_tier2_price">$150</span>
+                    <span class="text-white/40 ml-2" data-i18n="pricing_tier2_period">/month</span>
                 </div>
                 <ul class="space-y-6 mb-12 flex-grow">
                     <li class="flex items-center gap-4 text-white">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Unlimited daily classes</span>
+                        <span data-i18n="pricing_tier2_feat1">Unlimited daily classes</span>
                     </li>
                     <li class="flex items-center gap-4 text-white">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Free mat & towel rental</span>
+                        <span data-i18n="pricing_tier2_feat2">Free mat & towel rental</span>
                     </li>
                     <li class="flex items-center gap-4 text-white">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>10% boutique discount</span>
+                        <span data-i18n="pricing_tier2_feat3">10% boutique discount</span>
                     </li>
                 </ul>
                 <a href="booking.html"
-                    class="w-full text-center py-5 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-deep transition-all shadow-xl">Purchase
+                    class="w-full text-center py-5 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-deep transition-all shadow-xl"
+                    data-i18n="pricing_purchase_now">Purchase
                     Now</a>
             </div>
 
             <!-- Annual -->
             <div class="bg-white p-12 rounded-[40px] shadow-sm border border-deep/5 flex flex-col">
                 <div class="mb-10">
-                    <h3 class="text-3xl font-display text-deep italic">Annual Membership</h3>
-                    <p class="text-gray-400 text-sm mt-2">Best value for dedicated yogis</p>
+                    <h3 class="text-3xl font-display text-deep italic" data-i18n="pricing_tier3_name">Annual Membership
+                    </h3>
+                    <p class="text-gray-400 text-sm mt-2" data-i18n="pricing_tier3_subtitle">Best value for dedicated
+                        yogis</p>
                 </div>
                 <div class="mb-10 flex items-baseline">
-                    <span class="text-6xl font-display text-deep">$1,400</span>
-                    <span class="text-gray-400 ml-2">/year</span>
+                    <span class="text-6xl font-display text-deep" data-i18n="pricing_tier3_price">$1,400</span>
+                    <span class="text-gray-400 ml-2" data-i18n="pricing_tier3_period">/year</span>
                 </div>
                 <ul class="space-y-6 mb-12 flex-grow">
                     <li class="flex items-center gap-4 text-gray-600">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>All Monthly features</span>
+                        <span data-i18n="pricing_tier3_feat1">All Monthly features</span>
                     </li>
                     <li class="flex items-center gap-4 text-gray-600">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>2 Guest passes per month</span>
+                        <span data-i18n="pricing_tier3_feat2">2 Guest passes per month</span>
                     </li>
                 </ul>
                 <a href="booking.html"
-                    class="w-full text-center py-5 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">Purchase
+                    class="w-full text-center py-5 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all"
+                    data-i18n="pricing_purchase_now">Purchase
                     Now</a>
             </div>
         </div>
@@ -177,12 +206,13 @@
     <!-- FAQ -->
     <section class="section-padding bg-[#9b9773]">
         <div class="container mb-16 text-center">
-            <h2 class="text-5xl md:text-7xl font-display text-deep italic">Frequently Asked Questions</h2>
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic" data-i18n="pricing_faq_title">Frequently
+                Asked Questions</h2>
         </div>
         <div class="container grid md:grid-cols-[2fr_3fr] gap-16 items-center">
             <div class="relative group max-w-[70%] mx-auto md:mx-0">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzWvN4dJt1_Jdmpo545Ykx-aCEQZPTrVLmJNzFlnj7TJ0pu_JLzC27pE2TmXPZe2in-SoOU7UJs7zPbnQ9FwqTMyjg09t0VAisa4ifsWTZWbHdadhWCFT4KmZboFEU5LHE5S_lYD6NqIR_Q87xiRWNNQn7SOuniL9sxhbJ0scu7Eik_BTXwJaLj8mmcpcgckVmprrYP2XzxsPT-f2QF3gCIW-PcJQFcw-fdqfcap85kOv98JsffzyKUbkAoiETeI6uv_-2GneslHZt"
-                    class="rounded-[40px] h-auto w-full object-cover shadow-2xl">
+                    class="rounded-[40px] h-auto w-full object-cover shadow-2xl" alt="FAQ Image">
                 <div class="absolute inset-0 bg-primary/20 rounded-[40px] blur-3xl -z-10 opacity-50"></div>
             </div>
             <div class="space-y-4">
@@ -190,11 +220,12 @@
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-6 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-xl font-display text-deep italic">Can I cancel my membership?</span>
+                        <span class="text-xl font-display text-deep italic" data-i18n="pricing_faq1_q">Can I cancel my
+                            membership?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-500 font-light text-base">
+                    <div class="px-6 pb-6 text-gray-500 font-light text-base" data-i18n="pricing_faq1_a">
                         Our Monthly Unlimited plan requires a 30-day notice for cancellation. Annual memberships are
                         non-refundable but can be transferred to another person if you move.
                     </div>
@@ -202,11 +233,12 @@
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-6 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-xl font-display text-deep italic">Do you offer student discounts?</span>
+                        <span class="text-xl font-display text-deep italic" data-i18n="pricing_faq2_q">Do you offer
+                            student discounts?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-500 font-light text-base">
+                    <div class="px-6 pb-6 text-gray-500 font-light text-base" data-i18n="pricing_faq2_a">
                         Yes, we offer a 15% discount for full-time students and seniors (65+). Please bring a valid ID
                         to the studio to have the discount applied.
                     </div>
@@ -214,11 +246,12 @@
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-6 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-xl font-display text-deep italic">Can I pause my membership?</span>
+                        <span class="text-xl font-display text-deep italic" data-i18n="pricing_faq3_q">Can I pause my
+                            membership?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-500 font-light text-base">
+                    <div class="px-6 pb-6 text-gray-500 font-light text-base" data-i18n="pricing_faq3_a">
                         Monthly Unlimited and Annual members can pause their membership for up to 30 days once per year
                         at no additional cost.
                     </div>
@@ -226,11 +259,12 @@
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-6 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-xl font-display text-deep italic">What should I bring?</span>
+                        <span class="text-xl font-display text-deep italic" data-i18n="pricing_faq4_q">What should I
+                            bring?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-500 font-light text-base">
+                    <div class="px-6 pb-6 text-gray-500 font-light text-base" data-i18n="pricing_faq4_a">
                         Comfortable clothing is key. We recommend bringing a water bottle and your own mat, though we
                         have high-quality mats available for rent.
                     </div>
@@ -242,11 +276,12 @@
     <!-- VISIT US -->
     <section class="section-padding">
         <div class="container mb-16 text-center">
-            <h2 class="text-5xl md:text-7xl font-display text-deep italic">Visit our sanctuary</h2>
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic" data-i18n="pricing_visit_title">Visit our
+                sanctuary</h2>
         </div>
         <div class="container grid md:grid-cols-2 gap-24 items-center">
             <div class="space-y-10">
-                <p class="text-xl text-gray-500 font-light leading-relaxed">
+                <p class="text-xl text-gray-500 font-light leading-relaxed" data-i18n="pricing_visit_desc">
                     Located in the heart of Usaquén, our studio is designed to be your urban escape. High ceilings,
                     natural materials, and an atmosphere of stillness await.
                 </p>
@@ -255,7 +290,8 @@
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">Ak 15 #124-30, Usaquén, Bogotá</span>
+                        <span class="text-lg font-bold text-deep" data-i18n="pricing_visit_address">Ak 15 #124-30,
+                            Usaquén, Bogotá</span>
                     </div>
                     <div class="flex items-center gap-6">
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
@@ -267,13 +303,14 @@
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">mail</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">hello@jennifercordoba.com</span>
+                        <span class="text-lg font-bold text-deep">hello@jeniffercordoba.com</span>
                     </div>
                     <div class="flex items-center gap-6">
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">schedule</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">Mon-Fri: 6AM-9PM | Sat-Sun: 8AM-6PM</span>
+                        <span class="text-lg font-bold text-deep" data-i18n="pricing_visit_hours">Mon-Fri: 6AM-9PM |
+                            Sat-Sun: 8AM-6PM</span>
                     </div>
                 </div>
             </div>
@@ -281,7 +318,7 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4388334466!2d-74.0435!3d4.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDInMDAuMCJOIDc0wrAwMiczNi42Ilc!5e0!3m2!1sen!2sco!4v1234567890"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade" title="Google Maps">
                 </iframe>
             </div>
         </div>
@@ -297,10 +334,11 @@
                     <img src="images/logo_optimized.webp" class="w-16 h-16 object-contain brightness-0 invert"
                         alt="Jeniffer Córdoba Logo">
                     <span
-                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight">Jeniffer
+                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight"
+                        data-i18n="footer_brand">Jeniffer
                         Córdoba</span>
                 </div>
-                <p class="text-white/80 text-xl font-bold italic tracking-wide">
+                <p class="text-white/80 text-xl font-bold italic tracking-wide" data-i18n="footer_tagline">
                     A sanctuary for those seeking balance in a chaotic world.
                 </p>
             </div>
@@ -316,7 +354,7 @@
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
                         fill="currentColor" viewBox="0 0 24 24">
                         <path
-                            d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                            d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 Imm4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
                     </svg>
                 </a>
                 <!-- Mail -->
@@ -325,7 +363,16 @@
                     <span
                         class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
                 </a>
-                <!-- Facebook -->
+                <!-- Spotify (Podcasts) -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
+                    </svg>
+                </a>
+                <!-- Facebook (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1877F2] transition-all duration-500 shadow-xl">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -334,7 +381,8 @@
                             d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
                 </a>
-                <!-- YouTube -->
+                -->
+                <!-- YouTube (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#FF0000] transition-all duration-500 shadow-xl overflow-hidden">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -343,10 +391,14 @@
                             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>
                 </a>
+                -->
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <script>
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {

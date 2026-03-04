@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking & Contact Portal // Jennifer Cordoba</title>
+    <title>Booking & Contact Portal // Jeniffer Córdoba</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet">
@@ -40,18 +40,28 @@
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
                 <img src="images/logo_optimized.webp" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                Jeniffer Córdoba
+                <span data-i18n="footer_brand">Jeniffer Córdoba</span>
             </a>
             <ul class="nav-links">
-                <li class="hidden xl:block"><a href="index.html">Home</a></li>
-                <li><a href="healing.html">Healing</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="healing.html" data-i18n="nav_healing">Healing</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
 
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
-                <li class="hidden xl:block"><a href="youth.html">Youth</a></li>
-                <li class="hidden xl:block"><a href="corporate.html">Corporate</a></li>
-                <li class="hidden xl:block"><a href="gallery.html">Gallery</a></li>
-                <li class="hidden xl:block"><a href="pricing.html">Pricing</a></li>
+                <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
+                <li class="hidden xl:block"><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
+
+                <!-- Language Switcher Desktop (Hidden as per request)
+                <li class="hidden xl:block">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <span class="lang-divider"></span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+                -->
 
                 <!-- More Button -->
                 <li class="relative xl:hidden">
@@ -59,17 +69,27 @@
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
-                        <a href="index.html" class="xl:hidden">Home</a>
-                        <a href="youth.html" class="xl:hidden">Youth</a>
-                        <a href="corporate.html" class="xl:hidden">Corporate</a>
-                        <a href="gallery.html" class="xl:hidden">Gallery</a>
-                        <a href="pricing.html" class="xl:hidden">Pricing</a>
+                        <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
+                        <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
+                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
+                        <a href="gallery.html" class="xl:hidden" data-i18n="nav_gallery">Gallery</a>
+                        <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
                         <div class="border-t border-primary/10 my-2"></div>
-                        <a href="booking.html" class="text-primary font-bold">Book Now</a>
+
+                        <!-- Language Switcher Mobile (Hidden as per request)
+                        <div class="lang-switcher-mobile">
+                            <button class="lang-btn active" data-lang="es">Español</button>
+                            <button class="lang-btn" data-lang="en">English</button>
+                        </div>
+                        -->
+                        <div class="border-t border-primary/10 my-2"></div>
+
+                        <a href="booking.html" class="text-primary font-bold active" data-i18n="nav_book">Book Now</a>
                     </div>
                 </li>
 
-                <li class="hidden sm:block"><a href="booking.html" class="nav-cta active">Book Now</a></li>
+                <li class="hidden sm:block"><a href="booking.html" class="nav-cta active" data-i18n="nav_book">Book
+                        Now</a></li>
             </ul>
         </div>
     </nav>
@@ -77,13 +97,16 @@
     <!-- HERO -->
     <header class="relative aspect-video flex items-center justify-center text-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
-            <img src="images/dark_forest_hero.png" class="w-full h-full object-cover brightness-[0.4] scale-105">
+            <img src="images/dark_forest_hero.png" class="w-full h-full object-cover brightness-[0.4] scale-105"
+                alt="Hero Background">
         </div>
         <div class="relative z-10 px-6 max-w-4xl space-y-12">
-            <h1 class="text-6xl md:text-[100px] font-display text-white italic leading-tight drop-shadow-2xl">
+            <h1 class="text-6xl md:text-[100px] font-display text-white italic leading-tight drop-shadow-2xl"
+                data-i18n="booking_hero_title">
                 Your Transformation <br> Starts Here.
             </h1>
-            <p class="text-xl md:text-2xl font-light text-white/70 max-w-2xl mx-auto italic leading-relaxed">
+            <p class="text-xl md:text-2xl font-light text-white/70 max-w-2xl mx-auto italic leading-relaxed"
+                data-i18n="booking_hero_desc">
                 Select a time for your practice or reach out for specialized inquiries. Atmospheric calm awaits your
                 arrival.
             </p>
@@ -94,8 +117,10 @@
     <section class="section-padding">
         <div class="container">
             <div class="bg-white rounded-[60px] border border-deep/5 shadow-2xl p-6 md:p-12 text-center group">
-                <h3 class="text-4xl font-display text-deep italic mb-6">Real-time Scheduling</h3>
-                <p class="text-gray-400 italic mb-12 text-lg">Integrated directly with your journey. Select your
+                <h3 class="text-4xl font-display text-deep italic mb-6" data-i18n="booking_scheduling_title">Real-time
+                    Scheduling</h3>
+                <p class="text-gray-400 italic mb-12 text-lg" data-i18n="booking_scheduling_desc">Integrated directly
+                    with your journey. Select your
                     practice below.</p>
 
                 <!-- Calendly Inline Widget -->
@@ -113,58 +138,71 @@
             <!-- Left Header -->
             <div class="space-y-12">
                 <div class="space-y-6">
-                    <h2 class="text-5xl md:text-7xl font-display italic text-white">I love questions!</h2>
-                    <p class="text-white/60 text-xl font-light leading-relaxed">
+                    <h2 class="text-5xl md:text-7xl font-display italic text-white" data-i18n="booking_contact_title">I
+                        love questions!</h2>
+                    <p class="text-white/60 text-xl font-light leading-relaxed" data-i18n="booking_contact_desc">
                         Ready to begin your inward journey? Tell us more about how we can support your transformation.
                     </p>
                 </div>
                 <div class="rounded-[40px] overflow-hidden shadow-2xl h-[500px] border border-white/10">
                     <img src="images/yogapose2.png"
-                        class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000">
+                        class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
+                        alt="Contact Image">
                 </div>
             </div>
 
             <!-- Right Form -->
             <div class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[60px] p-8 md:p-16 shadow-2xl">
-                <form class="space-y-8">
+                <form class="space-y-8" action="#" method="POST">
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1">Full
+                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
+                            data-i18n="booking_form_name_label">Full
                             Name</label>
-                        <input type="text" placeholder="Full Name"
+                        <input type="text" placeholder="Full Name" data-i18n-placeholder="booking_form_name_placeholder"
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-2">
-                            <label
-                                class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1">Email</label>
+                            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
+                                data-i18n="booking_form_email_label">Email</label>
                             <input type="email" placeholder="Email Address"
+                                data-i18n-placeholder="booking_form_email_placeholder"
                                 class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                         <div class="space-y-2">
-                            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1">Phone
+                            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
+                                data-i18n="booking_form_phone_label">Phone
                                 Number</label>
                             <input type="tel" placeholder="Phone Number"
+                                data-i18n-placeholder="booking_form_phone_placeholder"
                                 class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1">Service</label>
+                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
+                            data-i18n="booking_form_service_label">Service</label>
                         <select
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white appearance-none cursor-pointer outline-none">
-                            <option class="bg-[#354F52]">Yoga Practice</option>
-                            <option class="bg-[#354F52]">Quantum Healing</option>
-                            <option class="bg-[#354F52]">Kids Mindfulness</option>
-                            <option class="bg-[#354F52]">Corporate Wellness</option>
+                            <option class="bg-[#354F52]" data-i18n="booking_form_service_yoga">Yoga Practice</option>
+                            <option class="bg-[#354F52]" data-i18n="booking_form_service_healing">Quantum Healing
+                            </option>
+                            <option class="bg-[#354F52]" data-i18n="booking_form_service_mindfulness">Kids Mindfulness
+                            </option>
+                            <option class="bg-[#354F52]" data-i18n="booking_form_service_corporate">Corporate Wellness
+                            </option>
                         </select>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1">Additional
+                        <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
+                            data-i18n="booking_form_message_label">Additional
                             Message</label>
                         <textarea rows="4" placeholder="Share your intentions..."
+                            data-i18n-placeholder="booking_form_message_placeholder"
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white resize-none transition-all placeholder:text-white/30 outline-none"></textarea>
                     </div>
                     <button type="submit"
-                        class="bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none">
+                        class="bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none"
+                        data-i18n="booking_form_submit">
                         Begin My Journey
                     </button>
                 </form>
@@ -175,23 +213,26 @@
     <!-- FAQ SECTION -->
     <section class="section-padding bg-[#CAD2C5]">
         <div class="container mb-20 text-center">
-            <h2 class="text-5xl md:text-7xl font-display text-deep italic">Booking & Protocols</h2>
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic" data-i18n="booking_protocols_title">Booking &
+                Protocols</h2>
         </div>
         <div class="container grid lg:grid-cols-2 gap-24 items-start">
             <div class="rounded-[40px] overflow-hidden shadow-2xl h-[600px] relative group">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA4PZddhm0zw3I5bnvgIcx3MUzItmPvOephKecfxJOP4L-LOpr69Owb7IWtIqKasU7yhHvzWZzYWylN_18m7RgBnAq6rUmOAj2TCLpUYyKMZtBPLoJ0kkvXbJ8eMl1mc8fdXFJkstbZ_A2rVTGBp6RrzTjuigGg7hf2EYKtS9qYBpAEfWWlf-zV24s1pqFFIPeH0icImu25W6woMZbjYLkIb2zf8d7J5LsIN352Ob1vgq7gD31Wzxsbb7-Uj12vtAr-kRO-WcWqtMQ"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-all duration-[2000ms]">
+                    class="w-full h-full object-cover group-hover:scale-110 transition-all duration-[2000ms]"
+                    alt="Booking Protocols Image">
                 <div class="absolute inset-0 bg-primary/10"></div>
             </div>
             <div class="space-y-8">
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-2xl font-display text-deep italic">Cancellations & Rescheduling</span>
+                        <span class="text-2xl font-display text-deep italic" data-i18n="booking_faq1_q">Cancellations &
+                            Rescheduling</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-8 text-gray-500 font-light text-lg">
+                    <div class="px-8 pb-8 text-gray-500 font-light text-lg" data-i18n="booking_faq1_a">
                         We require 24-hour notice for all cancellations. This allows us to offer the space to
                         another student on the path. Sessions cancelled within 24 hours are non-refundable but can
                         be gifted.
@@ -200,11 +241,12 @@
                 <details class="group bg-white rounded-3xl border border-deep/5 overflow-hidden">
                     <summary
                         class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-primary/5 transition-all">
-                        <span class="text-2xl font-display text-deep italic">Payment Options</span>
+                        <span class="text-2xl font-display text-deep italic" data-i18n="booking_faq2_q">Payment
+                            Options</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-8 text-gray-500 font-light text-lg">
+                    <div class="px-8 pb-8 text-gray-500 font-light text-lg" data-i18n="booking_faq2_a">
                         We accept all major credit cards and bank transfers. Secure payments via our Booking Widget
                         are preferred for initial reservations.
                     </div>
@@ -216,11 +258,12 @@
     <!-- OUR LOCATION -->
     <section class="section-padding bg-alabaster">
         <div class="container mb-16 text-center">
-            <h2 class="text-5xl md:text-7xl font-display text-deep italic">Our location</h2>
+            <h2 class="text-5xl md:text-7xl font-display text-deep italic" data-i18n="pricing_visit_title">Our location
+            </h2>
         </div>
         <div class="container grid md:grid-cols-2 gap-24 items-center">
             <div class="space-y-10">
-                <p class="text-xl text-gray-500 font-light leading-relaxed">
+                <p class="text-xl text-gray-500 font-light leading-relaxed" data-i18n="pricing_visit_desc">
                     Located in the heart of Usaquén, our studio is designed to be your urban escape. High ceilings,
                     natural materials, and an atmosphere of stillness await.
                 </p>
@@ -229,7 +272,8 @@
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">Ak 15 #124-30, Usaquén, Bogotá</span>
+                        <span class="text-lg font-bold text-deep" data-i18n="pricing_visit_address">Ak 15 #124-30,
+                            Usaquén, Bogotá</span>
                     </div>
                     <div class="flex items-center gap-6">
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
@@ -241,13 +285,14 @@
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">mail</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">hello@jennifercordoba.com</span>
+                        <span class="text-lg font-bold text-deep">hello@jeniffercordoba.com</span>
                     </div>
                     <div class="flex items-center gap-6">
                         <div class="w-12 h-12 bg-mint flex items-center justify-center rounded-2xl text-primary">
                             <span class="material-symbols-outlined">schedule</span>
                         </div>
-                        <span class="text-lg font-bold text-deep">Mon-Fri: 6AM-9PM | Sat-Sun: 8AM-6PM</span>
+                        <span class="text-lg font-bold text-deep" data-i18n="pricing_visit_hours">Mon-Fri: 6AM-9PM |
+                            Sat-Sun: 8AM-6PM</span>
                     </div>
                 </div>
             </div>
@@ -255,7 +300,7 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4388334466!2d-74.0435!3d4.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDInMDAuMCJOIDc0wrAwMiczNi42Ilc!5e0!3m2!1sen!2sco!4v1234567890"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade" title="Google Maps">
                 </iframe>
             </div>
         </div>
@@ -271,10 +316,11 @@
                     <img src="images/logo_optimized.webp" class="w-16 h-16 object-contain brightness-0 invert"
                         alt="Jeniffer Córdoba Logo">
                     <span
-                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight">Jeniffer
+                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight"
+                        data-i18n="footer_brand">Jeniffer
                         Córdoba</span>
                 </div>
-                <p class="text-white/80 text-xl font-bold italic tracking-wide">
+                <p class="text-white/80 text-xl font-bold italic tracking-wide" data-i18n="footer_tagline">
                     A sanctuary for those seeking balance in a chaotic world.
                 </p>
             </div>
@@ -299,7 +345,16 @@
                     <span
                         class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
                 </a>
-                <!-- Facebook -->
+                <!-- Spotify (Podcasts) -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
+                    </svg>
+                </a>
+                <!-- Facebook (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1877F2] transition-all duration-500 shadow-xl">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -308,7 +363,8 @@
                             d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
                 </a>
-                <!-- YouTube -->
+                -->
+                <!-- YouTube (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#FF0000] transition-all duration-500 shadow-xl overflow-hidden">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -317,10 +373,14 @@
                             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>
                 </a>
+                -->
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <script>
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {

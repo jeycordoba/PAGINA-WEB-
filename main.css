@@ -143,6 +143,7 @@ h4,
 .nav-links a.active {
     color: var(--primary-accent);
     opacity: 1;
+    font-weight: 700;
 }
 
 .nav-cta {
@@ -155,6 +156,69 @@ h4,
 .nav-cta:hover {
     background: var(--primary-accent);
     color: var(--white) !important;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-round);
+    background: rgba(156, 175, 136, 0.1);
+    border: 1px solid rgba(50, 47, 32, 0.15);
+    /* Increased contrast with espresso/deep-accent */
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: var(--transition-standard);
+}
+
+.main-nav.nav-transparent:not(.scrolled) .lang-switcher {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: var(--transition-standard);
+    color: var(--deep-accent);
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    padding: 2px 4px;
+}
+
+.main-nav.nav-transparent:not(.scrolled) .lang-btn {
+    color: var(--white);
+}
+
+.lang-btn:hover {
+    opacity: 0.7;
+}
+
+.lang-btn.active {
+    opacity: 1;
+    color: var(--primary-accent);
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.main-nav.nav-transparent:not(.scrolled) .lang-btn.active {
+    color: var(--white);
+    opacity: 1;
+}
+
+.lang-divider {
+    width: 1px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main-nav.nav-transparent:not(.scrolled) .lang-divider {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* More Menu Responsive Utility Styles */
@@ -213,7 +277,8 @@ h4,
     align-items: center;
     padding: 1rem 1.25rem;
     border-radius: 12px;
-    color: var(--deep-accent);
+    color: var(--deep-accent) !important;
+    /* Forced charcoal brown for visibility on white bg */
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -222,9 +287,19 @@ h4,
     transition: all 0.3s ease;
 }
 
+.more-dropdown a.text-primary {
+    color: var(--primary-accent) !important;
+}
+
+.more-dropdown a.active {
+    color: var(--primary-accent) !important;
+    font-weight: 700;
+    background: rgba(149, 80, 49, 0.05);
+}
+
 .more-dropdown a:hover {
     background: rgba(135, 169, 106, 0.08);
-    color: var(--primary-accent);
+    color: var(--primary-accent) !important;
     padding-left: 1.5rem;
 }
 
@@ -261,6 +336,10 @@ h4,
 .main-nav.scrolled .brand-logo,
 .main-nav.scrolled .nav-links a {
     color: var(--deep-accent);
+}
+
+.main-nav.scrolled .nav-links a.active {
+    color: var(--primary-accent);
 }
 
 /* Hero & Section Overlays */

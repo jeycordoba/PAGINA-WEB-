@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeniffer Córdoba // Lead Practitioner</title>
+    <title>A resonance beyond borders // Jeniffer Córdoba Yoga</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- I18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 
     <script>
         tailwind.config = {
@@ -44,15 +48,25 @@
                 Jeniffer Córdoba
             </a>
             <ul class="nav-links">
-                <li class="hidden xl:block"><a href="index.html" class="active">Home</a></li>
-                <li><a href="healing.html">Healing</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="hidden xl:block"><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="healing.html" data-i18n="nav_healing">Healing</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
 
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
-                <li class="hidden xl:block"><a href="youth.html">Youth</a></li>
-                <li class="hidden xl:block"><a href="corporate.html">Corporate</a></li>
-                <li class="hidden xl:block"><a href="gallery.html">Gallery</a></li>
-                <li class="hidden xl:block"><a href="pricing.html">Pricing</a></li>
+                <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
+                <li class="hidden xl:block"><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
+
+                <!-- Language Switcher Desktop (Hidden as per request)
+                <li class="hidden xl:block">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <span class="lang-divider"></span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+                -->
 
                 <!-- More Button -->
                 <li class="relative xl:hidden">
@@ -60,14 +74,22 @@
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
-                        <a href="youth.html" class="xl:hidden">Youth</a>
-                        <a href="corporate.html" class="xl:hidden">Corporate</a>
-                        <a href="gallery.html" class="xl:hidden">Gallery</a>
-                        <a href="pricing.html" class="xl:hidden">Pricing</a>
+                        <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
+                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
+                        <a href="gallery.html" class="xl:hidden" data-i18n="nav_gallery">Gallery</a>
+                        <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
+
+                        <!-- Language Switcher Mobile (Hidden as per request)
+                        <div class="lang-switcher-mobile">
+                            <button class="lang-btn active" data-lang="es">Español</button>
+                            <button class="lang-btn" data-lang="en">English</button>
+                        </div>
+                        -->
                     </div>
                 </li>
 
-                <li class="hidden sm:block"><a href="booking.html" class="nav-cta">Book Now</a></li>
+                <li class="hidden sm:block"><a href="booking.html" class="nav-cta" data-i18n="nav_book">Book Now</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -81,19 +103,20 @@
         </div>
         <div class="relative z-10 text-center px-6 max-w-7xl">
             <h1 class="hero-title-main text-white mb-12 drop-shadow-2xl">
-                <span class="brand-word-sans">Balance</span>
+                <span class="brand-word-sans" data-i18n="hero_balance">Balance</span>
                 <span class="brand-sep">//</span>
-                <span class="brand-word-serif">Calm</span>
+                <span class="brand-word-serif" data-i18n="hero_calm">Calm</span>
                 <span class="brand-sep">//</span>
-                <span class="brand-word-sans">Reconnect</span>
+                <span class="brand-word-sans" data-i18n="hero_reconnect">Reconnect</span>
             </h1>
-            <p
-                class="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-16 tracking-wide leading-relaxed italic opacity-90">
+            <p class="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-16 tracking-wide leading-relaxed italic opacity-90"
+                data-i18n="hero_description">
                 Discover your path to inner peace through curated movements and mindful breathing in our organic
                 sanctuary.
             </p>
             <a href="booking.html"
-                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all">
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
+                data-i18n="hero_cta">
                 Start Your Journey
             </a>
         </div>
@@ -107,19 +130,24 @@
         <div class="container grid md:grid-cols-2 gap-24 items-center">
             <div class="space-y-12">
                 <div>
-                    <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block">Our
+                    <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block"
+                        data-i18n="philosophy_tag">Our
                         Philosophy</span>
-                    <h2 class="text-5xl md:text-7xl font-display text-deep italic">Holistic Approach</h2>
+                    <h2 class="text-5xl md:text-7xl font-display text-deep italic" data-i18n="philosophy_title">Holistic
+                        Approach</h2>
                 </div>
-                <p class="text-gray-500 text-xl leading-relaxed italic font-light">We believe in the power of yoga to
+                <p class="text-gray-500 text-xl leading-relaxed italic font-light" data-i18n="philosophy_desc">We
+                    believe in the power of yoga to
                     transform your physical, mental, and emotional health.</p>
                 <div class="space-y-16">
                     <div class="flex gap-10 group">
                         <span
                             class="text-primary/20 font-display text-4xl group-hover:text-primary transition-colors duration-500">01.</span>
                         <div>
-                            <h4 class="text-2xl font-display text-deep italic mb-3">Mindful Movement</h4>
-                            <p class="text-gray-500 leading-relaxed max-w-sm font-light">Improve flexibility, posture,
+                            <h4 class="text-2xl font-display text-deep italic mb-3" data-i18n="philosophy_step1_title">
+                                Mindful Movement</h4>
+                            <p class="text-gray-500 leading-relaxed max-w-sm font-light"
+                                data-i18n="philosophy_step1_desc">Improve flexibility, posture,
                                 and strength through guided sequences tailored to your level.</p>
                         </div>
                     </div>
@@ -127,8 +155,10 @@
                         <span
                             class="text-primary/20 font-display text-4xl group-hover:text-primary transition-colors duration-500">02.</span>
                         <div>
-                            <h4 class="text-2xl font-display text-deep italic mb-3">Breath Awareness</h4>
-                            <p class="text-gray-500 leading-relaxed max-w-sm font-light">Learn to regulate stress and
+                            <h4 class="text-2xl font-display text-deep italic mb-3" data-i18n="philosophy_step2_title">
+                                Breath Awareness</h4>
+                            <p class="text-gray-500 leading-relaxed max-w-sm font-light"
+                                data-i18n="philosophy_step2_desc">Learn to regulate stress and
                                 improve focus with controlled breathing techniques.</p>
                         </div>
                     </div>
@@ -136,20 +166,23 @@
                         <span
                             class="text-primary/20 font-display text-4xl group-hover:text-primary transition-colors duration-500">03.</span>
                         <div>
-                            <h4 class="text-2xl font-display text-deep italic mb-3">Community Support</h4>
-                            <p class="text-gray-500 leading-relaxed max-w-sm font-light">Join a welcoming community that
+                            <h4 class="text-2xl font-display text-deep italic mb-3" data-i18n="philosophy_step3_title">
+                                Community Support</h4>
+                            <p class="text-gray-500 leading-relaxed max-w-sm font-light"
+                                data-i18n="philosophy_step3_desc">Join a welcoming community that
                                 motivates and uplifts you on your personal journey.</p>
                         </div>
                     </div>
                 </div>
                 <a href="about.html"
-                    class="inline-block mt-12 bg-primary text-white px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-deep transition-all">
+                    class="inline-block mt-12 bg-primary text-white px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-deep transition-all"
+                    data-i18n="philosophy_cta">
                     Explore Our Story
                 </a>
             </div>
             <div class="relative">
                 <div class="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl relative z-10">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3xxTZiLRqOgovtU71-sKN92YIWjjGJtIvCAEha-yvXB7tzafG67eFeXmtrCKkJIRqvOGx6Say6qsNdFsjpaIHl9gdr8jkTDFvF2txmfXU5wNh6J6uWFgp-GObBP6pkf0jdrd3ZJhbwdUEVSDvycY_zpaMdcHPQv4ODOsJLu-DO6-O_zsqjaTOlKkuEwq0YzO6bkBu3scGjLUXLBU9JqNqVHxW23BQt8Nxq-w5xLafSVPg-H2sq93J_5bLIxYwhxQkDF-xqUat1jaU"
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3xxTZiLRqOgovtU71-sKN92YIWjjGJtIvCAEha-yvXB7tzafG67eFeMmtrCKkJIRqvOGx6Say6qsNdFsjpaIHl9gdr8jkTDFvF2txmfXU5wNh6J6uWFgp-GObBP6pkf0jdrd3ZJhbwdUEVSDvycY_zpaMdcHPQv4ODOsJLu-DO6-O_zsqjaTOlKkuEwq0YzO6bkBu3scGjLUXLBU9JqNqVHxW23BQt8Nxq-w5xLafSVPg-H2sq93J_5bLIxYwhxQkDF-xqUat1jaU"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
@@ -161,9 +194,11 @@
     <section class="section-padding bg-[#9b9773] overflow-hidden" id="practices">
         <div class="container">
             <div class="text-center mb-24">
-                <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block">Our
+                <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block"
+                    data-i18n="practices_tag">Our
                     Curation</span>
-                <h2 class="text-5xl md:text-7xl font-display text-white italic">Signature Practices</h2>
+                <h2 class="text-5xl md:text-7xl font-display text-white italic" data-i18n="practices_title">Signature
+                    Practices</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8 items-stretch">
                 <!-- Practice 1: Yoga -->
@@ -175,16 +210,16 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                         </div>
                         <div class="flex-grow flex flex-col">
-                            <h3
-                                class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors">
+                            <h3 class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors"
+                                data-i18n="practices_item1_title">
                                 Yoga Practice</h3>
-                            <p
-                                class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors">
+                            <p class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors"
+                                data-i18n="practices_item1_desc">
                                 A seamless blend of Hatha and Vinyasa styles designed to align your physical body with
                                 your breath.</p>
                             <a href="healing.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.25em] text-deep group-hover:text-white transition-colors">
-                                Learn More <span
+                                <span data-i18n="common_learn_more">Learn More</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
                             </a>
                         </div>
@@ -200,16 +235,16 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                         </div>
                         <div class="flex-grow flex flex-col">
-                            <h3
-                                class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors">
+                            <h3 class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors"
+                                data-i18n="practices_item2_title">
                                 Quantum Healing</h3>
-                            <p
-                                class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors">
+                            <p class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors"
+                                data-i18n="practices_item2_desc">
                                 Energetic realignment sessions that target the nervous system and subconscious patterns.
                             </p>
                             <a href="healing.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.25em] text-deep group-hover:text-white transition-colors">
-                                Learn More <span
+                                <span data-i18n="common_learn_more">Learn More</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
                             </a>
                         </div>
@@ -225,16 +260,16 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                         </div>
                         <div class="flex-grow flex flex-col">
-                            <h3
-                                class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors">
+                            <h3 class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors"
+                                data-i18n="practices_item3_title">
                                 Deep Meditation</h3>
-                            <p
-                                class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors">
+                            <p class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors"
+                                data-i18n="practices_item3_desc">
                                 Advanced breathwork and guided meditation to cultivate presence and radical emotional
                                 clarity.</p>
                             <a href="healing.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.25em] text-deep group-hover:text-white transition-colors">
-                                Learn More <span
+                                <span data-i18n="common_learn_more">Learn More</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
                             </a>
                         </div>
@@ -250,29 +285,34 @@
             <div class="relative">
                 <div
                     class="w-full aspect-square md:aspect-[4/5] rounded-[100px] overflow-hidden shadow-2xl border-[15px] border-alabaster">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1N3EH5GZNpsqlV7svqdgORcaSOCcyza6NlysCh5QXUG3_9lLxo1fHxLpCND8ipFfC2fcNLs4k5h99wg_ydqE-j7h8_eYJ48dw5NWGvTj6HeDu3h3DxuqiMhi20JFG0OfUtZyap_JqyemN1OreDFMmXeBTODBRK-dPyQjifHA7CPyk7ZgneUx0n8jpExTOxbjI3XREm9ABOY9KN8MbziczgQaXmkqrs2x76mT5jk4KboNANTtuIwaZNbCPVnxLbR1V2whcVS7G4WZh"
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1N3EH5GZNpsqlV7svqdgORcaSOCcyza6NlysCh5QXUG3_9lLxo1fHxLpCND8ipFfC2fcNLs4k5h99wg_ydqE-j7h8_eYJ48dw5NWGvTj6HeDu3h3DxuqiMhi20JFG0OfUtZyap_JqyemN1OreDFMmXeBTODBRK-dPyQjifHA7CPyk7ZgneUx0n8jpExTOxbjI3XREm9ABOY9KN5Mb3iczgQaXmkqrs2x76mT5jk4KboNANTtuIwaZNbCPVnxLbR1V2whcVS7G4WZh"
                         class="w-full h-full object-cover grayscale-[20%]">
                 </div>
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
             </div>
             <div class="space-y-10">
-                <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block">The Heart of
+                <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block"
+                    data-i18n="founder_tag">The Heart of
                     Stillness</span>
-                <h2 class="text-6xl md:text-8xl font-display text-deep italic leading-none">Jennifer Cordoba</h2>
-                <p class="text-primary font-bold text-xs tracking-[0.3em] uppercase">Lead Practitioner & Founder</p>
-                <p class="text-deep text-2xl md:text-3xl font-display italic opacity-90 leading-tight">
+                <h2 class="text-6xl md:text-8xl font-display text-deep italic leading-none" data-i18n="founder_name">
+                    Jeniffer Córdoba</h2>
+                <p class="text-primary font-bold text-xs tracking-[0.3em] uppercase" data-i18n="founder_role">Lead
+                    Practitioner & Founder</p>
+                <p class="text-deep text-2xl md:text-3xl font-display italic opacity-90 leading-tight"
+                    data-i18n="founder_quote">
                     "Yoga is not just a practice; it is a homecoming to the self. My mission is to provide a sanctuary
                     where you can rediscover your innate stillness."
                 </p>
-                <p class="text-gray-500 text-lg font-light leading-relaxed">
-                    With over fifteen years of dedicated study, Jennifer specializes in the profound synergy of <span
-                        class="text-deep font-medium">Hatha</span> and transformative <span
-                        class="text-deep font-medium">Breathwork</span>. Her sessions are crafted to bridge the gap
+                <p class="text-gray-500 text-lg font-light leading-relaxed" data-i18n="founder_desc">
+                    With over fifteen years of dedicated study, Jeniffer specializes in the profound synergy of <span
+                        class="text-primary italic">Hatha</span> and transformative <span
+                        class="text-primary italic">Breathwork</span>. Her sessions are crafted to bridge the gap
                     between physical strength and mental clarity.
                 </p>
                 <div class="pt-8 flex flex-col sm:flex-row gap-6">
                     <a href="about.html"
-                        class="founder-btn-accent bg-primary text-white border-2 border-primary px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-center transition-all duration-300 hover:bg-transparent hover:text-[#322F20] hover:border-[#322F20]">Read
+                        class="founder-btn-accent bg-primary text-white border-2 border-primary px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-center transition-all duration-300 hover:bg-transparent hover:text-[#322F20] hover:border-[#322F20]"
+                        data-i18n="founder_cta">Read
                         Her Story</a>
                 </div>
             </div>
@@ -282,7 +322,8 @@
     <!-- TESTIMONIAL SECTION -->
     <section class="section-padding bg-mint relative overflow-hidden" id="testimonials">
         <div class="container relative z-10 flex flex-col items-center">
-            <h2 class="text-5xl md:text-7xl font-display text-[#322F20] italic mb-16 text-center">Stories of
+            <h2 class="text-5xl md:text-7xl font-display text-[#322F20] italic mb-16 text-center"
+                data-i18n="testimonials_title">Stories of
                 Transformation
             </h2>
 
@@ -345,14 +386,14 @@
             },
             {
                 id: 3,
-                quote: "Quantum healing helped me unlock creative blocks I'd carried for years. Jennifer has a truly unique gift for energy work.",
+                quote: "Quantum healing helped me unlock creative blocks I'd carried for years. Jeniffer has a truly unique gift for energy work.",
                 author: "Elena Rodriguez",
                 role: "Visual Artist",
                 avatar: "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1200"
             },
             {
                 id: 4,
-                quote: "The corporate retreat Jennifer led for our executive team was a turning point. We communicate with more empathy and focus now.",
+                quote: "The corporate retreat Jeniffer led for our executive team was a turning point. We communicate with more empathy and focus now.",
                 author: "James Whitaker",
                 role: "CEO, TechFlow",
                 avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200"
@@ -366,7 +407,7 @@
             },
             {
                 id: 6,
-                quote: "An experience that words fail to describe. Jennifer creates a vessel for profound introspection and physical release.",
+                quote: "An experience that words fail to describe. Jeniffer creates a vessel for profound introspection and physical release.",
                 author: "David Brooks",
                 role: "Journalist",
                 avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200"
@@ -382,6 +423,8 @@
 
             const quoteEl = document.getElementById('testimonialQuote');
             const roleEl = document.getElementById('testimonialRole');
+            const lang = window.i18n ? window.i18n.currentLang : 'es';
+            const trans = window.translations[lang];
 
             // Start exit animation
             quoteEl.classList.remove('opacity-100', 'blur-0', 'scale-100');
@@ -392,8 +435,11 @@
 
             setTimeout(() => {
                 activeIndex = index;
-                quoteEl.textContent = testimonialsData[index].quote;
-                roleEl.textContent = testimonialsData[index].role;
+                const quoteKey = `testimonial_${index + 1}_quote`;
+                const roleKey = `testimonial_${index + 1}_role`;
+
+                quoteEl.textContent = trans[quoteKey] || testimonialsData[index].quote;
+                roleEl.textContent = trans[roleKey] || testimonialsData[index].role;
 
                 // Re-render nav to update active state
                 renderNav();
@@ -410,6 +456,22 @@
                 }, 400);
             }, 300);
         }
+
+        // Handle language changes
+        window.addEventListener('languageChanged', (e) => {
+            const lang = e.detail.language;
+            const trans = window.translations[lang];
+            const quoteEl = document.getElementById('testimonialQuote');
+            const roleEl = document.getElementById('testimonialRole');
+
+            if (quoteEl && roleEl && trans) {
+                const quoteKey = `testimonial_${activeIndex + 1}_quote`;
+                const roleKey = `testimonial_${activeIndex + 1}_role`;
+                quoteEl.textContent = trans[quoteKey];
+                roleEl.textContent = trans[roleKey];
+            }
+            renderNav();
+        });
 
         function renderNav() {
             const nav = document.getElementById('testimonialNav');
@@ -459,16 +521,18 @@
                 class="w-full h-full object-cover brightness-[0.4] scale-110">
         </div>
         <div class="relative z-10 text-center px-6 max-w-5xl space-y-16">
-            <h2 class="text-7xl md:text-[100px] font-display text-white italic font-bold leading-[0.9] drop-shadow-2xl">
+            <h2 class="text-7xl md:text-[100px] font-display text-white italic font-bold leading-[0.9] drop-shadow-2xl"
+                data-i18n="cta_title">
                 One
                 Decision Can <br>Change Your Life</h2>
             <a href="booking.html"
-                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all">
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
+                data-i18n="cta_button">
                 Start Your Journey
             </a>
             <div class="flex items-center justify-center gap-6 text-white/40 pt-10">
                 <span class="w-12 h-px bg-white/20"></span>
-                <p class="text-sm uppercase tracking-[0.4em] font-bold">Limited Availability</p>
+                <p class="text-sm uppercase tracking-[0.4em] font-bold" data-i18n="cta_limited">Limited Availability</p>
                 <span class="w-12 h-px bg-white/20"></span>
             </div>
         </div>
@@ -484,10 +548,11 @@
                     <img src="images/logo_optimized.webp" class="w-16 h-16 object-contain brightness-0 invert"
                         alt="Jeniffer Córdoba Logo">
                     <span
-                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight">Jeniffer
+                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight"
+                        data-i18n="footer_brand">Jeniffer
                         Córdoba</span>
                 </div>
-                <p class="text-white/80 text-xl font-bold italic tracking-wide">
+                <p class="text-white/80 text-xl font-bold italic tracking-wide" data-i18n="footer_tagline">
                     A sanctuary for those seeking balance in a chaotic world.
                 </p>
             </div>
@@ -512,7 +577,16 @@
                     <span
                         class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
                 </a>
-                <!-- Facebook -->
+                <!-- Spotify (Podcasts) -->
+                <a href="#"
+                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
+                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
+                    </svg>
+                </a>
+                <!-- Facebook (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1877F2] transition-all duration-500 shadow-xl">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -521,7 +595,8 @@
                             d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
                 </a>
-                <!-- YouTube -->
+                -->
+                <!-- YouTube (Hidden)
                 <a href="#"
                     class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#FF0000] transition-all duration-500 shadow-xl overflow-hidden">
                     <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
@@ -530,6 +605,7 @@
                             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>
                 </a>
+                -->
             </div>
         </div>
     </footer>
