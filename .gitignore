@@ -2,3 +2,5 @@ source_*.html
 raw_index.html
 branding.md
 .DS_Store
+.vercel
+node_modules/
