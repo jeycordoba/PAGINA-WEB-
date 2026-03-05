@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = __dirname;
-const files = ['youth.html', 'pricing.html', 'index.html', 'healing.html', 'gallery.html', 'corporate.html', 'booking.html', 'about.html'];
+const files = ['youth.html', 'pricing.html', 'index.html', 'healing.html', 'gallery.html', 'corporate.html', 'contact.html', 'about.html'];
 
 for (const file of files) {
     const filePath = path.join(dir, file);

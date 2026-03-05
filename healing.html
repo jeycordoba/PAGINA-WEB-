@@ -88,11 +88,11 @@
                         </div>
                         -->
 
-                        <a href="booking.html" data-i18n="nav_book_session">Book Your Session</a>
+                        <a href="contact.html" class="xl:hidden" data-i18n="nav_book">Contacto</a>
                     </div>
                 </li>
 
-                <li class="hidden sm:block"><a href="booking.html" class="nav-cta" data-i18n="nav_book">Book Now</a>
+                <li class="hidden sm:block"><a href="contact.html" class="nav-cta" data-i18n="nav_book">Contact</a>
                 </li>
             </ul>
         </div>
@@ -116,7 +116,7 @@
                 Moving beyond labels. Combining Somatic Movement, Quantum Resonance, and Breath Science into a single,
                 fluid experience designed for your unique frequency.
             </p>
-            <a href="booking.html"
+            <a href="contact.html"
                 class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold uppercase text-sm tracking-widest shadow-2xl hover:bg-white hover:text-deep transition-all"
                 data-i18n="healing_hero_cta">
                 Begin Your Journey
@@ -139,74 +139,74 @@
         <!-- Pillars Grid -->
         <div class="container grid md:grid-cols-4 gap-8 mb-16">
             <!-- Pillar 1 -->
-            <div data-pillar="0" onclick="showPillarDetail(0, true)" onmouseenter="showPillarDetail(0, false)"
-                onmouseleave="hidePillarIfNotSelected()"
-                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+            <div data-pillar="0" onclick="selectPillar(0)" onmouseenter="previewPillar(0)"
+                onmouseleave="restorePillarSelection()"
+                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">spa</span>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title"
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-display text-deep italic mb-4 transition-colors pillar-title leading-tight"
                     data-i18n="healing_pillar1_title">
                     Somatic Yoga</h3>
-                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc"
+                <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar1_desc">Body-led
                     healing and intuitive intelligence.</p>
             </div>
 
             <!-- Pillar 2 -->
-            <div data-pillar="1" onclick="showPillarDetail(1, true)" onmouseenter="showPillarDetail(1, false)"
-                onmouseleave="hidePillarIfNotSelected()"
-                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+            <div data-pillar="1" onclick="selectPillar(1)" onmouseenter="previewPillar(1)"
+                onmouseleave="restorePillarSelection()"
+                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">auto_awesome</span>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title"
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-display text-deep italic mb-4 transition-colors pillar-title leading-tight"
                     data-i18n="healing_pillar2_title">
                     Quantum Resonance</h3>
-                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc"
+                <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar2_desc">Energy
                     frequency and vibrational alignment.</p>
             </div>
 
             <!-- Pillar 3 -->
-            <div data-pillar="2" onclick="showPillarDetail(2, true)" onmouseenter="showPillarDetail(2, false)"
-                onmouseleave="hidePillarIfNotSelected()"
-                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+            <div data-pillar="2" onclick="selectPillar(2)" onmouseenter="previewPillar(2)"
+                onmouseleave="restorePillarSelection()"
+                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">air</span>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title"
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-display text-deep italic mb-4 transition-colors pillar-title leading-tight"
                     data-i18n="healing_pillar3_title">
                     Conscious Breath</h3>
-                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc"
+                <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar3_desc">Nervous system
                     regulation protocols.</p>
             </div>
 
             <!-- Pillar 4 -->
-            <div data-pillar="3" onclick="showPillarDetail(3, true)" onmouseenter="showPillarDetail(3, false)"
-                onmouseleave="hidePillarIfNotSelected()"
-                class="pillar-card bg-white p-10 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+            <div data-pillar="3" onclick="selectPillar(3)" onmouseenter="previewPillar(3)"
+                onmouseleave="restorePillarSelection()"
+                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">psychology</span>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-display text-deep italic mb-2 transition-colors pillar-title"
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-display text-deep italic mb-4 transition-colors pillar-title leading-tight"
                     data-i18n="healing_pillar4_title">
                     Integration</h3>
-                <p class="text-gray-500 text-xs font-light leading-relaxed transition-colors pillar-desc"
+                <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar4_desc">Bridging the
                     session into daily life.</p>
             </div>
         </div>
 
-        <!-- Detail Discovery Card -->
+        <!-- Detail Discovery Card (Always Visible) -->
         <div class="container">
             <div id="pillarDetailWrapper"
-                class="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+                class="opacity-100 overflow-hidden transition-all duration-500 ease-in-out mt-12">
                 <div class="py-8 md:py-12"> <!-- Container for shadow to breathe -->
                     <div id="pillarDetailCard"
                         class="bg-white rounded-32 flex flex-col md:flex-row overflow-hidden border border-deep/10">
@@ -254,7 +254,7 @@
         }
 
         .pillar-card.active-pillar .material-symbols-outlined {
-            color: #955031 !important;
+            color: white !important;
         }
 
         /* Generic hover logic for non-active cards */
@@ -276,7 +276,7 @@
         }
 
         .pillar-card:hover:not(.active-pillar) .material-symbols-outlined {
-            color: #955031 !important;
+            color: white !important;
         }
 
         #pillarDetailWrapper.is-active {
@@ -319,29 +319,11 @@
             }
         ];
 
-        let selectedIndex = -1;
+        let selectedIndex = 0; // Default to Yoga
 
-        function showPillarDetail(index, isClick) {
-            if (isClick) {
-                if (selectedIndex === index) {
-                    selectedIndex = -1;
-                    hidePillarDetail();
-                    return;
-                }
-                selectedIndex = index;
-            }
-
+        function updatePillarContent(index) {
             const data = pillarData[index];
-            const wrapper = document.getElementById('pillarDetailWrapper');
             const img = document.getElementById('pillarImage');
-
-            // Highlight active/hovered card
-            document.querySelectorAll('.pillar-card').forEach((c, i) => {
-                if (i === index) c.classList.add('active-pillar');
-                else if (i !== selectedIndex) c.classList.remove('active-pillar');
-            });
-
-            // Update content from current language
             const lang = i18n.currentLang;
             const t = translations[lang];
 
@@ -350,31 +332,36 @@
             document.getElementById('pillarHeading').innerText = t[`healing_${data.key}_heading`];
             document.getElementById('pillarText').innerText = t[`healing_${data.key}_text`];
             document.getElementById('pillarSmallLabel').innerText = t[`healing_${data.key}_smallLabel`];
-
-            // Show wrapper
-            wrapper.classList.add('is-active');
         }
 
-        function hidePillarIfNotSelected() {
-            if (selectedIndex === -1) {
-                hidePillarDetail();
-            } else {
-                // Return to selected state highlighting
-                document.querySelectorAll('.pillar-card').forEach((c, i) => {
-                    if (i === selectedIndex) c.classList.add('active-pillar');
-                    else c.classList.remove('active-pillar');
-                });
-            }
+        function highlightCards(index) {
+            document.querySelectorAll('.pillar-card').forEach((c, i) => {
+                if (i === index) c.classList.add('active-pillar');
+                else c.classList.remove('active-pillar');
+            });
         }
 
-        function hidePillarDetail() {
-            const wrapper = document.getElementById('pillarDetailWrapper');
-            if (wrapper) wrapper.classList.remove('is-active');
-            document.querySelectorAll('.pillar-card').forEach(c => c.classList.remove('active-pillar'));
+        function selectPillar(index) {
+            selectedIndex = index;
+            updatePillarContent(index);
+            highlightCards(index);
+        }
+
+        function previewPillar(index) {
+            updatePillarContent(index);
+            highlightCards(index);
+        }
+
+        function restorePillarSelection() {
+            updatePillarContent(selectedIndex);
+            highlightCards(selectedIndex);
         }
 
         /* Intersection Observer for Scroll Animations */
         document.addEventListener('DOMContentLoaded', function () {
+            // Initialize with Yoga
+            selectPillar(0);
+
             const observerOptions = {
                 threshold: 0.15,
                 rootMargin: '0px 0px -50px 0px'
@@ -393,9 +380,7 @@
 
         // Language change reactive update for pillars
         document.addEventListener('languageChanged', (e) => {
-            if (selectedIndex !== -1) {
-                showPillarDetail(selectedIndex, false);
-            }
+            updatePillarContent(selectedIndex);
         });
     </script>
 
@@ -633,45 +618,50 @@
                         original resonance."</p>
                 </div>
             </div>
-            <div class="space-y-4 reveal">
-                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden"
-                    open>
+            <div class="space-y-2 reveal">
+                <!-- FAQ 1 -->
+                <details name="faq"
+                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
-                        <span class="font-bold text-xl text-deep" data-i18n="healing_faq1_q">What exactly is a "Unified
-                            Session"?</span>
+                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq1_q">What exactly is
+                            a "Unified Session"?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed" data-i18n="healing_faq1_a">
+                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq1_a">
                         A Unified Session is a 90-minute bespoke experience where we don't follow a fixed template.
                         Instead, we weave together whatever tools your body requires in the moment—whether it's more
                         somatic release or deeper energetic clearing.
                     </div>
                 </details>
-                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden">
+                <!-- FAQ 2 -->
+                <details name="faq"
+                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
-                        <span class="font-bold text-xl text-deep" data-i18n="healing_faq2_q">Do I need prior
+                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq2_q">Do I need prior
                             experience?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed" data-i18n="healing_faq2_a">
+                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq2_a">
                         Not at all. The journey is specifically designed for your current state. Whether you are a
-                        seasoned practitioner or completely new to wellness work, the session meets you exactly
-                        where you are.
+                        seasoned practitioner or completely new to wellness work, the session meets you exactly where
+                        you are.
                     </div>
                 </details>
-                <details name="healing-faq" class="group bg-alabaster rounded-2xl border border-deep/5 overflow-hidden">
+                <!-- FAQ 3 -->
+                <details name="faq"
+                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="list-none p-8 flex justify-between items-center cursor-pointer hover:bg-mint/30 transition-colors">
-                        <span class="font-bold text-xl text-deep" data-i18n="healing_faq3_q">Can this help with chronic
-                            pain?</span>
+                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq3_q">Can this help
+                            with chronic pain?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-8 text-gray-500 font-light text-lg leading-relaxed" data-i18n="healing_faq3_a">
+                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq3_a">
                         Somatic work is highly effective for chronic pain related to tension and trauma storage. By
                         addressing the nervous system's response, many clients experience significant and lasting
                         relief.
@@ -691,7 +681,7 @@
             <h2 class="text-6xl md:text-9xl font-display text-white italic leading-tight drop-shadow-2xl"
                 data-i18n="healing_cta_title">Ready to
                 Experience <br> the Shift?</h2>
-            <a href="booking.html"
+            <a href="contact.html"
                 class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
                 data-i18n="healing_cta_btn">
                 Book Your Session
@@ -787,14 +777,14 @@
             }
         });
 
-        // FAQ Mutually Exclusive Toggle Logic
-        document.querySelectorAll('details[name="healing-faq"]').forEach((details) => {
-            details.addEventListener('click', (e) => {
-                if (!details.open) {
-                    // If we are opening this one, close all others
-                    document.querySelectorAll('details[name="healing-faq"]').forEach((other) => {
-                        if (other !== details) {
-                            other.removeAttribute('open');
+        // FAQ Accordion Logic
+        const faqs = document.querySelectorAll('details');
+        faqs.forEach((faq) => {
+            faq.addEventListener('toggle', () => {
+                if (faq.open) {
+                    faqs.forEach((otherFaq) => {
+                        if (otherFaq !== faq) {
+                            otherFaq.removeAttribute('open');
                         }
                     });
                 }
