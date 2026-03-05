@@ -5,8 +5,18 @@
 
 class I18nManager {
     constructor() {
-        // Force Spanish ('es') as default for now as per user request
-        this.currentLang = localStorage.getItem('user-lang') || 'es';
+        // Migration: If the user has 'en' from a previous session but we now want 'es' as the universal starting point
+        const version = '1.1'; // Increment this to force a reset
+        const currentVersion = localStorage.getItem('idd-lang-version');
+
+        if (currentVersion !== version) {
+            this.currentLang = 'es';
+            localStorage.setItem('user-lang', 'es');
+            localStorage.setItem('idd-lang-version', version);
+        } else {
+            this.currentLang = localStorage.getItem('user-lang') || 'es';
+        }
+
         this.translations = window.translations || {};
         this.init();
     }
