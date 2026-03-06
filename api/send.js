@@ -3,50 +3,50 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { resource, name, email, phone } = req.body;
+
+  if (!name || !email || !phone || !resource) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  // eBook Metadata Mapping
+  const ebooks = {
+    'ebook1': {
+      title: 'El Campo Unificado',
+      file: 'campoUnificadoEbook.pdf',
+      subject: 'Tu Recurso: El Campo Unificado'
+    },
+    'ebook2': {
+      title: 'Respiración Cuántica',
+      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
+      subject: 'Tu Recurso: Respiración Cuántica'
+    },
+    'ebook3': {
+      title: 'Arquitectura de la Paz',
+      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
+      subject: 'Tu Recurso: Arquitectura de la Paz'
+    },
+    'ebook4': {
+      title: 'Más allá del Mat',
+      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
+      subject: 'Tu Recurso: Más allá del Mat'
     }
+  };
 
-    const { resource, name, email, phone } = req.body;
+  const selectedEbook = ebooks[resource] || ebooks['ebook1'];
 
-    if (!name || !email || !phone || !resource) {
-        return res.status(400).json({ error: 'Missing required fields' });
-    }
-
-    // eBook Metadata Mapping
-    const ebooks = {
-        'ebook1': {
-            title: 'El Campo Unificado',
-            file: 'campoUnificadoEbook.pdf',
-            subject: 'Tu Recurso: El Campo Unificado'
-        },
-        'ebook2': {
-            title: 'Respiración Cuántica',
-            file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-            subject: 'Tu Recurso: Respiración Cuántica'
-        },
-        'ebook3': {
-            title: 'Arquitectura de la Paz',
-            file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-            subject: 'Tu Recurso: Arquitectura de la Paz'
-        },
-        'ebook4': {
-            title: 'Más allá del Mat',
-            file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-            subject: 'Tu Recurso: Más allá del Mat'
-        }
-    };
-
-    const selectedEbook = ebooks[resource] || ebooks['ebook1'];
-
-    try {
-        // 1. Send Email to Customer
-        const { data, error } = await resend.emails.send({
-            from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>', // User needs to verify domain in Resend
-            to: [email],
-            bcc: ['jeniffercordoba@yahoo.com'],
-            subject: selectedEbook.subject,
-            html: `
+  try {
+    // 1. Send Email to Customer
+    const { data, error } = await resend.emails.send({
+      from: 'Jeniffer Córdoba <onboarding@resend.dev>', // Test address for initial trial
+      to: [email],
+      bcc: ['jeniffercordoba@yahoo.com'],
+      subject: selectedEbook.subject,
+      html: `
         <div style="font-family: 'Newsreader', serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
           <h1 style="font-style: italic; font-weight: normal; font-size: 32px; color: #955031; text-align: center;">Hola, ${name}</h1>
           <p style="font-size: 18px; line-height: 1.6; text-align: center; font-style: italic;">
@@ -71,16 +71,16 @@ export default async function handler(req, res) {
           </p>
         </div>
       `,
-        });
+    });
 
-        if (error) {
-            console.error('Resend Error:', error);
-            return res.status(400).json(error);
-        }
-
-        res.status(200).json(data);
-    } catch (err) {
-        console.error('Server Error:', err);
-        res.status(500).json({ error: 'Internal Server Error' });
+    if (error) {
+      console.error('Resend Error:', error);
+      return res.status(400).json(error);
     }
+
+    res.status(200).json(data);
+  } catch (err) {
+    console.error('Server Error:', err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 }
