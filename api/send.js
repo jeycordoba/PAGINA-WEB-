@@ -43,7 +43,7 @@ export default async function handler(req, res) {
     // 1. Send Email to Customer
     const { data, error } = await resend.emails.send({
       from: 'Jeniffer Córdoba <onboarding@resend.dev>', // Test address for initial trial
-      to: [email],
+      to: ['ivan@voizlab.com'],
       bcc: ['jeniffercordoba@yahoo.com'],
       subject: selectedEbook.subject,
       html: `
