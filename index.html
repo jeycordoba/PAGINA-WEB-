@@ -43,14 +43,17 @@
     <!-- NAVIGATION -->
     <nav class="main-nav nav-transparent" id="mainNav">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo text-[1.75rem]">
+            <a href="index.html" class="brand-logo">
                 <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                Jeniffer Córdoba
+                <span class="brand-name">
+                    <span>Jeniffer</span>
+                    <span>Córdoba</span>
+                </span>
             </a>
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" class="active" data-i18n="nav_home">Inicio</a></li>
                 <li><a href="healing.html" data-i18n="nav_healing">Sanación</a></li>
-                <li><a href="about.html" data-i18n="nav_about">Sobre Mí</a></li>
+                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">Sobre Mí</a></li>
 
                 <!-- Auxiliary Links -->
                 <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Jóvenes</a></li>
@@ -74,6 +77,8 @@
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
+                        <a href="index.html" class="xl:hidden" data-i18n="nav_home">Inicio</a>
+                        <a href="about.html" class="xl:hidden" data-i18n="nav_about">Sobre Mí</a>
                         <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Jóvenes</a>
                         <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporativo</a>
                         <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Esencia</a>

@@ -79,14 +79,17 @@
     <!-- NAVIGATION -->
     <nav class="main-nav scrolled" id="mainNav">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo text-[1.75rem]">
+            <a href="index.html" class="brand-logo">
                 <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                Jeniffer Córdoba
+                <span class="brand-name">
+                    <span>Jeniffer</span>
+                    <span>Córdoba</span>
+                </span>
             </a>
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
                 <li><a href="healing.html" data-i18n="nav_healing">Healing</a></li>
-                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
 
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
                 <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
@@ -112,6 +115,7 @@
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
+                        <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
                         <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
                         <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
                         <a href="sanctuary.html" class="xl:hidden active" data-i18n="nav_gallery">Esencia</a>
