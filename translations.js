@@ -91,6 +91,8 @@ const translations = {
         "ebook_success_desc": "Check your inbox in a few moments. A piece of the sanctuary is coming to you.",
         "ebook_modal_title": "Download Resource",
         "ebook_modal_cta": "Send me my eBook!",
+        "contact_success_title": "Message Received",
+        "contact_success_desc": "Your intentions have been heard. Jeniffer will connect with you shortly via email or phone.",
 
         // Home Page
         "home_hero_title": "A Resonance Beyond Borders.",
@@ -464,6 +466,8 @@ const translations = {
         "ebook_success_desc": "Revisa tu bandeja de entrada en unos momentos. Un pedazo del santuario va hacia ti.",
         "ebook_modal_title": "Descargar Recurso",
         "ebook_modal_cta": "Quiero mi eBook!",
+        "contact_success_title": "Mensaje Recibido",
+        "contact_success_desc": "Tus intenciones han sido escuchadas. Jeniffer se conectará contigo pronto vía email o teléfono.",
 
         // About Page
         "about_intro_tag": "TU INSTRUCTORA",

@@ -7,79 +7,131 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { resource, name, email, phone } = req.body;
+  const { type, resource, name, email, phone, service, message, lang = 'es' } = req.body;
 
-  if (!name || !email || !phone || !resource) {
+  // Basic validation
+  if (!name || !email || !phone) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  // eBook Metadata Mapping
-  const ebooks = {
-    'ebook1': {
-      title: 'El Campo Unificado',
-      file: 'campoUnificadoEbook.pdf',
-      subject: 'Tu Recurso: El Campo Unificado'
-    },
-    'ebook2': {
-      title: 'Respiración Cuántica',
-      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-      subject: 'Tu Recurso: Respiración Cuántica'
-    },
-    'ebook3': {
-      title: 'Arquitectura de la Paz',
-      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-      subject: 'Tu Recurso: Arquitectura de la Paz'
-    },
-    'ebook4': {
-      title: 'Más allá del Mat',
-      file: 'campoUnificadoEbook.pdf', // Fallback to existing file
-      subject: 'Tu Recurso: Más allá del Mat'
-    }
-  };
-
-  const selectedEbook = ebooks[resource] || ebooks['ebook1'];
+  const isSpanish = lang === 'es';
 
   try {
-    // 1. Send Email to Customer
-    const { data, error } = await resend.emails.send({
-      from: 'Jeniffer Córdoba <hola@voizlab.com>',
-      to: [email],
-      bcc: ['ivan@voizlab.com'],
-      // bcc: ['jeniffercordoba@yahoo.com'],
-      subject: selectedEbook.subject,
-      html: `
-        <div style="font-family: 'Newsreader', serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
-          <h1 style="font-style: italic; font-weight: normal; font-size: 32px; color: #955031; text-align: center;">Hola, ${name}</h1>
-          <p style="font-size: 18px; line-height: 1.6; text-align: center; font-style: italic;">
-            "La quietud no es la ausencia de movimiento, sino el equilibrio perfecto en medio de él."
-          </p>
-          <div style="background-color: white; padding: 30px; border-radius: 30px; margin-top: 30px; text-align: center; border: 1px solid rgba(80, 76, 51, 0.1);">
-            <p style="margin-bottom: 20px;">Gracias por resonar con mi espacio. Aquí tienes el recurso que solicitaste:</p>
-            <h2 style="color: #504c33; margin-bottom: 30px;">${selectedEbook.title}</h2>
-            <a href="https://${req.headers.host}/${selectedEbook.file}" 
-               style="background-color: #955031; color: white; padding: 16px 32px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; letter-spacing: 2px;">
-               DESCARGAR EBOOK
-            </a>
-          </div>
-          <p style="margin-top: 40px; text-align: center; font-size: 14px; opacity: 0.7;">
-            Con gratitud,<br>
-            <strong>Jeniffer Córdoba</strong><br>
-            Sanación & Movimiento
-          </p>
-          <hr style="border: 0; border-top: 1px solid rgba(149, 80, 49, 0.2); margin: 40px 0;">
-          <p style="font-size: 10px; text-align: center; opacity: 0.5; letter-spacing: 1px;">
-            Datos de contacto registrados: ${phone}
-          </p>
-        </div>
-      `,
-    });
+    // CASE 1: EBOOK REQUEST
+    if (type === 'ebook') {
+      if (!resource) return res.status(400).json({ error: 'Resource ID required' });
 
-    if (error) {
-      console.error('Resend Error:', error);
-      return res.status(400).json(error);
+      const ebooks = {
+        'ebook1': { title: isSpanish ? 'El Campo Unificado' : 'The Unified Field', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: El Campo Unificado' : 'Your Resource: The Unified Field' },
+        'ebook2': { title: isSpanish ? 'Respiración Cuántica' : 'Quantum Breath', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Respiración Cuántica' : 'Your Resource: Quantum Breath' },
+        'ebook3': { title: isSpanish ? 'Arquitectura de la Paz' : 'Peace Architecture', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Arquitectura de la Paz' : 'Your Resource: Peace Architecture' },
+        'ebook4': { title: isSpanish ? 'Más allá del Mat' : 'Beyond the Mat', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Más allá del Mat' : 'Your Resource: Beyond the Mat' }
+      };
+
+      const selectedEbook = ebooks[resource] || ebooks['ebook1'];
+
+      const { data, error } = await resend.emails.send({
+        from: 'Jeniffer Córdoba <hola@voizlab.com>',
+        to: [email],
+        bcc: ['ivan@voizlab.com'], // In test mode, we include ivan bcc
+        subject: selectedEbook.subject,
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
+            <h1 style="font-style: italic; font-weight: normal; font-size: 32px; color: #955031; text-align: center;">${isSpanish ? 'Hola' : 'Hello'}, ${name}</h1>
+            <p style="font-size: 18px; line-height: 1.6; text-align: center; font-style: italic;">
+              ${isSpanish ? '"La quietud no es la ausencia de movimiento, sino el equilibrio perfecto en medio de él."' : '"Stillness is not the absence of movement, but the perfect balance in the midst of it."'}
+            </p>
+            <div style="background-color: white; padding: 30px; border-radius: 30px; margin-top: 30px; text-align: center; border: 1px solid rgba(80, 76, 51, 0.1);">
+              <p style="margin-bottom: 20px;">${isSpanish ? 'Gracias por resonar con mi espacio. Aquí tienes el recurso que solicitaste:' : 'Thank you for resonating with my space. Here is the resource you requested:'}</p>
+              <h2 style="color: #504c33; margin-bottom: 30px;">${selectedEbook.title}</h2>
+              <a href="https://${req.headers.host}/${selectedEbook.file}" 
+                 style="background-color: #955031; color: white; padding: 16px 32px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; letter-spacing: 2px; text-transform: uppercase;">
+                 ${isSpanish ? 'Descargar eBook' : 'Download eBook'}
+              </a>
+            </div>
+          </div>
+        `,
+      });
+
+      if (error) return res.status(400).json(error);
+      return res.status(200).json(data);
     }
 
-    res.status(200).json(data);
+    // CASE 2: CONTACT FORM
+    if (type === 'contact') {
+      // 1. Internal Notification (to Jeniffer/Ivan) - Styled Ficha de Cliente
+      await resend.emails.send({
+        from: 'Website Portal <hola@voizlab.com>',
+        to: ['ivan+form@voizlab.com'],
+        subject: `New Lead: ${name} (${service})`,
+        html: `
+          <div style="font-family: sans-serif; background-color: #f7f7f7; padding: 40px;">
+            <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+              <div style="background-color: #504c33; color: white; padding: 30px; text-align: center;">
+                <h2 style="margin: 0; font-weight: 300; letter-spacing: 2px;">NUEVO PROSPECTO</h2>
+              </div>
+              <div style="padding: 40px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr><td style="padding: 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Cliente</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 18px; color: #322F20; border-bottom: 1px solid #eee;"><strong>${name}</strong></td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Email</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${email}</td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Teléfono</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${phone}</td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Servicio de Interés</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #955031; border-bottom: 1px solid #eee;"><strong>${service}</strong></td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Mensaje</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; line-height: 1.5;">${message || 'Sin mensaje adicional.'}</td></tr>
+                </table>
+                <div style="margin-top: 30px; font-size: 10px; color: #ccc;">Enviado desde el formulario de contacto (Idioma: ${lang.toUpperCase()})</div>
+              </div>
+            </div>
+          </div>
+        `
+      });
+
+      // 2. Thank You Email (to Customer) - Relaxing Sanctuary Style
+      const { data, error } = await resend.emails.send({
+        from: 'Jeniffer Córdoba <hola@voizlab.com>',
+        to: [email],
+        subject: isSpanish ? 'Tu mensaje ha sido recibido // Jeniffer Córdoba' : 'Your message has been received // Jeniffer Córdoba',
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+               <img src="https://green-ambiance.vercel.app/images/8-Color.png" width="60" style="opacity: 0.8;">
+            </div>
+            <h1 style="font-style: italic; font-weight: normal; font-size: 32px; color: #955031; text-align: center;">
+              ${isSpanish ? 'Gracias por conectar,' : 'Thank you for connecting,'} ${name}
+            </h1>
+            <div style="background-color: white; padding: 40px; border-radius: 30px; margin-top: 30px; line-height: 1.8; color: #504c33; border: 1px solid rgba(80, 76, 51, 0.1);">
+              <p style="margin: 0;">
+                ${isSpanish
+            ? 'He recibido tus intenciones con gratitud. Me tomaré un momento de presencia para revisar tu mensaje y te responderé personalmente en breve.'
+            : 'I have received your intentions with gratitude. I will take a moment of presence to review your message and will respond to you personally shortly.'}
+              </p>
+              <p style="margin-top: 20px; font-style: italic; opacity: 0.8;">
+                ${isSpanish ? 'Mientras tanto, te invito a seguir respirando con consciencia.' : 'In the meantime, I invite you to keep breathing with awareness.'}
+              </p>
+            </div>
+            <p style="margin-top: 40px; text-align: center; font-size: 14px; opacity: 0.7;">
+              ${isSpanish ? 'Con amor y presencia,' : 'With love and presence,'}<br>
+              <strong>Jeniffer Córdoba</strong><br>
+              Sanación & Movimiento
+            </p>
+          </div>
+        `
+      });
+
+      if (error) return res.status(400).json(error);
+      return res.status(200).json(data);
+    }
+
+    return res.status(400).json({ error: 'Invalid request type' });
+
   } catch (err) {
     console.error('Server Error:', err);
     res.status(500).json({ error: 'Internal Server Error' });
