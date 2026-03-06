@@ -44,7 +44,7 @@ export default async function handler(req, res) {
     const { data, error } = await resend.emails.send({
       from: 'Jeniffer Córdoba <onboarding@resend.dev>', // Test address for initial trial
       to: ['ivan@voizlab.com'],
-      bcc: ['jeniffercordoba@yahoo.com'],
+      // bcc: ['jeniffercordoba@yahoo.com'],
       subject: selectedEbook.subject,
       html: `
         <div style="font-family: 'Newsreader', serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
