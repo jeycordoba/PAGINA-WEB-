@@ -463,6 +463,23 @@
             }
         });
 
+        // More Menu Toggle
+        const moreBtn = document.getElementById('moreMenuBtn');
+        const moreDropdown = document.getElementById('moreDropdown');
+
+        if (moreBtn && moreDropdown) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle('is-active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                    moreDropdown.classList.remove('is-active');
+                }
+            });
+        }
+
         // FAQ Accordion Logic
         const faqs = document.querySelectorAll('details');
         faqs.forEach((faq) => {
