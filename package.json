@@ -1,0 +1,15 @@
+{
+  "name": "jeniffer-cordoba-yoga",
+  "version": "1.0.0",
+  "description": "Yoga sanctuary website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

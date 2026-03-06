@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanctuary // Jeniffer Córdoba</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="images/8-Color.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#955031',
+                        'deep': '#504c33',
+                        'sage': '#b69c75',
+                        'alabaster': '#ede1c9',
+                        'mint': '#9b9773',
+                        'espresso': '#322F20'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .masonry {
+            column-count: 3;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .masonry {
+                column-count: 1;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .audio-wave divine {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 40px;
+        }
+
+        .wave-bar {
+            width: 3px;
+            background: rgba(135, 169, 106, 0.3);
+            border-radius: 99px;
+            transition: all 0.3s ease;
+        }
+
+        .wave-bar.active {
+            background: #955031;
+        }
+    </style>
+</head>
+
+<body class="bg-alabaster selection:bg-primary/30">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav scrolled" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo text-[1.75rem]">
+                <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                Jeniffer Córdoba
+            </a>
+            <ul class="nav-links">
+                <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="healing.html" data-i18n="nav_healing">Healing</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+
+                <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
+                <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
+                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" class="active" data-i18n="nav_gallery">Esencia</a>
+                </li>
+                <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
+
+                <!-- Language Switcher Desktop (Hidden as per request)
+                <li class="hidden xl:block">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <span class="lang-divider"></span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+                -->
+
+                <!-- More Button -->
+                <li class="relative xl:hidden">
+                    <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div id="moreDropdown" class="more-dropdown">
+                        <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
+                        <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
+                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
+                        <a href="sanctuary.html" class="xl:hidden active" data-i18n="nav_gallery">Esencia</a>
+                        <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
+                        <div class="border-t border-primary/10 my-2"></div>
+
+                        <!-- Language Switcher Mobile (Hidden as per request)
+                        <div class="lang-switcher-mobile">
+                            <button class="lang-btn active" data-lang="es">Español</button>
+                            <button class="lang-btn" data-lang="en">English</button>
+                        </div>
+                        -->
+                        <div class="border-t border-primary/10 my-2"></div>
+
+                        <a href="contact.html" class="text-primary font-bold" data-i18n="nav_book">Contact</a>
+                    </div>
+                </li>
+
+                <li class="hidden sm:block"><a href="contact.html" class="nav-cta" data-i18n="nav_book">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- INTRO -->
+    <section class="section-padding pt-40">
+        <div class="container text-center max-w-4xl space-y-8">
+            <h1 class="text-6xl md:text-8xl font-display text-deep italic" data-i18n="gallery_title">Esencia</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-500 max-w-2xl mx-auto italic"
+                data-i18n="gallery_subtitle">
+                A visual and auditory window into the frequency of our practice. Immerse yourself in the atmosphere of
+                Stillness.
+            </p>
+            <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- GALLERY FILTER & MASONRY -->
+    <section class="pb-24">
+        <div class="container mb-16 flex flex-wrap justify-center gap-4">
+            <button
+                class="filter-btn active px-10 py-3 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-widest shadow-xl transition-all"
+                data-category="all" data-i18n="gallery_filter_all">All Moments</button>
+            <button
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                data-category="studio" data-i18n="gallery_filter_studio">The Studio</button>
+            <button
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                data-category="practice" data-i18n="gallery_filter_practice">The Practice</button>
+            <button
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                data-category="rituals" data-i18n="gallery_filter_rituals">Rituals & Details</button>
+            <button
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold uppercase tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                data-category="healing" data-i18n="gallery_filter_healing">Sound & Healing</button>
+        </div>
+        <div class="container masonry" id="multimediaGrid">
+            <!-- STUDIO -->
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="studio">
+                <img src="images/studio_1.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Studio Atmosphere">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="studio">
+                <img src="images/studio_2.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Studio Details">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="studio">
+                <img src="images/studio_3.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Studio View">
+            </div>
+
+            <!-- PRACTICE -->
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="practice">
+                <img src="images/practice_1.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Jeniffer in Practice">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="practice">
+                <img src="images/practice_2.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Energy Flow">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="practice">
+                <img src="images/practice_3.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Meditation Space">
+            </div>
+
+            <!-- RITUALS -->
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="rituals">
+                <img src="images/rituals_1.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Gyan Mudra">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="rituals">
+                <img src="images/rituals_2.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Incense Ritual">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="rituals">
+                <img src="images/rituals_3.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Wellness Textures">
+            </div>
+
+            <!-- HEALING -->
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="healing">
+                <img src="images/healing_1.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Singing Bowl">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="healing">
+                <img src="images/healing_2.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Sound Therapy">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="healing">
+                <img src="images/healing_3.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="Crystal Bowl">
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW PODCAST SECTION -->
+    <section class="pb-24 pt-12 bg-alabaster transition-all duration-500" id="podcastSection">
+        <div class="container">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-5xl md:text-6xl font-display italic text-deep" data-i18n="gallery_filter_podcasts">
+                    Podcasts & Wisdom</h2>
+                <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Playlist 1: Meditation -->
+                <div
+                    class="bg-white rounded-[40px] p-8 shadow-xl border border-primary/5 hover:shadow-2xl transition-all">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase"
+                                data-i18n="gallery_playlist_category">Playlist</span>
+                            <h3 class="text-3xl font-display italic text-deep mt-1" data-i18n="gallery_playlist1_title">
+                                Guided Meditations</h3>
+                        </div>
+                        <span class="material-symbols-outlined text-4xl text-mint opacity-20">self_improvement</span>
+                    </div>
+                    <iframe style="border-radius:24px"
+                        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9uKNf5jGX6m?utm_source=generator&theme=0"
+                        width="100%" height="450" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <!-- Playlist 2: Experiences -->
+                <div
+                    class="bg-white rounded-[40px] p-8 shadow-xl border border-primary/5 hover:shadow-2xl transition-all">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase"
+                                data-i18n="gallery_playlist_category">Playlist</span>
+                            <h3 class="text-3xl font-display italic text-deep mt-1" data-i18n="gallery_playlist2_title">
+                                Personal Experiences</h3>
+                        </div>
+                        <span class="material-symbols-outlined text-4xl text-mint opacity-20">history_edu</span>
+                    </div>
+                    <iframe style="border-radius:24px"
+                        src="https://open.spotify.com/embed/playlist/5Qr8kB5AgGPQIVj4588Daj?utm_source=generator&theme=0"
+                        width="100%" height="450" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- BOTTOM CTA -->
+    <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-deep">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEJ3o2RFu3RVtTotgBjdkwJ9xzxgCDKXVfnPwCZnTjimEgKt-m7cwiH0xs3j2YRv2Kla35nSa5_jILP5seR3nIQADOWM1p2xFu5BNXgp0LTXuZ08sqQmQTzT5pCFRwjxDSnCsWJQDqItfNw7AbS6ecTIS9Q9OHguOeUvBke3Sio6mO3zFc_fA0PjpN7ZMPMe6-y2FOPXoy0qaxd7O8uCjZNRksFs6qJ6P47AC4XOYblUPZ2iZcaozYGGF8YkqYIDjPwMX2G0dHHKa"
+                class="w-full h-full object-cover brightness-[0.4] scale-105" alt="CTA background">
+        </div>
+        <div class="relative z-10 px-6 max-w-4xl space-y-12">
+            <h2 class="text-6xl md:text-[100px] font-display text-white italic leading-tight drop-shadow-2xl"
+                data-i18n="gallery_bottom_cta_title">From
+                Observation <br> to Experience.</h2>
+            <a href="contact.html"
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
+                data-i18n="gallery_bottom_cta_btn">
+                Book Your Session
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#ede1c9] text-deep/70 py-24 px-[5%] mt-0 relative overflow-hidden">
+        <!-- Decorative subtle pattern/texture -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M54.627 0l.83.83L1.244 55.457l-.83-.83L54.627 0zm-53.783 0l.83-.83L58.756 56.287l-.83.83L.844 0z\' fill=\'%23955031\' fill-opacity=\'0.4\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-8">
+
+                <!-- Left: Logo + Name Stacked -->
+                <div class="flex flex-col items-center gap-2">
+                    <img src="images/espiral_InfinitoColor.png" class="h-20 w-auto object-contain"
+                        alt="Infinite Yoga Logo">
+                    <h4 class="font-display italic text-5xl text-primary whitespace-nowrap text-center">
+                        Jeniffer Córdoba</h4>
+                </div>
+
+                <!-- Middle: Centered Motto -->
+                <div class="text-center">
+                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
+                        data-i18n="footer_tagline">
+                        Un santuario para quienes buscan equilibrio en un mundo caótico.
+                    </p>
+                </div>
+
+                <!-- Right: Social Media Section -->
+                <div class="flex items-center justify-center lg:justify-end gap-6">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/infiniteyoga_8" target="_blank"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#E1306C] transition-all duration-500 shadow-xl overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                        </svg>
+                    </a>
+                    <!-- Mail -->
+                    <a href="mailto:jeniffercordoba@yahoo.com"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#955031] transition-all duration-500 shadow-xl">
+                        <span
+                            class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-[#955031] group-hover:text-white transition-colors">mail</span>
+                    </a>
+                    <!-- Spotify -->
+                    <a href="#"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
+                        <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                // Keep scrolled state for background visibility on light pages if needed.
+            }
+        });
+
+        // More Menu Toggle
+        const moreBtn = document.getElementById('moreMenuBtn');
+        const moreDropdown = document.getElementById('moreDropdown');
+
+        if (moreBtn && moreDropdown) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle('is-active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                    moreDropdown.classList.remove('is-active');
+                }
+            });
+        }
+        // Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.masonry-item');
+        const gallerySection = document.querySelector('.masonry').closest('section');
+        const podcastSection = document.getElementById('podcastSection');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+
+                // Update UI state
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white', 'shadow-xl');
+                    b.classList.add('bg-white', 'text-deep', 'border', 'border-deep/5');
+                });
+                btn.classList.add('bg-primary', 'text-white', 'shadow-xl');
+                btn.classList.remove('bg-white', 'text-deep', 'border', 'border-deep/5');
+
+                // Filter items
+                items.forEach(item => {
+                    item.style.display = 'none';
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

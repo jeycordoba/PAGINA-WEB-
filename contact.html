@@ -10,7 +10,7 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/8-Color.png">
     <script>
         tailwind.config = {
             theme: {
@@ -51,9 +51,9 @@
     <!-- NAVIGATION -->
     <nav class="main-nav nav-transparent" id="mainNav">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="images/logo_optimized.webp" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                <span data-i18n="footer_brand">Jeniffer Córdoba</span>
+            <a href="index.html" class="brand-logo text-[1.75rem]">
+                <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                Jeniffer Córdoba
             </a>
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
@@ -63,7 +63,7 @@
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
                 <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
                 <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
-                <li class="hidden xl:block"><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_gallery">Essence</a></li>
 
                 <!-- More Button -->
                 <li class="relative xl:hidden">
@@ -74,7 +74,7 @@
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
                         <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
                         <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
-                        <a href="gallery.html" class="xl:hidden" data-i18n="nav_gallery">Gallery</a>
+                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Essence</a>
                     </div>
                 </li>
 
@@ -304,57 +304,64 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#504c33] text-white/70 py-24 px-[5%] mt-0">
-        <div
-            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
-            <!-- Brand Section -->
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <div class="flex items-center gap-4">
-                    <img src="images/logo_optimized.webp" class="w-16 h-16 object-contain brightness-0 invert"
-                        alt="Jeniffer Córdoba Logo">
-                    <span
-                        class="font-display italic text-4xl md:text-5xl font-medium tracking-tight text-primary leading-tight"
-                        data-i18n="footer_brand">Jeniffer
-                        Córdoba</span>
-                </div>
-                <p class="text-white/80 text-xl font-bold italic tracking-wide" data-i18n="footer_tagline">
-                    A sanctuary for those seeking balance in a chaotic world.
-                </p>
-            </div>
+    <footer class="bg-[#ede1c9] text-deep/70 py-24 px-[5%] mt-0 relative overflow-hidden">
+        <!-- Decorative subtle pattern/texture -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M54.627 0l.83.83L1.244 55.457l-.83-.83L54.627 0zm-53.783 0l.83-.83L58.756 56.287l-.83.83L.844 0z\' fill=\'%23955031\' fill-opacity=\'0.4\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');">
+        </div>
 
-            <!-- Social Media Section -->
-            <div class="flex items-center gap-6">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/infiniteyoga_8" target="_blank"
-                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#E1306C] transition-all duration-500 shadow-xl overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity">
-                    </div>
-                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
-                        fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
-                    </svg>
-                </a>
-                <!-- Mail -->
-                <a href="mailto:jeniffercordoba@yahoo.com"
-                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#955031] transition-all duration-500 shadow-xl">
-                    <span
-                        class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-white/50 group-hover:text-white transition-colors">mail</span>
-                </a>
-                <!-- Spotify (Podcasts) -->
-                <a href="#"
-                    class="group relative p-4 bg-white/5 rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
-                    <svg class="w-6 h-6 relative z-10 text-white/50 group-hover:text-white transition-colors"
-                        fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
-                    </svg>
-                </a>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-8">
+
+                <!-- Left: Logo + Name Stacked -->
+                <div class="flex flex-col items-center gap-2">
+                    <img src="images/espiral_InfinitoColor.png" class="h-20 w-auto object-contain"
+                        alt="Infinite Yoga Logo">
+                    <h4 class="font-display italic text-5xl text-primary whitespace-nowrap text-center">
+                        Jeniffer Córdoba</h4>
+                </div>
+
+                <!-- Middle: Centered Motto -->
+                <div class="text-center">
+                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
+                        data-i18n="footer_tagline">
+                        Un santuario para quienes buscan equilibrio en un mundo caótico.
+                    </p>
+                </div>
+
+                <!-- Right: Social Media Section -->
+                <div class="flex items-center justify-center lg:justify-end gap-6">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/infiniteyoga_8" target="_blank"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#E1306C] transition-all duration-500 shadow-xl overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5C18.877 2 22 5.123 22 8.5v7c0 3.377-3.123 6.5-6.5 6.5h-8.5C4.123 22 1 18.877 1 15.5v-7C1 5.123 4.123 2 7.75 2zm0 1.5c-2.551 0-4.75 2.199-4.75 4.75v7c0 2.551 2.199 4.75 4.75 4.75h8.5c2.551 0 4.75-2.199 4.75-4.75v-7c0-2.551-2.199-4.75-4.75-4.75h-8.5zm8.5 2c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25zm-4.25 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" />
+                        </svg>
+                    </a>
+                    <!-- Mail -->
+                    <a href="mailto:jeniffercordoba@yahoo.com"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#955031] transition-all duration-500 shadow-xl">
+                        <span
+                            class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-[#955031] group-hover:text-white transition-colors">mail</span>
+                    </a>
+                    <!-- Spotify -->
+                    <a href="#"
+                        class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
+                        <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.82-1.72-6.38-2.11-10.56-1.15-.39.09-.78-.16-.87-.55-.09-.39.16-.78.55-.87 4.58-1.05 8.52-.6 11.64 1.32.34.2.45.64.23.99s.11.02.01.02zm1.46-3.26c-.27.42-.82.55-1.24.28-3.23-1.98-8.15-2.55-11.97-1.39-.47.14-.98-.12-1.13-.59-.14-.47.12-.98.59-1.13 4.37-1.32 9.79-.69 13.48 1.58.42.27.55.83.27 1.25zm.13-3.41c-3.87-2.3-10.27-2.51-14-1.38-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.3-1.3 11.37-1.05 15.82 1.59.53.31.71 1 .4 1.53-.31.52-1 .7-1.55.41h-.02z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
-
     <!-- Scripts -->
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
