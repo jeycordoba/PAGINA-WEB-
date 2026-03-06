@@ -42,7 +42,7 @@ export default async function handler(req, res) {
   try {
     // 1. Send Email to Customer
     const { data, error } = await resend.emails.send({
-      from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>',
+      from: 'Jeniffer Córdoba <hola@voizlab.com>',
       to: [email],
       bcc: ['ivan@voizlab.com'],
       // bcc: ['jeniffercordoba@yahoo.com'],
