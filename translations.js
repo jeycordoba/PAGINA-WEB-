@@ -705,7 +705,7 @@ const translations = {
         "pricing_visit_hours": "Lun-Vie: 6AM-9PM | Sab-Dom: 8AM-6PM",
 
         // Booking Page
-        "contact_hero_title": "Tu Transformación <br> Comienta Aquí.",
+        "contact_hero_title": "Tu Transformación <br> Comienza Aquí.",
         "contact_hero_desc": "Selecciona un horario para tu práctica o comunícate para consultas especializadas. Calma atmosférica espera tu llegada.",
         "contact_scheduling_title": "Programación en Tiempo Real",
         "contact_scheduling_desc": "Integrado directamente con tu viaje. Selecciona tu práctica a continuación.",
