@@ -44,6 +44,7 @@
             transform: rotate(180deg);
         }
     </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body class="bg-alabaster selection:bg-primary/30">
@@ -64,7 +65,7 @@
                 <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
 
                 <!-- Auxiliary Links (Hidden on small/medium screens, moved to More) -->
-                <li class="hidden xl:block"><a href="youth.html" data-i18n="nav_youth">Youth</a></li>
+                <li class="hidden xl:block"><a href="kids.html" data-i18n="nav_youth">Youth</a></li>
                 <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
                 <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_gallery">Essence</a></li>
 
@@ -76,7 +77,7 @@
                     <div id="moreDropdown" class="more-dropdown">
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
                         <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
-                        <a href="youth.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
+                        <a href="kids.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
                         <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
                         <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Essence</a>
                     </div>
@@ -169,6 +170,10 @@
             <!-- Right Form -->
             <div class="bg-[#504c33] border border-white/10 rounded-[60px] p-8 md:p-16 shadow-2xl">
                 <form class="space-y-8" id="contactForm">
+                    <!-- Honeypot Trap -->
+                    <div style="display:none;">
+                        <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off">
+                    </div>
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
                             data-i18n="contact_form_name_label">Full
@@ -231,6 +236,10 @@
                             data-i18n-placeholder="contact_form_message_placeholder"
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white resize-none transition-all placeholder:text-white/30 outline-none"></textarea>
                     </div>
+
+                    <!-- Cloudflare Turnstile Widget -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="dark"></div>
+
                     <button type="submit"
                         class="bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none"
                         data-i18n="contact_form_submit" id="contactSubmitBtn">
@@ -252,8 +261,7 @@
 
                 <!-- Google Calendar Appointment Scheduling -->
                 <div class="rounded-[40px] overflow-hidden shadow-inner border border-deep/5 bg-white">
-                    <iframe
-                        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0vT8FI2lrRv0VSwsA7anenSSSNmjOMC-PPyVwjxyMgx2WASJA85YWyyKCkTT4oXtNWKjVVIOCW?gv=true"
+                    <iframe src="https://calendar.app.google/gpheBkRGBMz5RAkU7?gv=true"
                         style="border: 0; filter: invert(0) hue-rotate(0deg); margin: 0 auto; max-width: 100%;"
                         width="100%" height="700" frameborder="0"></iframe>
                 </div>
@@ -497,6 +505,8 @@
                     phone: document.getElementById('contactPhone').value,
                     service: document.getElementById('serviceInput').value,
                     message: document.getElementById('contactMessage').value,
+                    website: document.getElementById('contactWebsite').value, // Honeypot field
+                    'cf-turnstile-response': document.querySelector('[name="cf-turnstile-response"]').value,
                     lang: localStorage.getItem('user-lang') || 'es'
                 };
 

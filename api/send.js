@@ -7,7 +7,38 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { type, resource, name, email, phone, service, message, lang = 'es' } = req.body;
+  const { type, resource, name, email, phone, service, message, website, lang = 'es' } = req.body;
+  const turnstileResponse = req.body['cf-turnstile-response'];
+
+  // Honeypot trap check
+  if (website) {
+    console.warn('Bot detected by honeypot.');
+    return res.status(200).json({ success: true, message: 'Processed successfully.' });
+  }
+
+  // Cloudflare Turnstile Verification
+  if (!turnstileResponse) {
+    return res.status(403).json({ error: 'Security verification missing.' });
+  }
+
+  try {
+    const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+    const verification = await fetch(verifyUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${turnstileResponse}`
+    });
+
+    const outcome = await verification.json();
+    if (!outcome.success) {
+      console.error('Turnstile verification failed:', outcome['error-codes']);
+      return res.status(403).json({ error: 'Security verification failed.' });
+    }
+  } catch (err) {
+    console.error('Turnstile Error:', err);
+    // We proceed if the service itself is down to avoid blocking users, 
+    // but in a strict environment you might want to block.
+  }
 
   // Basic validation
   if (!name || !email || !phone) {
@@ -31,9 +62,9 @@ export default async function handler(req, res) {
       const selectedEbook = ebooks[resource] || ebooks['ebook1'];
 
       const { data, error } = await resend.emails.send({
-        from: 'Jeniffer Córdoba <hola@voizlab.com>',
+        from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>',
         to: [email],
-        bcc: ['ivan@voizlab.com'], // In test mode, we include ivan bcc
+        bcc: ['ivan+jc@voizlab.com'], // Ivan as BCC for monitoring during handover
         subject: selectedEbook.subject,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
@@ -61,8 +92,9 @@ export default async function handler(req, res) {
     if (type === 'contact') {
       // 1. Internal Notification (to Jeniffer/Ivan) - Styled Ficha de Cliente
       await resend.emails.send({
-        from: 'Website Portal <hola@voizlab.com>',
-        to: ['ivan+form@voizlab.com'],
+        from: 'Website Portal <hola@jeniffercordoba.com>',
+        to: ['jeniffercordoba@yahoo.com'], // Sent directly to Jeniffer's Yahoo now
+        bcc: ['ivan+jc@voizlab.com'], // Ivan as BCC for monitoring during handover
         subject: `New Lead: ${name} (${service})`,
         html: `
           <div style="font-family: sans-serif; background-color: #f7f7f7; padding: 40px;">
@@ -96,7 +128,7 @@ export default async function handler(req, res) {
 
       // 2. Thank You Email (to Customer) - Relaxing Sanctuary Style
       const { data, error } = await resend.emails.send({
-        from: 'Jeniffer Córdoba <hola@voizlab.com>',
+        from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>',
         to: [email],
         subject: isSpanish ? 'Tu mensaje ha sido recibido // Jeniffer Córdoba' : 'Your message has been received // Jeniffer Córdoba',
         html: `

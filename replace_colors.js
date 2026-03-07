@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = __dirname;
-const htmlFiles = ['youth.html', 'pricing.html', 'index.html', 'healing.html', 'essence.html', 'corporate.html', 'contact.html', 'about.html'];
+const htmlFiles = ['kids.html', 'pricing.html', 'index.html', 'healing.html', 'essence.html', 'corporate.html', 'contact.html', 'about.html'];
 
 // Replace Tailwind Config block
 const oldConfigStr = `colors: {
