@@ -43,6 +43,16 @@
         .rotate-180 {
             transform: rotate(180deg);
         }
+
+        /* Turnstile Customization */
+        .cf-turnstile-wrapper {
+            transition: all 0.3s ease;
+            filter: grayscale(0.2) opacity(0.9);
+        }
+
+        .cf-turnstile-wrapper:hover {
+            filter: grayscale(0) opacity(1);
+        }
     </style>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
@@ -239,7 +249,10 @@
                     </div>
 
                     <!-- Cloudflare Turnstile Widget -->
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="dark"></div>
+                    <div class="flex justify-center md:justify-start cf-turnstile-wrapper">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="dark"
+                            data-size="compact"></div>
+                    </div>
 
                     <button type="submit"
                         class="bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none"
