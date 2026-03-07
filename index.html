@@ -36,6 +36,7 @@
             }
         }
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body class="bg-alabaster selection:bg-primary/30">
@@ -461,6 +462,9 @@
                             class="w-full bg-alabaster/30 border border-primary/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-espresso transition-all outline-none placeholder:text-espresso/20"
                             placeholder="+57 ...">
                     </div>
+                    <!-- Cloudflare Turnstile Widget -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="light"
+                        data-size="compact"></div>
                     <div class="pt-4">
                         <button type="submit"
                             class="w-full bg-primary text-white py-6 rounded-full font-bold text-lg tracking-[0.2em] uppercase hover:bg-espresso transition-all duration-500 shadow-xl active:scale-95 flex items-center justify-center gap-4 group"
@@ -823,7 +827,7 @@
         const modalSubmitBtnText = document.getElementById('modalSubmitBtnText');
 
         window.openEbookModal = (id) => {
-            const currentLang = localStorage.getItem('language') || 'es';
+            const currentLang = localStorage.getItem('user-lang') || 'es';
             const trans = window.translations[currentLang];
             const ebookTitle = trans[`${id}_title`];
             modalEbookName.textContent = ebookTitle;
@@ -872,10 +876,13 @@
                 try {
                     const formData = new FormData(ebookForm);
                     const data = {
+                        type: 'ebook',
                         resource: formData.get('resource_id'),
                         name: formData.get('name'),
                         email: formData.get('email'),
-                        phone: formData.get('phone')
+                        phone: formData.get('phone'),
+                        'cf-turnstile-response': formData.get('cf-turnstile-response'),
+                        lang: localStorage.getItem('user-lang') || 'es'
                     };
 
                     await fetch('/api/send', {
