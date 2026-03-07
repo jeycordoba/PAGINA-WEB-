@@ -49,6 +49,15 @@ class I18nManager {
             }
         });
 
+        // Update Document Title
+        const titleEl = document.querySelector('[data-i18n-page-title]');
+        if (titleEl) {
+            const titleKey = titleEl.getAttribute('data-i18n-page-title');
+            if (window.translations[lang] && window.translations[lang][titleKey]) {
+                document.title = window.translations[lang][titleKey];
+            }
+        }
+
         // Update all elements with data-i18n-placeholder attribute
         const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
         placeholderElements.forEach(el => {

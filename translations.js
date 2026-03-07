@@ -11,6 +11,16 @@ const translations = {
         "nav_book": "Contact",
         "nav_book_session": "Book Your Session",
 
+        // Page Titles
+        "page_title_home": "Jeniffer Córdoba",
+        "page_title_about": "This is me // JC",
+        "page_title_healing": "Unified Session // JC",
+        "page_title_kids": "Kids Mindfulness // JC",
+        "page_title_corporate": "Corporate Wellness // JC",
+        "page_title_sanctuary": "My Sanctuary // JC",
+        "page_title_pricing": "Investment // JC",
+        "page_title_contact": "Contact // JC",
+
         // Hero Section
         "hero_balance": "Balance",
         "hero_calm": "Calm",
@@ -385,6 +395,16 @@ const translations = {
         "nav_gallery": "Santuario",
         "nav_pricing": "Precios",
         "nav_book": "Contacto",
+
+        // Page Titles
+        "page_title_home": "Jeniffer Córdoba",
+        "page_title_about": "Esta soy yo // JC",
+        "page_title_healing": "Sesión Unificada // JC",
+        "page_title_kids": "Kids Mindfulness // JC",
+        "page_title_corporate": "Bienestar Corporativo // JC",
+        "page_title_sanctuary": "Mi Santuario // JC",
+        "page_title_pricing": "Inversión // JC",
+        "page_title_contact": "Contacto // JC",
 
         // Hero Section
         "hero_balance": "Equilibrio",

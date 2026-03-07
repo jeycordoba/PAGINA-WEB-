@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking & Contact Portal // Jeniffer Córdoba</title>
+    <title data-i18n-page-title="page_title_contact">Contact // JC</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="images/8-Color.png">
+
+    <!-- I18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -69,6 +74,16 @@
                 <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
                 <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_gallery">Essence</a></li>
 
+                <!-- Language Switcher Desktop (Hidden as per request)
+                <li class="hidden xl:block">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <span class="lang-divider"></span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+                -->
+
                 <!-- More Button -->
                 <li class="relative xl:hidden">
                     <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
@@ -80,6 +95,13 @@
                         <a href="kids.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
                         <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
                         <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Essence</a>
+
+                        <!-- Language Switcher Mobile (Hidden as per request)
+                        <div class="lang-switcher-mobile">
+                            <button class="lang-btn active" data-lang="es">Español</button>
+                            <button class="lang-btn" data-lang="en">English</button>
+                        </div>
+                        -->
                     </div>
                 </li>
 
