@@ -176,33 +176,34 @@
                     </div>
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
-                            data-i18n="contact_form_name_label">Full
+                            for="contactName" data-i18n="contact_form_name_label">Full
                             Name</label>
                         <input type="text" id="contactName" name="name" required placeholder="Full Name"
-                            data-i18n-placeholder="contact_form_name_placeholder"
+                            autocomplete="name" data-i18n-placeholder="contact_form_name_placeholder"
                             class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-2">
                             <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
-                                data-i18n="contact_form_email_label">Email</label>
+                                for="contactEmail" data-i18n="contact_form_email_label">Email</label>
                             <input type="email" id="contactEmail" name="email" required placeholder="Email Address"
-                                data-i18n-placeholder="contact_form_email_placeholder"
+                                autocomplete="email" data-i18n-placeholder="contact_form_email_placeholder"
                                 class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                         <div class="space-y-2">
                             <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
-                                data-i18n="contact_form_phone_label">Phone
+                                for="contactPhone" data-i18n="contact_form_phone_label">Phone
                                 Number</label>
                             <input type="tel" id="contactPhone" name="phone" required placeholder="Phone Number"
-                                data-i18n-placeholder="contact_form_phone_placeholder"
+                                autocomplete="tel" data-i18n-placeholder="contact_form_phone_placeholder"
                                 class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                     </div>
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
-                            data-i18n="contact_form_service_label">Service</label>
-                        <div class="relative custom-dropdown" id="serviceDropdown">
+                            id="serviceLabel" data-i18n="contact_form_service_label">Service</label>
+                        <div class="relative custom-dropdown" id="serviceDropdown" role="group"
+                            aria-labelledby="serviceLabel">
                             <input type="hidden" name="service" id="serviceInput" value="unified">
                             <button type="button"
                                 class="w-full flex justify-between items-center bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-left transition-all hover:bg-white/10 text-lg text-white/70 outline-none">
@@ -230,7 +231,7 @@
                     </div>
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-white ml-1"
-                            data-i18n="contact_form_message_label">Additional
+                            for="contactMessage" data-i18n="contact_form_message_label">Additional
                             Message</label>
                         <textarea rows="4" id="contactMessage" name="message" placeholder="Share your intentions..."
                             data-i18n-placeholder="contact_form_message_placeholder"
