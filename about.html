@@ -104,17 +104,20 @@
 
     <!-- INTRO SECTION -->
     <section class="section-padding pt-40">
-        <div class="container grid md:grid-cols-2 gap-24 items-center">
+        <div class="container max-w-[1500px] mb-12">
+            <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-4"
+                data-i18n="about_intro_tag">Your Instructor</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-display text-deep italic leading-none tracking-tight"
+                data-i18n="about_intro_title">
+                Meet Your Guide, Jeniffer Córdoba</h1>
+        </div>
+        <div class="container max-w-[1500px] grid md:grid-cols-[1.2fr_0.8fr] gap-16 lg:gap-24 items-start">
             <div class="space-y-10">
-                <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block"
-                    data-i18n="about_intro_tag">Your Instructor</span>
-                <h1 class="text-6xl md:text-8xl font-display text-deep italic" data-i18n="about_intro_title">Meet Your
-                    Guide, <br>Jeniffer Córdoba</h1>
                 <p class="text-primary text-2xl font-display italic opacity-90 leading-relaxed max-w-2xl"
                     data-i18n="about_intro_quote">
-                    "Yoga is not about touching your toes, it's about what you learn on the way down."
+                    "Respira, vuelve a ti y recuerda: todo lo que buscas ya habita dentro de tu corazón."
                 </p>
-                <div class="space-y-6 text-gray-500 font-light text-lg leading-relaxed">
+                <div class="space-y-6 text-espresso/80 text-lg leading-relaxed">
                     <p data-i18n="about_intro_p1">With over a decade of dedicated practice and teaching, my journey
                         began in the high-stress world of corporate design. Searching for balance, I found my way onto a
                         yoga mat and never looked back.</p>
@@ -122,16 +125,70 @@
                         principles of Hatha, always emphasizing the connection between breath and movement. I believe
                         that every body is unique, and my classes are designed to be inclusive, challenging, and deeply
                         restorative.</p>
-                    <p data-i18n="about_intro_p3">When I'm not in the studio, you'll likely find me exploring local
-                        hiking trails or practicing meditation in my garden. I am a lifelong student of movement and
-                        mindfulness.</p>
+                    <p data-i18n="about_intro_p3">Each session is a sacred space designed for you to let go of what no
+                        longer serves you and open yourself to the infinity of your own being, rediscovering the power
+                        that has always been within you.</p>
                 </div>
+                <p class="text-deep font-display italic text-xl border-l-2 border-primary pl-6 py-2"
+                    data-i18n="about_iyengar_quote">
+                    "“Estoy tan agradecido por lo que el yoga ha hecho en mi vida, que siempre busco compartirlo” -
+                    B.K.S. Iyengar"
+                </p>
             </div>
-            <div class="relative">
+            <div class="relative max-w-sm lg:max-w-md ml-auto">
                 <div class="organic-mask overflow-hidden aspect-[3/4] shadow-2xl border-[15px] border-white">
                     <img src="images/jeniffer_profile.png" class="w-full h-full object-cover">
                 </div>
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+
+        <!-- INTEGRATED CERTIFICATIONS -->
+        <div class="container max-w-[1500px] mt-20 pt-20 border-t border-espresso/5">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+                <div class="w-full md:w-1/3 text-center md:text-left">
+                    <span class="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-4"
+                        data-i18n="about_certs_title">International Credentials</span>
+                    <h2 class="text-3xl md:text-5xl font-display text-deep italic leading-tight">Yoga Alliance Authority
+                    </h2>
+                </div>
+                <div class="w-full md:w-2/3 grid sm:grid-cols-2 gap-12">
+                    <!-- Cert 1 -->
+                    <div class="flex gap-6 items-start group">
+                        <div
+                            class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl p-3 shadow-md group-hover:shadow-xl transition-all duration-500 hover:scale-105">
+                            <img src="images/certs/yacep.png" alt="YACEP" class="w-full h-full object-contain">
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-deep font-bold text-xl" data-i18n="about_cert1_title">YACEP</h4>
+                            <div>
+                                <span
+                                    class="text-espresso font-bold underline decoration-primary/40 underline-offset-4 block mb-2"
+                                    data-i18n="about_cert1_full">Yoga Alliance Continuing Education Provider</span>
+                                <p class="text-espresso/70 text-sm leading-relaxed" data-i18n="about_cert1_desc">
+                                    Recognized as an expert capable of providing specialized training to other yoga
+                                    instructors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="flex gap-6 items-start group">
+                        <div
+                            class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl p-3 shadow-md group-hover:shadow-xl transition-all duration-500 hover:scale-105">
+                            <img src="images/certs/rys300.png" alt="RYS 300" class="w-full h-full object-contain">
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-deep font-bold text-xl" data-i18n="about_cert2_title">RYS 300</h4>
+                            <div>
+                                <span
+                                    class="text-espresso font-bold underline decoration-primary/40 underline-offset-4 block mb-2"
+                                    data-i18n="about_cert2_full">Registered Yoga School 300H</span>
+                                <p class="text-espresso/70 text-sm leading-relaxed" data-i18n="about_cert2_desc">
+                                    Advanced certification ensuring the highest standards of teaching in traditional
+                                    Hatha and Ashtanga Yoga.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -179,42 +236,133 @@
             <p class="text-primary font-bold text-xs uppercase tracking-[0.4em]" data-i18n="about_journey_subtitle">How
                 I found my way to the mat</p>
         </div>
-        <div class="container max-w-4xl relative">
+        <div class="container max-w-[1500px] relative">
             <div class="absolute left-1/2 top-0 bottom-0 w-px bg-primary/30 -translate-x-1/2"></div>
 
-            <div class="space-y-24 relative">
-                <!-- 2012 -->
+            <div class="space-y-6 relative">
+                <!-- Item 1: 2026 -->
                 <div class="flex items-center gap-12 group">
                     <div class="w-1/2 text-right">
-                        <span class="text-4xl md:text-5xl font-display text-deep font-bold italic">2012</span>
-                        <p class="text-gray-500 font-light text-xl mt-2 italic" data-i18n="about_journey_2012">Discovery
-                            of Hatha</p>
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_1">Mayo 2026</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_1">
+                            El Cerebro como Aliado - Nazareth Castellanos - La Escuela de Epicuro - Madrid (España)-
+                            Virtual</p>
                     </div>
                     <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
                     </div>
                     <div class="w-1/2"></div>
                 </div>
-                <!-- 2015 -->
+                <!-- Item 2: 2025 -->
                 <div class="flex items-center gap-12 group">
                     <div class="w-1/2"></div>
                     <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
                     </div>
                     <div class="w-1/2 text-left">
-                        <span class="text-4xl md:text-5xl font-display text-deep font-bold italic">2015</span>
-                        <p class="text-gray-500 font-light text-xl mt-2 italic" data-i18n="about_journey_2015">Teacher
-                            Training in India</p>
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_2">Noviembre 2025</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_2">
+                            Sanador y Coach Cuántico 50 H - Paola gutierrez - UNAD Florida University (Virtual)</p>
                     </div>
                 </div>
-                <!-- 2018 -->
+                <!-- Item 3: 2025 -->
                 <div class="flex items-center gap-12 group">
                     <div class="w-1/2 text-right">
-                        <span class="text-4xl md:text-5xl font-display text-deep font-bold italic">2018</span>
-                        <p class="text-gray-500 font-light text-xl mt-2 italic" data-i18n="about_journey_2018">Advanced
-                            Breathwork</p>
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_3">Mayo 2025</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_3">
+                            Curso de Profesor de Yoga Nidra 60H - Yoga Alliance - kAVAALYA - India (Virtual)</p>
                     </div>
                     <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
                     </div>
                     <div class="w-1/2"></div>
+                </div>
+                <!-- Item 4: 2024 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2"></div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_4">Noviembre 2024</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_4">
+                            Certification 300 Hours Yoga Teacher Training In Hatha and Ashtanga Yoga as expounded in the
+                            traditional scriptures. - YOGAGARA - India</p>
+                    </div>
+                </div>
+                <!-- Item 5: 2024 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2 text-right">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_5">Mayo 2024</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_5">
+                            PREM (Asociación Internacional de Escuelas de Yoga) y Happy Yoga Certificación de yoga y
+                            mindfulness para niños y jóvenes - 135 H</p>
+                    </div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+                <!-- Item 6: 2024 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2"></div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_6">Abril 2024</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_6">
+                            Taller de Canto con tambor y prácticas avanzadas con tambor - Sendero HUNAB KU - México
+                            (Virtual)</p>
+                    </div>
+                </div>
+                <!-- Item 7: 2022 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2 text-right">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_7">Junio 2022</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_7">
+                            Access Bar Practitioner - ACCESS CONSCIOUSNESS</p>
+                    </div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+                <!-- Item 8: 2021 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2"></div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_8">Noviembre 2021</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_8">
+                            Formación de Yoga y meditación 200H - YOGA VIVA - Zamira Cifuentes</p>
+                    </div>
+                </div>
+                <!-- Item 9: 2020 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2 text-right">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_9">Abril 2020</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_9">
+                            Taller - La Memoria en la Células - LUIS ANGEL DÍAZ</p>
+                    </div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+                <!-- Item 10: 2020 -->
+                <div class="flex items-center gap-12 group">
+                    <div class="w-1/2"></div>
+                    <div class="w-4 h-4 rounded-full bg-primary relative z-10 shadow-[0_0_20px_rgba(135,169,106,1)]">
+                    </div>
+                    <div class="w-1/2 text-left">
+                        <span class="text-3xl md:text-4xl font-display text-deep font-bold italic"
+                            data-i18n="about_journey_date_10">Febrero 2020</span>
+                        <p class="text-espresso/80 text-lg mt-1 italic" data-i18n="about_journey_10">
+                            Certificación - Detox Coach - PROSPERIT TEAM INTERNATIONAL</p>
+                    </div>
                 </div>
             </div>
         </div>
