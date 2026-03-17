@@ -52,13 +52,12 @@
             </a>
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
-                <li><a href="healing.html" class="active" data-i18n="nav_healing">Healing</a></li>
                 <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="xl:block"><a href="QHC.html" class="active" data-i18n="nav_healing">Healing</a></li>
+                <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
 
-                <!-- Auxiliary Links -->
-                <li class="hidden xl:block"><a href="kids.html" data-i18n="nav_youth">Youth</a></li>
-                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporate</a></li>
-                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_gallery">Essence</a></li>
                 <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
 
                 <!-- Language Switcher Desktop (Hidden as per request)
@@ -79,9 +78,10 @@
                     <div id="moreDropdown" class="more-dropdown">
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
                         <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
-                        <a href="kids.html" class="xl:hidden" data-i18n="nav_youth">Youth</a>
-                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporate</a>
-                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Essence</a>
+                        <a href="QHC.html" class="xl:hidden active" data-i18n="nav_healing">Healing</a>
+                        <a href="Yoga.html" class="xl:hidden" data-i18n="nav_yoga">Yoga</a>
+                        <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
+                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
                         <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
                         <hr class="border-mint/20 my-2 xl:hidden">
 
@@ -141,7 +141,7 @@
             <!-- Pillar 1 -->
             <div data-pillar="0" onclick="selectPillar(0)" onmouseenter="previewPillar(0)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">spa</span>
@@ -152,12 +152,25 @@
                 <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar1_desc">Body-led
                     healing and intuitive intelligence.</p>
+
+                <!-- Mobile Detail Expansion -->
+                <div class="mobile-pillar-content md:hidden text-left mt-8 space-y-6 overflow-hidden transition-all duration-700 max-h-0 opacity-0 cursor-default"
+                    onclick="event.stopPropagation()">
+                    <div class="rounded-2xl overflow-hidden aspect-video bg-alabaster w-[70%] mx-auto shadow-inner">
+                        <img loading="lazy" src="" class="pillar-mobile-img w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-primary font-bold tracking-[0.3em] text-[10px] block pillar-mobile-label"></span>
+                        <h4 class="text-2xl font-display text-deep italic pillar-mobile-heading leading-tight"></h4>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed italic pillar-mobile-text"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- Pillar 2 -->
             <div data-pillar="1" onclick="selectPillar(1)" onmouseenter="previewPillar(1)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">auto_awesome</span>
@@ -168,12 +181,25 @@
                 <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar2_desc">Energy
                     frequency and vibrational alignment.</p>
+
+                <!-- Mobile Detail Expansion -->
+                <div class="mobile-pillar-content md:hidden text-left mt-8 space-y-6 overflow-hidden transition-all duration-700 max-h-0 opacity-0 cursor-default"
+                    onclick="event.stopPropagation()">
+                    <div class="rounded-2xl overflow-hidden aspect-video bg-alabaster w-[70%] mx-auto shadow-inner">
+                        <img loading="lazy" src="" class="pillar-mobile-img w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-primary font-bold tracking-[0.3em] text-[10px] block pillar-mobile-label"></span>
+                        <h4 class="text-2xl font-display text-deep italic pillar-mobile-heading leading-tight"></h4>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed italic pillar-mobile-text"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- Pillar 3 -->
             <div data-pillar="2" onclick="selectPillar(2)" onmouseenter="previewPillar(2)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">air</span>
@@ -184,12 +210,25 @@
                 <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar3_desc">Nervous system
                     regulation protocols.</p>
+
+                <!-- Mobile Detail Expansion -->
+                <div class="mobile-pillar-content md:hidden text-left mt-8 space-y-6 overflow-hidden transition-all duration-700 max-h-0 opacity-0 cursor-default"
+                    onclick="event.stopPropagation()">
+                    <div class="rounded-2xl overflow-hidden aspect-video bg-alabaster w-[70%] mx-auto shadow-inner">
+                        <img loading="lazy" src="" class="pillar-mobile-img w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-primary font-bold tracking-[0.3em] text-[10px] block pillar-mobile-label"></span>
+                        <h4 class="text-2xl font-display text-deep italic pillar-mobile-heading leading-tight"></h4>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed italic pillar-mobile-text"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- Pillar 4 -->
             <div data-pillar="3" onclick="selectPillar(3)" onmouseenter="previewPillar(3)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">psychology</span>
@@ -200,11 +239,25 @@
                 <p class="text-gray-500 text-sm md:text-base font-light leading-relaxed transition-colors pillar-desc px-2"
                     data-i18n="healing_pillar4_desc">Bridging the
                     session into daily life.</p>
+
+                <!-- Mobile Detail Expansion -->
+                <div class="mobile-pillar-content md:hidden text-left mt-8 space-y-6 overflow-hidden transition-all duration-700 max-h-0 opacity-0 cursor-default"
+                    onclick="event.stopPropagation()">
+                    <div class="rounded-2xl overflow-hidden aspect-video bg-alabaster">
+                        <img src="" class="pillar-mobile-img w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-primary font-bold tracking-[0.3em] text-[10px] block pillar-mobile-label"></span>
+                        <h4 class="text-2xl font-display text-deep italic pillar-mobile-heading leading-tight"></h4>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed italic pillar-mobile-text"></p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Detail Discovery Card (Always Visible) -->
-        <div class="container">
+
+        <!-- Detail Discovery Card (Desktop Only) -->
+        <div class="container hidden md:block">
             <div id="pillarDetailWrapper"
                 class="opacity-100 overflow-hidden transition-all duration-500 ease-in-out mt-12">
                 <div class="py-8 md:py-12"> <!-- Container for shadow to breathe -->
@@ -241,12 +294,32 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
+        @media (max-width: 768px) {
+            .pillar-card.active-pillar {
+                transform: none;
+            }
+
+            .pillar-card.active-pillar .mobile-pillar-content {
+                max-height: 800px;
+                opacity: 1;
+                margin-bottom: 2rem;
+            }
+        }
+
         .pillar-card.active-pillar .pillar-title {
             color: #955031 !important;
         }
 
         .pillar-card.active-pillar .pillar-desc {
             color: white !important;
+        }
+
+        .pillar-card.active-pillar .pillar-mobile-heading {
+            color: white !important;
+        }
+
+        .pillar-card.active-pillar .pillar-mobile-text {
+            color: rgba(255, 255, 255, 0.8) !important;
         }
 
         .pillar-card.active-pillar .icon-bg {
@@ -323,15 +396,42 @@
 
         function updatePillarContent(index) {
             const data = pillarData[index];
-            const img = document.getElementById('pillarImage');
             const lang = i18n.currentLang;
             const t = translations[lang];
 
-            img.src = data.image;
-            document.getElementById('pillarLabel').innerText = t[`healing_${data.key}_label`];
-            document.getElementById('pillarHeading').innerText = t[`healing_${data.key}_heading`];
-            document.getElementById('pillarText').innerText = t[`healing_${data.key}_text`];
-            document.getElementById('pillarSmallLabel').innerText = t[`healing_${data.key}_smallLabel`];
+            // 1. Update Desktop View
+            const desktopImg = document.getElementById('pillarImage');
+            if (desktopImg) {
+                desktopImg.src = data.image;
+                document.getElementById('pillarLabel').innerText = t[`healing_${data.key}_label`];
+                document.getElementById('pillarHeading').innerText = t[`healing_${data.key}_heading`];
+                document.getElementById('pillarText').innerText = t[`healing_${data.key}_text`];
+                document.getElementById('pillarSmallLabel').innerText = t[`healing_${data.key}_smallLabel`];
+            }
+
+            // 2. Update Mobile View (Optimized for performance)
+            const cards = document.querySelectorAll('.pillar-card');
+            cards.forEach((card, i) => {
+                const cardData = pillarData[i];
+                const mobileImg = card.querySelector('.pillar-mobile-img');
+                const mobileLabel = card.querySelector('.pillar-mobile-label');
+                const mobileHeading = card.querySelector('.pillar-mobile-heading');
+                const mobileText = card.querySelector('.pillar-mobile-text');
+
+                if (mobileImg) {
+                    // Performance optimization: Only load the image if this card is active or it's desktop
+                    if (i === index || window.innerWidth > 768) {
+                        if (mobileImg.src !== cardData.image) {
+                            mobileImg.src = cardData.image;
+                            mobileImg.onload = () => mobileImg.classList.remove('opacity-0');
+                        }
+                    }
+                    
+                    mobileLabel.innerText = t[`healing_${cardData.key}_label`];
+                    mobileHeading.innerText = t[`healing_${cardData.key}_heading`];
+                    mobileText.innerText = t[`healing_${cardData.key}_text`];
+                }
+            });
         }
 
         function highlightCards(index) {
@@ -348,13 +448,17 @@
         }
 
         function previewPillar(index) {
-            updatePillarContent(index);
-            highlightCards(index);
+            if (window.innerWidth > 768) {
+                updatePillarContent(index);
+                highlightCards(index);
+            }
         }
 
         function restorePillarSelection() {
-            updatePillarContent(selectedIndex);
-            highlightCards(selectedIndex);
+            if (window.innerWidth > 768) {
+                updatePillarContent(selectedIndex);
+                highlightCards(selectedIndex);
+            }
         }
 
         /* Intersection Observer for Scroll Animations */
@@ -610,60 +714,77 @@
         </div>
         <div class="container grid md:grid-cols-2 gap-24 items-center">
             <div class="relative reveal">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Xh6yMN81HmAmy99VBqFAM5OdG84bfZ2vtr85Lc25fMWLMCAmP7tJVvd_WY1AQkclJ7ppy1XG9YLGb2vbYCn06wHQj9QJAi28n3HZi297enHt-Fyt1sgPPofrYx--_4eZ7EYHkMtkuF4xPt9KA7Hb_mlTaBfZ6fkxitOEy5cOz0_aeqjmyCjp4BgQ6zLQ-rRX88mYic1QnfoEhDgRvrmJWslvK6cz7XXve0nrwrh8TLyoMjAL1467ffXjz5ia-8iCQbmBkhZpflXF"
-                    class="w-full h-[600px] object-cover rounded-32 grayscale brightness-75 contrast-110 shadow-2xl">
+                <img src="images/sacred_geometry.png"
+                    class="w-full h-[600px] object-cover rounded-32 shadow-2xl">
                 <div class="absolute inset-0 flex items-end p-12">
                     <p class="text-white text-3xl font-display italic leading-snug" data-i18n="healing_quote_text">
                         "En el silencio del cuerpo, encontramos el susurro del alma - B.K.S Iyengar"</p>
                 </div>
             </div>
-            <div class="space-y-2 reveal">
+            <div class="space-y-6 reveal">
                 <!-- FAQ 1 -->
                 <details name="faq"
-                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
+                    class="group bg-mint/5 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
-                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq1_q">What exactly is
-                            a "Unified Session"?</span>
+                        class="flex justify-between items-center py-5 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq1_q">What exactly is QHC 5D?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq1_a">
-                        A Unified Session is a 90-minute bespoke experience where we don't follow a fixed template.
-                        Instead, we weave together whatever tools your body requires in the moment—whether it's more
-                        somatic release or deeper energetic clearing.
+                    <div class="px-8 pb-6 text-gray-600 font-light text-sm" data-i18n="healing_faq1_a">
+                        QHC 5D (Quantum Healing Consciousness) is a multidimensional approach that combines somatic release, nervous system regulation, and quantum resonance.
                     </div>
                 </details>
                 <!-- FAQ 2 -->
                 <details name="faq"
-                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
+                    class="group bg-mint/5 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
-                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq2_q">Do I need prior
-                            experience?</span>
+                        class="flex justify-between items-center py-5 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq2_q">How does technology play a role?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq2_a">
-                        Not at all. The journey is specifically designed for your current state. Whether you are a
-                        seasoned practitioner or completely new to wellness work, the session meets you exactly where
-                        you are.
+                    <div class="px-8 pb-6 text-gray-600 font-light text-sm" data-i18n="healing_faq2_a">
+                        We utilize sound frequencies and bio-resonant technologies to align your energy centers.
                     </div>
                 </details>
                 <!-- FAQ 3 -->
                 <details name="faq"
-                    class="group bg-mint/10 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
+                    class="group bg-mint/5 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
                     <summary
-                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
-                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq3_q">Can this help
-                            with chronic pain?</span>
+                        class="flex justify-between items-center py-5 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq3_q">Specific preparation?</span>
                         <span
                             class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
                     </summary>
-                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="healing_faq3_a">
-                        Somatic work is highly effective for chronic pain related to tension and trauma storage. By
-                        addressing the nervous system's response, many clients experience significant and lasting
-                        relief.
+                    <div class="px-8 pb-6 text-gray-600 font-light text-sm" data-i18n="healing_faq3_a">
+                        Arrive with an open heart and comfortable clothing.
+                    </div>
+                </details>
+                <!-- FAQ 4 -->
+                <details name="faq"
+                    class="group bg-mint/5 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center py-5 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq4_q">How many sessions?</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
+                    </summary>
+                    <div class="px-8 pb-6 text-gray-600 font-light text-sm" data-i18n="healing_faq4_a">
+                        We suggest a series of 3 to 5 sessions to anchor new patterns.
+                    </div>
+                </details>
+                <!-- FAQ 5 -->
+                <details name="faq"
+                    class="group bg-mint/5 backdrop-blur-md rounded-2xl border border-deep/10 shadow-lg shadow-deep/5 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center py-5 px-8 cursor-pointer hover:bg-white/60 transition-colors">
+                        <span class="text-2xl font-display text-deep italic" data-i18n="healing_faq5_q">Medical treatments?</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
+                    </summary>
+                    <div class="px-8 pb-6 text-gray-600 font-light text-sm" data-i18n="healing_faq5_a">
+                        It is a complementary approach that works alongside traditional medicine.
                     </div>
                 </details>
             </div>
@@ -716,7 +837,7 @@
                 <div class="text-center">
                     <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
                         data-i18n="footer_tagline">
-                        Un santuario Divino de Infinitas Posibilidades.
+                        Un santuario Divino de<br>Infinitas Posibilidades.
                     </p>
                 </div>
 

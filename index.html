@@ -52,14 +52,12 @@
                 </span>
             </a>
             <ul class="nav-links">
-                <li class="hidden xl:block"><a href="index.html" class="active" data-i18n="nav_home">Inicio</a></li>
-                <li><a href="healing.html" data-i18n="nav_healing">Sanación</a></li>
-                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">Sobre Mí</a></li>
-
-                <!-- Auxiliary Links -->
-                <li class="hidden xl:block"><a href="kids.html" data-i18n="nav_youth">Jóvenes</a></li>
-                <li class="hidden xl:block"><a href="corporate.html" data-i18n="nav_corporate">Corporativo</a></li>
-                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_gallery">Esencia</a></li>
+                <li class="xl:block"><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="hidden xl:block"><a href="QHC.html" data-i18n="nav_healing">QHC</a></li>
+                <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
                 <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
 
                 <!-- Language Switcher Desktop (Hidden as per request)
@@ -78,11 +76,12 @@
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <div id="moreDropdown" class="more-dropdown">
-                        <a href="index.html" class="xl:hidden" data-i18n="nav_home">Inicio</a>
-                        <a href="about.html" class="xl:hidden" data-i18n="nav_about">Sobre Mí</a>
-                        <a href="kids.html" class="xl:hidden" data-i18n="nav_youth">Jóvenes</a>
-                        <a href="corporate.html" class="xl:hidden" data-i18n="nav_corporate">Corporativo</a>
-                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_gallery">Esencia</a>
+                        <a href="index.html" class="xl:hidden active" data-i18n="nav_home">Home</a>
+                        <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
+                        <a href="QHC.html" class="xl:hidden" data-i18n="nav_healing">QHC</a>
+                        <a href="Yoga.html" class="xl:hidden" data-i18n="nav_yoga">Yoga</a>
+                        <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
+                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
                         <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
 
                         <!-- Language Switcher Mobile (Hidden as per request)
@@ -220,7 +219,7 @@
                                 data-i18n="practices_item1_desc">
                                 Una mezcla fluida de estilos Hatha y Vinyasa diseñada para alinear tu cuerpo físico con
                                 tu respiración.</p>
-                            <a href="healing.html"
+                            <a href="QHC.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold tracking-[0.25em] text-deep group-hover:text-white transition-colors">
                                 <span data-i18n="common_learn_more">Saber Más</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
@@ -246,7 +245,7 @@
                                 Sesiones de realineación energética dirigidas al sistema nervioso y patrones
                                 subconscientes.
                             </p>
-                            <a href="healing.html"
+                            <a href="QHC.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold tracking-[0.25em] text-deep group-hover:text-white transition-colors">
                                 <span data-i18n="common_learn_more">Learn More</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
@@ -271,7 +270,7 @@
                                 data-i18n="practices_item3_desc">
                                 Técnicas avanzadas de respiración y meditación guiada para cultivar la presencia y una
                                 claridad emocional radical.</p>
-                            <a href="healing.html"
+                            <a href="QHC.html"
                                 class="mt-auto group/link flex items-center gap-3 text-[10px] font-bold tracking-[0.25em] text-deep group-hover:text-white transition-colors">
                                 <span data-i18n="common_learn_more">Learn More</span> <span
                                     class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
@@ -453,13 +452,7 @@
                             class="w-full bg-alabaster/30 border border-primary/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-espresso transition-all outline-none placeholder:text-espresso/20"
                             placeholder="tu@email.com">
                     </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-espresso/40 ml-1"
-                            data-i18n="ebook_form_phone">Teléfono</label>
-                        <input type="tel" name="phone" required
-                            class="w-full bg-alabaster/30 border border-primary/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-espresso transition-all outline-none placeholder:text-espresso/20"
-                            placeholder="+57 ...">
-                    </div>
+
                     <!-- Cloudflare Turnstile Widget -->
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="light"
                         data-size="compact"></div>
@@ -520,12 +513,9 @@
                                 class="absolute -right-4 -bottom-10 text-8xl font-serif text-[#955031] opacity-80 select-none pointer-events-none">"</span>
                         </div>
 
+
                         <div class="flex flex-col items-center gap-8 mt-4 w-full">
-                            <!-- Role text -->
-                            <p id="testimonialRole"
-                                class="text-[10px] text-white/60 font-bold tracking-[0.4em] transition-all duration-500 ease-out opacity-100 translate-y-0">
-                                Creative Director, EVO Group
-                            </p>
+
 
                             <div class="flex items-center justify-center gap-3 flex-wrap">
                                 <!-- Avatars will be injected here -->
@@ -560,28 +550,28 @@
                 id: 3,
                 quote: "Quantum healing helped me unlock creative blocks I'd carried for years. Jeniffer has a truly unique gift for energy work.",
                 author: "Elena Rodriguez",
-                role: "Visual Artist",
+                role: "Elena Rodriguez",
                 avatar: "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1200"
             },
             {
                 id: 4,
                 quote: "The corporate retreat Jeniffer led for our executive team was a turning point. We communicate with more empathy and focus now.",
                 author: "James Whitaker",
-                role: "CEO, TechFlow",
+                role: "James Whitaker",
                 avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200"
             },
             {
                 id: 5,
                 quote: "I brought my daughter for the mindfulness sessions, and the change has been incredible. She is more self-aware and patient.",
                 author: "Sarah Jenkins",
-                role: "Educator",
+                role: "Sarah Jenkins",
                 avatar: "images/avatars/female-avatar.png"
             },
             {
                 id: 6,
                 quote: "An experience that words fail to describe. Jeniffer creates a vessel for profound introspection and physical release.",
                 author: "David Brooks",
-                role: "Journalist",
+                role: "David Brooks",
                 avatar: "images/avatars/male-avatar.png"
             }
         ];
@@ -594,7 +584,6 @@
             isAnimating = true;
 
             const quoteEl = document.getElementById('testimonialQuote');
-            const roleEl = document.getElementById('testimonialRole');
             const lang = window.i18n ? window.i18n.currentLang : 'es';
             const trans = window.translations[lang];
 
@@ -602,16 +591,11 @@
             quoteEl.classList.remove('opacity-100', 'blur-0', 'scale-100');
             quoteEl.classList.add('opacity-0', 'blur-sm', 'scale-[0.98]');
 
-            roleEl.classList.remove('opacity-100', 'translate-y-0');
-            roleEl.classList.add('opacity-0', 'translate-y-2');
-
             setTimeout(() => {
                 activeIndex = index;
                 const quoteKey = `testimonial_${index + 1}_quote`;
-                const roleKey = `testimonial_${index + 1}_role`;
 
                 quoteEl.textContent = trans[quoteKey] || testimonialsData[index].quote;
-                roleEl.textContent = trans[roleKey] || testimonialsData[index].role;
 
                 // Re-render nav to update active state
                 renderNav();
@@ -619,9 +603,6 @@
                 // Start enter animation
                 quoteEl.classList.remove('opacity-0', 'blur-sm', 'scale-[0.98]');
                 quoteEl.classList.add('opacity-100', 'blur-0', 'scale-100');
-
-                roleEl.classList.remove('opacity-0', 'translate-y-2');
-                roleEl.classList.add('opacity-100', 'translate-y-0');
 
                 setTimeout(() => {
                     isAnimating = false;
@@ -634,13 +615,10 @@
             const lang = e.detail.language;
             const trans = window.translations[lang];
             const quoteEl = document.getElementById('testimonialQuote');
-            const roleEl = document.getElementById('testimonialRole');
 
-            if (quoteEl && roleEl && trans) {
+            if (quoteEl && trans) {
                 const quoteKey = `testimonial_${activeIndex + 1}_quote`;
-                const roleKey = `testimonial_${activeIndex + 1}_role`;
                 quoteEl.textContent = trans[quoteKey];
-                roleEl.textContent = trans[roleKey];
             }
             renderNav();
         });
@@ -693,7 +671,7 @@
                 class="w-full h-full object-cover brightness-[0.4] scale-110">
         </div>
         <div class="relative z-10 text-center px-6 max-w-5xl space-y-16">
-            <h2 class="text-7xl md:text-[100px] font-display text-white italic font-bold leading-[0.9] drop-shadow-2xl"
+            <h2 class="text-[69px] md:text-[97px] font-display text-white italic font-bold leading-[0.9] drop-shadow-2xl"
                 data-i18n="cta_title">
                 Una<br>Decisión Puede<br>Cambiar tu Vida</h2>
             <a href="contact.html"
@@ -732,7 +710,7 @@
                 <div class="text-center">
                     <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
                         data-i18n="footer_tagline">
-                        Un santuario Divino de Infinitas Posibilidades.
+                        Un santuario Divino de<br>Infinitas Posibilidades.
                     </p>
                 </div>
 
@@ -878,7 +856,7 @@
                         resource: formData.get('resource_id'),
                         name: formData.get('name'),
                         email: formData.get('email'),
-                        phone: formData.get('phone'),
+
                         'cf-turnstile-response': formData.get('cf-turnstile-response'),
                         lang: localStorage.getItem('user-lang') || 'es'
                     };

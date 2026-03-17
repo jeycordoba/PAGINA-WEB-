@@ -2,12 +2,11 @@ const translations = {
     en: {
         // Navigation
         "nav_home": "Home",
-        "nav_healing": "Healing",
-        "nav_about": "About",
-        "nav_youth": "Kids",
-        "nav_corporate": "Corporate",
-        "nav_gallery": "Sanctuary",
-        "nav_pricing": "Pricing",
+        "nav_about": "About Me",
+        "nav_healing": "QHC",
+        "nav_yoga": "Yoga",
+        "nav_experiences": "Experiences",
+        "nav_essence": "Sanctuary",
         "nav_book": "Contact",
         "nav_book_session": "Book Your Session",
 
@@ -66,13 +65,13 @@ const translations = {
         "testimonial_2_quote": "You are a charismatic woman, with a permanent smile, respectful, who loves what she does and transmits her enthusiasm. Her incense mantras make her yoga flow naturally, without effort and challenging me to do more daring movements every day. Her classes are a delight for the body and spirit! Her tranquility and firmness make emotional well-being flourish. She is a talented professional, through and through!",
         "testimonial_2_role": "Johanna Kling",
         "testimonial_3_quote": "Quantum healing helped me unlock creative blocks I'd carried for years. Jeniffer has a truly unique gift for energy work.",
-        "testimonial_3_role": "Visual Artist",
+        "testimonial_3_role": "Elena Rodriguez",
         "testimonial_4_quote": "The corporate retreat Jeniffer led for our executive team was a turning point. We communicate with more empathy and focus now.",
-        "testimonial_4_role": "CEO, TechFlow",
+        "testimonial_4_role": "James Whitaker",
         "testimonial_5_quote": "I brought my daughter for the mindfulness sessions, and the change has been incredible. She is more self-aware and patient.",
-        "testimonial_5_role": "Educator",
+        "testimonial_5_role": "Sarah Jenkins",
         "testimonial_6_quote": "An experience that words fail to describe. Jeniffer creates a vessel for profound introspection and physical release.",
-        "testimonial_6_role": "Journalist",
+        "testimonial_6_role": "David Brooks",
 
         // Final CTA
         "cta_title": "Awaken the Consciousness <br>of the Heart",
@@ -96,7 +95,7 @@ const translations = {
         "ebook4_cta": "Release Deep Tension",
         "ebook_form_name": "Full Name",
         "ebook_form_email": "Email Address",
-        "ebook_form_phone": "Phone Number",
+
         "ebook_success_title": "Your Guide is on the way!",
         "ebook_success_desc": "Check your inbox in a few moments. A piece of the sanctuary is coming to you.",
         "ebook_modal_title": "Download Resource",
@@ -230,14 +229,18 @@ const translations = {
         "healing_transformation2_desc": "Clear cognitive fog and emotional noise, allowing for decisive action and creative flow.",
         "healing_transformation3_title": "Physical Vitality",
         "healing_transformation3_desc": "Restore cellular communication and energy flow, manifesting in improved posture and deep rest.",
-        "healing_nuances_title": "The Nuances",
+        "healing_nuances_title": "Frequently Asked Questions about QHC",
         "healing_quote_text": "In the silence of the body, we find the whisper of the soul - B.K.S Iyengar",
-        "healing_faq1_q": "What exactly is a \"Unified Session\"?",
-        "healing_faq1_a": "A Unified Session is a 90-minute bespoke experience where we don't follow a fixed template. Instead, we weave together whatever tools your body requires in the moment—whether it's more somatic release or deeper energetic clearing.",
-        "healing_faq2_q": "Do I need prior experience?",
-        "healing_faq2_a": "Not at all. The journey is specifically designed for your current state. Whether you are a seasoned practitioner or completely new to wellness work, the session meets you exactly where you are.",
-        "healing_faq3_q": "Can this help with chronic pain?",
-        "healing_faq3_a": "Somatic work is highly effective for chronic pain related to tension and trauma storage. By addressing the nervous system's response, many clients experience significant and lasting relief.",
+        "healing_faq1_q": "What exactly is QHC 5D?",
+        "healing_faq1_a": "QHC 5D (Quantum Healing Consciousness) is a multidimensional approach that combines somatic release, nervous system regulation, and quantum resonance to facilitate deep spiritual and physical transformation.",
+        "healing_faq2_q": "How does technology play a role in the sessions?",
+        "healing_faq2_a": "We utilize specific sound frequencies and bio-resonant technologies to align your energy centers and facilitate a state of deep neural reception for lasting change.",
+        "healing_faq3_q": "Do I need to prepare in any specific way?",
+        "healing_faq3_a": "We recommend arriving with an open heart and comfortable clothing. It is best to avoid heavy meals two hours prior to ensure your body can fully dive into the somatic work.",
+        "healing_faq4_q": "How many sessions are recommended?",
+        "healing_faq4_a": "While a single session can provide profound shifts, we suggest a series of 3 to 5 sessions to anchor the new energetic patterns and achieve long-term structural and emotional stability.",
+        "healing_faq5_q": "Is this session compatible with medical treatments?",
+        "healing_faq5_a": "Absolutely. QHC 5D is a complementary approach that works alongside traditional medicine by optimizing your body's internal environment and stress response systems.",
         "healing_cta_title": "Ready to Experience <br> the Shift?",
         "healing_cta_btn": "Book Your Session",
         "healing_cta_availability": "Limited Availability",
@@ -416,17 +419,16 @@ const translations = {
 
         // Footer
         "footer_brand": "Jeniffer Córdoba",
-        "footer_tagline": "A Divine Sanctuary of Infinite Possibilities."
+        "footer_tagline": "A Divine Sanctuary of<br>Infinite Possibilities."
     },
     es: {
         // Navigation
         "nav_home": "Inicio",
-        "nav_healing": "Sanación",
         "nav_about": "Sobre Mí",
-        "nav_youth": "Kids",
-        "nav_corporate": "Corporativo",
-        "nav_gallery": "Santuario",
-        "nav_pricing": "Precios",
+        "nav_healing": "QHC",
+        "nav_yoga": "Yoga",
+        "nav_experiences": "Experiencias",
+        "nav_essence": "Santuario",
         "nav_book": "Contacto",
 
         // Page Titles
@@ -484,13 +486,13 @@ const translations = {
         "testimonial_2_quote": "Eres una mujer carismática, con sonrisa permanente, respetuosa, que ama lo que hace y transmite su entusiasmo. Sus mantras en incienso hacen de su yoga fluya al natural, sin esfuerzo y retando a hacer cada día movimientos más audaces. Sus clases son un deleite para el cuerpo y espíritu! Su tranquilidad y firmeza hacen florecer el bienestar emocional. Es una profesional talentosa, a carta cabal!",
         "testimonial_2_role": "Johanna Kling",
         "testimonial_3_quote": "La sanación cuántica me ayudó a desbloquear bloqueos creativos que arrastraba desde hace años. Jeniffer tiene un don verdaderamente único para el trabajo energético.",
-        "testimonial_3_role": "Artista Visual",
+        "testimonial_3_role": "Elena Rodriguez",
         "testimonial_4_quote": "El retiro corporativo que Jeniffer dirigió para nuestro equipo ejecutivo fue un punto de inflexión. Ahora nos comunicamos con más empatía y enfoque.",
-        "testimonial_4_role": "CEO, TechFlow",
+        "testimonial_4_role": "James Whitaker",
         "testimonial_5_quote": "Traje a mi hija a las sesiones de mindfulness y el cambio ha sido increíble. Ella es más consciente de sí misma y paciente.",
-        "testimonial_5_role": "Educadora",
+        "testimonial_5_role": "Sarah Jenkins",
         "testimonial_6_quote": "Una experiencia que las palabras no alcanzan a describir. Jeniffer crea un recipiente para una profunda introspección y liberación física.",
-        "testimonial_6_role": "Periodista",
+        "testimonial_6_role": "David Brooks",
 
         // Final CTA
         "cta_title": "Despierta la Conciencia <br>del Corazón",
@@ -514,7 +516,7 @@ const translations = {
         "ebook4_cta": "Liberar mi Tensión Profunda",
         "ebook_form_name": "Nombre Completo",
         "ebook_form_email": "Correo Electrónico",
-        "ebook_form_phone": "Teléfono",
+
         "ebook_success_title": "¡Tu guía está en camino!",
         "ebook_success_desc": "Revisa tu bandeja de entrada en unos momentos. Un pedazo del santuario va hacia ti.",
         "ebook_modal_title": "Descargar Recurso",
@@ -635,14 +637,18 @@ const translations = {
         "healing_transformation2_desc": "Despeje la niebla cognitiva y el ruido emocional, permitiendo una acción decisiva y flujo creativo.",
         "healing_transformation3_title": "Vitalidad Física",
         "healing_transformation3_desc": "Restaura la comunicación celular y el flujo de energía, manifestándose en una mejor postura y descanso profundo.",
-        "healing_nuances_title": "Los Matices",
+        "healing_nuances_title": "Preguntas Frecuentes sobre QHC",
         "healing_quote_text": "En el silencio del cuerpo, encontramos el susurro del alma - B.K.S Iyengar",
-        "healing_faq1_q": "¿Qué es exactamente una \"Sesión Unificada\"?",
-        "healing_faq1_a": "Una Sesión Unificada es una experiencia personalizada de 90 minutos donde no seguimos una plantilla fija. En su lugar, entrelazamos las herramientas que tu cuerpo requiera en el momento, ya sea más liberación somática o una limpieza energética más profunda.",
-        "healing_faq2_q": "¿Necesito experiencia previa?",
-        "healing_faq2_a": "Para nada. El viaje está diseñado específicamente para su estado actual. Ya sea que sea un practicante experimentado o completamente nuevo en el trabajo de bienestar, la sesión se ajusta exactamente adonde usted se encuentra.",
-        "healing_faq3_q": "¿Puede esto ayudar con el dolor crónico?",
-        "healing_faq3_a": "El trabajo somático es altamente efectivo para el dolor crónico relacionado con la tensión y el almacenamiento de traumas. Al abordar la respuesta del sistema nervioso, muchos clientes experimentan un alivio significativo y duradero.",
+        "healing_faq1_q": "¿Qué es exactamente QHC 5D?",
+        "healing_faq1_a": "QHC 5D (Quantum Healing Consciousness) es un enfoque multidimensional que combina liberación somática, regulación del sistema nervioso y resonancia cuántica para facilitar una profunda transformación espiritual y física.",
+        "healing_faq2_q": "¿Cómo influye la tecnología en las sesiones?",
+        "healing_faq2_a": "Utilizamos frecuencias de sonido específicas y tecnologías de bio-resonancia para alinear sus centros energéticos y facilitar un estado de profunda recepción neural para cambios duraderos.",
+        "healing_faq3_q": "¿Necesito prepararme de alguna manera específica?",
+        "healing_faq3_a": "Le recomendamos llegar con el corazón abierto y ropa cómoda. Es ideal evitar comidas pesadas dos horas antes para asegurar que su cuerpo pueda sumergirse plenamente en el trabajo somático.",
+        "healing_faq4_q": "¿Cuántas sesiones recomienda?",
+        "healing_faq4_a": "Si bien una sola sesión puede generar cambios profundos, sugerimos una serie de 3 a 5 sesiones para anclar los nuevos patrones energéticos y lograr estabilidad estructural y emocional a largo plazo.",
+        "healing_faq5_q": "¿Es esta sesión compatible con tratamientos médicos?",
+        "healing_faq5_a": "Absolutamente. QHC 5D es un enfoque complementario que trabaja junto a la medicina tradicional al optimizar el entorno interno y los sistemas de respuesta al estrés de su cuerpo.",
         "healing_cta_title": "¿Lista para Experimentar <br> el Cambio?", // No direct "usted" but could be informalized if needed. "Lista" is fine for "tú" too.
         "healing_cta_btn": "Reserva tu Sesión",
         "healing_cta_availability": "Disponibilidad Limitada",
@@ -818,7 +824,7 @@ const translations = {
         "contact_direct_title": "¡Contáctame!",
 
         "footer_brand": "Jeniffer Córdoba",
-        "footer_tagline": "Un santuario Divino de Infinitas Posibilidades."
+        "footer_tagline": "Un santuario Divino de<br>Infinitas Posibilidades."
     }
 };
 

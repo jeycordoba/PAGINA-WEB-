@@ -41,7 +41,7 @@ export default async function handler(req, res) {
   }
 
   // Basic validation
-  if (!name || !email || !phone) {
+  if (!name || !email || (type === 'contact' && !phone)) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -60,7 +60,6 @@ export default async function handler(req, res) {
       };
 
       const selectedEbook = ebooks[resource] || ebooks['ebook1'];
-
       const { data, error } = await resend.emails.send({
         from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>',
         to: [email],
@@ -82,6 +81,36 @@ export default async function handler(req, res) {
             </div>
           </div>
         `,
+      });
+  
+      // INTERNAL NOTIFICATION (To Jeniffer/Ivan) for Ebook Success
+      await resend.emails.send({
+        from: 'Website Portal <hola@jeniffercordoba.com>',
+        to: ['jeniffercordoba@yahoo.com'],
+        bcc: ['ivan+jc@voizlab.com'],
+        subject: `Ebook Download: ${name} - ${selectedEbook.title}`,
+        html: `
+          <div style="font-family: sans-serif; background-color: #f7f7f7; padding: 40px;">
+            <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+              <div style="background-color: #955031; color: white; padding: 30px; text-align: center;">
+                <h2 style="margin: 0; font-weight: 300; letter-spacing: 2px;">RECURSO DESCARGADO</h2>
+              </div>
+              <div style="padding: 40px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr><td style="padding: 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Lead</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 18px; color: #322F20; border-bottom: 1px solid #eee;"><strong>${name}</strong></td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Email</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${email}</td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Recurso</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #955031; border-bottom: 1px solid #eee;"><strong>${selectedEbook.title}</strong></td></tr>
+                </table>
+                <div style="margin-top: 30px; font-size: 10px; color: #ccc;">Enviado desde el Lead Magnet (Idioma: ${lang.toUpperCase()})</div>
+              </div>
+            </div>
+          </div>
+        `
       });
 
       if (error) return res.status(400).json(error);
@@ -111,7 +140,7 @@ export default async function handler(req, res) {
                   <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${email}</td></tr>
                   
                   <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Teléfono</td></tr>
-                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${phone}</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${phone || 'No proporcionado'}</td></tr>
                   
                   <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Servicio de Interés</td></tr>
                   <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #955031; border-bottom: 1px solid #eee;"><strong>${service}</strong></td></tr>
