@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Practices - Visual Options</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,200..800&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#955031',
+                        'deep': '#504c33',
+                        'sage': '#b69c75',
+                        'alabaster': '#ede1c9',
+                        'mint': '#9b9773',
+                        'espresso': '#322F20'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    },
+                    borderRadius: {
+                        '32': '32px',
+                        '40': '40px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .section-padding { padding: 120px 5%; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* OPTION 1: ZEN ACCORDION */
+        .accordion-item {
+            position: relative;
+            height: 600px;
+            flex-grow: 1;
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+            border-radius: 24px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .accordion-item:hover {
+            flex-grow: 8;
+        }
+        .accordion-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1.2s ease;
+            filter: brightness(0.7) grayscale(30%);
+        }
+        .accordion-item:hover .accordion-bg {
+            transform: scale(1.1);
+            filter: brightness(0.5) grayscale(0%);
+        }
+        .accordion-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            color: white;
+            z-index: 10;
+        }
+        .accordion-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.3s;
+            max-width: 500px;
+        }
+        .accordion-item:hover .accordion-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .accordion-title-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .accordion-item:hover .accordion-title-vertical {
+            display: none;
+        }
+
+        /* OPTION 2: SPLIT SANCTUARY */
+        .stage-reveal {
+            animation: stageReveal 0.6s ease-out forwards;
+        }
+        @keyframes stageReveal {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* OPTION 3: FOCUS GRID */
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 32px;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(80, 76, 51, 0.8);
+            backdrop-blur: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        .grid-item:hover .grid-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-alabaster font-body text-deep">
+
+    <nav class="p-8 fixed top-0 w-full z-50 bg-alabaster/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="font-display italic text-2xl text-primary font-bold">Conceptos de Visualización</h1>
+            <a href="yoga.html" class="text-xs font-bold tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all">VOLVER A YOGA</a>
+        </div>
+    </nav>
+
+    <!-- OPTION 1: ZEN ACCORDION -->
+    <section class="section-padding overflow-hidden">
+        <div class="container mx-auto mb-16 text-center">
+            <span class="text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 px-4 py-2 rounded-full">Opción 1</span>
+            <h2 class="text-5xl font-display italic text-primary mt-6 mb-4">Zen Accordion</h2>
+            <p class="text-gray-500 font-light text-lg max-w-2xl mx-auto">Impacto visual máximo y enfoque en la sensación de inmersión.</p>
+        </div>
+
+        <div class="flex max-w-[1400px] mx-auto h-[600px] items-stretch px-4">
+            <!-- Vinyasa -->
+            <div class="accordion-item">
+                <div class="accordion-bg" style="background-image: url('images/yoga_hero_1.png')"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title-vertical">
+                        <span class="font-display italic text-4xl mb-4">Vinyasa</span>
+                        <div class="w-10 h-px bg-white/50 mb-4"></div>
+                        <span class="material-symbols-outlined">waves</span>
+                    </div>
+                    <div class="accordion-text">
+                        <span class="text-xs font-bold tracking-widest uppercase text-white/60 block mb-2">01. Dinámico</span>
+                        <h4 class="text-4xl font-display italic mb-4">Vinyasa</h4>
+                        <p class="text-white/80 font-light leading-relaxed">Más allá de una secuencia de movimientos, nos enseña que cada gesto, cada paso y cada respiración en nuestra vida tiene un propósito y un lugar sagrado. No es solo moverse; es elegir conscientemente cómo nos movemos a través de nuestra existencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hatha -->
+            <div class="accordion-item">
+                <div class="accordion-bg" style="background-image: url('images/yoga_hero_2.png')"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title-vertical">
+                        <span class="font-display italic text-4xl mb-4">Hatha</span>
+                        <div class="w-10 h-px bg-white/50 mb-4"></div>
+                        <span class="material-symbols-outlined">light_mode</span>
+                    </div>
+                    <div class="accordion-text">
+                        <span class="text-xs font-bold tracking-widest uppercase text-white/60 block mb-2">02. Equilibrio</span>
+                        <h4 class="text-4xl font-display italic mb-4">Hatha</h4>
+                        <p class="text-white/80 font-light leading-relaxed">Práctica refinada, poderosa y transformadora que llama al cuerpo, la respiración y la mente a trabajar como unidad. Reconocemos la fuerza, la quietud y el balance en la estabilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ashtanga -->
+            <div class="accordion-item">
+                <div class="accordion-bg" style="background-image: url('images/yoga_hero_3.png')"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title-vertical">
+                        <span class="font-display italic text-4xl mb-4">Ashtanga</span>
+                        <div class="w-10 h-px bg-white/50 mb-4"></div>
+                        <span class="material-symbols-outlined">change_history</span>
+                    </div>
+                    <div class="accordion-text">
+                        <span class="text-xs font-bold tracking-widest uppercase text-white/60 block mb-2">03. Disciplina</span>
+                        <h4 class="text-4xl font-display italic mb-4">Ashtanga</h4>
+                        <p class="text-white/80 font-light leading-relaxed">Fortalece, flexibiliza, equilibra y purifica el cuerpo físico, desarrollando actitudes mentales expansivas que armonizan el cuerpo energético.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nidra -->
+            <div class="accordion-item">
+                <div class="accordion-bg" style="background-image: url('images/yoga_hero_4.png')"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title-vertical">
+                        <span class="font-display italic text-4xl mb-4">Nidra</span>
+                        <div class="w-10 h-px bg-white/50 mb-4"></div>
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </div>
+                    <div class="accordion-text">
+                        <span class="text-xs font-bold tracking-widest uppercase text-white/60 block mb-2">04. Consciencia</span>
+                        <h4 class="text-4xl font-display italic mb-4">Nidra</h4>
+                        <p class="text-white/80 font-light leading-relaxed">Método para explorar las diferentes capas de la mente a través del subconsciente para desarrollar a profundidad la percepción y la mente cósmica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restorative -->
+            <div class="accordion-item">
+                <div class="accordion-bg" style="background-image: url('images/yoga_hero_5.png')"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title-vertical">
+                        <span class="font-display italic text-4xl mb-4">Restaurativo</span>
+                        <div class="w-10 h-px bg-white/50 mb-4"></div>
+                        <span class="material-symbols-outlined">spa</span>
+                    </div>
+                    <div class="accordion-text">
+                        <span class="text-xs font-bold tracking-widest uppercase text-white/60 block mb-2">05. Pausa</span>
+                        <h4 class="text-4xl font-display italic mb-4">Restaurativo</h4>
+                        <p class="text-white/80 font-light leading-relaxed">Regálate 20 minutos de pausa. No para dormir, sino para despertar a una calma que ya vive en ti. A veces, la postura más avanzada es quedarse quieto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 2: SPLIT SANCTUARY -->
+    <section class="section-padding bg-white relative">
+        <div class="container mx-auto mb-16 text-center">
+            <span class="text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 px-4 py-2 rounded-full">Opción 2</span>
+            <h2 class="text-5xl font-display italic text-primary mt-6 mb-4">Split Sanctuary</h2>
+            <p class="text-gray-500 font-light text-lg max-w-2xl mx-auto">Ordenado, profesional y con jerarquía clara de lectura.</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 items-center min-h-[500px]">
+            <!-- Side Menu -->
+            <div class="space-y-4">
+                <button onclick="updateStage('vinyasa')" class="split-btn group flex items-center gap-6 w-full p-6 bg-alabaster/50 hover:bg-primary/10 rounded-2xl transition-all text-left">
+                    <span class="text-primary font-bold text-xs tracking-tighter opacity-50 group-hover:opacity-100 italic transition-all">01</span>
+                    <span class="text-2xl font-display italic group-hover:text-primary transition-all">Vinyasa</span>
+                    <span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                </button>
+                <button onclick="updateStage('hatha')" class="split-btn group flex items-center gap-6 w-full p-6 hover:bg-primary/10 rounded-2xl transition-all text-left">
+                    <span class="text-primary font-bold text-xs tracking-tighter opacity-50 group-hover:opacity-100 italic transition-all">02</span>
+                    <span class="text-2xl font-display italic group-hover:text-primary transition-all">Hatha</span>
+                    <span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                </button>
+                <button onclick="updateStage('ashtanga')" class="split-btn group flex items-center gap-6 w-full p-6 hover:bg-primary/10 rounded-2xl transition-all text-left">
+                    <span class="text-primary font-bold text-xs tracking-tighter opacity-50 group-hover:opacity-100 italic transition-all">03</span>
+                    <span class="text-2xl font-display italic group-hover:text-primary transition-all">Ashtanga</span>
+                    <span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                </button>
+                <button onclick="updateStage('nidra')" class="split-btn group flex items-center gap-6 w-full p-6 hover:bg-primary/10 rounded-2xl transition-all text-left">
+                    <span class="text-primary font-bold text-xs tracking-tighter opacity-50 group-hover:opacity-100 italic transition-all">04</span>
+                    <span class="text-2xl font-display italic group-hover:text-primary transition-all">Nidra</span>
+                    <span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                </button>
+                <button onclick="updateStage('restorative')" class="split-btn group flex items-center gap-6 w-full p-6 hover:bg-primary/10 rounded-2xl transition-all text-left">
+                    <span class="text-primary font-bold text-xs tracking-tighter opacity-50 group-hover:opacity-100 italic transition-all">05</span>
+                    <span class="text-2xl font-display italic group-hover:text-primary transition-all">Restaurativo</span>
+                    <span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Content Stage -->
+            <div id="content-stage" class="relative bg-alabaster/30 rounded-40 overflow-hidden min-h-[500px] flex flex-col justify-center p-12 lg:p-16">
+                <div id="stage-visual" class="absolute inset-0 opacity-10">
+                    <img src="images/8-Color.png" class="w-full h-full object-contain scale-150 grayscale rotate-12">
+                </div>
+                <div class="relative z-10 space-y-8" id="stage-body">
+                    <h3 class="text-6xl font-display italic text-primary" id="stage-title">Vinyasa</h3>
+                    <p class="text-gray-500 font-light text-xl leading-relaxed max-w-xl" id="stage-desc">
+                        La danza entre el aliento y el espíritu. Cada gesto tiene un propósito, transformando el movimiento en meditación activa.
+                    </p>
+                    <div class="pt-8">
+                        <div class="w-24 h-px bg-primary mb-6"></div>
+                        <p class="font-bold italic text-sm tracking-widest text-primary uppercase">Dinámico & Fluido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 3: FOCUS GRID -->
+    <section class="section-padding overflow-hidden">
+        <div class="container mx-auto mb-16 text-center">
+            <span class="text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 px-4 py-2 rounded-full">Opción 3</span>
+            <h2 class="text-5xl font-display italic text-primary mt-6 mb-4">Focus Grid</h2>
+            <p class="text-gray-500 font-light text-lg max-w-2xl mx-auto">Inspiración editorial con un ritmo visual dinámico.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- Vinyasa -->
+            <div class="grid-item group">
+                <img src="images/yoga_hero_1.png" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-10 bg-white/90 px-4 py-2 rounded-full group-hover:opacity-0 transition-all">
+                    <span class="text-sm font-bold italic font-display">Vinyasa</span>
+                </div>
+                <div class="grid-overlay">
+                    <h4 class="text-2xl font-display italic text-white mb-2 underline decoration-primary/50 underline-offset-8">Vinyasa</h4>
+                    <p class="text-white/80 text-xs leading-relaxed">Danza consciente entre el aliento y el espíritu.</p>
+                </div>
+            </div>
+            <!-- Hatha -->
+            <div class="grid-item group">
+                <img src="images/yoga_hero_2.png" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-10 bg-white/90 px-4 py-2 rounded-full group-hover:opacity-0 transition-all">
+                    <span class="text-sm font-bold italic font-display">Hatha</span>
+                </div>
+                <div class="grid-overlay">
+                    <h4 class="text-2xl font-display italic text-white mb-2 underline decoration-primary/50 underline-offset-8">Hatha</h4>
+                    <p class="text-white/80 text-xs leading-relaxed">Fuerza, quietud y balance en cada postura.</p>
+                </div>
+            </div>
+            <!-- Ashtanga -->
+            <div class="grid-item group">
+                <img src="images/yoga_hero_3.png" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-10 bg-white/90 px-4 py-2 rounded-full group-hover:opacity-0 transition-all">
+                    <span class="text-sm font-bold italic font-display">Ashtanga</span>
+                </div>
+                <div class="grid-overlay">
+                    <h4 class="text-2xl font-display italic text-white mb-2 underline decoration-primary/50 underline-offset-8">Ashtanga</h4>
+                    <p class="text-white/80 text-xs leading-relaxed">Disciplina que purifica y armoniza el cuerpo.</p>
+                </div>
+            </div>
+            <!-- Nidra -->
+            <div class="grid-item group">
+                <img src="images/yoga_hero_4.png" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-10 bg-white/90 px-4 py-2 rounded-full group-hover:opacity-0 transition-all">
+                    <span class="text-sm font-bold italic font-display">Nidra</span>
+                </div>
+                <div class="grid-overlay">
+                    <h4 class="text-2xl font-display italic text-white mb-2 underline decoration-primary/50 underline-offset-8">Nidra</h4>
+                    <p class="text-white/80 text-xs leading-relaxed">Exploración profunda de la mente consciente.</p>
+                </div>
+            </div>
+            <!-- Restorative -->
+            <div class="grid-item group">
+                <img src="images/yoga_hero_5.png" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-10 bg-white/90 px-4 py-2 rounded-full group-hover:opacity-0 transition-all">
+                    <span class="text-sm font-bold italic font-display">Restaurativo</span>
+                </div>
+                <div class="grid-overlay">
+                    <h4 class="text-2xl font-display italic text-white mb-2 underline decoration-primary/50 underline-offset-8">Restaurativo</h4>
+                    <p class="text-white/80 text-xs leading-relaxed">La pausa avanzada para conectar con tu calma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-espresso text-alabaster py-20 text-center">
+        <p class="font-display italic text-3xl mb-4">¿Cuál eleva mejor la experiencia?</p>
+        <p class="text-white/50 font-light">Explora cada uno y decide cuál se siente más "Pura Magia".</p>
+    </footer>
+
+    <script>
+        const stageData = {
+            vinyasa: {
+                title: 'Vinyasa',
+                desc: 'La danza entre el aliento y el espíritu. Cada gesto tiene un propósito, transformando el movimiento en meditación activa.',
+                tag: 'Dinámico & Fluido'
+            },
+            hatha: {
+                title: 'Hatha',
+                desc: 'Práctica refinada que llama al cuerpo, la respiración y la mente a trabajar como unidad. Reconocemos la fuerza y el balance.',
+                tag: 'Equilibrio & Fuerza'
+            },
+            ashtanga: {
+                title: 'Ashtanga',
+                desc: 'Disciplina que purifica el cuerpo físico, desarrollando actitudes mentales expansivas que armonizan tu energía.',
+                tag: 'Tradición & Potencia'
+            },
+            nidra: {
+                title: 'Nidra',
+                desc: 'Explora las diferentes capas de la mente a través del subconsciente. Desarrolla a profundidad tu percepción cósmica.',
+                tag: 'Reposo & Consciencia'
+            },
+            restorative: {
+                title: 'Restaurativo',
+                desc: '20 minutos de pausa para despertar a una calma que ya vive en ti. A veces, quedarse quieto es la postura más avanzada.',
+                tag: 'Calma & Renovación'
+            }
+        };
+
+        function updateStage(type) {
+            const body = document.getElementById('stage-body');
+            const title = document.getElementById('stage-title');
+            const desc = document.getElementById('stage-desc');
+            const btns = document.querySelectorAll('.split-btn');
+
+            // Reset buttons
+            btns.forEach(btn => btn.classList.remove('bg-primary/10'));
+            event.currentTarget.classList.add('bg-primary/10');
+            
+            body.style.opacity = '0';
+            body.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                title.innerText = stageData[type].title;
+                desc.innerText = stageData[type].desc;
+                body.style.opacity = '1';
+                body.style.transform = 'translateY(0)';
+                body.classList.add('stage-reveal');
+                setTimeout(() => body.classList.remove('stage-reveal'), 600);
+            }, 300);
+        }
+
+        // Simple Reveal Scroll
+        function checkScroll() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    </script>
+</body>
+</html>

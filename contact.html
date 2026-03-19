@@ -274,7 +274,7 @@
     </section>
 
     <!-- BOOKING INTERFACE (Calendar) -->
-    <section class="section-padding bg-mint/5">
+    <section class="section-padding bg-[#ede1c9]">
         <div class="container">
             <div class="bg-white rounded-[60px] border border-deep/5 shadow-2xl p-6 md:p-12 text-center group">
                 <h3 class="text-4xl font-display text-deep italic mb-6" data-i18n="contact_scheduling_title">Select Your
@@ -293,53 +293,64 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="section-padding bg-[#b69c75]">
-        <div class="container mb-20 text-center">
-            <h2 class="text-5xl md:text-6xl font-display text-white italic" data-i18n="contact_protocols_title">
-                Protocols
-                & FAQ</h2>
-        </div>
-        <div class="container grid lg:grid-cols-2 gap-24 items-center">
-            <div class="rounded-[40px] overflow-hidden shadow-2xl h-[400px] relative group">
-                <img src="images/groupSession.png"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-all duration-[2000ms]"
-                    alt="Booking Protocols Image">
-                <div class="absolute inset-0 bg-primary/10"></div>
+    <!-- ROTATING QUOTES SECTION -->
+    <section class="py-16 bg-[#ede1c9] overflow-hidden transition-all duration-500">
+        <div class="container max-w-4xl text-center px-6">
+            <div id="quoteContainer" class="min-h-[160px] flex items-center justify-center relative">
+                <span class="material-symbols-outlined text-primary/10 text-5xl absolute -top-6 left-1/2 -translate-x-1/2">format_quote</span>
+                <p id="mainQuote" class="text-2xl md:text-4xl font-display font-medium text-deep italic leading-tight transition-all duration-1000 opacity-100 transform translate-y-0" data-i18n="quote_1">
+                    "En el silencio del cuerpo, encontramos el susurro del alma." — B.K.S. Iyengar
+                </p>
             </div>
-            <div class="space-y-2">
-                <!-- FAQ 1 -->
-                <details name="faq"
-                    class="group bg-white/40 backdrop-blur-md rounded-2xl border border-white/60 shadow-lg shadow-deep/5 overflow-hidden">
-                    <summary
-                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
-                        <span class="text-2xl font-display text-deep italic" data-i18n="contact_faq1_q">Cancellations &
-                            Rescheduling</span>
-                        <span
-                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
-                    </summary>
-                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="contact_faq1_a">
-                        We require 24-hour notice for all cancellations. This allows us to offer the space to another
-                        student on the path. Sessions cancelled within 24 hours are non-refundable but can be gifted.
-                    </div>
-                </details>
-                <!-- FAQ 2 -->
-                <details name="faq"
-                    class="group bg-white/40 backdrop-blur-md rounded-2xl border border-white/60 shadow-lg shadow-deep/5 overflow-hidden">
-                    <summary
-                        class="flex justify-between items-center py-4 px-8 cursor-pointer hover:bg-white/60 transition-colors">
-                        <span class="text-2xl font-display text-deep italic" data-i18n="contact_faq2_q">Payment
-                            Options</span>
-                        <span
-                            class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform text-3xl">expand_more</span>
-                    </summary>
-                    <div class="px-8 pb-4 text-gray-600 font-light text-sm" data-i18n="contact_faq2_a">
-                        We accept all major credit cards and bank transfers. Secure payments via our Booking Widget or
-                        direct wire are accepted.
-                    </div>
-                </details>
+            <div class="flex justify-center gap-3 mt-10">
+                <div class="quote-dot w-6 h-1.5 rounded-full bg-primary/40 transition-all duration-300" data-index="1"></div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="2"></div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="3"></div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="4"></div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="5"></div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const quoteText = document.getElementById('mainQuote');
+                const dots = document.querySelectorAll('.quote-dot');
+                let currentQuote = 1;
+                let rotateInterval;
+
+                const updateQuoteDisplay = () => {
+                    const lang = document.documentElement.lang || 'es';
+                    const t = window.translations[lang];
+                    if (t && t[`quote_${currentQuote}`]) {
+                        quoteText.innerHTML = t[`quote_${currentQuote}`];
+                    }
+                    
+                    dots.forEach((dot, idx) => {
+                        const isActive = idx + 1 === currentQuote;
+                        dot.style.background = isActive ? 'rgba(149, 80, 49, 0.4)' : 'rgba(149, 80, 49, 0.1)';
+                        dot.style.width = isActive ? '24px' : '8px';
+                    });
+                };
+
+                const rotateQuote = () => {
+                    quoteText.style.opacity = '0';
+                    quoteText.style.transform = 'translateY(10px)';
+                    
+                    setTimeout(() => {
+                        currentQuote = currentQuote === 5 ? 1 : currentQuote + 1;
+                        updateQuoteDisplay();
+                        quoteText.style.opacity = '1';
+                        quoteText.style.transform = 'translateY(0)';
+                    }, 1000);
+                };
+
+                // Handle language changes
+                window.addEventListener('languageChanged', updateQuoteDisplay);
+                
+                // Start rotation
+                rotateInterval = setInterval(rotateQuote, 5000);
+            });
+        </script>
     </section>
 
     <!-- FOOTER -->
