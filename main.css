@@ -303,6 +303,7 @@ h4,
     z-index: 1001;
 }
 
+.more-dropdown.active,
 .more-dropdown.is-active {
     opacity: 1;
     visibility: visible;

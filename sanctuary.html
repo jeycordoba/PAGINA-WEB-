@@ -163,10 +163,10 @@
     <section class="pb-24">
         <div class="container mb-16 flex flex-wrap justify-center gap-4">
             <button
-                class="filter-btn active px-10 py-3 rounded-full bg-primary text-white text-xs font-bold tracking-widest shadow-xl transition-all"
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold tracking-widest border border-deep/5 hover:bg-mint transition-all"
                 data-category="all" data-i18n="gallery_filter_all">All Moments</button>
             <button
-                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                class="filter-btn active px-10 py-3 rounded-full bg-primary text-white text-xs font-bold tracking-widest shadow-xl transition-all"
                 data-category="studio" data-i18n="gallery_filter_studio">The Studio</button>
             <button
                 class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold tracking-widest border border-deep/5 hover:bg-mint transition-all"
@@ -177,6 +177,9 @@
             <button
                 class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold tracking-widest border border-deep/5 hover:bg-mint transition-all"
                 data-category="healing" data-i18n="gallery_filter_healing">Sound & Healing</button>
+            <button
+                class="filter-btn px-10 py-3 rounded-full bg-white text-deep text-xs font-bold tracking-widest border border-deep/5 hover:bg-mint transition-all"
+                data-category="qhc" data-i18n="gallery_filter_qhc">QHC</button>
         </div>
         <div class="container masonry" id="multimediaGrid">
             <!-- STUDIO -->
@@ -241,6 +244,48 @@
             <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="healing">
                 <img src="images/sacred_geometry_gallery.png" class="w-full hover:scale-105 transition-transform duration-500"
                     alt="Sacred Geometry Meditation">
+            </div>
+
+            <!-- QHC -->
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_hero.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Connection">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_biofield.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Biofield">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_awareness.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Awareness">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_entrainment.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Entrainment">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_manifestation.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Manifestation">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_torus.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Torus">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_entanglement.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Entanglement">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_dna_vibrant.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC DNA Vibrant">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_aha.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC Aha Moment">
+            </div>
+            <div class="masonry-item rounded-[40px] overflow-hidden shadow-lg group" data-category="qhc">
+                <img src="images/qhc2_dna_dim.png" class="w-full hover:scale-105 transition-transform duration-500"
+                    alt="QHC DNA Dim">
             </div>
         </div>
     </section>
@@ -408,6 +453,18 @@
         const items = document.querySelectorAll('.masonry-item');
         const gallerySection = document.querySelector('.masonry').closest('section');
         const podcastSection = document.getElementById('podcastSection');
+
+        // Initial filtering state
+        window.addEventListener('DOMContentLoaded', () => {
+            const defaultCategory = 'studio';
+            items.forEach(item => {
+                if (item.getAttribute('data-category') === defaultCategory) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {

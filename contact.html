@@ -455,12 +455,12 @@
         if (moreBtn && moreDropdown) {
             moreBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                moreDropdown.classList.toggle('is-active');
+                moreDropdown.classList.toggle('active');
             });
 
             document.addEventListener('click', (e) => {
                 if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
-                    moreDropdown.classList.remove('is-active');
+                    moreDropdown.classList.remove('active');
                 }
             });
         }
