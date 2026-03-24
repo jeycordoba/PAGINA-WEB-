@@ -297,6 +297,13 @@
     <section class="py-16 bg-[#ede1c9] overflow-hidden transition-all duration-500">
         <div class="container max-w-4xl text-center px-6">
             <div id="quoteContainer" class="min-h-[160px] flex items-center justify-center relative">
+                <button id="prevQuote" class="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
+                    <span class="material-symbols-outlined text-4xl">chevron_left</span>
+                </button>
+                <button id="nextQuote" class="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
+                    <span class="material-symbols-outlined text-4xl">chevron_right</span>
+                </button>
+                
                 <span class="material-symbols-outlined text-primary/10 text-5xl absolute -top-6 left-1/2 -translate-x-1/2">format_quote</span>
                 <p id="mainQuote" class="text-2xl md:text-4xl font-display font-medium text-deep italic leading-tight transition-all duration-1000 opacity-100 transform translate-y-0" data-i18n="quote_1">
                     "En el silencio del cuerpo, encontramos el susurro del alma." — B.K.S. Iyengar
@@ -308,6 +315,7 @@
                 <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="3"></div>
                 <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="4"></div>
                 <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="5"></div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="6"></div>
             </div>
         </div>
 
@@ -315,6 +323,8 @@
             document.addEventListener('DOMContentLoaded', () => {
                 const quoteText = document.getElementById('mainQuote');
                 const dots = document.querySelectorAll('.quote-dot');
+                const btnPrev = document.getElementById('prevQuote');
+                const btnNext = document.getElementById('nextQuote');
                 let currentQuote = 1;
                 let rotateInterval;
 
@@ -332,23 +342,56 @@
                     });
                 };
 
-                const rotateQuote = () => {
+                const switchQuote = (nextIndex) => {
                     quoteText.style.opacity = '0';
                     quoteText.style.transform = 'translateY(10px)';
                     
                     setTimeout(() => {
-                        currentQuote = currentQuote === 5 ? 1 : currentQuote + 1;
+                        currentQuote = nextIndex;
                         updateQuoteDisplay();
                         quoteText.style.opacity = '1';
                         quoteText.style.transform = 'translateY(0)';
-                    }, 1000);
+                    }, 500);
                 };
+
+                const rotateNext = () => {
+                    const next = currentQuote === 6 ? 1 : currentQuote + 1;
+                    switchQuote(next);
+                };
+
+                const rotatePrev = () => {
+                    const next = currentQuote === 1 ? 6 : currentQuote - 1;
+                    switchQuote(next);
+                };
+
+                const startTimer = () => {
+                    clearInterval(rotateInterval);
+                    rotateInterval = setInterval(rotateNext, 6000);
+                };
+
+                btnNext.addEventListener('click', () => {
+                    rotateNext();
+                    startTimer();
+                });
+
+                btnPrev.addEventListener('click', () => {
+                    rotatePrev();
+                    startTimer();
+                });
+
+                dots.forEach((dot, idx) => {
+                    dot.style.cursor = 'pointer';
+                    dot.addEventListener('click', () => {
+                        switchQuote(idx + 1);
+                        startTimer();
+                    });
+                });
 
                 // Handle language changes
                 window.addEventListener('languageChanged', updateQuoteDisplay);
                 
                 // Start rotation
-                rotateInterval = setInterval(rotateQuote, 5000);
+                startTimer();
             });
         </script>
     </section>

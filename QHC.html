@@ -137,11 +137,11 @@
         </div>
 
         <!-- Pillars Grid -->
-        <div class="container grid md:grid-cols-4 gap-8 mb-16">
+        <div class="container grid md:grid-cols-4 gap-8 mb-8">
             <!-- Pillar 1 -->
             <div data-pillar="0" onclick="selectPillar(0)" onmouseenter="previewPillar(0)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-8 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">spa</span>
@@ -170,7 +170,7 @@
             <!-- Pillar 2 -->
             <div data-pillar="1" onclick="selectPillar(1)" onmouseenter="previewPillar(1)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-8 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">auto_awesome</span>
@@ -199,7 +199,7 @@
             <!-- Pillar 3 -->
             <div data-pillar="2" onclick="selectPillar(2)" onmouseenter="previewPillar(2)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-8 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <svg class="w-8 h-8 text-primary transition-colors duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -232,7 +232,7 @@
             <!-- Pillar 4 -->
             <div data-pillar="3" onclick="selectPillar(3)" onmouseenter="previewPillar(3)"
                 onmouseleave="restorePillarSelection()"
-                class="pillar-card bg-white p-6 md:p-12 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
+                class="pillar-card bg-white p-6 md:p-8 rounded-32 shadow-sm cursor-pointer transition-all duration-500 border border-deep/5 text-center group">
                 <div
                     class="w-16 h-16 rounded-full bg-alabaster flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors icon-bg">
                     <span class="material-symbols-outlined text-primary text-3xl transition-colors">psychology</span>
@@ -263,7 +263,7 @@
         <!-- Detail Discovery Card (Desktop Only) -->
         <div class="container hidden md:block">
             <div id="pillarDetailWrapper"
-                class="opacity-100 overflow-hidden transition-all duration-500 ease-in-out mt-12">
+                class="opacity-100 overflow-hidden transition-all duration-500 ease-in-out mt-6">
                 <div class="py-8 md:py-12"> <!-- Container for shadow to breathe -->
                     <div id="pillarDetailCard"
                         class="bg-white rounded-32 flex flex-col md:flex-row overflow-hidden border border-deep/10">
@@ -410,8 +410,8 @@
             if (desktopImg) {
                 desktopImg.src = data.image;
                 document.getElementById('pillarLabel').innerText = t[`healing_${data.key}_label`];
-                document.getElementById('pillarHeading').innerText = t[`healing_${data.key}_heading`];
-                document.getElementById('pillarText').innerText = t[`healing_${data.key}_text`];
+                document.getElementById('pillarHeading').innerHTML = t[`healing_${data.key}_heading`];
+                document.getElementById('pillarText').innerHTML = t[`healing_${data.key}_text`];
                 document.getElementById('pillarSmallLabel').innerText = t[`healing_${data.key}_smallLabel`];
             }
 
@@ -434,8 +434,8 @@
                     }
                     
                     mobileLabel.innerText = t[`healing_${cardData.key}_label`];
-                    mobileHeading.innerText = t[`healing_${cardData.key}_heading`];
-                    mobileText.innerText = t[`healing_${cardData.key}_text`];
+                    mobileHeading.innerHTML = t[`healing_${cardData.key}_heading`];
+                    mobileText.innerHTML = t[`healing_${cardData.key}_text`];
                 }
             });
         }
@@ -509,7 +509,7 @@
                 <!-- Stage 1 -->
                 <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
                     <!-- Image -->
-                    <div class="md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
+                    <div class="w-[70%] mx-auto md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAiLuZA3QLFiK8SB7fREOPzs7mHc9vKrvHnC1ACYIFpZx3Ml4vAyYZ2eFclKd6-U64bu4LZuHbNtfWDUEX5Mkzlqki_XvnpFcEkQvqSlmjt2L267XaRgQwhBVvNT-mvT_jEzyWMPgEgSWfuOiQMW1_9QLSohWw4bnnsHeQ5JKmahxrk-ZamxqTPYRWfrPZM6vbxdGn4ygesFwRUq68TzeLPoILTjpuNcakp0bUgEgxq7eDRtSQ_-oEodQznGUwhup7PCMoFrJS4ASv"
                             class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
                     </div>
@@ -555,7 +555,7 @@
                     </div>
 
                     <!-- Image -->
-                    <div class="md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
+                    <div class="w-[70%] mx-auto md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ-fVn16nw4A-0NDlZbdcqNMYwiZzSaNipG4ML7600buxoxqSBxkKSKTgKfiYnv1viSj5vy8B0CgPNYjzRISpJB4C-pss2bVSvsERFZblaPapSg8sWzEFn4LyDrg06Uk_lFI1COVNFB1a-3QubkOeHA8bl-L3GWR1_JyzM4epeWzLnLfeFcUXXadEvYFAI0BxsKsAMJZKnB9arNcHXI4nRQz6WN4GfFHbjs8N4ctnPI0dw4tYsdSOozYI_9rDVqnfWJKNevvwFONZv"
                             class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
                     </div>
@@ -564,7 +564,7 @@
                 <!-- Stage 3 -->
                 <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
                     <!-- Image -->
-                    <div class="md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
+                    <div class="w-[70%] mx-auto md:w-[38%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4MjcZ7TwY1cRbFHUQXnh5tVlAq0zDriSQLr91rkaNqpJa8mWMFpJMG9btaA-jTMJFtwZurvaqyUJVQx--bP9zrtgM1NerM9CKGFgppmZGzPQt0BOxsfx118BoB4pHJc3Tf3y8ZEB56Z3PYn1eePtbKTWrzd_GssEBkr9T0FCIqe7g_B7XUF-yTjLbbbNcM_q5bPiHT18rffxn9wG9qK7IvlgL0B4qQ4sRpi-cncCCAudgVZh5YfZMe1qqtkD-bzzEpR4TyX-MsKi"
                             class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
                     </div>
@@ -612,7 +612,7 @@
                     </div>
 
                     <!-- Image -->
-                    <div class="md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
+                    <div class="w-[70%] mx-auto md:w-[38%] order-2 rounded-32 overflow-hidden shadow-2xl">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa8LMA1QGNxfdJZYMJHyLZ_k6IZjV38wwfn689HUrbucUngIXkFyAHRtupj_WvAltH0tv4zWOBJu2hFnH9wkbp8EKx1MDaTxLxwZNPMiLhfl2Gio1YP_jACutxn3_1F31OyVvhVUOhP8sI8vSqRW5tvbdQh27IMDj7H74j2joaKfaiGcJOMxf1-8Bsdpo64meHVs845_0nEtqvEERB5Em4SJCdaj-qioGBo4OTXxYBbHPBtIj3pvRdCm93-Z-48XeFDfP7bhMy3b09"
                             class="w-full h-[380px] object-cover transition-transform duration-1000 group-hover:scale-105">
                     </div>
@@ -621,94 +621,13 @@
         </div>
     </section>
 
-    <!-- BIOLOGY MEETS ENERGY (STATS) -->
-    <section class="section-padding bg-[#354F52] relative overflow-hidden">
-        <div class="absolute inset-0 bg-primary/5 blur-3xl opacity-30 translate-y-1/2"></div>
-        <div class="container relative z-10">
-            <div class="bg-[#6B917E] rounded-[60px] p-12 md:p-24 shadow-2xl max-w-5xl mx-auto border border-white/10">
-                <div class="text-center space-y-12">
-                    <h2 class="text-4xl md:text-6xl font-display text-white italic leading-tight"
-                        data-i18n="healing_biology_title">Where Biology
-                        Meets
-                        Energy.</h2>
-                    <div class="space-y-10 text-white/90 text-xl font-light leading-relaxed max-w-4xl mx-auto">
-                        <p data-i18n="healing_biology_text1">Our somatic approach isn't just about feeling good—it's
-                            anchored in neurobiology. By
-                            moving
-                            the body with intention, we communicate directly with the vagus nerve, signaling safety
-                            to
-                            the brain.</p>
-                        <p data-i18n="healing_biology_text2">When the nervous system is regulated, the body becomes a
-                            conductor for quantum resonance.
-                            We
-                            utilize specific sound frequencies to harmonize your internal landscape.</p>
-                    </div>
-                    <div class="flex justify-center items-center gap-12 pt-12">
-                        <div class="text-center">
-                            <p class="text-5xl font-display text-white font-bold mb-2">95%</p>
-                            <p class="text-[10px] tracking-widest text-white/60"
-                                data-i18n="healing_stat1_label">Nervous Regulation</p>
-                        </div>
-                        <div class="w-px h-12 bg-white/20"></div>
-                        <div class="text-center">
-                            <p class="text-5xl font-display text-white font-bold mb-2">100%</p>
-                            <p class="text-[10px] tracking-widest text-white/60"
-                                data-i18n="healing_stat2_label">Bespoke Protocol</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE TRANSFORMATION -->
-    <section class="section-padding bg-alabaster">
-        <div class="container text-center mb-20">
-            <h2 class="text-5xl md:text-6xl font-display text-deep italic" data-i18n="healing_transformation_title">The
-                Transformation</h2>
-        </div>
-        <div class="container grid md:grid-cols-3 gap-10">
-            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
-                <div class="h-64 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7L-Kc0LUkdwo6i37g5JPK8Yds0d2wtwImxYEIvf1_VUP7gBvN5qCZUo8quB8y1N3fxdOw-16PwlgnlgQ4DTz8JlIS3KLPuEh2vslaK7CMEvjjsoE9pAyGjDi0N26hnGSdiYswEwZ0jJiXFrYfbkHOD822cYrbTe_-RZpm4Iod0dU0ALRNZeyqQbd869G2Kf53DaG7ez8hhotOPfImaxFA8SvBTwG1DKcNxXC3DJuyJOQbTx004tmkZpY5TJlR5R8gVVa79-9Clp3T"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                </div>
-                <div class="p-10 space-y-4">
-                    <h3 class="text-2xl font-display text-deep italic" data-i18n="healing_transformation1_title">Nervous
-                        System Balance</h3>
-                    <p class="text-gray-500 font-light" data-i18n="healing_transformation1_desc">Release chronic stress
-                        patterns and move from a state of
-                        survival to one of restorative thriving.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
-                <div class="h-64 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3CcE3s65ef5of8SW2ka5VRkeHw1eqxW1XkXM1AQHP4u84JJx11orYyc-oa-D6Dkk1oKtkq_kF3Bc7Yl9kkTNKseT2lEiZNHhetLm0-hapq4ihhyM8OlYkdEdsL82_NeT2bMrM_ScPrHWyg6uur7aE07C24k4KKq0-_IxLvSwfwQJgi64cPD1yG0POfbmWEOCaZaQjp9LPTlGTWA22yVUqGmJtdiA-8XC3kxBvhnd3wOBiYQb-KAXsjnuDRacyK4Iz0SLttZka4Ib"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                </div>
-                <div class="p-10 space-y-4">
-                    <h3 class="text-2xl font-display text-deep italic" data-i18n="healing_transformation2_title">Mental
-                        Clarity</h3>
-                    <p class="text-gray-500 font-light" data-i18n="healing_transformation2_desc">Clear cognitive fog and
-                        emotional noise, allowing for
-                        decisive
-                        action and creative flow.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-32 overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
-                <div class="h-64 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPFIbhBRuMtzkv3E9j-mXfIu445dcTmj9F_JdAAqjWpqm7c677YpD192Q0Ceb6GWg9v0tFrMfWfs-m599C7qp-o4q_q6ZFE_G_AEU5CLFS1z0mNE8ztbi7Q8xTC0-2F1tulcVnycS00sgNXs-FF3m4JB_QHlDyUw-MxBDS_Zlk6pRtfEgyGclrGo59m7vMiaC56Z6j-4aOF2yEiojqbsGwLJ9h2PsimMUs70tuJtbNGjNf9ojtE1d7BGob-rV1ivBZ3dLloe6dAz0Q"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                </div>
-                <div class="p-10 space-y-4">
-                    <h3 class="text-2xl font-display text-deep italic" data-i18n="healing_transformation3_title">
-                        Physical Vitality</h3>
-                    <p class="text-gray-500 font-light" data-i18n="healing_transformation3_desc">Restore cellular
-                        communication and energy flow, manifesting
-                        in
-                        improved posture and deep rest.</p>
-                </div>
-            </div>
+    <!-- THE COMPLETE TRANSFORMATION -->
+    <section class="w-full bg-black py-16 md:py-24 mb-0 overflow-hidden">
+        <div class="w-full md:max-w-[80%] mx-auto px-0 md:px-6 reveal">
+            <img src="images/QHC_complete.png" 
+                 class="w-full h-auto md:rounded-[30px] shadow-2xl shadow-white/5" 
+                 alt="QHC Complete Transformation"
+                 loading="lazy">
         </div>
     </section>
 
@@ -719,14 +638,14 @@
                 Nuances</h2>
         </div>
         <div class="container grid md:grid-cols-2 gap-24 items-center">
-            <div class="relative reveal h-[500px] md:h-[650px] rounded-[40px] overflow-hidden shadow-2xl">
+            <div class="relative reveal h-[400px] md:h-[500px] rounded-[40px] overflow-hidden shadow-2xl shadow-deep/10">
                 <img src="images/sacred_geometry_v2.png" 
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 h-1/2 md:h-1/3 flex items-center p-8 md:p-16">
                     <p class="text-white text-lg md:text-3xl font-display italic leading-relaxed max-w-2xl drop-shadow-2xl" 
                         data-i18n="healing_quote_text">
-                        "Y en esa quietud, empieza el verdadero llamado: La conexión con lo esencial, con lo divino en nosotros. Desde ese lugar sagrado, renacemos. Más conscientes, más verdaderos, más en alma y en ser"
+                        "“Que el amor sea presente y que el presente sea puro amor incondicional” - Metatrón"
                     </p>
                 </div>
             </div>
@@ -817,8 +736,7 @@
             </a>
             <div class="flex items-center justify-center gap-6 text-white/40 pt-10">
                 <span class="w-12 h-px bg-white/20"></span>
-                <p class="text-sm tracking-[0.4em] font-bold" data-i18n="healing_cta_availability">Disponibilidad
-                    Limitada</p>
+                <p class="text-sm tracking-[0.4em] font-bold" data-i18n="healing_cta_availability">El Infinito de Posibilidades</p>
                 <span class="w-12 h-px bg-white/20"></span>
             </div>
         </div>
