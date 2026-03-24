@@ -113,6 +113,13 @@ const translations = {
         "bonding_unity_pillar4_desc": "A bridge of light towards mindfulness that allows you to observe your feelings without judgment. It is the space where the mind clears and yoga becomes the art of inhabiting the present with full, loving, and expansive awareness.",
         "home_cta_btn": "Reserve Your Space",
 
+        "healing_method_title": "My Method",
+        "healing_method_subtitle": "A dance between science and spirituality",
+        "healing_method_desc1": "It is an integrative approach to conscious transformation that unites body, mind, and energy. The '5D Quantum Healer Technology' (QHC5D) is a unique, flexible, and harmonious methodology that joins spirituality and science. Its focus will lead you to awaken hidden potentials, achieve self-healing, empower yourself, and recognize the Divine and unlimited potential we are.",
+        "healing_method_desc2": "Gently explore the awakening of your internal potentials, facilitating self-healing processes and strengthening your capacity for deep transformation from a new essence, a new capacity to vibrate, and a new observer effect consciousness, changing your vibrational point and thus emanating from a new direction.",
+        "healing_method_desc3": "The methodology is sustained by four fundamental pillars; each one works as a solid base that supports the tools and protocols that we will integrate throughout the process.",
+        "healing_method_desc4": "The quantum spiral is the map; your will is the motor. Let's start elevating your frequency today.",
+
         // About Page
         "about_intro_tag": "YOUR MENTOR",
         "about_intro_title": "Meet your Guide, Jeniffer Córdoba",
@@ -597,6 +604,13 @@ const translations = {
         "about_intro_p4": "Mi búsqueda por comprender el bienestar de manera integral me llevó también a estudiar neurociencia, entendiendo el cerebro como un gran aliado en nuestros procesos de transformación, así como a formarme como sanadora y coach cuántica espiritual.",
         "about_intro_p5": "Hoy comparto lo que amo como un acto de amor propio y de servicio. A través de la respiración consciente, la quietud, el canto de mantras y la creación de espacios de calma, invito a cada persona a reconectar con su esencia.",
         "about_intro_p6": "Este espacio nace desde el corazón: una invitación a pausar, escuchar, recordar quiénes somos y expandirnos desde el amor.",
+        "healing_method_title": "Mi método",
+        "healing_method_subtitle": "Una danza entre la ciencia y la espiritualidad",
+        "healing_method_desc1": "Es un enfoque integrativo de transformación consciente que une cuerpo, mente y energía. La “Tecnología Quantum Healer de 5D” (QHC5D), es una metodología única, flexible y armoniosa que une la espiritualidad y la ciencia. Su enfoque te conducirá a despertar potenciales ocultos, lograr la autosanación, empoderarte y reconocer el potencial Divino e ilimitado que somos.",
+        "healing_method_desc2": "Explora con suavidad el despertar de tus potenciales internos, facilitando procesos de autosanación y fortaleciendo tu capacidad de transformación profunda desde una nueva esencia, una nueva capacidad de vibrar y una nueva consciencia de efecto observador, cambiando tu punto vibratorio y así emanar desde una nueva dirección.",
+        "healing_method_desc3": "La metodología se sostiene en cuatro pilares fundamentales; cada uno funciona como una base sólida que respalda las herramientas y protocolos que iremos integrando a lo largo del proceso.",
+        "healing_method_desc4": "La espiral cuántica es el mapa; tu voluntad es el motor. Comencemos hoy a elevar tu frecuencia.",
+
         "about_iyengar_quote": "\"Estoy tan agradecido por lo que el yoga ha hecho en mi vida, que siempre busco compartirlo\" - B.K.S. Iyengar",
         "about_certs_title": "Credenciales Internacionales",
         "about_cert1_title": "YACEP",

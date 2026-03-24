@@ -25,6 +25,7 @@
                         'deep': '#504c33',
                         'sage': '#b69c75',
                         'alabaster': '#ede1c9',
+                        'parchment': '#F2F2EB',
                         'mint': '#9b9773',
                         'espresso': '#322F20'
                     },
@@ -109,7 +110,8 @@
     </nav>
 
     <!-- HERO -->
-    <header class="relative min-h-[75vh] md:min-h-0 md:aspect-[21/9] flex items-center justify-center text-center overflow-hidden bg-deep">
+    <header
+        class="relative min-h-[75vh] md:min-h-0 md:aspect-[21/9] flex items-center justify-center text-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
             <img src="images/dark_forest_hero.png" class="w-full h-full object-cover brightness-[0.4] scale-105"
                 alt="Hero Background">
@@ -197,8 +199,8 @@
                         <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off">
                     </div>
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1"
-                            for="contactName" data-i18n="contact_form_name_label">Full
+                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactName"
+                            data-i18n="contact_form_name_label">Full
                             Name</label>
                         <input type="text" id="contactName" name="name" required placeholder="Full Name"
                             autocomplete="name" data-i18n-placeholder="contact_form_name_placeholder"
@@ -206,15 +208,15 @@
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-2">
-                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1"
-                                for="contactEmail" data-i18n="contact_form_email_label">Email</label>
+                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactEmail"
+                                data-i18n="contact_form_email_label">Email</label>
                             <input type="email" id="contactEmail" name="email" required placeholder="Email Address"
                                 autocomplete="email" data-i18n-placeholder="contact_form_email_placeholder"
                                 class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                         <div class="space-y-2">
-                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1"
-                                for="contactPhone" data-i18n="contact_form_phone_label">Phone
+                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactPhone"
+                                data-i18n="contact_form_phone_label">Phone
                                 Number</label>
                             <input type="tel" id="contactPhone" name="phone" required placeholder="Phone Number"
                                 autocomplete="tel" data-i18n-placeholder="contact_form_phone_placeholder"
@@ -222,8 +224,8 @@
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1"
-                            id="serviceLabel" data-i18n="contact_form_service_label">Service</label>
+                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" id="serviceLabel"
+                            data-i18n="contact_form_service_label">Service</label>
                         <div class="relative custom-dropdown" id="serviceDropdown" role="group"
                             aria-labelledby="serviceLabel">
                             <input type="hidden" name="service" id="serviceInput" value="unified">
@@ -252,8 +254,8 @@
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1"
-                            for="contactMessage" data-i18n="contact_form_message_label">Additional
+                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactMessage"
+                            data-i18n="contact_form_message_label">Additional
                             Message</label>
                         <textarea rows="4" id="contactMessage" name="message" placeholder="Share your intentions..."
                             data-i18n-placeholder="contact_form_message_placeholder"
@@ -297,25 +299,36 @@
     <section class="py-16 bg-[#ede1c9] overflow-hidden transition-all duration-500">
         <div class="container max-w-4xl text-center px-6">
             <div id="quoteContainer" class="min-h-[160px] flex items-center justify-center relative">
-                <button id="prevQuote" class="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
+                <button id="prevQuote"
+                    class="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
                     <span class="material-symbols-outlined text-4xl">chevron_left</span>
                 </button>
-                <button id="nextQuote" class="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
+                <button id="nextQuote"
+                    class="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 text-primary/20 hover:text-primary/60 transition-all p-2 rounded-full cursor-pointer z-20">
                     <span class="material-symbols-outlined text-4xl">chevron_right</span>
                 </button>
-                
-                <span class="material-symbols-outlined text-primary/10 text-5xl absolute -top-6 left-1/2 -translate-x-1/2">format_quote</span>
-                <p id="mainQuote" class="text-2xl md:text-4xl font-display font-medium text-deep italic leading-tight transition-all duration-1000 opacity-100 transform translate-y-0" data-i18n="quote_1">
+
+                <span
+                    class="material-symbols-outlined text-primary/10 text-5xl absolute -top-6 left-1/2 -translate-x-1/2">format_quote</span>
+                <p id="mainQuote"
+                    class="text-2xl md:text-4xl font-display font-medium text-deep italic leading-tight transition-all duration-1000 opacity-100 transform translate-y-0"
+                    data-i18n="quote_1">
                     "En el silencio del cuerpo, encontramos el susurro del alma." — B.K.S. Iyengar
                 </p>
             </div>
             <div class="flex justify-center gap-3 mt-10">
-                <div class="quote-dot w-6 h-1.5 rounded-full bg-primary/40 transition-all duration-300" data-index="1"></div>
-                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="2"></div>
-                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="3"></div>
-                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="4"></div>
-                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="5"></div>
-                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="6"></div>
+                <div class="quote-dot w-6 h-1.5 rounded-full bg-primary/40 transition-all duration-300" data-index="1">
+                </div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="2">
+                </div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="3">
+                </div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="4">
+                </div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="5">
+                </div>
+                <div class="quote-dot w-2 h-1.5 rounded-full bg-primary/10 transition-all duration-300" data-index="6">
+                </div>
             </div>
         </div>
 
@@ -334,7 +347,7 @@
                     if (t && t[`quote_${currentQuote}`]) {
                         quoteText.innerHTML = t[`quote_${currentQuote}`];
                     }
-                    
+
                     dots.forEach((dot, idx) => {
                         const isActive = idx + 1 === currentQuote;
                         dot.style.background = isActive ? 'rgba(149, 80, 49, 0.4)' : 'rgba(149, 80, 49, 0.1)';
@@ -345,7 +358,7 @@
                 const switchQuote = (nextIndex) => {
                     quoteText.style.opacity = '0';
                     quoteText.style.transform = 'translateY(10px)';
-                    
+
                     setTimeout(() => {
                         currentQuote = nextIndex;
                         updateQuoteDisplay();
@@ -389,7 +402,7 @@
 
                 // Handle language changes
                 window.addEventListener('languageChanged', updateQuoteDisplay);
-                
+
                 // Start rotation
                 startTimer();
             });

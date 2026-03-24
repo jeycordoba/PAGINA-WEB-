@@ -37,13 +37,13 @@
             inset: 0;
             pointer-events: none;
         }
-        
+
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease-out;
         }
-        
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
@@ -64,6 +64,7 @@
                         'deep': '#504c33',
                         'sage': '#b69c75',
                         'alabaster': '#ede1c9',
+                        'parchment': '#F2F2EB',
                         'mint': '#9b9773',
                         'espresso': '#322F20'
                     },
@@ -100,7 +101,7 @@
                 <li class="xl:block"><a href="Yoga.html" class="active" data-i18n="nav_yoga">Yoga</a></li>
                 <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
                 <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
-                
+
                 <li class="relative xl:hidden">
                     <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
                         <span class="material-symbols-outlined">menu</span>
@@ -138,7 +139,7 @@
             <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
         </div>
-        
+
         <div class="relative z-10 text-center px-6 max-w-5xl">
             <h1 class="text-5xl md:text-8xl font-display text-white italic leading-[1] mb-8 drop-shadow-2xl reveal"
                 data-i18n="yoga_hero_title">
@@ -146,7 +147,8 @@
             </h1>
             <p class="text-xl md:text-2xl font-light text-white/90 max-w-2xl mx-auto mb-12 italic leading-relaxed drop-shadow-lg reveal"
                 data-i18n="yoga_hero_desc">
-                Creo que el yoga no es algo que "LOGRAS". Es algo a lo que regresas - tu respiración, tu cuerpo, tu calma interior, a ti.
+                Creo que el yoga no es algo que "LOGRAS". Es algo a lo que regresas - tu respiración, tu cuerpo, tu
+                calma interior, a ti.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center reveal">
                 <a href="#why-yoga"
@@ -155,7 +157,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
             <span class="material-symbols-outlined text-white/50 text-4xl">expand_more</span>
         </div>
@@ -167,15 +169,20 @@
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-12 reveal">
                     <div class="space-y-4">
-                        <h2 class="text-4xl md:text-6xl font-display text-primary italic" data-i18n="yoga_why_title">¿Porque Yoga?</h2>
-                        <h3 class="text-3xl md:text-5xl font-display text-deep italic opacity-80" data-i18n="yoga_why_subtitle">Un encuentro con tu verdad</h3>
+                        <h2 class="text-4xl md:text-6xl font-display text-primary italic" data-i18n="yoga_why_title">
+                            ¿Porque Yoga?</h2>
+                        <h3 class="text-3xl md:text-5xl font-display text-deep italic opacity-80"
+                            data-i18n="yoga_why_subtitle">Un encuentro con tu verdad</h3>
                     </div>
                     <div class="space-y-6 text-gray-500 font-light text-lg leading-relaxed">
                         <p data-i18n="yoga_why_desc1">
-                            A menudo buscamos respuestas afuera, en el ritmo acelerado del mundo, olvidando que la sabiduría más profunda ya habita en nosotros. El Yoga no es algo que "haces", es un espacio que te permites ser.
+                            A menudo buscamos respuestas afuera, en el ritmo acelerado del mundo, olvidando que la
+                            sabiduría más profunda ya habita en nosotros. El Yoga no es algo que "haces", es un espacio
+                            que te permites ser.
                         </p>
                         <div class="bg-alabaster/50 p-8 rounded-32 space-y-4">
-                            <h4 class="text-xl font-bold text-primary italic" data-i18n="yoga_benefits_title">Beneficios del yoga:</h4>
+                            <h4 class="text-xl font-bold text-primary italic" data-i18n="yoga_benefits_title">Beneficios
+                                del yoga:</h4>
                             <ul class="space-y-3">
                                 <li class="flex items-center gap-3 text-deep/80 font-medium italic">
                                     <span class="material-symbols-outlined text-primary text-xl">spa</span>
@@ -183,25 +190,31 @@
                                 </li>
                                 <li class="flex items-center gap-3 text-deep/80 font-medium italic">
                                     <span class="material-symbols-outlined text-primary text-xl">insights</span>
-                                    <span data-i18n="yoga_benefits_li2">Aumenta la concentración y la claridad mental</span>
+                                    <span data-i18n="yoga_benefits_li2">Aumenta la concentración y la claridad
+                                        mental</span>
                                 </li>
                             </ul>
                             <p class="text-sm italic pt-4 leading-relaxed" data-i18n="yoga_benefits_desc">
-                                La magia del yoga se despliega en cada estiramiento, en cada respiración consciente y en cada momento de conexión entre body, mind and spirit...
+                                La magia del yoga se despliega en cada estiramiento, en cada respiración consciente y en
+                                cada momento de conexión entre body, mind and spirit...
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="relative reveal">
-                    <div class="rounded-[60px] overflow-hidden shadow-2xl h-[700px] transform hover:scale-[1.02] transition-transform duration-700">
+                    <div
+                        class="rounded-[60px] overflow-hidden shadow-2xl h-[700px] transform hover:scale-[1.02] transition-transform duration-700">
                         <img src="images/yoga_hero_3.png" class="w-full h-full object-cover">
                     </div>
                     <!-- Overlapping Card -->
-                    <div class="absolute -bottom-10 -left-10 bg-white p-10 rounded-32 shadow-2xl max-w-sm hidden md:block">
-                        <h4 class="text-2xl font-display text-primary italic mb-4" data-i18n="yoga_more_title">Más que yoga</h4>
+                    <div
+                        class="absolute -bottom-10 -left-10 bg-white p-10 rounded-32 shadow-2xl max-w-sm hidden md:block">
+                        <h4 class="text-2xl font-display text-primary italic mb-4" data-i18n="yoga_more_title">Más que
+                            yoga</h4>
                         <p class="text-sm font-light leading-relaxed text-gray-500" data-i18n="yoga_more_desc">
-                            Guiados de la manera más amorosa y apasionada, exploramos las posturas (asanas), la respiración consciente y la meditación...
+                            Guiados de la manera más amorosa y apasionada, exploramos las posturas (asanas), la
+                            respiración consciente y la meditación...
                         </p>
                     </div>
                 </div>
@@ -218,22 +231,30 @@
                     <img src="images/yoga_hero_7.png" class="w-full h-full object-cover">
                 </div>
                 <div class="space-y-4 p-4 reveal">
-                    <h3 class="text-4xl md:text-5xl font-display text-deep italic leading-tight" data-i18n="yoga_personal_title">Práctica Personalizada</h3>
+                    <h3 class="text-4xl md:text-5xl font-display text-deep italic leading-tight"
+                        data-i18n="yoga_personal_title">Práctica Personalizada</h3>
                     <p class="text-gray-500 font-light text-lg leading-relaxed" data-i18n="yoga_personal_desc">
-                        En nuestro trabajo individual, mi objetivo es ofrecerte un punto de referencia sobre lo que es posible...
+                        En nuestro trabajo individual, mi objetivo es ofrecerte un punto de referencia sobre lo que es
+                        posible...
                     </p>
-                    <a href="contact.html" class="inline-block text-primary font-bold text-xs tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-all">RESERVAR ESPACIO</a>
+                    <a href="contact.html"
+                        class="inline-block text-primary font-bold text-xs tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-all">RESERVAR
+                        ESPACIO</a>
                 </div>
             </div>
 
             <!-- Group Session -->
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1 space-y-4 p-4 text-right reveal">
-                    <h3 class="text-4xl md:text-5xl font-display text-deep italic leading-tight" data-i18n="yoga_group_title">Práctica Grupal</h3>
+                    <h3 class="text-4xl md:text-5xl font-display text-deep italic leading-tight"
+                        data-i18n="yoga_group_title">Práctica Grupal</h3>
                     <p class="text-gray-500 font-light text-lg leading-relaxed" data-i18n="yoga_group_desc">
-                        Práctica en comunidad, trabaja en equipo, siente la energía de movernos al ritmo de la práctica...
+                        Práctica en comunidad, trabaja en equipo, siente la energía de movernos al ritmo de la
+                        práctica...
                     </p>
-                    <a href="contact.html" class="inline-block text-primary font-bold text-xs tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-all">UNIRSE AL GRUPO</a>
+                    <a href="contact.html"
+                        class="inline-block text-primary font-bold text-xs tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-all">UNIRSE
+                        AL GRUPO</a>
                 </div>
                 <div class="order-1 md:order-2 rounded-[32px] overflow-hidden shadow-xl h-[380px] reveal">
                     <img src="images/yoga_hero_5.png" class="w-full h-full object-cover">
@@ -247,12 +268,19 @@
         <div class="container mb-12 reveal">
             <div class="max-w-5xl mx-auto space-y-6">
                 <div class="space-y-4">
-                    <h2 class="text-4xl md:text-5xl font-display text-primary italic" data-i18n="yoga_kids_teens_section_title">Yoga y mindfulness para niños y adolescentes</h2>
-                    <h3 class="text-xl md:text-2xl font-display text-deep italic opacity-80" data-i18n="yoga_kids_teens_subtitle">Sembrando Bienestar: Un Espacio para Crecer con el alma</h3>
+                    <h2 class="text-4xl md:text-5xl font-display text-primary italic"
+                        data-i18n="yoga_kids_teens_section_title">Yoga y mindfulness para niños y adolescentes</h2>
+                    <h3 class="text-xl md:text-2xl font-display text-deep italic opacity-80"
+                        data-i18n="yoga_kids_teens_subtitle">Sembrando Bienestar: Un Espacio para Crecer con el alma
+                    </h3>
                 </div>
                 <div class="w-24 h-px bg-primary mb-12"></div>
-                <p class="text-gray-500 font-light text-xl leading-relaxed text-justify" data-i18n="yoga_kids_teens_intro">
-                    Como padres, nuestro mayor deseo es ver a nuestros hijos crecer con confianza, alegría y las herramientas necesarias para navegar la vida. Entendemos que cada etapa tiene su propio ritmo y sus propios desafíos, por eso hemos creado un refugio donde el yoga se convierte en el lenguaje del corazón, adaptándose a cada paso de su camino.
+                <p class="text-gray-500 font-light text-xl leading-relaxed text-justify"
+                    data-i18n="yoga_kids_teens_intro">
+                    Como padres, nuestro mayor deseo es ver a nuestros hijos crecer con confianza, alegría y las
+                    herramientas necesarias para navegar la vida. Entendemos que cada etapa tiene su propio ritmo y sus
+                    propios desafíos, por eso hemos creado un refugio donde el yoga se convierte en el lenguaje del
+                    corazón, adaptándose a cada paso de su camino.
                 </p>
             </div>
         </div>
@@ -264,8 +292,11 @@
                     <img src="images/infinite kid smiling.png" class="w-full h-full object-cover">
                 </div>
                 <div class="space-y-6 reveal">
-                    <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full" data-i18n="yoga_kids_age">Edades 5-11</span>
-                    <h3 class="text-4xl font-display text-deep italic" data-i18n="yoga_kids_title">Para los más pequeños: El Juego como Puerta al Interior</h3>
+                    <span
+                        class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full"
+                        data-i18n="yoga_kids_age">Edades 5-11</span>
+                    <h3 class="text-4xl font-display text-deep italic" data-i18n="yoga_kids_title">Para los más
+                        pequeños: El Juego como Puerta al Interior</h3>
                     <p class="text-gray-500 font-light text-lg leading-relaxed" data-i18n="yoga_kids_desc">
                         En la infancia, el bienestar florece a través de la alegría...
                     </p>
@@ -275,20 +306,27 @@
             <!-- Teens -->
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1 space-y-6 text-right reveal">
-                    <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full" data-i18n="yoga_teens_age">Edades 12-18</span>
-                    <h3 class="text-4xl font-display text-deep italic" data-i18n="yoga_teens_title">Para nuestros adolescentes: Construyendo un Refugio Seguro</h3>
+                    <span
+                        class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full"
+                        data-i18n="yoga_teens_age">Edades 12-18</span>
+                    <h3 class="text-4xl font-display text-deep italic" data-i18n="yoga_teens_title">Para nuestros
+                        adolescentes: Construyendo un Refugio Seguro</h3>
                     <p class="text-gray-500 font-light text-lg leading-relaxed" data-i18n="yoga_teens_desc">
-                        Sabemos que navegar las complejidades de la adolescencia requiere mucho más que preparación académica...
+                        Sabemos que navegar las complejidades de la adolescencia requiere mucho más que preparación
+                        académica...
                     </p>
                 </div>
                 <div class="order-1 md:order-2 rounded-32 overflow-hidden shadow-2xl h-[380px] reveal">
                     <img src="images/yoga_hero_8.png" class="w-full h-full object-cover">
                 </div>
             </div>
-            
+
             <div class="max-w-5xl mx-auto text-center reveal pt-2">
-                <p class="text-xl md:text-2xl font-display text-primary italic leading-relaxed" data-i18n="yoga_kids_teens_footer">
-                    Al invitarlos a esta práctica, no solo les estás regalando una actividad física; les estás entregando un ancla de amor propio que los acompañará toda la vida, permitiéndoles enraizar y florecer.
+                <p class="text-xl md:text-2xl font-display text-primary italic leading-relaxed"
+                    data-i18n="yoga_kids_teens_footer">
+                    Al invitarlos a esta práctica, no solo les estás regalando una actividad física; les estás
+                    entregando un ancla de amor propio que los acompañará toda la vida, permitiéndoles enraizar y
+                    florecer.
                 </p>
             </div>
         </div>
@@ -301,23 +339,29 @@
         </div>
         <div class="container relative z-10">
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-                <div class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
+                <div
+                    class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-px bg-white mb-6"></div>
-                        <h2 class="text-4xl md:text-5xl font-display italic text-primary" data-i18n="yoga_meditation_title">MEDITACIÓN</h2>
-                        <p class="text-white/70 font-light text-lg leading-relaxed pt-2" data-i18n="yoga_meditation_desc">
+                        <h2 class="text-4xl md:text-5xl font-display italic text-primary"
+                            data-i18n="yoga_meditation_title">MEDITACIÓN</h2>
+                        <p class="text-white/70 font-light text-lg leading-relaxed pt-2"
+                            data-i18n="yoga_meditation_desc">
                             La meditación es una de las artes más grandes de la vida...
                         </p>
                     </div>
-                    <p class="text-white font-bold italic text-sm tracking-widest pt-4" data-i18n="yoga_meditation_footer">
+                    <p class="text-white font-bold italic text-sm tracking-widest pt-4"
+                        data-i18n="yoga_meditation_footer">
                         Prepara tu cuerpo - Respira - Pon una intención y hazlo parte de ti.
                     </p>
                 </div>
-                
-                <div class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
+
+                <div
+                    class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-px bg-white mb-6"></div>
-                        <h2 class="text-4xl md:text-5xl font-display italic text-primary" data-i18n="yoga_breath_title">RESPIRA</h2>
+                        <h2 class="text-4xl md:text-5xl font-display italic text-primary" data-i18n="yoga_breath_title">
+                            RESPIRA</h2>
                         <p class="text-white/70 font-light text-lg leading-relaxed pt-2" data-i18n="yoga_breath_desc">
                             Inhala - exhala - respira, siente la energía de vida que entra en tu cuerpo...
                         </p>
@@ -334,9 +378,11 @@
     <section class="section-padding bg-alabaster">
         <div class="container mb-12 reveal text-center">
             <div class="max-w-4xl mx-auto space-y-6 flex flex-col items-center">
-                <h2 class="text-4xl md:text-5xl font-display text-primary italic" data-i18n="yoga_practices_title">Prácticas de Yoga</h2>
+                <h2 class="text-4xl md:text-5xl font-display text-primary italic" data-i18n="yoga_practices_title">
+                    Prácticas de Yoga</h2>
                 <div class="w-24 h-px bg-primary"></div>
-                <p class="text-gray-500 font-light text-xl leading-relaxed max-w-2xl" data-i18n="yoga_practices_explore">
+                <p class="text-gray-500 font-light text-xl leading-relaxed max-w-2xl"
+                    data-i18n="yoga_practices_explore">
                     Explora la esencia de cada práctica pasando el cursor sobre los elementos sagrados.
                 </p>
             </div>
@@ -351,23 +397,32 @@
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <!-- Collapsed View (Desktop) / Header (Mobile) -->
-                        <div class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7 lg:w-8 lg:h-8">
-                                    <path d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke-linecap="round"/>
-                                    <path d="M4 12c0 4.418 1.582 4 4 4s4-8 8-8 4 4 4 4" stroke-linecap="round"/>
+                        <div
+                            class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="w-7 h-7 lg:w-8 lg:h-8">
+                                    <path d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke-linecap="round" />
+                                    <path d="M4 12c0 4.418 1.582 4 4 4s4-8 8-8 4 4 4 4" stroke-linecap="round" />
                                 </svg>
                             </div>
                             <div class="flex-1 flex items-center justify-center w-full lg:pt-32">
-                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap" data-i18n="yoga_vinyasa_title">Vinyasa</h4>
+                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap"
+                                    data-i18n="yoga_vinyasa_title">Vinyasa</h4>
                             </div>
                         </div>
 
                         <!-- Expanded View -->
-                        <div class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
-                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Práctica Dinámica</span>
-                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6" data-i18n="yoga_vinyasa_title">Vinyasa</h3>
-                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl" data-i18n="yoga_vinyasa_desc">Más allá de una secuencia de movimientos...</p>
+                        <div
+                            class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
+                            <span
+                                class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Práctica
+                                Dinámica</span>
+                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6"
+                                data-i18n="yoga_vinyasa_title">Vinyasa</h3>
+                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl"
+                                data-i18n="yoga_vinyasa_desc">Más allá de una secuencia de movimientos...</p>
                         </div>
                     </div>
                 </div>
@@ -377,22 +432,32 @@
                     <div class="accordion-bg" style="background-image: url('images/yoga_hero_2.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
-                        <div class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7 lg:w-8 lg:h-8">
-                                    <circle cx="12" cy="12" r="5"/>
-                                    <path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10l2 2M5 19l2-2m10-10l2-2" stroke-linecap="round"/>
-                                    <path d="M12 8c0 4-2 4-2 4s2 0 2 4" stroke-linecap="round"/>
+                        <div
+                            class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="w-7 h-7 lg:w-8 lg:h-8">
+                                    <circle cx="12" cy="12" r="5" />
+                                    <path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10l2 2M5 19l2-2m10-10l2-2"
+                                        stroke-linecap="round" />
+                                    <path d="M12 8c0 4-2 4-2 4s2 0 2 4" stroke-linecap="round" />
                                 </svg>
                             </div>
                             <div class="flex-1 flex items-center justify-center w-full lg:pt-32">
-                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap" data-i18n="yoga_hatha_title">Hatha</h4>
+                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap"
+                                    data-i18n="yoga_hatha_title">Hatha</h4>
                             </div>
                         </div>
-                        <div class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
-                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Equilibrio & Fuerza</span>
-                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6" data-i18n="yoga_hatha_title">Hatha</h3>
-                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl" data-i18n="yoga_hatha_desc">Práctica refinada, poderosa y transformadora...</p>
+                        <div
+                            class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
+                            <span
+                                class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Equilibrio
+                                & Fuerza</span>
+                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6"
+                                data-i18n="yoga_hatha_title">Hatha</h3>
+                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl"
+                                data-i18n="yoga_hatha_desc">Práctica refinada, poderosa y transformadora...</p>
                         </div>
                     </div>
                 </div>
@@ -402,22 +467,31 @@
                     <div class="accordion-bg" style="background-image: url('images/yoga_hero_3.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
-                        <div class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7 lg:w-8 lg:h-8">
-                                    <path d="M12 3L2 21h20L12 3z" stroke-linejoin="round"/>
-                                    <path d="M12 9l-4 7h8z"/>
-                                    <circle cx="12" cy="15" r="1"/>
+                        <div
+                            class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="w-7 h-7 lg:w-8 lg:h-8">
+                                    <path d="M12 3L2 21h20L12 3z" stroke-linejoin="round" />
+                                    <path d="M12 9l-4 7h8z" />
+                                    <circle cx="12" cy="15" r="1" />
                                 </svg>
                             </div>
                             <div class="flex-1 flex items-center justify-center w-full lg:pt-32">
-                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap" data-i18n="yoga_ashtanga_title">Ashtanga</h4>
+                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap"
+                                    data-i18n="yoga_ashtanga_title">Ashtanga</h4>
                             </div>
                         </div>
-                        <div class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
-                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Disciplina & Poder</span>
-                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6" data-i18n="yoga_ashtanga_title">Ashtanga</h3>
-                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl" data-i18n="yoga_ashtanga_desc">Fortalece, flexibiliza y purifica...</p>
+                        <div
+                            class="expanded-info mt-auto opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
+                            <span
+                                class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Disciplina
+                                & Poder</span>
+                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6"
+                                data-i18n="yoga_ashtanga_title">Ashtanga</h3>
+                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl"
+                                data-i18n="yoga_ashtanga_desc">Fortalece, flexibiliza y purifica...</p>
                         </div>
                     </div>
                 </div>
@@ -427,21 +501,29 @@
                     <div class="accordion-bg" style="background-image: url('images/yoga_nidra_new.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
-                        <div class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7 lg:w-8 lg:h-8">
-                                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                                    <path d="M12 7l1 1-1 1-1-1zM16 11l1 1-1 1-1-1z" fill="currentColor"/>
+                        <div
+                            class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="w-7 h-7 lg:w-8 lg:h-8">
+                                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                                    <path d="M12 7l1 1-1 1-1-1zM16 11l1 1-1 1-1-1z" fill="currentColor" />
                                 </svg>
                             </div>
                             <div class="flex-1 flex items-center justify-center w-full lg:pt-32">
-                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap" data-i18n="yoga_nidra_title">Nidra</h4>
+                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap"
+                                    data-i18n="yoga_nidra_title">Nidra</h4>
                             </div>
                         </div>
-                        <div class="expanded-info mt-auto lg:mb-40 mb-20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
-                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Yoga del Sueño</span>
-                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6" data-i18n="yoga_nidra_title">Nidra</h3>
-                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl" data-i18n="yoga_nidra_desc">Método para explorar las capas de la mente...</p>
+                        <div
+                            class="expanded-info mt-auto lg:mb-40 mb-20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
+                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Yoga
+                                del Sueño</span>
+                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6"
+                                data-i18n="yoga_nidra_title">Nidra</h3>
+                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl"
+                                data-i18n="yoga_nidra_desc">Método para explorar las capas de la mente...</p>
                         </div>
                     </div>
                 </div>
@@ -451,133 +533,145 @@
                     <div class="accordion-bg" style="background-image: url('images/practice_restorative.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
-                        <div class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7 lg:w-8 lg:h-8">
-                                    <path d="M12 22s-8-4-8-12a8 8 0 0116 0c0 8-8 12-8 12z"/>
-                                    <path d="M12 18s-4-3-4-7a4 4 0 018 0c0 4-4 7-4 7z"/>
-                                    <circle cx="12" cy="11" r="1.5"/>
+                        <div
+                            class="collapsed-header flex lg:flex-col items-center lg:h-[500px] lg:mt-4 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:scale-110 group-hover:bg-primary transition-all shadow-xl">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="w-7 h-7 lg:w-8 lg:h-8">
+                                    <path d="M12 22s-8-4-8-12a8 8 0 0116 0c0 8-8 12-8 12z" />
+                                    <path d="M12 18s-4-3-4-7a4 4 0 018 0c0 4-4 7-4 7z" />
+                                    <circle cx="12" cy="11" r="1.5" />
                                 </svg>
                             </div>
                             <div class="flex-1 flex items-center justify-center w-full lg:pt-32">
-                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap" data-i18n="yoga_restorative_title">Restaurativo</h4>
+                                <h4 class="text-xl lg:text-4xl font-display italic text-white lg:-rotate-90 lg:origin-center transition-opacity duration-500 whitespace-nowrap"
+                                    data-i18n="yoga_restorative_title">Restaurativo</h4>
                             </div>
                         </div>
-                        <div class="expanded-info mt-auto lg:mb-40 mb-20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
-                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Pausa Sagrada</span>
-                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6" data-i18n="yoga_restorative_title">Restaurativo</h3>
-                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl" data-i18n="yoga_restorative_desc">Regálate una pausa para despertar a tu calma...</p>
+                        <div
+                            class="expanded-info mt-auto lg:mb-40 mb-20 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100 pointer-events-none group-hover:pointer-events-auto">
+                            <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-3 block">Pausa
+                                Sagrada</span>
+                            <h3 class="text-4xl lg:text-5xl font-display italic text-white mb-6"
+                                data-i18n="yoga_restorative_title">Restaurativo</h3>
+                            <p class="text-white/80 font-light text-lg lg:text-xl leading-relaxed max-w-xl"
+                                data-i18n="yoga_restorative_desc">Regálate una pausa para despertar a tu calma...</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-            <style>
+        <style>
+            .accordion-wrapper {
+                display: flex;
+                width: 100%;
+                height: 600px;
+                gap: 1rem;
+                overflow: hidden;
+            }
+
+            .accordion-item {
+                position: relative;
+                flex: 1;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 2rem;
+                transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+                cursor: pointer;
+            }
+
+            .accordion-item.active,
+            .accordion-item:hover {
+                flex: 5;
+            }
+
+            .accordion-bg {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 0;
+            }
+
+            .accordion-item:hover .accordion-bg,
+            .accordion-item.active .accordion-bg {
+                transform: scale(1.1);
+            }
+
+            .item-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(31, 55, 41, 0.4), rgba(31, 55, 41, 0.9));
+                z-index: 10;
+            }
+
+            .item-content {
+                position: relative;
+                z-index: 20;
+                height: 100%;
+                padding: 2.5rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Synchronize Active and Hover states for internal components */
+            .accordion-item.active .expanded-info,
+            .accordion-item:hover .expanded-info {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+                pointer-events: auto !important;
+            }
+
+            .accordion-item.active h4,
+            .accordion-item:hover h4 {
+                opacity: 0 !important;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .accordion-item.active .collapsed-header>div:first-child,
+            .accordion-item:hover .collapsed-header>div:first-child {
+                transform: scale(1.1);
+                background-color: #955031 !important;
+                /* Terra Cotta Color */
+                border-color: #955031 !important;
+            }
+
+            .accordion-item.active .collapsed-header .flex-1,
+            .accordion-item:hover .collapsed-header .flex-1 {
+                padding-top: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+            }
+
+            @media (max-width: 1023px) {
                 .accordion-wrapper {
-                    display: flex;
-                    width: 100%;
-                    height: 600px;
-                    gap: 1rem;
-                    overflow: hidden;
+                    flex-direction: column;
+                    height: auto;
+                    gap: 1.5rem;
                 }
 
                 .accordion-item {
-                    position: relative;
-                    flex: 1;
-                    height: 100%;
-                    overflow: hidden;
-                    border-radius: 2rem;
-                    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-                    cursor: pointer;
+                    height: 120px;
+                    flex: none;
                 }
 
-                .accordion-item.active,
-                .accordion-item:hover {
-                    flex: 5;
+                .accordion-item.active {
+                    height: 450px;
                 }
 
-                .accordion-bg {
-                    position: absolute;
-                    inset: 0;
-                    background-size: cover;
-                    background-position: center;
-                    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-                    z-index: 0;
+                /* Mobile specific header fade */
+                .accordion-item.active .collapsed-header {
+                    opacity: 0;
+                    transform: translateY(-20px);
                 }
-
-                .accordion-item:hover .accordion-bg,
-                .accordion-item.active .accordion-bg {
-                    transform: scale(1.1);
-                }
-
-                .item-overlay {
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to bottom, rgba(31, 55, 41, 0.4), rgba(31, 55, 41, 0.9));
-                    z-index: 10;
-                }
-
-                .item-content {
-                    position: relative;
-                    z-index: 20;
-                    height: 100%;
-                    padding: 2.5rem;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                /* Synchronize Active and Hover states for internal components */
-                .accordion-item.active .expanded-info,
-                .accordion-item:hover .expanded-info {
-                    opacity: 1 !important;
-                    transform: translateY(0) !important;
-                    pointer-events: auto !important;
-                }
-
-                .accordion-item.active h4,
-                .accordion-item:hover h4 {
-                    opacity: 0 !important;
-                    visibility: hidden;
-                    pointer-events: none;
-                }
-
-                .accordion-item.active .collapsed-header > div:first-child,
-                .accordion-item:hover .collapsed-header > div:first-child {
-                    transform: scale(1.1);
-                    background-color: #955031 !important; /* Terra Cotta Color */
-                    border-color: #955031 !important;
-                }
-
-                .accordion-item.active .collapsed-header .flex-1,
-                .accordion-item:hover .collapsed-header .flex-1 {
-                    padding-top: 0 !important;
-                    display: flex !important;
-                    flex-direction: column !important;
-                    justify-content: flex-start !important;
-                    align-items: center !important;
-                }
-
-                @media (max-width: 1023px) {
-                    .accordion-wrapper {
-                        flex-direction: column;
-                        height: auto;
-                        gap: 1.5rem;
-                    }
-                    .accordion-item {
-                        height: 120px;
-                        flex: none;
-                    }
-                    .accordion-item.active {
-                        height: 450px;
-                    }
-                    /* Mobile specific header fade */
-                    .accordion-item.active .collapsed-header {
-                        opacity: 0;
-                        transform: translateY(-20px);
-                    }
-                }
-            </style>
+            }
+        </style>
 
 
 
@@ -596,7 +690,8 @@
                 data-i18n="yoga_cta_title">
                 Practiquemos Juntos.
             </h2>
-            <h3 class="text-2xl md:text-3xl text-white/80 font-light italic" data-i18n="yoga_cta_subtitle">Nos vemos en el Mat</h3>
+            <h3 class="text-2xl md:text-3xl text-white/80 font-light italic" data-i18n="yoga_cta_subtitle">Nos vemos en
+                el Mat</h3>
             <div class="pt-8">
                 <a href="contact.html"
                     class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-sm tracking-widest shadow-2xl hover:scale-105 transition-all">
@@ -615,12 +710,15 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-8">
                 <div class="flex flex-col items-center gap-2">
-                    <img src="images/espiral_InfinitoColor.png" class="h-20 w-auto object-contain" alt="Infinite Yoga Logo">
-                    <h4 class="font-display italic text-5xl text-primary whitespace-nowrap text-center" data-i18n="footer_brand">Jeniffer Córdoba</h4>
+                    <img src="images/espiral_InfinitoColor.png" class="h-20 w-auto object-contain"
+                        alt="Infinite Yoga Logo">
+                    <h4 class="font-display italic text-5xl text-primary whitespace-nowrap text-center"
+                        data-i18n="footer_brand">Jeniffer Córdoba</h4>
                 </div>
 
                 <div class="text-center">
-                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto" data-i18n="footer_tagline">
+                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
+                        data-i18n="footer_tagline">
                         Un santuario Divino de<br>Infinitas Posibilidades.
                     </p>
                 </div>
@@ -695,7 +793,7 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        
+
         // Mobile Menu Logic
         const moreMenuBtn = document.getElementById('moreMenuBtn');
         const moreDropdown = document.getElementById('moreDropdown');
