@@ -1,7 +1,8 @@
+images/ALTA/
+node_modules/
+.git/
 source_*.html
 raw_index.html
 branding.md
 .DS_Store
 .vercel
-node_modules/
-images/ALTA/
