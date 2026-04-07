@@ -398,7 +398,7 @@ h4,
     align-items: center;
     gap: 0;
     line-height: 1.1;
-    font-size: clamp(2.2rem, 6.5vw, 110px);
+    font-size: clamp(2.5rem, 7.5vw, 122px);
     width: 100%;
 }
 
