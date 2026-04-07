@@ -191,6 +191,81 @@ export default async function handler(req, res) {
       return res.status(200).json(data);
     }
 
+    // CASE 3: LEAD CAPTURE (MODAL)
+    if (type === 'lead') {
+      const isCirculo = service === 'circulo';
+      const isTalleres = service === 'talleres';
+      const isRetiros = service === 'retiros';
+
+      const serviceLabel = isCirculo ? (isSpanish ? 'Círculo de Mujeres' : 'Women\'s Circle') :
+                           isTalleres ? (isSpanish ? 'Taller' : 'Workshop') :
+                           (isSpanish ? 'Retiro' : 'Retreat');
+
+      // 1. Internal Notification (to Jeniffer/Ivan)
+      await resend.emails.send({
+        from: 'Website Portal <hola@jeniffercordoba.com>',
+        to: ['jeniffercordoba@yahoo.com'],
+        bcc: ['ivan+jc@voizlab.com'],
+        subject: `New Lead [Experiencias]: ${name} (${serviceLabel})`,
+        html: `
+          <div style="font-family: sans-serif; background-color: #f7f7f7; padding: 40px;">
+            <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+              <div style="background-color: #955031; color: white; padding: 30px; text-align: center;">
+                <h2 style="margin: 0; font-weight: 300; letter-spacing: 2px;">NUEVO LEAD - EXPERIENCIA</h2>
+              </div>
+              <div style="padding: 40px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr><td style="padding: 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Lead</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 18px; color: #322F20; border-bottom: 1px solid #eee;"><strong>${name}</strong></td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Email</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #322F20; border-bottom: 1px solid #eee;">${email}</td></tr>
+                  
+                  <tr><td style="padding: 20px 0 10px 0; color: #999; font-size: 12px; text-transform: uppercase;">Interés</td></tr>
+                  <tr><td style="padding: 0 0 20px 0; font-size: 16px; color: #955031; border-bottom: 1px solid #eee;"><strong>${serviceLabel}</strong></td></tr>
+                </table>
+                <div style="margin-top: 30px; font-size: 10px; color: #ccc;">Enviado desde el Lead Modal (Idioma: ${lang.toUpperCase()})</div>
+              </div>
+            </div>
+          </div>
+        `
+      });
+
+      // 2. Thank You Email (to Lead)
+      const { data, error } = await resend.emails.send({
+        from: 'Jeniffer Córdoba <hola@jeniffercordoba.com>',
+        to: [email],
+        subject: isSpanish ? 'Tu interés ha sido recibido // Jeniffer Córdoba' : 'Your interest has been received // Jeniffer Córdoba',
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px; background-color: #ede1c9; color: #322F20; border-radius: 40px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+               <img src="https://green-ambiance.vercel.app/images/8-Color.png" width="60" style="opacity: 0.8;">
+            </div>
+            <h1 style="font-style: italic; font-weight: normal; font-size: 32px; color: #955031; text-align: center;">
+              ${isSpanish ? 'Gracias por conectar,' : 'Thank you for connecting,'} ${name}
+            </h1>
+            <div style="background-color: white; padding: 40px; border-radius: 30px; margin-top: 30px; line-height: 1.8; color: #504c33; border: 1px solid rgba(80, 76, 51, 0.1);">
+              <p style="margin: 0;">
+                ${isSpanish
+            ? `Tu interés en ${serviceLabel} ha sido recibido con gratitud. Me conectaré contigo pronto para compartirte más detalles.`
+            : `Your interest in ${serviceLabel} has been received with gratitude. I will connect with you soon to share more details.`}
+              </p>
+              <p style="margin-top: 20px; font-style: italic; opacity: 0.8;">
+                ${isSpanish ? 'Mantente en sintonía con tu presencia.' : 'Stay tuned with your presence.'}
+              </p>
+            </div>
+            <p style="margin-top: 40px; text-align: center; font-size: 14px; opacity: 0.7;">
+              ${isSpanish ? 'Con amor,' : 'With love,'}<br>
+              <strong>Jeniffer Córdoba</strong>
+            </p>
+          </div>
+        `
+      });
+
+      if (error) return res.status(400).json(error);
+      return res.status(200).json(data);
+    }
+
     return res.status(400).json({ error: 'Invalid request type' });
 
   } catch (err) {

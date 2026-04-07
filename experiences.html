@@ -15,6 +15,7 @@
     <!-- I18n Scripts -->
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <script>
         tailwind.config = {
@@ -478,6 +479,9 @@
                     <!-- Hidden Type Field -->
                     <input type="hidden" id="leadType" name="type" value="general">
 
+                    <!-- Cloudflare Turnstile Widget -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="light"></div>
+
                     <button type="submit" id="leadSubmitBtn"
                         class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg tracking-widest hover:bg-espresso active:scale-95 transition-all shadow-xl leading-none mt-4">
                         <span id="leadSubmitBtnText" data-i18n="lead_form_btn_circulo">Join the Circle!</span>
@@ -494,8 +498,8 @@
             <div class="w-20 h-20 bg-alabaster rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-inner">
                 <span class="material-symbols-outlined text-4xl">check_circle</span>
             </div>
-            <h3 class="text-3xl font-display text-deep italic mb-2" data-i18n="contact_success_title">Mensaje Recibido</h3>
-            <p class="text-gray-400 text-sm font-light italic mb-8" data-i18n="contact_success_desc">Jeniffer se conectará contigo pronto.</p>
+            <h3 id="successTitle" class="text-3xl font-display text-deep italic mb-2">Mensaje Recibido</h3>
+            <p id="successDesc" class="text-gray-400 text-sm font-light italic mb-8">Jeniffer se conectará contigo pronto.</p>
             <button onclick="closeSuccessModal()" class="w-full bg-deep text-white py-4 rounded-full font-bold text-sm tracking-widest hover:bg-primary transition-all">
                 Cerrar
             </button>
@@ -570,6 +574,13 @@
                 const btn = document.getElementById('leadSubmitBtn');
                 const originalContent = btn.innerHTML;
                 
+                // Get turnstile response
+                const turnstileResponse = document.querySelector('#leadForm [name="cf-turnstile-response"]').value;
+                if (!turnstileResponse) {
+                    alert('Por favor, completa la verificación de seguridad.');
+                    return;
+                }
+
                 btn.disabled = true;
                 btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
 
@@ -578,6 +589,7 @@
                     service: leadTypeInput.value,
                     name: document.getElementById('leadName').value,
                     email: document.getElementById('leadEmail').value,
+                    'cf-turnstile-response': turnstileResponse,
                     lang: localStorage.getItem('user-lang') || 'es'
                 };
 
@@ -589,6 +601,17 @@
                     });
 
                     if (response.ok) {
+                        // Set dynamic success text before showing modal
+                        const lang = localStorage.getItem('user-lang') || 'es';
+                        const type = leadTypeInput.value;
+                        const titleKey = 'lead_success_title';
+                        const descKey = `lead_success_desc_${type}`;
+                        
+                        if(window.translations && window.translations[lang]) {
+                            document.getElementById('successTitle').textContent = window.translations[lang][titleKey] || 'Mensaje Recibido';
+                            document.getElementById('successDesc').textContent = window.translations[lang][descKey] || 'Jeniffer se conectará contigo pronto.';
+                        }
+
                         closeLeadModal();
                         setTimeout(() => {
                             leadSuccessModal.classList.remove('hidden');
@@ -596,8 +619,10 @@
                             setTimeout(() => { leadSuccessModal.style.opacity = '1'; }, 50);
                         }, 600);
                         leadForm.reset();
+                        if(window.turnstile) window.turnstile.reset();
                     } else {
-                        alert('Error. Please try again or reach out via WhatsApp.');
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.error || 'Please try again.'}`);
                     }
                 } catch (err) {
                     console.error('Lead Error:', err);
