@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization: Hero 70 // JC</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="images/8-Color.png">
+
+    <!-- I18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#955031',
+                        'deep': '#504c33',
+                        'sage': '#b69c75',
+                        'alabaster': '#ede1c9',
+                        'parchment': '#F2F2EB',
+                        'mint': '#9b9773',
+                        'espresso': '#322F20'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-alabaster selection:bg-primary/30">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav nav-transparent" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                <span class="brand-name">
+                    <span>Jeniffer</span>
+                    <span>Córdoba</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li class="xl:block"><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="hidden xl:block"><a href="QHC.html" data-i18n="nav_healing">QHC</a></li>
+                <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
+                <li class="hidden sm:block"><a href="contact.html" class="nav-cta" data-i18n="nav_book">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen flex flex-col items-center justify-between pt-48 pb-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- NEW IMAGE 70 - Reverted to scale-110 to maintain centering -->
+            <img src="images/hero_70.jpg?v=12"
+                class="w-full h-full object-cover brightness-[0.7] transform scale-110 -translate-x-[5%] object-[center_85%]">
+            
+            <!-- 55% DARK OVERLAY (Sweet spot confirmed) -->
+            <div class="absolute inset-0 bg-black/55"></div>
+            
+            <!-- GRADIENT OVERLAY -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        </div>
+        
+        <!-- TOP: TITLES (ABOVE HEAD) -->
+        <div class="relative z-10 text-center px-6 max-w-7xl mt-20">
+            <h1 class="hero-title-main text-white drop-shadow-2xl" style="font-size: clamp(2.5rem, 7.5vw, 122px);">
+                <span class="brand-word-sans" data-i18n="hero_balance">Equilibrio</span>
+                <span class="brand-sep">//</span>
+                <span class="brand-word-serif" data-i18n="hero_calm">Calma</span>
+                <span class="brand-sep">//</span>
+                <span class="brand-word-sans" data-i18n="hero_reconnect">Reconexión</span>
+            </h1>
+        </div>
+
+        <!-- BOTTOM: DESCRIPTION & CTA -->
+        <div class="relative z-10 text-center px-6 max-w-7xl">
+            <p class="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-16 tracking-wide leading-relaxed italic opacity-90"
+                data-i18n="hero_description">
+                Descubre y honra el camino hacia ti, abre tu corazón, conecta con la espiritualidad de la vida, el
+                movimiento consciente, la respiración y la meditación.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
+                data-i18n="hero_cta">
+                Inicia tu Viaje
+            </a>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 animate-pulse">
+            <span class="material-symbols-outlined text-4xl font-light">expand_more</span>
+        </div>
+    </header>
+
+    <footer class="py-12 text-center text-deep/40 text-xs">
+        <p>Visualización de Hero Image - Jeniffer Córdoba Yoga</p>
+    </footer>
+
+    <script>
+        // Basic Init
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+                nav.classList.remove('nav-transparent');
+            } else {
+                nav.classList.remove('scrolled');
+                nav.classList.add('nav-transparent');
+            }
+        });
+    </script>
+</body>
+
+</html>
