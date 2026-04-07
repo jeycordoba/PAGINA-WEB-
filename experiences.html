@@ -222,9 +222,10 @@
                 </div>
                 <div class="flex">
                     <button type="button" onclick="openLeadModal('circulo')"
-                        class="bg-primary text-white px-12 py-4 rounded-full font-bold text-xs tracking-widest hover:bg-deep transition-all shadow-xl uppercase"
-                        data-i18n="experience_women_link">
-                        Join the Circle!
+                        class="group relative inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-bold text-xs tracking-widest shadow-xl overflow-hidden transition-all duration-500 hover:scale-105 uppercase">
+                        <span class="relative z-10" data-i18n="experience_women_link">Unirme al Círculo!</span>
+                        <span class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform duration-500">auto_awesome</span>
+                        <div class="absolute inset-0 bg-espresso scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                     </button>
                 </div>
             </div>
@@ -291,8 +292,10 @@
                     <!-- Button -->
                     <div class="pt-4">
                         <button type="button" onclick="openLeadModal('talleres')"
-                            class="inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-bold text-xs tracking-widest shadow-xl hover:scale-105 transition-all uppercase" data-i18n="experience_talleres_card_cta_btn">
-                            ¡Sé parte de la evolución!
+                            class="group relative inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-bold text-xs tracking-widest shadow-xl overflow-hidden transition-all duration-500 hover:scale-105 uppercase">
+                            <span class="relative z-10" data-i18n="experience_talleres_card_cta_btn">¡Sé parte de la evolución!</span>
+                            <span class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform duration-500">bolt</span>
+                            <div class="absolute inset-0 bg-espresso scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                         </button>
                     </div>
                 </div>
@@ -351,8 +354,10 @@
                     <!-- Button -->
                     <div class="pt-4">
                         <button type="button" onclick="openLeadModal('retiros')"
-                            class="inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-bold text-xs tracking-widest shadow-xl hover:scale-105 transition-all uppercase" data-i18n="experience_retreats_cta_btn">
-                            ¡Quiero ser parte del viaje!
+                            class="group relative inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-bold text-xs tracking-widest shadow-xl overflow-hidden transition-all duration-500 hover:scale-105 uppercase">
+                            <span class="relative z-10" data-i18n="experience_retreats_cta_btn">¡Quiero ser parte del viaje!</span>
+                            <span class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform duration-500">explore</span>
+                            <div class="absolute inset-0 bg-espresso scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                         </button>
                     </div>
                 </div>
@@ -483,8 +488,9 @@
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="light"></div>
 
                     <button type="submit" id="leadSubmitBtn"
-                        class="w-full bg-primary text-white py-5 rounded-full font-bold text-lg tracking-widest hover:bg-espresso active:scale-95 transition-all shadow-xl leading-none mt-4">
-                        <span id="leadSubmitBtnText" data-i18n="lead_form_btn_circulo">Join the Circle!</span>
+                        class="group relative w-full bg-primary text-white py-6 rounded-full font-bold text-lg tracking-widest shadow-xl overflow-hidden transition-all duration-500 hover:scale-[1.02] uppercase leading-none mt-4">
+                        <span id="leadSubmitBtnText" class="relative z-10" data-i18n="lead_form_btn_circulo">Join the Circle!</span>
+                        <div class="absolute inset-0 bg-espresso scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                     </button>
                 </form>
             </div>
