@@ -44,7 +44,7 @@
     - Standardized image height to `h-[320px]` (matching Stage 3) to ensure timeline consistency and correct 16:9 ratio display.
 - [x] **4 Pillars Mobile Layout Correction**
     - Adjusted `index.html` positioning for the Meditation (Mudra) image.
-    - Switched from absolute bottom anchoring to percentage-based top positioning (`top-[62%]`) to ensure visual engagement with the main Yoga image on mobile screens.
+    - Switched from absolute bottom anchoring to percentage-based top positioning (`top-[52%]`) to ensure visual engagement with the main Yoga image on mobile screens across various device widths.
     - Maintained desktop layout consistency using responsive utility classes.
 - [x] **Documentation Management**
     - Updated `tasks.md` with new progress logs and date-based markers.
