@@ -41,7 +41,7 @@
 ### Completed Tasks
 - [x] **High-Resolution Image Asset Update**
     - Replaced `stage2.webp` with `stage2.png` in `QHC.html`.
-    - Corrected 16:9 aspect ratio and removed white horizontal bands by adjusting height constraints.
+    - Standardized image height to `h-[320px]` (matching Stage 3) to ensure timeline consistency and correct 16:9 ratio display.
 - [x] **4 Pillars Mobile Layout Correction**
     - Adjusted `index.html` positioning for the Meditation (Mudra) image.
     - Switched from absolute bottom anchoring to percentage-based top positioning (`top-[62%]`) to ensure visual engagement with the main Yoga image on mobile screens.
