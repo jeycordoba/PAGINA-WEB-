@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-page-title="page_title_404">Not Found // JC</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="images/8-Color.png">
+
+    <!-- I18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#955031',
+                        'deep': '#504c33',
+                        'sage': '#b69c75',
+                        'alabaster': '#ede1c9',
+                        'parchment': '#F2F2EB',
+                        'mint': '#9b9773',
+                        'espresso': '#322F20'
+                    },
+                    fontFamily: {
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-alabaster selection:bg-primary/30 min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav scrolled" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
+                <span class="brand-name text-deep">
+                    <span>Jeniffer</span>
+                    <span>Córdoba</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li class="xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="hidden xl:block"><a href="QHC.html" data-i18n="nav_healing">QHC</a></li>
+                <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
+                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
+                
+                <li class="relative xl:hidden">
+                    <button id="moreMenuBtn" class="more-btn" aria-label="More Menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div id="moreDropdown" class="more-dropdown">
+                        <a href="index.html" data-i18n="nav_home">Home</a>
+                        <a href="about.html" data-i18n="nav_about">About</a>
+                        <a href="QHC.html" data-i18n="nav_healing">QHC</a>
+                        <a href="Yoga.html" data-i18n="nav_yoga">Yoga</a>
+                        <a href="experiences.html" data-i18n="nav_experiences">Experiences</a>
+                        <a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ERROR CONTENT -->
+    <main class="flex-grow flex items-center justify-center relative py-32 px-6">
+        <!-- Calming Background Elements -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2600&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-20 scale-110 blur-[2px]">
+            <div class="absolute inset-0 bg-gradient-to-b from-alabaster via-transparent to-alabaster"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl w-full text-center space-y-12">
+            <!-- Large Artistic 404 -->
+            <div class="relative inline-block">
+                <h1 class="text-[12rem] md:text-[18rem] font-display text-primary/10 leading-none italic select-none" data-i18n="error_404_title">
+                    404
+                </h1>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-7xl md:text-9xl text-deep/20 animate-[pulse_4s_infinite]">
+                        self_improvement
+                    </span>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="text-4xl md:text-6xl font-display text-deep italic leading-tight px-4" data-i18n="error_404_message">
+                    Calm and Breathe... <br>Requested page was not found or is not available at the moment.
+                </h2>
+                <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+            </div>
+
+            <div class="pt-8">
+                <a href="index.html" 
+                   class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-lg tracking-widest shadow-xl hover:scale-105 transition-all duration-300 active:scale-95"
+                   data-i18n="error_404_btn">
+                    Return to Sanctuary
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white/50 backdrop-blur-md border-t border-deep/5 py-12 px-[5%] text-center">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+             <div class="flex flex-col items-center gap-2">
+                <img src="images/espiral_InfinitoColor.png" class="h-12 w-auto object-contain grayscale opacity-50"
+                    alt="Infinite Yoga Logo">
+                <p class="font-display italic text-2xl text-deep/40">Jeniffer Córdoba</p>
+            </div>
+            <p class="text-xs tracking-[0.4em] text-deep/30 font-bold uppercase" data-i18n="footer_tagline">
+                Un santuario Divino de Infinitas Posibilidades.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // More Menu Toggle
+        const moreBtn = document.getElementById('moreMenuBtn');
+        const moreDropdown = document.getElementById('moreDropdown');
+
+        if (moreBtn && moreDropdown) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                    moreDropdown.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+    <!-- Vercel Web Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

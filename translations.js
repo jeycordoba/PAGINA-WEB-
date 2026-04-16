@@ -19,6 +19,7 @@ const translations = {
         "page_title_sanctuary": "My Sanctuary // JC",
         "page_title_pricing": "Investment // JC",
         "page_title_contact": "Contact // JC",
+        "page_title_404": "Not Found // JC",
 
         // Hero Section
         "hero_balance": "Balance",
@@ -79,6 +80,9 @@ const translations = {
         "ebook_modal_cta": "Send me my eBook!",
         "contact_success_title": "Message Received",
         "contact_success_desc": "Your intentions have been heard. Jeniffer will connect with you shortly via email or phone.",
+        "error_404_title": "404",
+        "error_404_message": "Calm and Breathe... Requested page was not found or is not available at the moment.",
+        "error_404_btn": "Return to Sanctuary",
 
         // Home Page
         "home_hero_title": "A Resonance Beyond Borders.",
@@ -559,6 +563,7 @@ const translations = {
         "page_title_sanctuary": "Mi Santuario // JC",
         "page_title_pricing": "Inversión // JC",
         "page_title_contact": "Contacto // JC",
+        "page_title_404": "No Encontrado // JC",
 
         // Hero Section
         "hero_balance": "Equilibrio",
@@ -633,6 +638,9 @@ const translations = {
         "ebook_modal_cta": "Quiero mi eBook!",
         "contact_success_title": "Mensaje Recibido",
         "contact_success_desc": "Tus intenciones han sido escuchadas. Jeniffer se conectará contigo pronto vía email o teléfono.",
+        "error_404_title": "404",
+        "error_404_message": "Calma y Respira... La página solicitada no fue encontrada o no está disponible en este momento.",
+        "error_404_btn": "Regresar al Santuario",
 
         // About Page
         "about_intro_tag": "TU MENTORA",
