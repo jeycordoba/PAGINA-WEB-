@@ -39,14 +39,14 @@
     </script>
 </head>
 
-<body class="bg-alabaster selection:bg-primary/30 min-h-screen flex flex-col overflow-x-hidden">
+<body class="bg-espresso selection:bg-primary/30 min-h-screen flex flex-col overflow-x-hidden">
 
     <!-- NAVIGATION -->
-    <nav class="main-nav scrolled" id="mainNav">
+    <nav class="main-nav nav-transparent" id="mainNav">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
                 <img src="images/8-Color.png" class="logo-icon" alt="Jeniffer Córdoba Logo">
-                <span class="brand-name text-deep">
+                <span class="brand-name">
                     <span>Jeniffer</span>
                     <span>Córdoba</span>
                 </span>
@@ -78,36 +78,36 @@
 
     <!-- ERROR CONTENT -->
     <main class="flex-grow flex items-center justify-center relative py-32 px-6">
-        <!-- Calming Background Elements -->
+        <!-- Dark Meditative Background -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2600&auto=format&fit=crop" 
-                 class="w-full h-full object-cover opacity-20 scale-110 blur-[2px]">
-            <div class="absolute inset-0 bg-gradient-to-b from-alabaster via-transparent to-alabaster"></div>
+            <img src="images/hero_meditative_pose_dark.png" 
+                 class="w-full h-full object-cover brightness-[0.6] scale-105">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl w-full text-center space-y-12">
             <!-- Large Artistic 404 -->
             <div class="relative inline-block">
-                <h1 class="text-[12rem] md:text-[18rem] font-display text-primary/10 leading-none italic select-none" data-i18n="error_404_title">
+                <h1 class="text-[12rem] md:text-[18rem] font-display text-white/5 leading-none italic select-none" data-i18n="error_404_title">
                     404
                 </h1>
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-7xl md:text-9xl text-deep/20 animate-[pulse_4s_infinite]">
+                    <span class="material-symbols-outlined text-7xl md:text-9xl text-white/20 animate-[pulse_4s_infinite]">
                         self_improvement
                     </span>
                 </div>
             </div>
 
             <div class="space-y-6">
-                <h2 class="text-4xl md:text-6xl font-display text-deep italic leading-tight px-4" data-i18n="error_404_message">
+                <h2 class="text-4xl md:text-6xl font-display text-white italic leading-tight px-4 drop-shadow-lg" data-i18n="error_404_message">
                     Calm and Breathe... <br>Requested page was not found or is not available at the moment.
                 </h2>
-                <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+                <div class="w-24 h-px bg-primary/50 mx-auto"></div>
             </div>
 
             <div class="pt-8">
                 <a href="index.html" 
-                   class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-lg tracking-widest shadow-xl hover:scale-105 transition-all duration-300 active:scale-95"
+                   class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-lg tracking-widest shadow-2xl hover:scale-105 transition-all duration-300 active:scale-95 border border-white/10"
                    data-i18n="error_404_btn">
                     Return to Sanctuary
                 </a>
@@ -115,15 +115,15 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-white/50 backdrop-blur-md border-t border-deep/5 py-12 px-[5%] text-center">
+    <!-- MINIMAL DARK FOOTER -->
+    <footer class="bg-black/40 backdrop-blur-md border-t border-white/5 py-12 px-[5%] text-center">
         <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
              <div class="flex flex-col items-center gap-2">
-                <img src="images/espiral_InfinitoColor.png" class="h-12 w-auto object-contain grayscale opacity-50"
+                <img src="images/espiral_InfinitoColor.png" class="h-12 w-auto object-contain brightness-0 invert opacity-40"
                     alt="Infinite Yoga Logo">
-                <p class="font-display italic text-2xl text-deep/40">Jeniffer Córdoba</p>
+                <p class="font-display italic text-2xl text-white/40">Jeniffer Córdoba</p>
             </div>
-            <p class="text-xs tracking-[0.4em] text-deep/30 font-bold uppercase" data-i18n="footer_tagline">
+            <p class="text-xs tracking-[0.4em] text-white/30 font-bold uppercase" data-i18n="footer_tagline">
                 Un santuario Divino de Infinitas Posibilidades.
             </p>
         </div>
