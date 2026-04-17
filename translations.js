@@ -68,8 +68,8 @@ const translations = {
         // Lead Magnet (Ebooks)
         "ebook_tag": "Free resources",
         "ebook_title": "The Sanctuary Library",
-        "ebook1_title": "The Unified Field",
-        "ebook1_desc": "A 5-minute somatic ritual to release digital burnout and return to your center. Grounded and clinical.",
+        "ebook1_title": "Return to You",
+        "ebook1_desc": "A guide to reconnect with your center, releasing external noise and returning to your authentic essence.",
         "ebook1_cta": "Free Download!",
         "ebook_form_name": "Full Name",
         "ebook_form_email": "Email Address",
@@ -612,8 +612,8 @@ const translations = {
         // Lead Magnet (Ebooks)
         "ebook_tag": "Recursos gratuitos",
         "ebook_title": "La Biblioteca del Santuario",
-        "ebook1_title": "El Campo Unificado",
-        "ebook1_desc": "Un ritual somático de 5 minutos para liberar el agotamiento digital y volver a tu centro. Basado en ciencia.",
+        "ebook1_title": "Volver a Ti",
+        "ebook1_desc": "Una guía para reconectar con tu centro, soltando el ruido externo y regresando a tu esencia auténtica.",
         "ebook1_cta": "Descarga Gratis!",
         "bonding_unity_tag": "UNIDAD DE VÍNCULO",
         "bonding_unity_title": "Yoga, Respiración, Mindfulness Y Neurociencia: Un Viaje De Regreso A Ti",
