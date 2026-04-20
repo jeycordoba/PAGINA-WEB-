@@ -53,7 +53,7 @@ export default async function handler(req, res) {
       if (!resource) return res.status(400).json({ error: 'Resource ID required' });
 
       const ebooks = {
-        'ebook1': { title: isSpanish ? 'Volver a Ti' : 'Return to You', file: 'E-BOOK VOLVER A TI.pdf', subject: isSpanish ? 'Tu Recurso: Volver a Ti' : 'Your Resource: Return to You' },
+        'ebook1': { title: isSpanish ? 'Volver a Ti' : 'Return to Yourself', file: 'JC_Volver_a_ti.pdf', subject: isSpanish ? 'Tu Recurso: Volver a Ti' : 'Your Resource: Return to Yourself' },
         'ebook2': { title: isSpanish ? 'Respiración Cuántica' : 'Quantum Breath', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Respiración Cuántica' : 'Your Resource: Quantum Breath' },
         'ebook3': { title: isSpanish ? 'Arquitectura de la Paz' : 'Peace Architecture', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Arquitectura de la Paz' : 'Your Resource: Peace Architecture' },
         'ebook4': { title: isSpanish ? 'Más allá del Mat' : 'Beyond the Mat', file: 'campoUnificadoEbook.pdf', subject: isSpanish ? 'Tu Recurso: Más allá del Mat' : 'Your Resource: Beyond the Mat' }
@@ -82,7 +82,7 @@ export default async function handler(req, res) {
           </div>
         `,
       });
-  
+
       // INTERNAL NOTIFICATION (To Jeniffer/Ivan) for Ebook Success
       await resend.emails.send({
         from: 'Website Portal <hola@jeniffercordoba.com>',
@@ -198,8 +198,8 @@ export default async function handler(req, res) {
       const isRetiros = service === 'retiros';
 
       const serviceLabel = isCirculo ? (isSpanish ? 'Círculo de Mujeres' : 'Women\'s Circle') :
-                           isTalleres ? (isSpanish ? 'Taller' : 'Workshop') :
-                           (isSpanish ? 'Retiro' : 'Retreat');
+        isTalleres ? (isSpanish ? 'Taller' : 'Workshop') :
+          (isSpanish ? 'Retiro' : 'Retreat');
 
       // 1. Internal Notification (to Jeniffer/Ivan)
       await resend.emails.send({
