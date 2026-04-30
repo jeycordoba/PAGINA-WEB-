@@ -152,7 +152,8 @@
 - [x] **Sanctuary Gallery Cleanup**
     - Removed redundant `rituals_6.webp` image from the Rituals category in `sanctuary.html`.
 
-- [x] **Coaching 1:1 Integration**
+- [x] **Visual Refinements**
+    - Adjusted the yoga hero overlay opacity from 60% back to 40% for better brightness.
     - Added the detailed "Acompañamiento 1 a 1" section to `Coaching.html`.
     - Integrated a 4-step roadmap ("Tu Camino: Paso a Paso") with hover effects and expansive layout.
     - Optimized and integrated a new high-res portrait (`coaching1on1.jpg`).
