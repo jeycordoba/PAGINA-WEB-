@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-page-title="page_title_healing">Unified Session // JC</title>
+    <title data-i18n-page-title="page_title_healing">Coaching // JC</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
         rel="stylesheet">
@@ -37,8 +37,22 @@
             }
         }
     </script>
-    
+    <style>
+        .carousel-img {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 10s linear;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+        }
 
+        .carousel-img.active {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body class="bg-alabaster selection:bg-primary/30">
@@ -56,8 +70,8 @@
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
                 <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
-                <li class="xl:block"><a href="QHC.html" class="active" data-i18n="nav_healing">Healing</a></li>
                 <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="xl:block"><a href="Coaching.html" class="active" data-i18n="nav_healing">Coaching</a></li>
                 <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
                 <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
 
@@ -81,8 +95,8 @@
                     <div id="moreDropdown" class="more-dropdown">
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
                         <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
-                        <a href="QHC.html" class="xl:hidden active" data-i18n="nav_healing">Healing</a>
                         <a href="Yoga.html" class="xl:hidden" data-i18n="nav_yoga">Yoga</a>
+                        <a href="Coaching.html" class="xl:hidden active" data-i18n="nav_healing">Coaching</a>
                         <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
                         <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
                         <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
@@ -105,11 +119,13 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0 text-white">
-            <img src="images/LotusPoseWoman.png" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-deep/10"></div>
+        <!-- Hero Carousel Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="carousel-img active" style="background-image: url('images/coachingHero1.jpg');"></div>
+            <div class="carousel-img" style="background-image: url('images/coachingHero2.jpg');"></div>
+            <div class="carousel-img" style="background-image: url('images/coachingHero3.jpg');"></div>
+            <div class="absolute inset-0 bg-deep/20"></div>
         </div>
         <div class="relative z-10 text-center px-6 max-w-5xl">
             <h1 class="text-6xl md:text-8xl font-display text-white italic leading-[1] mb-10 drop-shadow-2xl"
@@ -181,7 +197,95 @@
             </div>
         </div>
 
+        </div>
+    </section>
 
+    <!-- COACHING 1:1 SECTION -->
+    <section id="coaching-1on1" class="py-20 md:py-32 bg-white relative overflow-hidden">
+        <div class="container max-w-[1600px] mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center mb-32">
+                <div class="reveal">
+                    <span class="text-primary font-bold text-xs tracking-[0.4em] mb-4 block uppercase" data-i18n="coaching_1on1_tag">Tu Portal de Transformación Personal</span>
+                    <h2 class="text-5xl md:text-7xl font-display text-deep italic mb-8 leading-tight" data-i18n="coaching_1on1_title">Acompañamiento 1 a 1</h2>
+                    <p class="text-deep/70 font-light text-lg md:text-xl leading-relaxed text-justify" data-i18n="coaching_1on1_desc">
+                        Este es un espacio de silencio y escucha profunda diseñado exclusivamente para tu proceso. Aquí, el Coaching y la Sanación Cuántica (QHC) se funden para cultivar tu mundo interior y liberar el potencial que ya habita en ti, fomentando tu autenticidad y soberanía personal. Juntos, construiremos un nuevo estado del ser integrando tu cuerpo físico, emocional y espiritual, a través de los cuatro pilares: "Alquimia de Herramientas”.
+                    </p>
+                </div>
+                <div class="relative reveal order-first md:order-last lg:max-w-xl mx-auto">
+                    <div class="rounded-32 overflow-hidden aspect-square md:aspect-[1.1/1] shadow-2xl">
+                        <img src="images/coaching1on1.jpg" alt="Coaching Jeniffer Cordoba" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 md:w-32 md:h-32 bg-parchment rounded-full flex items-center justify-center p-4 shadow-xl border border-primary/10">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-primary font-light">diversity_1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE STEPS -->
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl font-display text-deep italic mb-6" data-i18n="coaching_steps_title">Tu Camino: Paso a Paso</h2>
+                    <p class="text-deep/60 font-light text-lg max-w-2xl mx-auto leading-relaxed" data-i18n="coaching_steps_desc">El acompañamiento conmigo es un proceso profundamente personalizado e intencional. Mi propósito es que cada paso que demos juntos sea un portal hacia tu propia soberanía energética.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-24 gap-y-20">
+                    <!-- Step 1 -->
+                    <div class="reveal group">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                                <span class="font-display italic text-2xl">1</span>
+                            </div>
+                            <h3 class="text-2xl font-display text-deep italic leading-tight" data-i18n="coaching_step1_title">1. Sintonía Inicial: Nuestra Primera Llamada</h3>
+                        </div>
+                        <p class="text-deep/70 font-light leading-relaxed md:pl-20" data-i18n="coaching_step1_desc">Para comenzar, te invito a coordinar una primera llamada de conexión. Este es nuestro espacio sagrado para conocernos, sentir nuestra resonancia y comprender tus objetivos. Es el momento de escuchar el pulso de tu corazón y ver cómo el Coaching QHC puede brindarte el apoyo más alineado a tu diseño original.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="reveal group" style="transition-delay: 100ms;">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                                <span class="font-display italic text-2xl">2</span>
+                            </div>
+                            <h3 class="text-2xl font-display text-deep italic leading-tight" data-i18n="coaching_step2_title">2. Tu espacio Virtual: Sesiones en Línea</h3>
+                        </div>
+                        <p class="text-deep/70 font-light leading-relaxed md:pl-20" data-i18n="coaching_step2_desc">Nuestros encuentros se realizan a través de Meet. He elegido este formato para que podamos conectar alma a alma, sin importar las distancias físicas, permitiéndote estar en la comodidad y seguridad de tu propio espacio.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="reveal group" style="transition-delay: 200ms;">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                                <span class="font-display italic text-2xl">3</span>
+                            </div>
+                            <h3 class="text-2xl font-display text-deep italic leading-tight" data-i18n="coaching_step3_title">3. Presencia Plena: Minutos para Ti</h3>
+                        </div>
+                        <p class="text-deep/70 font-light leading-relaxed md:pl-20" data-i18n="coaching_step3_desc">Cada sesión tiene un tiempo diseñado de 90 minutos específicamente para tu proceso individual, donde permitimos que la biología y el espíritu hablen con calma, sin prisas.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="reveal group" style="transition-delay: 300ms;">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                                <span class="font-display italic text-2xl">4</span>
+                            </div>
+                            <h3 class="text-2xl font-display text-deep italic leading-tight" data-i18n="coaching_step4_title">4. Integración: Herramientas para el Día a Día</h3>
+                        </div>
+                        <p class="text-deep/70 font-light leading-relaxed md:pl-20" data-i18n="coaching_step4_desc">La transformación no termina cuando cerramos la pantalla. Entre sesiones, recibirás prácticas, códigos de sintonía y recursos personalizados. Estas herramientas están creadas para ayudarte a integrar lo explorado y para que seas tú quien lidere su propia autocuración en cada paso de su vida diaria.</p>
+                    </div>
+                </div>
+
+                <!-- CALL TO ACTION -->
+                <div class="mt-32 p-12 md:p-24 bg-parchment rounded-32 text-center reveal border border-primary/10 relative overflow-hidden group/cta">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full -mr-48 -mt-48 transition-transform duration-1000 group-hover/cta:scale-110"></div>
+                    <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full -ml-48 -mb-48 transition-transform duration-1000 group-hover/cta:scale-110"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8" data-i18n="coaching_call_title">¿Sientes el llamado?</h3>
+                        <p class="text-deep/70 font-light text-lg md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed" data-i18n="coaching_call_desc">Dar el primer paso es un acto de valentía y amor propio. Si resuena en ti, agenda tu llamada y permitamos que tu mapa estelar comience a revelarse.</p>
+                        <a href="contact.html" class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-sm tracking-widest hover:bg-deep transition-all shadow-2xl hover:-translate-y-1" data-i18n="coaching_call_btn">Agendar Llamada</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -551,145 +655,20 @@
         });
     </script>
 
-    <!-- ANATOMY OF A SESSION (TIMELINE) -->
-    <section class="section-padding bg-white overflow-hidden">
-        <div class="container max-w-[1600px]">
-            <h2 class="text-5xl md:text-6xl font-display text-deep italic text-center mb-10 reveal"
-                data-i18n="healing_anatomy_title">Anatomy of a
-                Session
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-400 text-center max-w-4xl mx-auto mb-28 font-light reveal" 
-               data-i18n="healing_anatomy_intro">
-               The path of the Quantum Spiral is not a linear process; it is a constant evolution toward your highest self. Transitamos the espiral for pass from disconnection to conscious manifestation.
+    <!-- ANATOMY OF A SESSION SUMMARY -->
+    <section class="py-24 md:py-32 bg-white overflow-hidden text-center">
+        <div class="container max-w-4xl mx-auto px-6 reveal">
+            <h2 class="text-5xl md:text-6xl font-display text-deep italic mb-8" data-i18n="healing_anatomy_summary_title">El Camino de la Sesión</h2>
+            <p class="text-xl md:text-2xl text-gray-500 font-light leading-relaxed mb-12" data-i18n="healing_anatomy_summary_desc">
+                ¿Quieres comprender qué esperar durante un encuentro de Sanación Cuántica con Jeniffer? Descubre paso a paso cómo transitamos desde la observación hasta la manifestación consciente.
             </p>
-            <div class="space-y-20 relative">
-                <!-- Thicker Vertical Line -->
-                <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 -translate-x-1/2 hidden md:block">
-                </div>
-
-                <!-- Stage 1 -->
-                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
-                    <!-- Image -->
-                    <div class="w-[56%] mx-auto md:w-[35%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
-                        <img src="images/stage1hr.webp"
-                            class="w-full h-[320px] object-cover transition-transform duration-1000 group-hover:scale-105 brightness-75">
-                    </div>
-
-                    <!-- Enlarged Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
-                    </div>
-
-                    <!-- Text Expanded Outward -->
-                    <div class="md:w-[50%] order-1 md:order-2 text-left md:pl-12">
-                        <span class="text-primary font-bold text-sm tracking-[0.4em] mb-5 block"
-                            data-i18n="healing_stage1_tag">Stage
-                            One</span>
-                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8"
-                            data-i18n="healing_stage1_title">The Scan</h3>
-                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed w-full"
-                            data-i18n="healing_stage1_desc">A detailed
-                            intuitive and energetic assessment to identify blockages and determine your system's
-                            immediate needs through resonant observation.</p>
-                    </div>
-                </div>
-
-                <!-- Stage 2 -->
-                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
-                    <!-- Text Expanded Outward -->
-                    <div class="md:w-[50%] order-1 text-left md:text-right md:pr-12">
-                        <span class="text-primary font-bold text-sm tracking-[0.4em] mb-5 block"
-                            data-i18n="healing_stage2_tag">Stage
-                            Two</span>
-                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8"
-                            data-i18n="healing_stage2_title">The Opening</h3>
-                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed w-full ml-auto"
-                            data-i18n="healing_stage2_desc">
-                            Gentle
-                            somatic unwinding designed to soften physical fascia and prepare the neural pathways for
-                            deeper energetic reception.</p>
-                    </div>
-
-                    <!-- Enlarged Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
-                    </div>
-
-                    <!-- Image -->
-                    <div class="w-[56%] mx-auto md:w-[35%] order-2 rounded-32 overflow-hidden shadow-2xl">
-                        <img src="images/stage2.png"
-                            class="w-full h-[320px] object-cover transition-transform duration-1000 group-hover:scale-105">
-                    </div>
-                </div>
-
-                <!-- Stage 3 -->
-                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
-                    <!-- Image -->
-                    <div class="w-[56%] mx-auto md:w-[35%] order-2 md:order-1 rounded-32 overflow-hidden shadow-2xl">
-                        <img src="images/trabajoprofundo_hor.webp"
-                            class="w-full h-[320px] object-cover transition-transform duration-1000 group-hover:scale-105">
-                    </div>
-
-                    <!-- Enlarged Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
-                    </div>
-
-                    <!-- Text Expanded Outward -->
-                    <div class="md:w-[50%] order-1 md:order-2 text-left md:pl-12">
-                        <span class="text-primary font-bold text-sm tracking-[0.4em] mb-5 block"
-                            data-i18n="healing_stage3_tag">Stage
-                            Three</span>
-                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8"
-                            data-i18n="healing_stage3_title">The Deep Work</h3>
-                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed w-full"
-                            data-i18n="healing_stage3_desc">The core
-                            of
-                            the journey. Weaving quantum resonance with breath protocols to facilitate profound
-                            cellular
-                            release and realignment.</p>
-                    </div>
-                </div>
-
-                <!-- Stage 4 -->
-                <div class="flex flex-col md:flex-row items-center justify-between relative group reveal">
-                    <!-- Text Expanded Outward -->
-                    <div class="md:w-[50%] order-1 text-left md:text-right md:pr-12">
-                        <span class="text-primary font-bold text-sm tracking-[0.4em] mb-5 block"
-                            data-i18n="healing_stage4_tag">Stage
-                            Four</span>
-                        <h3 class="text-4xl md:text-6xl font-display text-deep italic mb-8"
-                            data-i18n="healing_stage4_title">The Integration</h3>
-                        <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed w-full ml-auto"
-                            data-i18n="healing_stage4_desc">
-                            Integration into pure stillness. We anchor the expanded energetic state into your
-                            physical
-                            architecture for lasting structural shift.</p>
-                    </div>
-
-                    <!-- Enlarged Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 w-7 h-7 bg-primary ring-[12px] ring-white rounded-full z-10 hidden md:block shadow-[0_0_20px_rgba(135,169,106,0.3)]">
-                    </div>
-
-                    <!-- Image -->
-                    <div class="w-[56%] mx-auto md:w-[35%] order-2 rounded-32 overflow-hidden shadow-2xl">
-                        <img src="images/stage4.webp"
-                            class="w-full h-[320px] object-cover transition-transform duration-1000 group-hover:scale-105">
-                    </div>
-                </div>
-            </div>
+            <a href="session.html" class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-lg tracking-widest hover:bg-deep transition-all shadow-xl hover:scale-105" data-i18n="healing_anatomy_summary_btn">
+                Ver Anatomía de la Sesión
+            </a>
         </div>
     </section>
 
-    <section class="w-full bg-parchment py-16 md:py-24 mb-0 overflow-hidden">
-        <div class="container max-w-[1400px] mx-auto px-6 reveal">
-            <img src="images/qhc-transformation-highres.jpg" 
-                 class="w-full h-auto md:rounded-[30px] shadow-2xl shadow-deep/10" 
-                 alt="QHC Complete Transformation"
-                 loading="lazy">
-        </div>
-    </section>
+
 
     <!-- THE NUANCES (FAQ) -->
     <section class="section-padding bg-white">
@@ -699,15 +678,8 @@
         </div>
         <div class="max-w-[1600px] mx-auto px-[5%] grid md:grid-cols-10 gap-24 items-center">
             <div class="md:col-span-4 relative reveal h-[400px] md:h-[510px] rounded-[40px] overflow-hidden shadow-2xl shadow-deep/10">
-                <img src="images/sacred_geometry_v2.png" 
+                <img src="images/FAQcoaching.png" 
                     class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                <div class="absolute inset-x-0 bottom-0 h-1/2 md:h-1/3 flex items-center p-8 md:p-16">
-                    <p class="text-white text-lg md:text-3xl font-display italic leading-relaxed max-w-2xl drop-shadow-2xl" 
-                        data-i18n="healing_quote_text">
-                        “Que el amor sea presente y que el presente sea puro amor incondicional”
-                    </p>
-                </div>
             </div>
             <div class="md:col-span-6 space-y-6 reveal">
                 <!-- FAQ 1 -->
@@ -782,8 +754,9 @@
     <!-- BOTTOM CTA -->
     <section class="relative h-[68vh] flex items-center justify-center text-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP6n32gnfG75ZQGL6_KfNAQV5b58CAKo0fD_ZmgTNwtp8sE-njmSneCVc6MLI8Is5H3wIlQosncKaO-SXZVhRVxGEhjR0mtEwYmkAP-l8UM8w_Dl0InVy-pgp5IVNkQDIWLrrMbqgPLznbuAtZEMAkmNOZXFhM8A3XqgISubYL6l974UcC-YPrcKsDym5bqgoICJ7-YLmb2DUdQO4GybTVxu6AW9prXaA9EZQZ_Zg_qTddlTWIX6Cn9FFSJTpx25LCB5PGW8pJj0pX"
-                class="w-full h-full object-cover brightness-[0.3] scale-105">
+            <img src="images/coachingCTA.png"
+                class="w-full h-full object-cover scale-105">
+            <div class="absolute inset-0 bg-black/40"></div>
         </div>
         <div class="relative z-10 px-6 max-w-4xl space-y-12">
             <h2 class="text-6xl md:text-8xl font-display text-white italic leading-tight drop-shadow-2xl"
@@ -822,10 +795,15 @@
 
                 <!-- Middle: Centered Motto -->
                 <div class="text-center">
-                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
-                        data-i18n="footer_tagline">
-                        Un santuario Divino de<br>Infinitas Posibilidades.
-                    </p>
+                    <div class="space-y-6 -translate-y-1">
+                        <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
+                            data-i18n="footer_tagline">
+                            Un santuario Divino de<br>Infinitas Posibilidades.
+                        </p>
+                        <p class="text-deep/60 text-sm font-bold tracking-[0.2em] uppercase">
+                            Bogotá / Colombia
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Right: Social Media Section -->
@@ -863,6 +841,17 @@
     </footer>
 
     <script>
+        // Hero Carousel Logic
+        const carouselImages = document.querySelectorAll('.carousel-img');
+        let currentCarouselIndex = 0;
+
+        function cycleCarousel() {
+            carouselImages[currentCarouselIndex].classList.remove('active');
+            currentCarouselIndex = (currentCarouselIndex + 1) % carouselImages.length;
+            carouselImages[currentCarouselIndex].classList.add('active');
+        }
+        setInterval(cycleCarousel, 4000);
+
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {

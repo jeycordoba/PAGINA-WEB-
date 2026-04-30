@@ -3,7 +3,7 @@ const translations = {
         // Navigation
         "nav_home": "Home",
         "nav_about": "About Me",
-        "nav_healing": "QHC",
+        "nav_healing": "Coaching",
         "nav_yoga": "Yoga",
         "nav_experiences": "Experiences",
         "nav_essence": "Sanctuary",
@@ -13,12 +13,13 @@ const translations = {
         // Page Titles
         "page_title_home": "Jeniffer Córdoba",
         "page_title_about": "This is me // JC",
-        "page_title_healing": "QHC // JC",
+        "page_title_healing": "Coaching // JC",
         "page_title_kids": "Yoga // JC",
         "page_title_corporate": "Experiences // JC",
         "page_title_sanctuary": "My Sanctuary // JC",
         "page_title_pricing": "Investment // JC",
         "page_title_contact": "Contact // JC",
+        "page_title_session": "Session Anatomy // JC",
         "page_title_404": "Not Found // JC",
 
         // Hero Section
@@ -35,7 +36,7 @@ const translations = {
         "practices_title": "Transformation Practices",
         "practices_item1_title": "Yoga Practice",
         "practices_item1_desc": "Beyond movement, there lies a space of stillness where your biology meets the infinite. You create the path.",
-        "practices_item2_title": "Quantum Healing",
+        "practices_item2_title": "Coaching - Quantum Healing",
         "practices_item2_desc": "We are potential energy in constant motion. I invite you to cross the threshold of the known to embrace a new way of inhabiting your story.",
         "common_learn_more": "Learn More",
 
@@ -150,6 +151,8 @@ const translations = {
         "about_phil_item3_desc": "Creating a safe space where every practitioner feels supported and seen.",
         "about_journey_title": "My Journey",
         "about_journey_subtitle": "How I found my way to the mat",
+        "about_journey_date_0": "December 2026",
+        "about_journey_0": "Functional Breathing & Breathwork Facilitator Certification - Felipe Galvis <br><a href='https://go.respira.group/' target='_blank' class='hover:text-primary transition-all underline decoration-primary/30'>Respira Group</a>",
         "about_journey_date_1": "May 2026",
         "about_journey_1": "The Brain as an Ally - Nazareth Castellanos - La Escuela de Epicuro - Madrid (Spain) - Virtual",
         "about_journey_date_2": "November 2025",
@@ -211,6 +214,9 @@ const translations = {
         "healing_pillar4_smallLabel": "Manifestation",
         "healing_anatomy_title": "Anatomy of a Session",
         "healing_anatomy_intro": "The path of the Quantum Spiral is not a linear process; it is a constant evolution toward your highest self. We journey through the spiral to move from disconnection to conscious manifestation.",
+        "healing_anatomy_summary_title": "The Path of the Session",
+        "healing_anatomy_summary_desc": "Do you want to understand what to expect during a Quantum Healing encounter with Jeniffer? Discover step by step how we transit from observation to conscious manifestation.",
+        "healing_anatomy_summary_btn": "View Session Anatomy",
         "healing_stage1_tag": "Stage One",
         "healing_stage1_title": "The Scan",
         "healing_stage1_desc": "The first step is to make the unconscious conscious. We will approach your transformation process and why you are here through a gentle 'scan.' I don't just listen to your words, but to the silent vibration of your body. Open your heart.",
@@ -251,6 +257,26 @@ const translations = {
         "healing_cta_title": "Ready to Experience <br> the Shift?",
         "healing_cta_btn": "Book Your Session",
         "healing_cta_availability": "An Infinity of Possibilities",
+
+        // Coaching 1:1 Section
+        "coaching_1on1_tag": "Personal Transformation Portal",
+        "coaching_1on1_title": "1-on-1 Accompaniment",
+        "coaching_1on1_desc": "This is a space of silence and deep listening designed exclusively for your process. Here, Coaching and Quantum Healing (QHC) merge to cultivate your inner world and release the potential that already dwells within you, fostering your authenticity and personal sovereignty. Together, we will build a new state of being by integrating your physical, emotional, and spiritual body, through the four pillars: \"Alchemy of Tools\".",
+        "coaching_1on1_cta": "Begin your path",
+        "coaching_steps_title": "Your Path: Step by Step",
+        "coaching_steps_desc": "Accompaniment with me is a deeply personalized and intentional process. My purpose is that each step we take together becomes a portal toward your own energetic sovereignty.",
+        "coaching_step1_title": "1. Initial Attunement: Our First Call",
+        "coaching_step1_desc": "To begin, I invite you to coordinate a first connection call. This is our sacred space to get to know each other, feel our resonance, and understand your goals. It is the moment to listen to the pulse of your heart and see how QHC Coaching can provide the support most aligned with your original design.",
+        "coaching_step2_title": "2. Your Virtual Space: Online Sessions",
+        "coaching_step2_desc": "Our encounters are held via Meet. I have chosen this format so we can connect soul to soul, regardless of physical distances, allowing you to be in the comfort and safety of your own space.",
+        "coaching_step3_title": "3. Full Presence: Minutes for You",
+        "coaching_step3_desc": "Each session has a time designed of 90 minutes specifically for your individual process, where we allow biology and spirit to speak calmly, without haste.",
+        "coaching_step4_title": "4. Integration: Tools for Daily Life",
+        "coaching_step4_desc": "Transformation doesn't end when we close the screen. Between sessions, you will receive practices, attunement codes, and personalized resources. These tools are created to help you integrate what has been explored and for you to be the one who leads their own self-healing in every step of their daily life.",
+        "coaching_call_title": "Do you feel the call?",
+        "coaching_call_desc": "Taking the first step is an act of bravery and self-love. If it resonates with you, schedule your call and let your star map begin to reveal itself.",
+        "coaching_call_btn": "Schedule Your Call",
+
 
         // Yoga Page
         "yoga_hero_title": "Inhabit your magic and <br> discover your calm",
@@ -310,8 +336,8 @@ const translations = {
         "yoga_faq5_q": "Is it necessary to inform about my health status or previous injuries before starting?",
         "yoga_faq5_a": "For me, it is a fundamental step of our shared integrity. Your body is a sacred temple, and my priority is that every movement is an act of love, never unnecessary effort. This information allows me to adapt each pose and adjust it to your current biological reality. In this space, we honor your limits and work in favor of your anatomy, ensuring that yoga is always a safe, conscious, and deeply respectful path to well-being.",
 
-        "yoga_cta_title": "Let's Practice Together.",
-        "yoga_cta_subtitle": "Nos vemos en el Mat",
+        "yoga_cta_title": "Waiting for you with bare feet",
+        "yoga_cta_subtitle": "and an open heart!",
 
         // Experiences Page
         "corporate_hero_tag": "Bespoke Corporate Solutions",
@@ -400,7 +426,7 @@ const translations = {
         "corporate_faq5_q": "On-Site Facilitation",
         "corporate_faq5_a": "Our team provides 24/7 support during retreats, including dedicated mindfulness coaches and logistics coordinators to manage all daily flows.",
         "corporate_bottom_cta_tag": "Ready to transform?",
-        "corporate_bottom_cta_title": "Design Your Custom <br> Experience.",
+        "corporate_bottom_cta_title": "Somos Almas",
         "corporate_bottom_cta_btn": "Request Proposal",
 
         // QHC2 Page
@@ -548,7 +574,7 @@ const translations = {
         // Navigation
         "nav_home": "Inicio",
         "nav_about": "Sobre Mí",
-        "nav_healing": "QHC",
+        "nav_healing": "Coaching",
         "nav_yoga": "Yoga",
         "nav_experiences": "Experiencias",
         "nav_essence": "Santuario",
@@ -557,12 +583,13 @@ const translations = {
         // Page Titles
         "page_title_home": "Jeniffer Córdoba",
         "page_title_about": "Esta soy yo // JC",
-        "page_title_healing": "QHC // JC",
+        "page_title_healing": "Coaching // JC",
         "page_title_kids": "Yoga // JC",
         "page_title_corporate": "Experiencias // JC",
         "page_title_sanctuary": "Mi Santuario // JC",
         "page_title_pricing": "Inversión // JC",
         "page_title_contact": "Contacto // JC",
+        "page_title_session": "Anatomía de la Sesión // JC",
         "page_title_404": "No Encontrado // JC",
 
         // Hero Section
@@ -579,7 +606,7 @@ const translations = {
         "practices_title": "Prácticas de Transformación",
         "practices_item1_title": "Práctica de Yoga",
         "practices_item1_desc": "Más allá del movimiento, existe un espacio de quietud donde tu biología se encuentra con el infinito. El camino lo creas tú.",
-        "practices_item2_title": "Sanación Cuántica",
+        "practices_item2_title": "Coaching - Sanación Cuántica",
         "practices_item2_desc": "Somos energía potencial en constante movimiento. Te invito a cruzar el umbral de lo conocido para abrazar una nueva forma de habitar tu historia.",
         "common_learn_more": "Saber Más",
 
@@ -681,6 +708,8 @@ const translations = {
         "about_phil_item3_desc": "Creando un espacio seguro donde cada practicante se sienta apoyado y visto.",
         "about_journey_title": "Mi Viaje",
         "about_journey_subtitle": "Cómo encontré mi camino hacia el mat",
+        "about_journey_date_0": "Diciembre 2026",
+        "about_journey_0": "Certificación Facilitador en Respiración Funcional & Breathwork - Felipe Galvis <br><a href='https://go.respira.group/' target='_blank' class='hover:text-primary transition-all underline decoration-primary/30'>Respira Group</a>",
         "about_journey_date_1": "Mayo 2026",
         "about_journey_1": "El Cerebro como Aliado - Nazareth Castellanos - La Escuela de Epicuro - Madrid (España)- Virtual",
         "about_journey_date_2": "Noviembre 2025",
@@ -742,6 +771,9 @@ const translations = {
         "healing_pillar4_smallLabel": "Manifestación",
         "healing_anatomy_title": "Anatomía de una Sesión",
         "healing_anatomy_intro": "El camino de la Espiral Cuántica no es un proceso lineal, es una evolución constante hacia tu ser más elevado. Transitamos la espiral para pasar de la desconexión a la manifestación consciente",
+        "healing_anatomy_summary_title": "El Camino de la Sesión",
+        "healing_anatomy_summary_desc": "¿Quieres comprender qué esperar durante un encuentro de Sanación Cuántica con Jeniffer? Descubre paso a paso cómo transitamos desde la observación hasta la manifestación consciente.",
+        "healing_anatomy_summary_btn": "Ver Anatomía de la Sesión",
         "healing_stage1_tag": "Fase Uno",
         "healing_stage1_title": "El escaneo",
         "healing_stage1_desc": "El primer paso es hacer consciente lo inconsciente. Abordaremos tu proceso de transformación y el porqué estás aquí, a través de un suave 'escaneo'. No solo escucho tus palabras, sino la vibración silenciosa de tu cuerpo. Abre tu corazón.",
@@ -782,6 +814,26 @@ const translations = {
         "healing_cta_title": "¿Listo para experimentar el cambio?",
         "healing_cta_btn": "Reserva Tu Sesión",
         "healing_cta_availability": "El Infinito de Posibilidades",
+
+        // Coaching 1:1 Section
+        "coaching_1on1_tag": "Tu Portal de Transformación Personal",
+        "coaching_1on1_title": "Acompañamiento 1 a 1",
+        "coaching_1on1_desc": "Este es un espacio de silencio y escucha profunda diseñado exclusivamente para tu proceso. Aquí, el Coaching y la Sanación Cuántica (QHC) se funden para cultivar tu mundo interior y liberar el potencial que ya habita en ti, fomentando tu autenticidad y soberanía personal. Juntos, construiremos un nuevo estado del ser integrando tu cuerpo físico, emocional y espiritual, a través de los cuatro pilares: \"Alquimia de Herramientas\".",
+        "coaching_1on1_cta": "Inicia tu camino",
+        "coaching_steps_title": "Tu Camino: Paso a Paso",
+        "coaching_steps_desc": "El acompañamiento conmigo es un proceso profundamente personalizado e intencional. Mi propósito es que cada paso que demos juntos sea un portal hacia tu propia soberanía energética.",
+        "coaching_step1_title": "1. Sintonía Inicial: Nuestra Primera Llamada",
+        "coaching_step1_desc": "Para comenzar, te invito a coordinar una primera llamada de conexión. Este es nuestro espacio sagrado para conocernos, sentir nuestra resonancia y comprender tus objetivos. Es el momento de escuchar el pulso de tu corazón y ver cómo el Coaching QHC puede brindarte el apoyo más alineado a tu diseño original.",
+        "coaching_step2_title": "2. Tu espacio Virtual: Sesiones en Línea",
+        "coaching_step2_desc": "Nuestros encuentros se realizan a través de Meet. He elegido este formato para que podamos conectar alma a alma, sin importar las distancias físicas, permitiéndote estar en la comodidad y seguridad de tu propio espacio.",
+        "coaching_step3_title": "3. Presencia Plena: Minutos para Ti",
+        "coaching_step3_desc": "Cada sesión tiene un tiempo diseñado de 90 minutos específicamente para tu proceso individual, donde permitimos que la biología y el espíritu hablen con calma, sin prisas.",
+        "coaching_step4_title": "4. Integración: Herramientas para el Día a Día",
+        "coaching_step4_desc": "La transformación no termina cuando cerramos la pantalla. Entre sesiones, recibirás prácticas, códigos de sintonía y recursos personalizados. Estas herramientas están creadas para ayudarte a integrar lo explorado y para que seas tú quien lidere su propia autocuración en cada paso de su vida diaria.",
+        "coaching_call_title": "¿Sientes el llamado?",
+        "coaching_call_desc": "Dar el primer paso es un acto de valentía y amor propio. Si resuena en ti, agenda tu llamada y permitamos que tu mapa estelar comience a revelarse.",
+        "coaching_call_btn": "Agendar Llamada",
+
 
         "yoga_hero_title": "Habita tu magia y <br> descubre tu calma",
         "yoga_hero_desc": "Respira... ya estás en casa",
@@ -826,8 +878,8 @@ const translations = {
         "yoga_ashtanga_desc": "Fortalece, flexibiliza, equilibra y purifica el cuerpo físico, desarrollando actitudes mentales y expansivas que armonizan el cuerpo energético.",
         "yoga_restorative_title": "Restaurativo",
         "yoga_restorative_desc": "Regálate 20 minutos de pausa. No para dormir, sino para despertar a una calma que ya vive en ti. \"A veces, la postura más avanzada es simplemente aprender a quedarse quieto.\"",
-        "yoga_cta_title": "Practiquemos Juntos.",
-        "yoga_cta_subtitle": "Nos vemos en el Mat",
+        "yoga_cta_title": "Te espero con los pies descalzos",
+        "yoga_cta_subtitle": "y el corazón abierto!",
 
         // Experiences Page
         "corporate_hero_tag": "Soluciones Corporativas a Medida",
@@ -930,7 +982,7 @@ const translations = {
         "corporate_faq5_q": "Facilitación en el Sitio",
         "corporate_faq5_a": "Nuestro equipo brinda soporte las 24 horas, los 7 días de la semana durante los retiros, incluyendo entrenadores de mindfulness dedicados y coordinadores de logística para gestionar todos los flujos diarios.",
         "corporate_bottom_cta_tag": "¿Listo para transformar?",
-        "corporate_bottom_cta_title": "Diseña tu Experiencia <br> Personalizada.",
+        "corporate_bottom_cta_title": "Somos Almas",
         "corporate_bottom_cta_btn": "Solicitar Propuesta",
 
         // QHC2 Page

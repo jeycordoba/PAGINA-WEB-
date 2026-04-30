@@ -18,13 +18,14 @@
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 2s ease-in-out;
-            transform: scale(1.05);
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+            transform: scale(1);
         }
 
         .carousel-img.active {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1.1);
+            transition: opacity 2s ease-in-out, transform 10s linear;
         }
 
         .grid-lotus {
@@ -99,8 +100,8 @@
             <ul class="nav-links">
                 <li class="hidden xl:block"><a href="index.html" data-i18n="nav_home">Home</a></li>
                 <li class="hidden xl:block"><a href="about.html" data-i18n="nav_about">About</a></li>
-                <li class="hidden xl:block"><a href="QHC.html" data-i18n="nav_healing">Healing</a></li>
                 <li class="xl:block"><a href="Yoga.html" class="active" data-i18n="nav_yoga">Yoga</a></li>
+                <li class="hidden xl:block"><a href="Coaching.html" data-i18n="nav_healing">Coaching</a></li>
                 <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
                 <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
 
@@ -111,8 +112,8 @@
                     <div id="moreDropdown" class="more-dropdown">
                         <a href="index.html" class="xl:hidden" data-i18n="nav_home">Home</a>
                         <a href="about.html" class="xl:hidden" data-i18n="nav_about">About</a>
-                        <a href="QHC.html" class="xl:hidden" data-i18n="nav_healing">Healing</a>
                         <a href="Yoga.html" class="xl:hidden active" data-i18n="nav_yoga">Yoga</a>
+                        <a href="Coaching.html" class="xl:hidden" data-i18n="nav_healing">Coaching</a>
                         <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
                         <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
                         <hr class="border-mint/20 my-2 xl:hidden">
@@ -125,20 +126,18 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION WITH CAROUSEL -->
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0" id="heroCarousel">
-            <img src="images/yoga_hero_1.png" class="carousel-img active">
-            <img src="images/yoga_hero_2.png" class="carousel-img">
-            <img src="images/yoga_hero_3.png" class="carousel-img">
-            <img src="images/yoga_hero_4.png" class="carousel-img">
-            <img src="images/yoga_hero_5.png" class="carousel-img">
-            <img src="images/yoga_hero_6.png" class="carousel-img">
-            <img src="images/yoga_hero_7.png" class="carousel-img">
-            <img src="images/yoga_hero_8.png" class="carousel-img">
-            <img src="images/yoga_hero_9.png" class="carousel-img">
-            <img src="images/yoga_hero_10.png" class="carousel-img">
-            <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 z-0 bg-deep" id="heroCarousel">
+            <img src="images/YogaHero7.jpg" class="carousel-img active">
+            <img src="images/YogaHero8.jpg" class="carousel-img">
+            <img src="images/YogaHero4.jpg" class="carousel-img">
+            <img src="images/YogaHero1.jpg" class="carousel-img">
+            <img src="images/YogaHero2.jpg" class="carousel-img">
+            <img src="images/YogaHero3.jpg" class="carousel-img">
+            <img src="images/YogaHero9.jpg" class="carousel-img">
+            <img src="images/YogaHero5.jpg" class="carousel-img">
+            <img src="images/YogaHero6.jpg" class="carousel-img">
+            <div class="absolute inset-0 bg-black/60"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
         </div>
 
@@ -206,7 +205,7 @@
                 <div class="relative reveal">
                     <div
                         class="rounded-[60px] overflow-hidden shadow-2xl h-[700px] transform hover:scale-[1.02] transition-transform duration-700">
-                        <img src="images/yoga_hero_3.png" class="w-full h-full object-cover">
+                        <img src="images/yogaWhy.jpg" class="w-full h-full object-cover object-bottom">
                     </div>
                     <!-- Overlapping Card -->
                     <div
@@ -258,7 +257,7 @@
                         AL GRUPO</a>
                 </div>
                 <div class="order-1 md:order-2 rounded-[32px] overflow-hidden shadow-xl h-[380px] reveal">
-                    <img src="images/yoga_hero_5.png" class="w-full h-full object-cover">
+                    <img src="images/yogaGroupSession.png" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -289,8 +288,8 @@
         <div class="container space-y-10">
             <!-- Kids -->
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="rounded-32 overflow-hidden shadow-2xl h-[380px] reveal">
-                    <img src="images/infinite kid smiling.png" class="w-full h-full object-cover">
+                <div class="rounded-32 overflow-hidden shadow-2xl h-[400px] md:h-[550px] reveal">
+                    <img src="images/infinite kid smiling.png" class="w-full h-full object-cover object-center">
                 </div>
                 <div class="space-y-6 reveal">
                     <span
@@ -317,8 +316,8 @@
                         académica...
                     </p>
                 </div>
-                <div class="order-1 md:order-2 rounded-32 overflow-hidden shadow-2xl h-[380px] reveal">
-                    <img src="images/yoga_hero_8.png" class="w-full h-full object-cover">
+                <div class="order-1 md:order-2 rounded-32 overflow-hidden shadow-2xl h-[400px] md:h-[550px] reveal">
+                    <img src="images/yogaTeens.png" class="w-full h-full object-cover object-center">
                 </div>
             </div>
 
@@ -329,48 +328,6 @@
                     entregando un ancla de amor propio que los acompañará toda la vida, permitiéndoles enraizar y
                     florecer.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: MEDITATION & BREATHING -->
-    <section class="section-padding bg-espresso text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <img src="images/yoga_hero_10.png" class="w-full h-full object-cover mix-blend-overlay">
-        </div>
-        <div class="container relative z-10">
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-                <div
-                    class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-px bg-white mb-6"></div>
-                        <h2 class="text-4xl md:text-5xl font-display italic text-primary"
-                            data-i18n="yoga_meditation_title">MEDITACIÓN</h2>
-                        <p class="text-white/70 font-light text-lg leading-relaxed pt-2"
-                            data-i18n="yoga_meditation_desc">
-                            La meditación es una de las artes más grandes de la vida...
-                        </p>
-                    </div>
-                    <p class="text-white font-bold italic text-sm tracking-widest pt-4"
-                        data-i18n="yoga_meditation_footer">
-                        Prepara tu cuerpo - Respira - Pon una intención y hazlo parte de ti.
-                    </p>
-                </div>
-
-                <div
-                    class="p-8 md:p-10 border border-white/10 rounded-32 backdrop-blur-md bg-white/5 space-y-4 reveal flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-px bg-white mb-6"></div>
-                        <h2 class="text-4xl md:text-5xl font-display italic text-primary" data-i18n="yoga_breath_title">
-                            RESPIRA</h2>
-                        <p class="text-white/70 font-light text-lg leading-relaxed pt-2" data-i18n="yoga_breath_desc">
-                            Inhala - exhala - respira, siente la energía de vida que entra en tu cuerpo...
-                        </p>
-                    </div>
-                    <p class="text-white font-bold italic text-sm tracking-widest pt-4" data-i18n="yoga_breath_footer">
-                        Comencemos hoy a elevar tu frecuencia.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -394,7 +351,7 @@
             <div class="accordion-wrapper reveal">
                 <!-- Vinyasa -->
                 <div class="accordion-item group">
-                    <div class="accordion-bg" style="background-image: url('images/yoga_hero_1.png')"></div>
+                    <div class="accordion-bg" style="background-image: url('images/yogaPracticeVinyasa.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <!-- Collapsed View (Desktop) / Header (Mobile) -->
@@ -430,7 +387,7 @@
 
                 <!-- Hatha -->
                 <div class="accordion-item group">
-                    <div class="accordion-bg" style="background-image: url('images/yoga_hero_2.png')"></div>
+                    <div class="accordion-bg" style="background-image: url('images/yogaPracticeHatha.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <div
@@ -465,7 +422,7 @@
 
                 <!-- Ashtanga -->
                 <div class="accordion-item group">
-                    <div class="accordion-bg" style="background-image: url('images/yoga_hero_3.png')"></div>
+                    <div class="accordion-bg" style="background-image: url('images/yogaPracticeAshtanga.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <div
@@ -499,7 +456,7 @@
 
                 <!-- Nidra -->
                 <div class="accordion-item group">
-                    <div class="accordion-bg" style="background-image: url('images/yoga_nidra_new.png')"></div>
+                    <div class="accordion-bg" style="background-image: url('images/yogaPracticeNidra.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <div
@@ -531,7 +488,7 @@
 
                 <!-- Restaurativo -->
                 <div class="accordion-item group">
-                    <div class="accordion-bg" style="background-image: url('images/practice_restorative.png')"></div>
+                    <div class="accordion-bg" style="background-image: url('images/yogaPracticeRestaurativo.png')"></div>
                     <div class="item-overlay"></div>
                     <div class="item-content">
                         <div
@@ -692,7 +649,7 @@
         <div class="container grid md:grid-cols-2 gap-24 items-start">
             <div class="sticky top-32 reveal">
                 <div class="rounded-[40px] overflow-hidden shadow-2xl h-[550px] relative group border border-white/20">
-                    <img src="images/yoga_hero_1.png" class="w-full h-full object-cover text-deep">
+                    <img src="images/practice_3.webp" class="w-full h-full object-cover object-bottom text-deep">
                     <div class="absolute inset-0 bg-gradient-to-t from-deep/20 to-transparent"></div>
                 </div>
             </div>
@@ -769,15 +726,14 @@
     <!-- FINAL CTA -->
     <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
-            <img src="images/kids2.png" class="w-full h-full object-cover brightness-[0.4] scale-110">
+            <img src="images/yogaCTA_Bottom.jpg" class="w-full h-full object-cover brightness-[0.4] scale-110">
         </div>
-        <div class="relative z-10 text-center px-6 max-w-5xl space-y-12 reveal">
+        <div class="relative z-10 text-center px-6 max-w-5xl space-y-8 reveal">
             <h2 class="text-6xl md:text-8xl font-display text-white italic leading-[1] drop-shadow-2xl"
                 data-i18n="yoga_cta_title">
-                Practiquemos Juntos.
+                Te espero con los pies descalzos
             </h2>
-            <h3 class="text-2xl md:text-3xl text-white/80 font-light italic" data-i18n="yoga_cta_subtitle">Nos vemos en
-                el Mat</h3>
+            <h3 class="text-2xl md:text-4xl text-white/90 font-light italic" data-i18n="yoga_cta_subtitle">y el corazón abierto!</h3>
             <div class="pt-8">
                 <a href="contact.html"
                     class="inline-block bg-primary text-white px-12 py-5 rounded-full font-bold text-sm tracking-widest shadow-2xl hover:scale-105 transition-all">
@@ -803,10 +759,15 @@
                 </div>
 
                 <div class="text-center">
-                    <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
-                        data-i18n="footer_tagline">
-                        Un santuario Divino de<br>Infinitas Posibilidades.
-                    </p>
+                    <div class="space-y-6 -translate-y-1">
+                        <p class="text-deep/80 text-xl font-bold italic tracking-wide max-w-md mx-auto"
+                            data-i18n="footer_tagline">
+                            Un santuario Divino de<br>Infinitas Posibilidades.
+                        </p>
+                        <p class="text-deep/60 text-sm font-bold tracking-[0.2em] uppercase">
+                            Bogotá / Colombia
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Right: Social Media Section -->

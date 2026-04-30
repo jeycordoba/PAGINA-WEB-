@@ -60,7 +60,7 @@
     - Substituted the placeholder PDF with **"E-BOOK VOLVER A TI.pdf"**.
     - Updated `api/send.js` to correctly map `ebook1` to the new filename and updated email subjects.
 - [x] **Premium Visual Asset Generation**
-    - Created a custom-branded book cover for **"Volver a Ti"** featuring Jeniffer Córdoba as the author.
+    - Created a custom-branded book cover for **"Volver a Ti"** featuring Jeniffer CÃ³rdoba as the author.
     - Generated high-quality vertical and horizontal mockups for selection.
 - [x] **Sanctuary Library UI Update**
     - Implemented the **Vertical Mockup** for the first ebook card.
@@ -92,3 +92,70 @@
 - [x] **Repository Maintenance**
     - Pushed all finalized changes to GitHub.
     - Verified proper asset mapping and file availability in the production path.
+
+## 2026-04-30
+### Objectives
+- Redesign the Lead Magnet E-book section to an inline layout instead of a modal popup.
+
+### Completed Tasks
+- [x] **Inline Lead Magnet Form**
+    - Removed the modal popup functionality for downloading the E-book.
+    - Implemented a two-column layout showing the E-book image on the left and the download form on the right.
+    - Adjusted the layout from full-page width to a contained, rounded card design to improve visual balance.
+    - Enhanced the copy to clearly state it's a "Recurso Gratuito" with punchy Spanish (Colombia) copywriting.
+    - Maintained exact same backend functionality for email delivery and MailerLite integration.
+
+### Completed Tasks - About Page
+- [x] **Journey Milestone Addition**
+    - Added new "Dec 2026" milestone for "CertificaciÃ³n Facilitador en RespiraciÃ³n Funcional & Breathwork - Felipe Galvis".
+    - Added link to Respira Group (https://go.respira.group/).
+    - Handled translation integration in `translations.js`.
+
+- [x] **Relocate Founder Section (index.html)**
+    - Moved the "About Jeniffer" (Founder) section to be the first content section immediately below the Hero.
+    - Cleaned up stray tags and ensured section spacing remains consistent.
+
+- [x] **Update Practice Title (translations.js)
+    - Changed 'Sanación Cuántica' to 'Coaching - Sanación Cuántica' in the transformation practices section of the homepage.
+    - Updated English translation to 'Coaching - Quantum Healing' for consistency.
+
+- [x] **Site-wide Branding Rebranding: QHC to Coaching**
+    - Renamed QHC.html to Coaching.html.
+    - Updated the page title/tooltip to Coaching // JC.
+    - Swapped the navigation menu order: Yoga now appears before Coaching across all active pages.
+    - Standardized menu labels from Healing to Coaching.
+    - Updated the contact form dropdown to include Coaching - Quantum Healing.
+    - Synchronized all internal links to reference the new Coaching.html destination.
+
+- [x] **Code Modularization & Repository Management**
+    - Created `webElements.html` as a central repository for reusable or shelved UI sections.
+    - Migrated the "4 Pillars" (Bonding Unity) section from `index.html` to `webElements.html`.
+    - Migrated the "Quantum Healer" diagram section from `Coaching.html` to `webElements.html`.
+    - Cleaned up production pages by removing these shelved sections to optimize current layout.
+
+- [x] **Modularize Session Anatomy Experience**
+    - Migrated the detailed "Anatomy of a Session" timeline from `Coaching.html` to a dedicated `session.html` landing page.
+    - Replaced the original section in `Coaching.html` with a concise, performance-optimized summary CTA linking to the new page.
+    - Created `session.html` with a clean, content-first layout and standard navigation/footer.
+    - Added localization support for the new page title, summary copy, and CTA buttons in `translations.js`.
+    - Verified the site-wide navigation logic and tooltips for consistency.
+- [x] **Yoga Page Asset & Layout Refinement**
+    - **Asset Standardization**: Renamed all yoga practice images to semantic names (`yogaPracticeVinyasa`, `yogaTeens`, etc.) to prevent future naming conflicts.
+    - **Kids/Teens Section**: Fixed limb-clipping issues by implementing responsive heights (`h-[400px] md:h-[550px]`) and centering the compositions.
+    - **FAQ Section**: Replaced the image with `practice_3.webp` and adjusted `object-bottom` to prioritize the subjects over the sky.
+    - **"Why Yoga?" Section**: Updated the main visual to `yogaWhy.jpg` (optimized from high-res source 131.jpg) and adjusted framing to `object-bottom`.
+- [x] **Hero Carousel Restructuring**
+    - **Coaching.html**: Moved the premium 3-image carousel from Yoga to Coaching as corrected by the user. Implemented Ken Burns zoom effect and standardized assets to `coachingHero1-3`.
+    - **Yoga.html**: Implemented a new, high-performance 9-image carousel using specific high-res assets (`138, 139, 145, 159, 161, 170, 179, 191, 198`).
+    - **Sequence Control**: Applied a custom loading sequence: `7, 8, 4, 1, 2, 3, 9, 5, 6`.
+    - **Visual Depth**: Darkened the hero overlay to **60% black** and removed blur for maximum clarity of the new assets.
+- [x] **Sanctuary Gallery Cleanup**
+    - Removed redundant `rituals_6.webp` image from the Rituals category in `sanctuary.html`.
+
+- [x] **Coaching 1:1 Integration**
+    - Added the detailed "Acompañamiento 1 a 1" section to `Coaching.html`.
+    - Integrated a 4-step roadmap ("Tu Camino: Paso a Paso") with hover effects and expansive layout.
+    - Optimized and integrated a new high-res portrait (`coaching1on1.jpg`).
+    - Refined layout: Balanced image aspect ratio, removed redundant buttons, and widened the steps grid for better flow.
+    - Added comprehensive localized content (ES/EN) to `translations.js`.
+    - Implemented a high-impact Call-to-Action linking to the contact page.
