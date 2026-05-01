@@ -160,3 +160,34 @@
     - Refined layout: Balanced image aspect ratio, removed redundant buttons, and widened the steps grid for better flow.
     - Added comprehensive localized content (ES/EN) to `translations.js`.
     - Implemented a high-impact Call-to-Action linking to the contact page.
+- [x] **Home Page Bottom CTA Image Update**
+    - Optimized high-res asset `160.jpg` from `ALTA` folder into `homeCTA.webp` (1920px, WebP).
+    - Replaced the placeholder Unsplash image in `index.html` with the new optimized asset.
+    - Adjusted visual framing: Removed `scale-110` and refined position to `object-[center_65%]` for optimal content visibility.
+- [x] **Ebook Section Localization & Visuals**
+    - Updated detailed text and inspirational quote in the Lead Magnet section.
+    - Synced changes across `translations.js` for both Spanish and English versions.
+    - **Asset Refresh**: Generated and integrated a new premium ebook cover image (`ebook_vertical_v2.png`) with a bonsai plant background, replacing the legacy "strategy cup".
+- [x] **About Page Bottom CTA Image Update**
+    - Optimized high-res asset `77.jpg` from `ALTA` folder into `aboutCTA.webp` (1920px, WebP).
+    - Replaced the previous placeholder in `about.html` with the new optimized asset.
+    - Adjusted brightness to `0.7` and overlay to `40% black` for better visual balance.
+- [x] **Yoga Page Image Updates**
+    - **Hero Carousel**: Removed `YogaHero1.jpg` and renamed the remaining 8 images sequentially (`YogaHero1` to `YogaHero8`) to match the display order.
+    - **Why Yoga Section**: Optimized high-res asset `156.jpg` into `yogaWhy_v2.webp` and integrated it with responsive framing.
+    - **FAQ Section**: Refined layout with 40-60 split and 500px container height for perfect framing.
+- [x] **Coaching Page Image Update**
+    - Optimized high-res asset `61.jpg` from `ALTA` folder into `coaching1on1_v3.webp` and integrated it into the 1:1 section.
+- [x] **Sanctuary Page Gallery Update**
+    - Optimized high-res assets `79.jpg` and `194.jpg` from `ALTA` folder into `sanctuary_practice_79.webp` and `sanctuary_practice_194.webp`.
+    - Integrated new images into the Practice masonry grid.
+- [x] **Contact Page Refinements**
+    - Adjusted title "Share your intentions" to be smaller (`text-4xl md:text-5xl`) and changed color to `primary` (terracotta).
+    - Optimized high-res asset `124.jpg` from `ALTA` folder into `contact_yogapose_v2.webp`.
+    - **Hero Refresh**: Optimized high-res asset `196.jpg` into `contact_hero_v2.webp` and darkened to `brightness-[0.25]` for high contrast.
+    - **Layout Overhaul**: Moved title/desc to full-width and restructured form into a horizontal multi-column grid.
+    - **Height Optimization**: Clamped both image and form containers to a strict `600px` height for a perfectly balanced, compact look.
+- [x] **Experiences Page Visual Update**
+    - Optimized high-res asset `experiencesBottomCTAv2.png` (re-uploaded/fixed) for the bottom CTA section.
+    - Centered "Somos Almas" text, changed to white contrast, and applied a `-translate-y-32` shift for artistic composition.
+    - Added a `black/20` image overlay to ensure readability.

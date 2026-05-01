@@ -51,7 +51,7 @@
         }
     </style>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    
+
 
 </head>
 
@@ -115,7 +115,7 @@
     <header
         class="relative min-h-[75vh] md:min-h-0 md:aspect-[21/9] flex items-center justify-center text-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
-            <img src="images/dark_forest_hero.png" class="w-full h-full object-cover brightness-[0.4] scale-105"
+            <img src="images/contact_hero_v2.webp" class="w-full h-full object-cover brightness-[0.25] scale-105"
                 alt="Hero Background">
         </div>
         <div class="relative z-10 px-6 max-w-4xl space-y-6">
@@ -175,99 +175,99 @@
 
     <!-- CONTACT FORM SECTION -->
     <section class="bg-white py-32 text-deep">
-        <div class="container grid lg:grid-cols-2 gap-24 items-center">
-            <!-- Left Header -->
-            <div class="space-y-12">
-                <div class="space-y-6 text-center lg:text-left">
-                    <h2 class="text-5xl md:text-6xl font-display italic text-deep" data-i18n="contact_contact_title">
-                        Share your intentions</h2>
-                    <p class="text-gray-500 text-xl font-light leading-relaxed" data-i18n="contact_contact_desc">
-                        Ready to begin your inward journey? Tell us more about how we can support your transformation.
-                    </p>
-                </div>
-                <div class="rounded-[40px] overflow-hidden shadow-2xl h-[500px] border border-deep/5">
-                    <img src="images/yogapose2.png"
-                        class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
-                        alt="Contact Image">
-                </div>
+        <div class="container mb-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-display italic text-primary mb-6" data-i18n="contact_contact_title">
+                Share your intentions</h2>
+            <p class="text-gray-500 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto"
+                data-i18n="contact_contact_desc">
+                Ready to begin your inward journey? Tell us more about how we can support your transformation.
+            </p>
+        </div>
+
+        <div class="container grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+            <!-- Left Image -->
+            <div class="rounded-[40px] overflow-hidden shadow-2xl border border-deep/5 h-[600px]">
+                <img src="images/contact_yogapose_v2.webp"
+                    class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
+                    alt="Contact Image">
             </div>
 
             <!-- Right Form -->
-            <div class="bg-[#504c33] border border-white/10 rounded-[60px] p-8 md:p-16 shadow-2xl">
-                <form class="space-y-8" id="contactForm">
+            <div class="bg-[#504c33] border border-white/10 rounded-[60px] p-8 md:py-8 md:px-12 shadow-2xl flex flex-col justify-center h-[600px]">
+                <form class="space-y-5" id="contactForm">
                     <!-- Honeypot Trap -->
                     <div style="display:none;">
                         <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off">
                     </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactName"
-                            data-i18n="contact_form_name_label">Full
-                            Name</label>
-                        <input type="text" id="contactName" name="name" required placeholder="Full Name"
-                            autocomplete="name" data-i18n-placeholder="contact_form_name_placeholder"
-                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Row 1: Name & Email -->
+                    <div class="grid md:grid-cols-2 gap-6">
                         <div class="space-y-2">
-                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactEmail"
+                            <label class="text-[13px] font-bold tracking-[0.3em] text-white ml-1" for="contactName"
+                                data-i18n="contact_form_name_label">Full Name</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Full Name"
+                                autocomplete="name" data-i18n-placeholder="contact_form_name_placeholder"
+                                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[13px] font-bold tracking-[0.3em] text-white ml-1" for="contactEmail"
                                 data-i18n="contact_form_email_label">Email</label>
                             <input type="email" id="contactEmail" name="email" required placeholder="Email Address"
                                 autocomplete="email" data-i18n-placeholder="contact_form_email_placeholder"
-                                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactPhone"
-                                data-i18n="contact_form_phone_label">Phone
-                                Number</label>
-                            <input type="tel" id="contactPhone" name="phone" required placeholder="Phone Number"
-                                autocomplete="tel" data-i18n-placeholder="contact_form_phone_placeholder"
-                                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
+                                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
                         </div>
                     </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" id="serviceLabel"
-                            data-i18n="contact_form_service_label">Service</label>
-                        <div class="relative custom-dropdown" id="serviceDropdown" role="group"
-                            aria-labelledby="serviceLabel">
-                            <input type="hidden" name="service" id="serviceInput" value="unified">
-                            <button type="button"
-                                class="w-full flex justify-between items-center bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-left transition-all hover:bg-white/10 text-lg text-white/70 outline-none">
-                                <span class="selected-value" data-i18n="contact_form_service_unified">Unified
-                                    Session</span>
-                                <span
-                                    class="material-symbols-outlined transition-transform duration-300">expand_more</span>
-                            </button>
-                            <div
-                                class="custom-dropdown-options absolute z-50 w-full mt-2 bg-[#ede1c9] rounded-2xl shadow-2xl overflow-hidden border border-white/20">
-                                <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
-                                    data-value="unified" data-i18n="contact_form_service_unified">Unified Session</div>
-                                <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
-                                    data-value="yoga" data-i18n="contact_form_service_yoga">Yoga Practice</div>
-                                <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
-                                    data-value="healing" data-i18n="contact_form_service_healing">Coaching - Quantum Healing</div>
-                                <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
-                                    data-value="mindfulness" data-i18n="contact_form_service_mindfulness">Kids
-                                    Mindfulness</div>
-                                <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
-                                    data-value="corporate" data-i18n="contact_form_service_corporate">Corporate Wellness
+
+                    <!-- Row 2: Phone & Service -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-[13px] font-bold tracking-[0.3em] text-white ml-1" for="contactPhone"
+                                data-i18n="contact_form_phone_label">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="Phone Number"
+                                autocomplete="tel" data-i18n-placeholder="contact_form_phone_placeholder"
+                                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white transition-all placeholder:text-white/30 outline-none">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[13px] font-bold tracking-[0.3em] text-white ml-1" id="serviceLabel"
+                                data-i18n="contact_form_service_label">Service</label>
+                            <div class="relative custom-dropdown" id="serviceDropdown" role="group"
+                                aria-labelledby="serviceLabel">
+                                <input type="hidden" name="service" id="serviceInput" value="unified">
+                                <button type="button"
+                                    class="w-full flex justify-between items-center bg-white/5 border border-white/10 rounded-2xl px-6 py-3 text-left transition-all hover:bg-white/10 text-lg text-white/70 outline-none">
+                                    <span class="selected-value" data-i18n="contact_form_service_unified">Unified Session</span>
+                                    <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                                </button>
+                                <div class="custom-dropdown-options absolute z-50 w-full mt-2 bg-[#ede1c9] rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+                                    <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
+                                        data-value="unified" data-i18n="contact_form_service_unified">Unified Session</div>
+                                    <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
+                                        data-value="yoga" data-i18n="contact_form_service_yoga">Yoga Practice</div>
+                                    <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
+                                        data-value="healing" data-i18n="contact_form_service_healing">Coaching - Quantum Healing</div>
+                                    <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
+                                        data-value="mindfulness" data-i18n="contact_form_service_mindfulness">Kids Mindfulness</div>
+                                    <div class="option px-6 py-4 text-deep hover:bg-primary hover:text-white cursor-pointer transition-colors"
+                                        data-value="corporate" data-i18n="contact_form_service_corporate">Corporate Wellness</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Row 3: Message -->
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold tracking-[0.3em] text-white ml-1" for="contactMessage"
-                            data-i18n="contact_form_message_label">Additional
-                            Message</label>
-                        <textarea rows="4" id="contactMessage" name="message" placeholder="Share your intentions..."
+                        <label class="text-[13px] font-bold tracking-[0.3em] text-white ml-1" for="contactMessage"
+                            data-i18n="contact_form_message_label">Additional Message</label>
+                        <textarea rows="3" id="contactMessage" name="message" placeholder="Share your intentions..."
                             data-i18n-placeholder="contact_form_message_placeholder"
-                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white resize-none transition-all placeholder:text-white/30 outline-none"></textarea>
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-lg text-white resize-none transition-all placeholder:text-white/30 outline-none"></textarea>
                     </div>
 
                     <!-- Cloudflare Turnstile Widget -->
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="dark"></div>
 
                     <button type="submit"
-                        class="bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none"
+                        class="bg-primary text-white px-16 py-5 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:bg-white hover:text-deep active:scale-95 transition-all w-full leading-none"
                         data-i18n="contact_form_submit" id="contactSubmitBtn">
                         Begin My Journey
                     </button>
@@ -650,4 +650,3 @@
 </body>
 
 </html>
-
