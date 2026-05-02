@@ -280,7 +280,7 @@
     </section>
 
     <!-- NEW PODCAST SECTION -->
-    <section class="pb-24 pt-12 bg-alabaster transition-all duration-500" id="podcastSection">
+    <section class="pb-24 pt-12 bg-alabaster transition-all duration-500 scroll-mt-32" id="podcasts">
         <div class="container">
             <div class="text-center mb-16 space-y-4">
                 <h2 class="text-5xl md:text-6xl font-display italic text-deep" data-i18n="gallery_filter_podcasts">
@@ -392,7 +392,7 @@
                             class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-[#955031] group-hover:text-white transition-colors">mail</span>
                     </a>
                     <!-- Spotify -->
-                    <a href="#"
+                    <a href="#podcasts"
                         class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
                         <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
                             fill="currentColor" viewBox="0 0 24 24">
@@ -438,7 +438,7 @@
         const filterBtns = document.querySelectorAll('.filter-btn');
         const items = document.querySelectorAll('.masonry-item');
         const gallerySection = document.querySelector('.masonry').closest('section');
-        const podcastSection = document.getElementById('podcastSection');
+        const podcastSection = document.getElementById('podcasts');
 
         // Initial filtering state
         window.addEventListener('DOMContentLoaded', () => {
@@ -472,6 +472,16 @@
                     }
                 });
             });
+        // Handle hash scroll on load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '#podcasts') {
+                const podcasts = document.getElementById('podcasts');
+                if (podcasts) {
+                    setTimeout(() => {
+                        podcasts.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                }
+            }
         });
     </script>
 

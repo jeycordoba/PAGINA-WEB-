@@ -178,16 +178,20 @@
     - **FAQ Section**: Refined layout with 40-60 split and 500px container height for perfect framing.
 - [x] **Coaching Page Image Update**
     - Optimized high-res asset `61.jpg` from `ALTA` folder into `coaching1on1_v3.webp` and integrated it into the 1:1 section.
-- [x] **Sanctuary Page Gallery Update**
-    - Optimized high-res assets `79.jpg` and `194.jpg` from `ALTA` folder into `sanctuary_practice_79.webp` and `sanctuary_practice_194.webp`.
-    - Integrated new images into the Practice masonry grid.
 - [x] **Contact Page Refinements**
     - Adjusted title "Share your intentions" to be smaller (`text-4xl md:text-5xl`) and changed color to `primary` (terracotta).
     - Optimized high-res asset `124.jpg` from `ALTA` folder into `contact_yogapose_v2.webp`.
     - **Hero Refresh**: Optimized high-res asset `196.jpg` into `contact_hero_v2.webp` and darkened to `brightness-[0.25]` for high contrast.
     - **Layout Overhaul**: Moved title/desc to full-width and restructured form into a horizontal multi-column grid.
-    - **Height Optimization**: Clamped both image and form containers to a strict `600px` height for a perfectly balanced, compact look.
+    - **Height & Responsiveness**: Clamped both image and form containers to a strict `600px` height on desktop, with `h-auto` on mobile to prevent overflow.
+- [x] **Sanctuary Page Gallery & CTA Update**
+    - Optimized high-res assets `79.jpg` and `194.jpg` from `ALTA` folder into `sanctuary_practice_79.webp` and `sanctuary_practice_194.webp`.
+    - Integrated new images into the Practice masonry grid.
+    - **Bottom CTA**: Optimized asset `51.jpg` into `sanctuary_bottom_cta_v2.webp` and applied a bottom-focused (`object-[center_90%]`) framing with `brightness-[0.3]` for a moody, high-contrast feel.
 - [x] **Experiences Page Visual Update**
     - Optimized high-res asset `experiencesBottomCTAv2.png` (re-uploaded/fixed) for the bottom CTA section.
     - Centered "Somos Almas" text, changed to white contrast, and applied a `-translate-y-32` shift for artistic composition.
     - Added a `black/20` image overlay to ensure readability.
+- [x] **Global Footer Update**
+    - Linked the Spotify icon in the footer across all pages to the Podcast section in `sanctuary.html#podcasts`.
+    - Ensured local anchor link (`#podcasts`) is used within `sanctuary.html` itself.
