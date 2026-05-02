@@ -195,3 +195,6 @@
 - [x] **Global Footer Update**
     - Linked the Spotify icon in the footer across all pages to the Podcast section in `sanctuary.html#podcasts`.
     - Ensured local anchor link (`#podcasts`) is used within `sanctuary.html` itself.
+    - Implemented a smooth-scroll fallback script and `scroll-mt-32` in `sanctuary.html` for reliable navigation.
+- [x] **Coaching Page Visual Fix**
+    - Reduced font size of the bottom CTA heading (from `6xl/8xl` to `5xl/7xl`) to prevent text overflow on smaller screens.
