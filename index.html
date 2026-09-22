@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n-page-title="page_title_home">Jeniffer Córdoba</title>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="main.css">
@@ -38,9 +40,185 @@
         }
     </script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <!-- ============================================
+         PAGE-HOME DESIGN SYSTEM
+         Scoped to body.page-home — does NOT affect
+         any other page in the site.
+    ============================================ -->
+    <style>
+        /* ── Base ─────────────────────────────────── */
+        body.page-home {
+            background-color: var(--cream);
+        }
+
+        /* ── Typography ────────────────────────────── */
+        .page-home h1,
+        .page-home h2,
+        .page-home h3,
+        .page-home h4 {
+            font-family: var(--font-heading) !important;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .page-home p,
+        .page-home li,
+        .page-home label {
+            font-family: var(--font-sans);
+        }
+
+        /* Eyebrow labels */
+        .ph-eyebrow {
+            font-family: var(--font-sans) !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.22em !important;
+            text-transform: uppercase !important;
+            color: var(--clay-deep) !important;
+            display: block;
+        }
+        .ph-eyebrow-gold {
+            font-family: var(--font-sans) !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.22em !important;
+            text-transform: uppercase !important;
+            color: var(--gold) !important;
+        }
+
+        /* ── Clay Button ───────────────────────────── */
+        .btn-clay {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            background-color: var(--clay);
+            color: var(--cream) !important;
+            border-radius: 999px;
+            padding: 15px 34px;
+            font-family: var(--font-sans);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(168,98,63,0.3);
+        }
+        .btn-clay:hover {
+            background-color: var(--clay-deep);
+            transform: scale(1.04);
+            box-shadow: 0 6px 28px rgba(140,76,47,0.38);
+        }
+        .btn-clay .material-symbols-outlined {
+            font-size: 1rem;
+        }
+
+        /* ── HERO ──────────────────────────────────── */
+        .page-home .hero-overlay-new {
+            background: linear-gradient(0deg,
+                rgba(54,43,34,0.72) 0%,
+                rgba(54,43,34,0.15) 55%,
+                rgba(54,43,34,0.35) 100%);
+        }
+
+        .page-home .hero-title-new {
+            font-family: var(--font-heading) !important;
+            font-weight: 500;
+            font-size: clamp(40px, 6vw, 74px);
+            line-height: 1.08;
+            text-transform: none;
+            letter-spacing: -0.01em;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-home .hero-desc-new {
+            font-family: var(--font-sans);
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.88);
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Scroll-cue at bottom of hero */
+        .hero-scroll-cue {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.65);
+            font-family: var(--font-sans);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .hero-scroll-cue::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 48px;
+            background: rgba(255,255,255,0.35);
+        }
+
+        /* ── FOUNDER SECTION ───────────────────────── */
+        .page-home .section-founder {
+            background-color: var(--cream-2) !important;
+        }
+
+        /* ── PRACTICES SECTION ─────────────────────── */
+        .page-home .section-practices {
+            background-color: var(--ph-sage) !important;
+        }
+        .page-home .practice-card-inner {
+            background-color: var(--cream) !important;
+            border: none !important;
+        }
+        .page-home .practice-card-inner:hover,
+        .page-home .practice-card:hover .practice-card-inner,
+        .page-home .practice-card .group:hover .practice-card-inner {
+            background-color: var(--ink) !important;
+        }
+        .page-home .practice-card-inner p {
+            color: #5C4F42 !important;
+            opacity: 1 !important;
+        }
+        .page-home .practice-card-inner:hover p,
+        .page-home .practice-card:hover .practice-card-inner p,
+        .page-home .practice-card.group:hover .practice-card-inner p {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+
+        /* ── TESTIMONIALS SECTION ──────────────────── */
+        .page-home .section-testimonials {
+            background-color: var(--cream-2) !important;
+        }
+        .page-home .section-testimonials h2 {
+            color: var(--ink) !important;
+        }
+
+        /* ── CTA SECTION ────────────────────────────── */
+        .page-home .section-cta .btn-clay {
+            box-shadow: 0 6px 30px rgba(168,98,63,0.5);
+        }
+
+        /* ── FOOTER ─────────────────────────────────── */
+        .page-home footer {
+            background-color: var(--cream-2) !important;
+        }
+    </style>
 </head>
 
-<body class="bg-alabaster selection:bg-primary/30">
+<body class="page-home bg-alabaster selection:bg-primary/30">
 
     <!-- NAVIGATION -->
     <nav class="main-nav nav-transparent" id="mainNav">
@@ -58,7 +236,7 @@
                 <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
                 <li class="hidden xl:block"><a href="Coaching.html" data-i18n="nav_healing">Coaching</a></li>
                 <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
-                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
+
                 <!-- <li class="hidden xl:block"><a href="pricing.html" data-i18n="nav_pricing">Pricing</a></li> -->
 
                 <!-- Language Switcher Desktop (Hidden as per request)
@@ -82,7 +260,7 @@
                         <a href="Yoga.html" class="xl:hidden" data-i18n="nav_yoga">Yoga</a>
                         <a href="Coaching.html" class="xl:hidden" data-i18n="nav_healing">Coaching</a>
                         <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
-                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
+
                         <!-- <a href="pricing.html" class="xl:hidden" data-i18n="nav_pricing">Pricing</a> -->
 
                         <!-- Language Switcher Mobile (Hidden as per request)
@@ -104,51 +282,42 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative h-screen flex flex-col items-center justify-between pt-48 pb-24 overflow-hidden">
+    <header class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <!-- NEW IMAGE 70 - Reverted to scale-110 to maintain centering -->
             <img src="images/hero_70.jpg?v=12"
-                class="w-full h-full object-cover brightness-[0.7] transform scale-110 -translate-x-[5%] object-[center_85%]">
-            
-            <!-- 55% DARK OVERLAY (Sweet spot confirmed) -->
-            <div class="absolute inset-0 bg-black/55"></div>
-            
-            <!-- GRADIENT OVERLAY -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-        </div>
-        
-        <!-- TOP: TITLES (ABOVE HEAD) -->
-        <div class="relative z-10 text-center px-6 max-w-7xl mt-20">
-            <h1 class="hero-title-main text-white drop-shadow-2xl">
-                <span class="brand-word-sans" data-i18n="hero_balance">Equilibrio</span>
-                <span class="brand-sep">//</span>
-                <span class="brand-word-serif" data-i18n="hero_calm">Calma</span>
-                <span class="brand-sep">//</span>
-                <span class="brand-word-sans" data-i18n="hero_reconnect">Reconexión</span>
-            </h1>
+                class="w-full h-full object-cover brightness-[0.75] transform scale-110 -translate-x-[5%] object-[center_85%]">
+            <!-- New gradient overlay: dark bottom, lighter middle, subtle top -->
+            <div class="absolute inset-0 hero-overlay-new"></div>
         </div>
 
-        <!-- BOTTOM: DESCRIPTION & CTA -->
-        <div class="relative z-10 text-center px-6 max-w-7xl">
-            <p class="text-white text-lg md:text-2xl font-light max-w-2xl mx-auto mb-16 tracking-wide leading-relaxed italic opacity-90"
-                data-i18n="hero_description">
-                Descubre y honra el camino hacia ti, abre tu corazón, conecta con la espiritualidad de la vida, el
-                movimiento consciente, la respiración y la meditación.
+        <!-- HERO CONTENT -->
+        <div class="relative z-10 text-center px-6 max-w-5xl w-full flex flex-col items-center" style="gap: 1.75rem; padding-top: 6rem;">
+            <!-- Eyebrow -->
+            <span class="ph-eyebrow-gold">Un santuario de posibilidades infinitas</span>
+            <!-- Title -->
+            <h1 class="hero-title-new drop-shadow-2xl">
+                <span data-i18n="hero_balance">Equilibrio</span>,
+                <span data-i18n="hero_calm">calma</span>
+                y <span data-i18n="hero_reconnect">reconexión</span>
+            </h1>
+            <!-- Description -->
+            <p class="hero-desc-new" data-i18n="hero_description">
+                Descubre y honra el camino de regreso a ti, abre tu corazón, conecta con la espiritualidad de la vida, movimiento consciente, respiración y meditación.
             </p>
-            <a href="contact.html"
-                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
-                data-i18n="hero_cta">
+            <!-- CTA Button -->
+            <a href="contact.html" class="btn-clay" data-i18n="hero_cta">
                 Inicia tu Viaje
             </a>
         </div>
 
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 animate-pulse">
-            <span class="material-symbols-outlined text-4xl font-light">expand_more</span>
+        <!-- Scroll cue -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <a href="#practices" class="hero-scroll-cue">Descubre más</a>
         </div>
     </header>
     
     <!-- FOUNDER SECTION -->
-    <section class="section-padding bg-white border-t border-mint/30 overflow-hidden">
+    <section class="section-padding section-founder overflow-hidden">
         <div class="container grid md:grid-cols-2 gap-24 items-center">
             <div class="relative">
                 <div
@@ -158,28 +327,21 @@
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
             </div>
             <div class="space-y-10">
-                <span class="text-primary font-bold tracking-[0.4em] text-[10px] block" data-i18n="founder_tag">El
-                    Corazón de la Quietud</span>
+                <span class="ph-eyebrow" data-i18n="founder_tag">La espiral del corazón</span>
                 <h2 class="text-5xl md:text-6xl font-display text-deep italic leading-none" data-i18n="founder_name">
                     Jeniffer Córdoba</h2>
-                <p class="text-primary font-bold text-xs tracking-[0.3em]" data-i18n="founder_role">
-                    Practicante Principal y Fundadora</p>
+                <p class="text-primary font-display italic text-base tracking-wide mb-2" data-i18n="founder_role">Encuentra tu equilibrio y co-crea tu realidad</p>
                 <p class="text-deep text-2xl md:text-3xl font-display italic opacity-90 leading-tight"
                     data-i18n="founder_quote">
-                    "El yoga no es solo una práctica; es un regreso al hogar del ser. Mi misión es brindar un santuario
-                    donde puedas redescubrir tu quietud innata."
+                    "El yoga no es sólo una práctica; es un regreso a casa, a uno mismo. Mi misión es proporcionar un santuario interior donde puedas redescubrir tu quietud."
                 </p>
                 <p class="text-gray-500 text-lg font-light leading-relaxed" data-i18n="founder_desc">
-                    Con más de quince años de estudio dedicado, Jeniffer se especializa en la profunda sinergia del
-                    <span class="text-primary italic">Hatha</span> y el <span
-                        class="text-primary italic">Breathwork</span> transformador. Sus sesiones están diseñadas para
-                    cerrar la brecha entre la fuerza física y la claridad mental.
+                    Acompaño procesos de transformación consciente a través del yoga, la respiración, el coaching y la neurociencia. Un espacio suave para reconectar con tu esencia, armonizar cuerpo, mente y energía, despertando tu claridad, tu poder interior y tu conexión con el todo.
                 </p>
                 <div class="pt-8 flex flex-col sm:flex-row gap-6">
-                    <a href="about.html"
-                        class="inline-flex items-center justify-center w-[40%] bg-primary text-white py-3 rounded-full text-xs font-bold tracking-[0.1em] transition-all duration-300 hover:scale-105 shadow-md">
+                    <a href="about.html" class="btn-clay">
                         <span data-i18n="founder_cta">Más sobre mí</span>
-                        <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+                        <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
                     </a>
                 </div>
             </div>
@@ -190,18 +352,16 @@
 
 
     <!-- PRACTICES SECTION -->
-    <section class="section-padding bg-[#9b9773] overflow-hidden" id="practices">
+    <section class="section-padding section-practices overflow-hidden" id="practices">
         <div class="container">
             <div class="text-center mb-12">
-
-                <h2 class="text-4xl md:text-5xl font-display text-white italic" data-i18n="practices_title">Prácticas
-                    Distintivas</h2>
+                <span class="ph-eyebrow" style="color:rgba(241,233,220,0.7); margin-bottom:0.75rem;"></span>
+                <h2 class="text-4xl md:text-5xl font-display text-white" style="font-style:normal;" data-i18n="practices_title">Prácticas de Transformación</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-stretch pt-6">
                 <!-- Practice 1: Yoga -->
                 <div class="practice-card group">
-                    <div
-                        class="p-8 rounded-[40px] transition-all duration-500 flex flex-col h-full bg-white border border-deep/5 shadow-sm hover:bg-[#504c33] group-hover:shadow-2xl group-hover:-translate-y-4">
+                    <div class="practice-card-inner p-8 rounded-[40px] transition-all duration-500 flex flex-col h-full shadow-sm group-hover:shadow-2xl group-hover:-translate-y-4">
                         <div class="aspect-[3/2] rounded-32 overflow-hidden mb-8 shadow-sm">
                             <img src="images/practiva_yoga.jpg?v=1"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
@@ -210,23 +370,21 @@
                             <h3 class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors"
                                 data-i18n="practices_item1_title">
                                 Práctica de Yoga</h3>
-                            <p class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors"
+                            <p class="leading-relaxed mb-8 font-light italic transition-colors"
                                 data-i18n="practices_item1_desc">
                                 Una mezcla fluida de estilos Hatha y Vinyasa diseñada para alinear tu cuerpo físico con
                                 tu respiración.</p>
-                            <a href="Yoga.html"
-                                class="inline-flex items-center justify-center w-[40%] bg-primary text-white py-3 rounded-full text-xs font-bold tracking-[0.1em] transition-all duration-300 hover:scale-105 shadow-md mt-auto">
+                            <a href="Yoga.html" class="btn-clay mt-auto" style="width:fit-content;">
                                 <span data-i18n="common_learn_more">Saber Más</span>
-                                <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+                                <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Practice 2: Quantum Healing -->
+                <!-- Practice 2: Coaching -->
                 <div class="practice-card group">
-                    <div
-                        class="p-8 rounded-[40px] transition-all duration-500 flex flex-col h-full bg-white border border-deep/5 shadow-sm hover:bg-[#504c33] group-hover:shadow-2xl group-hover:-translate-y-4">
+                    <div class="practice-card-inner p-8 rounded-[40px] transition-all duration-500 flex flex-col h-full shadow-sm group-hover:shadow-2xl group-hover:-translate-y-4">
                         <div class="aspect-[3/2] rounded-32 overflow-hidden mb-8 shadow-sm">
                             <img src="images/practice_quantum.jpg?v=1"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
@@ -234,16 +392,13 @@
                         <div class="flex-grow flex flex-col">
                             <h3 class="text-4xl font-display text-deep italic mb-6 group-hover:text-white transition-colors"
                                 data-i18n="practices_item2_title">
-                                Sanación Cuántica</h3>
-                            <p class="text-gray-500 leading-relaxed mb-8 font-light italic group-hover:text-white/80 transition-colors"
+                                Coaching</h3>
+                            <p class="leading-relaxed mb-8 font-light italic transition-colors"
                                 data-i18n="practices_item2_desc">
-                                Sesiones de realineación energética dirigidas al sistema nervioso y patrones
-                                subconscientes.
-                            </p>
-                            <a href="Coaching.html"
-                                class="inline-flex items-center justify-center w-[40%] bg-primary text-white py-3 rounded-full text-xs font-bold tracking-[0.1em] transition-all duration-300 hover:scale-105 shadow-md mt-auto">
-                                <span data-i18n="common_learn_more">Learn More</span>
-                                <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+                                Somos energía potencial en constante movimiento. Te invito a cruzar el umbral de lo conocido para abrazar una nueva forma de habitar tu historia.</p>
+                            <a href="Coaching.html" class="btn-clay mt-auto" style="width:fit-content;">
+                                <span data-i18n="common_learn_more">Saber Más</span>
+                                <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
                             </a>
                         </div>
                     </div>
@@ -253,90 +408,8 @@
     </section>
 
 
-
-    <!-- LEAD MAGNET SECTION -->
-    <section class="section-padding bg-white" id="lead-magnet">
-        <div class="container mx-auto px-6">
-            <!-- Header Above Card -->
-            <div class="max-w-6xl mx-auto mb-16 text-left reveal">
-                <h2 class="text-4xl md:text-6xl font-display text-primary italic mb-2" data-i18n="ebook_tag">Recursos Gratuitos</h2>
-                <h3 class="text-3xl md:text-5xl font-display text-deep italic opacity-80" data-i18n="ebook_subtitle">La biblioteca del Santuario</h3>
-            </div>
-
-            <div class="bg-[#F2F2EB] rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row max-w-6xl mx-auto">
-                <!-- Left: Image -->
-                <div class="lg:w-5/12 relative min-h-[350px]">
-                    <img src="images/ebook_vertical_v2.png" class="absolute inset-0 w-full h-full object-cover object-top scale-105" alt="E-book Volver a Ti">
-                </div>
-                
-                <!-- Right: Content & Form -->
-                <div class="lg:w-7/12 p-10 md:p-16 flex flex-col justify-center">
-                    <div class="max-w-xl mx-auto w-full">
-                        <h2 class="text-3xl md:text-4xl font-display text-deep italic mb-10 leading-[1.1]" data-i18n="ebook_title">
-                            ¡Descarga tu e-book Gratis!
-                        </h2>
-
-                        <div class="space-y-4 mb-8 text-gray-500 font-light text-base">
-                            <p data-i18n="ebook_desc_1">Descubre la magia que habita en ti, aprende a integrar la consciencia en tu día a día...</p>
-                            <p data-i18n="ebook_desc_2">“Que la luz ilumine e inspire cada una de tus mañanas...”</p>
-                        </div>
-
-                        <div id="ebookFormContent">
-                            <form class="space-y-5" id="ebookForm">
-                                <input type="hidden" name="resource_id" id="modalResourceId" value="ebook1">
-                                <div class="grid md:grid-cols-2 gap-5">
-                                    <div class="space-y-1">
-                                        <label class="text-[10px] font-bold tracking-[0.3em] text-deep/60 ml-1" data-i18n="ebook_form_name">Nombre</label>
-                                        <input type="text" name="name" required
-                                            class="w-full bg-white/60 border border-primary/10 rounded-xl px-5 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-deep transition-all outline-none placeholder:text-deep/20"
-                                            placeholder="Nombre">
-                                    </div>
-                                    <div class="space-y-1">
-                                        <label class="text-[10px] font-bold tracking-[0.3em] text-deep/60 ml-1" data-i18n="ebook_form_email">Correo electrónico</label>
-                                        <input type="email" name="email" required
-                                            class="w-full bg-white/60 border border-primary/10 rounded-xl px-5 py-3 focus:ring-2 focus:ring-primary focus:border-transparent text-deep transition-all outline-none placeholder:text-deep/20"
-                                            placeholder="Correo">
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-3 pt-2">
-                                    <input type="checkbox" id="privacy" required class="mt-1 text-primary focus:ring-primary rounded border-primary/30 w-4 h-4">
-                                    <label for="privacy" class="text-xs text-gray-500 font-light leading-snug">He leído y acepto la Política de privacidad.</label>
-                                </div>
-
-                                <!-- Cloudflare Turnstile Widget -->
-                                <div class="cf-turnstile" data-sitekey="0x4AAAAAACnv8Ai6cEzh65zb" data-theme="light" data-size="compact"></div>
-                                
-                                <div class="pt-2">
-                                    <button type="submit"
-                                        class="w-full bg-deep text-white py-4 rounded-full font-bold text-[14px] tracking-[0.2em] hover:bg-primary transition-all duration-500 shadow-xl active:scale-95 flex justify-center items-center gap-2"
-                                        id="ebookSubmitBtn">
-                                        <span id="modalSubmitBtnText" data-i18n="ebook_modal_cta">¡LO QUIERO!</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Success State -->
-                        <div id="ebookSuccess" class="hidden text-center space-y-4 py-8">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-2xl">
-                                <span class="material-symbols-outlined text-white text-3xl font-light">task_alt</span>
-                            </div>
-                            <div class="space-y-2">
-                                <h3 class="text-2xl font-display text-deep italic" data-i18n="ebook_success_title">¡Tu guía está en camino!</h3>
-                                <p class="text-deep/60 text-base font-light leading-relaxed italic" data-i18n="ebook_success_desc">
-                                    Revisa tu bandeja de entrada. Un pedazo del santuario está llegando a ti.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- TESTIMONIAL SECTION -->
-    <section class="section-padding bg-[#ede1c9] relative overflow-hidden" id="testimonials">
+    <section class="section-padding section-testimonials relative overflow-hidden" id="testimonials">
         <div class="container relative z-10 flex flex-col items-center">
             <h2 class="text-4xl md:text-6xl font-display text-[#322F20] italic mb-16 text-center"
                 data-i18n="testimonials_title">Historias de Transformación
@@ -508,18 +581,17 @@
     </script>
 
     <!-- FINAL CTA SECTION -->
-    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-deep">
+    <section class="section-cta relative h-[80vh] flex items-center justify-center overflow-hidden bg-deep">
         <div class="absolute inset-0 z-0">
             <img src="images/homeCTA.webp?v=1"
                 class="w-full h-full object-cover object-[center_65%] brightness-[0.4]">
         </div>
         <div class="relative z-10 text-center px-6 max-w-5xl space-y-16">
-            <h2 class="text-6xl md:text-8xl font-display text-white italic leading-[1] drop-shadow-2xl"
+            <h2 class="text-6xl md:text-8xl font-display text-white leading-[1] drop-shadow-2xl"
+                style="font-style:normal;"
                 data-i18n="cta_title">
                 Una<br>Decisión Puede<br>Cambiar tu Vida</h2>
-            <a href="contact.html"
-                class="inline-block bg-primary text-white px-16 py-6 rounded-full font-bold text-xl tracking-widest shadow-2xl hover:scale-105 transition-all"
-                data-i18n="cta_button">
+            <a href="contact.html" class="btn-clay" data-i18n="cta_button">
                 Inicia tu Viaje
             </a>
             <div class="flex items-center justify-center gap-6 text-white/40 pt-10">
@@ -583,7 +655,7 @@
                             class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-[#955031] group-hover:text-white transition-colors">mail</span>
                     </a>
                     <!-- Spotify -->
-                    <a href="sanctuary.html#podcasts"
+                    <a href="contact.html#podcasts"
                         class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
                         <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
                             fill="currentColor" viewBox="0 0 24 24">
@@ -636,51 +708,6 @@
             document.addEventListener('click', (e) => {
                 if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
                     moreDropdown.classList.remove('active');
-                }
-            });
-        }
-
-        // Lead Magnet Form Handling
-        const ebookForm = document.getElementById('ebookForm');
-        const ebookSuccess = document.getElementById('ebookSuccess');
-        const ebookFormContent = document.getElementById('ebookFormContent');
-        const ebookSubmitBtn = document.getElementById('ebookSubmitBtn');
-
-
-        if (ebookForm) {
-            ebookForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                ebookSubmitBtn.disabled = true;
-                const oldText = ebookSubmitBtn.innerHTML;
-                ebookSubmitBtn.innerHTML = `
-                    <span class="animate-spin material-symbols-outlined">sync</span>
-                    <span>Procesando...</span>
-                `;
-
-                try {
-                    const formData = new FormData(ebookForm);
-                    const data = {
-                        type: 'ebook',
-                        resource: formData.get('resource_id'),
-                        name: formData.get('name'),
-                        email: formData.get('email'),
-
-                        'cf-turnstile-response': formData.get('cf-turnstile-response'),
-                        lang: localStorage.getItem('user-lang') || 'es'
-                    };
-
-                    await fetch('/api/send', {
-                        method: 'POST',
-                        body: JSON.stringify(data),
-                        headers: { 'Content-Type': 'application/json' }
-                    });
-
-                    ebookFormContent.classList.add('hidden');
-                    ebookSuccess.classList.remove('hidden');
-                } catch (error) {
-                    ebookFormContent.classList.add('hidden');
-                    ebookSuccess.classList.remove('hidden');
                 }
             });
         }

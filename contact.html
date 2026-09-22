@@ -73,7 +73,7 @@
                 <li class="hidden xl:block"><a href="Yoga.html" data-i18n="nav_yoga">Yoga</a></li>
                 <li class="hidden xl:block"><a href="Coaching.html" data-i18n="nav_healing">Coaching</a></li>
                 <li class="hidden xl:block"><a href="experiences.html" data-i18n="nav_experiences">Experiences</a></li>
-                <li class="hidden xl:block"><a href="sanctuary.html" data-i18n="nav_essence">Sanctuary</a></li>
+
 
                 <!-- Language Switcher Desktop (Hidden as per request)
                 <li class="hidden xl:block">
@@ -96,7 +96,7 @@
                         <a href="Yoga.html" class="xl:hidden" data-i18n="nav_yoga">Yoga</a>
                         <a href="Coaching.html" class="xl:hidden" data-i18n="nav_healing">Coaching</a>
                         <a href="experiences.html" class="xl:hidden" data-i18n="nav_experiences">Experiences</a>
-                        <a href="sanctuary.html" class="xl:hidden" data-i18n="nav_essence">Sanctuary</a>
+
 
                         <!-- Language Switcher Mobile (Hidden as per request)
                         <div class="lang-switcher-mobile">
@@ -276,22 +276,43 @@
         </div>
     </section>
 
-    <!-- BOOKING INTERFACE (Calendar) -->
-    <section class="section-padding bg-[#ede1c9]">
+    <!-- PODCASTS & WISDOM SECTION -->
+    <section class="pb-24 pt-12 bg-[#ede1c9] transition-all duration-500 scroll-mt-32" id="podcasts">
         <div class="container">
-            <div class="bg-white rounded-[60px] border border-deep/5 shadow-2xl p-6 md:p-12 text-center group">
-                <h3 class="text-4xl font-display text-deep italic mb-6" data-i18n="contact_scheduling_title">Select Your
-                    Time</h3>
-                <p class="text-gray-400 italic mb-12 text-lg" data-i18n="contact_scheduling_desc">Real-time scheduling
-                    integrated with your journey.</p>
-
-                <!-- Google Calendar Appointment Scheduling -->
-                <div class="rounded-[40px] overflow-hidden shadow-inner border border-deep/5 bg-white">
-                    <iframe src="https://calendar.app.google/gpheBkRGBMz5RAkU7?gv=true"
-                        style="border: 0; filter: invert(0) hue-rotate(0deg); margin: 0 auto; max-width: 100%;"
-                        width="100%" height="700" frameborder="0"></iframe>
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-5xl md:text-6xl font-display italic text-deep" data-i18n="gallery_filter_podcasts">
+                    Podcasts &amp; Wisdom</h2>
+                <div class="w-24 h-px bg-primary/30 mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Playlist 1: Meditation -->
+                <div
+                    class="bg-white rounded-[40px] p-8 shadow-xl border border-primary/5 hover:shadow-2xl transition-all">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-[0.2em] text-primary"
+                                data-i18n="gallery_playlist_category">Playlist</span>
+                            <h3 class="text-3xl font-display italic text-deep mt-1" data-i18n="gallery_playlist1_title">
+                                Guided Meditations</h3>
+                        </div>
+                        <span class="material-symbols-outlined text-4xl text-mint opacity-20">self_improvement</span>
+                    </div>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7yOKFTxLpzdfnnECsCXLzL?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
-                <!-- end Google Calendar Appointment Scheduling -->
+                <!-- Playlist 2: Experiences -->
+                <div
+                    class="bg-white rounded-[40px] p-8 shadow-xl border border-primary/5 hover:shadow-2xl transition-all">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase"
+                                data-i18n="gallery_playlist_category">Playlist</span>
+                            <h3 class="text-3xl font-display italic text-deep mt-1" data-i18n="gallery_playlist2_title">
+                                Personal Experiences</h3>
+                        </div>
+                        <span class="material-symbols-outlined text-4xl text-mint opacity-20">history_edu</span>
+                    </div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3MIxT2khdhJcSQHxcIOaDj?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -462,7 +483,7 @@
                             class="material-symbols-outlined w-6 h-6 flex items-center justify-center relative z-10 text-[#955031] group-hover:text-white transition-colors">mail</span>
                     </a>
                     <!-- Spotify -->
-                    <a href="sanctuary.html#podcasts"
+                    <a href="contact.html#podcasts"
                         class="group relative p-4 bg-[#b69c75] rounded-2xl hover:bg-[#1DB954] transition-all duration-500 shadow-xl overflow-hidden">
                         <svg class="w-6 h-6 relative z-10 text-[#955031] group-hover:text-white transition-colors"
                             fill="currentColor" viewBox="0 0 24 24">
