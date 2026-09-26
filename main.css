@@ -29,16 +29,16 @@
     --font-body: 'Montserrat', 'Open Sans', sans-serif;
 
     /* ── Homepage Design System (page-home) ── */
-    --cream:      #F1E9DC;
-    --cream-2:    #E9DFCE;
-    --clay:       #A8623F;
-    --clay-deep:  #8C4C2F;
-    --ph-sage:    #7E8B6D;
-    --gold:       #B08D57;
-    --ink:        #362B22;
-    --ink-soft:   #5C4F42;
+    --cream: #F1E9DC;
+    --cream-2: #E9DFCE;
+    --clay: #A8623F;
+    --clay-deep: #8C4C2F;
+    --ph-sage: #7E8B6D;
+    --gold: #B08D57;
+    --ink: #362B22;
+    --ink-soft: #5C4F42;
     --font-heading: 'Cormorant Garamond', 'Newsreader', Georgia, serif;
-    --font-sans:    'Jost', 'Montserrat', sans-serif;
+    --font-sans: 'Jost', 'Montserrat', sans-serif;
 }
 
 /* Reset & Foundation */
@@ -602,4 +602,8 @@ h4,
 
 .practice-card div {
     will-change: transform, background-color;
+}
+
+[data-i18n^="about_journey_date_"] {
+    display: none !important;
 }

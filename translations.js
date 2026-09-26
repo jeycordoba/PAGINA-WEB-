@@ -172,6 +172,8 @@ const translations = {
         "about_journey_9": "Workshop - Memory in the Cells - LUIS ANGEL DÍAZ",
         "about_journey_date_10": "February 2020",
         "about_journey_10": "Certification - Detox Coach - PROSPERIT TEAM INTERNATIONAL",
+        "about_journey_date_11": "2026",
+        "about_journey_11": "Neurolife Coach 50H - Paola Gutierrez",
         "about_gallery_title": "Jeniffer in Practice",
         "about_gallery_subtitle": "MOMENTS OF STILLNESS, FLOW, AND CONNECTION",
         "index_cta_title_1": "Find your own balance and honor it!",
@@ -317,7 +319,7 @@ const translations = {
         "yoga_ashtanga_desc": "Strengthens, flexes, balances and purifies the physical body, developing mental and expansive attitudes that harmonize the energy body.",
         "yoga_restorative_title": "Restorative",
         "yoga_restorative_desc": "Give yourself 20 minutes of pause. Not to sleep, but to wake up to a calm that already lives in you. \"Sometimes, the most advanced posture is simply learning to stay still.\"",
-        
+
         "yoga_faq_tag": "Yoga Wisdom",
         "yoga_faq_title": "Common Questions",
         "yoga_faq1_q": "Do I need previous experience or to be flexible to start?",
@@ -339,7 +341,7 @@ const translations = {
         "corporate_hero_title": "Spiral of Connection.",
         "corporate_hero_desc": "There is a magic that only awakens when we allow for a genuine encounter. In the geometry of our circles, stories cease to be linear to become spirals of collective healing.",
         "corporate_hero_cta": "Inquire for your Team",
-        
+
         "experience_corporate_title": "Corporate Wellness",
         "corporate_service1_tag": "Executive Focus",
         "corporate_service1_title": "One-to-One Coaching",
@@ -359,13 +361,13 @@ const translations = {
         "corporate_service3_title": "Retreats",
         'corporate_service3_desc': '<p class="mb-4">There are encounters that mark a before and after. My retreats are spaces for immersion and profound transformation, designed to disconnect from external noise and tune into the frequency of nature and personal power (soul).</p><p class="mb-4">In magical and carefully selected environments, we fuse the practice of yoga, the wisdom of neuroscience, and the potential of collective meditation. These are days to inhabit the body, calm the nervous system, and allow the group’s alchemy to guide us toward real expansion. A retreat is not just a trip to a special place; it is a journey back to reconnect with your soul pact, your integrity, and the light that inspires and opens paths.</p><p class="mb-0 italic">Soon I will be opening portals to destinations with unique experiences in places where the earth and the soul embrace.</p>',
         "corporate_service3_link": "Request Catalog",
-        
+
         "experience_women_title": "Women’s Circle",
         "experience_women_tag": "Sacred Space",
         "experience_women_desc": "<p class='mb-6'>In this space, we gather to remember that we are not alone on our journey. Through group Cardiac Coherence, conscious movement, and deep listening, we weave a containment network where your story is honored and your light is celebrated.</p><p class='mb-6'>It is not just a gathering; it is collective alchemy moving in an upward spiral towards a fuller and more sovereign version of yourself.</p><p class='mb-8'>Here, the divine in each of us recognizes and sustains the divine in the other.</p>",
         "experience_women_hero_title": "Sisterhood in Calm",
         "experience_women_link": "Join the Circle!",
-        
+
         "experience_workshops_retreats_title": "Workshops & Retreats",
         "experience_talleres_tag": "Immersive Workshops",
         "experience_talleres_title": "Mastery in Motion: Beyond the Mat",
@@ -429,7 +431,7 @@ const translations = {
         "qhc2_hero_title": "Mastering Your Internal Frequency",
         "qhc2_hero_desc": "The bridge between the human mind and the universe. Realignment through quantum architecture.",
         "qhc2_hero_cta": "Begin your Quantum Shift",
-        
+
         "qhc2_science_tag": "SCIENCE VS SPIRIT",
         "qhc2_science_title": "Where Physics Meets Purpose",
         "qhc2_science_physical": "The Physical",
@@ -437,7 +439,7 @@ const translations = {
         "qhc2_science_quantum": "The Quantum",
         "qhc2_science_quantum_desc": "Wave patterns, light particles, and energy vortexes forming our multidimensional reality.",
         "qhc2_science_overlap": "The Healing Point",
-        
+
         "qhc2_biofield_title": "The Human Biofield",
         "qhc2_biofield_desc": "We are more than skin and bone; we are electromagnetic fields. Discover your energy hotspots.",
         "qhc2_biofield_heart": "Heart",
@@ -446,14 +448,14 @@ const translations = {
         "qhc2_biofield_brain_desc": "Electrical command center. QHC harmonizes neural rhythms for clarity.",
         "qhc2_biofield_gut": "Gut",
         "qhc2_biofield_gut_desc": "The second brain. QHC releases somatic trauma stored in the enteric system.",
-        
+
         "qhc2_observer_tag": "SHIFT YOUR REALITY",
         "qhc2_observer_title": "The Observer Effect",
         "qhc2_observer_victim": "Victim (Fixed)",
         "qhc2_observer_victim_desc": "Scattered waves, stress, and physical disease in a reactive state.",
         "qhc2_observer_creator": "Creator (Quantum)",
         "qhc2_observer_creator_desc": "Coherent beam, healing, and absolute clarity from a proactive state.",
-        
+
         "qhc2_process_title": "The Quantum Leap",
         "qhc2_process_awareness_title": "Awareness",
         "qhc2_process_awareness_desc": "Identifying the cloudy patterns and pixelated perceptions of the past.",
@@ -461,7 +463,7 @@ const translations = {
         "qhc2_process_entrainment_desc": "Syncing your frequency with cosmic harmony and collective resonance.",
         "qhc2_process_manifestation_title": "Manifestation",
         "qhc2_process_manifestation_desc": "Clear, high-contrast action in your newly anchored structural reality.",
-        
+
         "qhc2_gallery_title": "Frequency Modalities",
         "qhc2_modality1_title": "Vibration",
         "qhc2_modality1_desc": "Advanced protocols for tuning the cellular resonance and clearing disharmony.",
@@ -724,6 +726,8 @@ const translations = {
         "about_journey_9": "Taller - La Memoria en la Células - LUIS ANGEL DÍAZ",
         "about_journey_date_10": "Febrero 2020",
         "about_journey_10": "Certificación - Detox Coach - PROSPERIT TEAM INTERNATIONAL",
+        "about_journey_date_11": "2026",
+        "about_journey_11": "Neurolife Coach - 50H - Paola Gutiérrez",
         "about_gallery_title": "Jeniffer en la Práctica",
         "about_gallery_subtitle": "MOMENTOS DE QUIETUD, FLUIDEZ Y CONEXIÓN",
         "index_cta_title_1": "Encuentra tu propio equilibrio y hónralo!",
@@ -876,7 +880,7 @@ const translations = {
         "corporate_hero_title": "Espiral de Conexión.",
         "corporate_hero_desc": "Existe una magia que solo despierta cuando nos permitimos el encuentro genuino. En la geometría de nuestros círculos, las historias dejan de ser lineales para volverse espirales de sanación colectiva.",
         "corporate_hero_cta": "Consultar para su Equipo",
-        
+
         "experience_corporate_title": "Bienestar Corporativo",
         "corporate_service1_tag": "Enfoque Ejecutivo",
         "corporate_service1_title": "Coaching Uno a Uno",
@@ -892,7 +896,7 @@ const translations = {
         "corporate_service2_li3": "Fomentar una comunicación empática y una colaboración genuina.",
         "corporate_service2_li4": "Recuperar el enfoque y la energía vital para una productividad consciente.",
         "corporate_service2_link": "Ver Ofertas",
-        
+
         "yoga_faq_tag": "Sabiduría del Yoga",
         "yoga_faq_title": "Preguntas Frecuentes",
         "yoga_faq1_q": "¿Necesito tener experiencia previa o ser flexible para empezar?",
@@ -910,13 +914,13 @@ const translations = {
         "corporate_service3_title": "Retiros",
         'corporate_service3_desc': '<p class="mb-4">Existen encuentros que marcan un antes y un después. Mis retiros son espacios de inmersión y transformación profunda, diseñados para desconectar del ruido externo y sintonizar con la frecuencia de la naturaleza y el poder personal (alma).</p><p class="mb-4">En entornos mágicos y cuidadosamente seleccionados, fusionamos la práctica del yoga, la sabiduría de la neurociencia y el potencial de la meditación colectiva. Son días para habitar el cuerpo, calmar el sistema nervioso y permitir que la alquimia del grupo nos guíe hacia una expansión real. Un retiro no es solo un viaje a un lugar especial; es un viaje de regreso a reconectar con tu pacto del alma, a tu integridad, a la luz que inspira y abre caminos.</p><p class="mb-0 italic">Próximamente abriré portales a destinos con experiencias únicas en lugares donde la tierra y el alma se abrazan. </p>',
         "corporate_service3_link": "Solicitar Catálogo",
-        
+
         "experience_women_title": "Círculo de Mujeres",
         "experience_women_tag": "Espacio Sagrado",
         "experience_women_desc": "<p class='mb-6'>En este espacio, nos reunimos para recordar que no estamos solas en nuestro caminar. A través de la Coherencia Cardiaca grupal, el movimiento consciente y la escucha profunda, tejemos una red de contención donde tu historia es honrada y tu luz es celebrada.</p><p class='mb-6'>No es solo un encuentro, es una alquimia colectiva moviéndose en una espiral ascendente hacia una versión más plena y soberana.</p><p class='mb-8'>Aquí, lo divino en cada una de nosotros reconoce y sostiene lo divino en la otra.</p>",
         "experience_women_hero_title": "Hermandad en Calma",
         "experience_women_link": "¡Unirme al Círculo!",
-        
+
         "experience_workshops_retreats_title": "Talleres y Retiros",
         "experience_talleres_tag": "Talleres Inmersivos",
         "experience_talleres_title": "Maestría en Movimiento: Más Allá del Mat",
@@ -980,7 +984,7 @@ const translations = {
         "qhc2_hero_title": "Dominando Tu Frecuencia Interna",
         "qhc2_hero_desc": "El puente entre la mente humana y el universo. Realineación a través de la arquitectura cuántica.",
         "qhc2_hero_cta": "Inicia Tu Cambio Cuántico",
-        
+
         "qhc2_science_tag": "CIENCIA VS ESPÍRITU",
         "qhc2_science_title": "Donde la Física se Encuentra con el Propósito",
         "qhc2_science_physical": "Lo Físico",
@@ -988,7 +992,7 @@ const translations = {
         "qhc2_science_quantum": "Lo Cuántico",
         "qhc2_science_quantum_desc": "Patrones de ondas, partículas de luz y vórtices de energía que forman nuestra realidad multidimensional.",
         "qhc2_science_overlap": "El Punto de Sanación",
-        
+
         "qhc2_biofield_title": "El Biocampo Humano",
         "qhc2_biofield_desc": "Somos más que piel y huesos; somos campos electromagnéticos. Descubre tus puntos de energía.",
         "qhc2_biofield_heart": "Corazón",
@@ -997,14 +1001,14 @@ const translations = {
         "qhc2_biofield_brain_desc": "Centro de mando eléctrico. QHC armoniza los ritmos neuronales para mayor claridad.",
         "qhc2_biofield_gut": "Instinto",
         "qhc2_biofield_gut_desc": "El segundo cerebro. QHC libera traumas somáticos almacenados en el sistema entérico.",
-        
+
         "qhc2_observer_tag": "CAMBIA TU REALIDAD",
         "qhc2_observer_title": "El Efecto Observador",
         "qhc2_observer_victim": "Víctima (Fijo)",
         "qhc2_observer_victim_desc": "Ondas dispersas, estrés y enfermedad física en un estado reactivo.",
         "qhc2_observer_creator": "Creador (Cuántico)",
         "qhc2_observer_creator_desc": "Haz coherente, sanación y claridad absoluta desde un estado proactivo.",
-        
+
         "qhc2_process_title": "El Salto Cuántico",
         "qhc2_process_awareness_title": "Consciencia",
         "qhc2_process_awareness_desc": "Identificando los patrones nublados y percepciones pixeladas del pasado.",
@@ -1012,7 +1016,7 @@ const translations = {
         "qhc2_process_entrainment_desc": "Sincronizando tu frecuencia con la armonía cósmica y la resonancia colectiva.",
         "qhc2_process_manifestation_title": "Manifestación",
         "qhc2_process_manifestation_desc": "Acción clara y de alto contraste en tu realidad estructural recién anclada.",
-        
+
         "qhc2_gallery_title": "Modalidades de Frecuencia",
         "qhc2_modality1_title": "Vibración",
         "qhc2_modality1_desc": "Protocolos avanzados para sintonizar la resonancia celular y limpiar la desarmonía.",
